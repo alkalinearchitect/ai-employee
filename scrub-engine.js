@@ -135,7 +135,7 @@ function mountScrollWorld(container, config) {
   // segment scenes
   SEGMENTS.forEach(s => {
     const scene = el('div', 'sw-scene'); scene.style.setProperty('--sw-accent', s.accent || '');
-    const img = el('img', 'sw-scene__still'); img.alt = ''; img.decoding = 'async'; img.loading = 'lazy';
+    const img = el('img', 'sw-scene__still'); img.alt = ''; img.decoding = 'async'; img.loading = i === 0 ? 'eager' : 'lazy';
     if (s.still) img.src = s.still;
     scene.appendChild(img); stage.appendChild(scene);
     s.el = scene; s.img = img; s.video = null; s.hasClip = false;
@@ -149,7 +149,7 @@ function mountScrollWorld(container, config) {
     c.innerHTML =
       `<span class="sw-copy__num">${pad(i + 1)} / ${pad(N)}</span>` +
       (s.eyebrow ? `<span class="sw-copy__eyebrow">${esc(s.eyebrow)}</span>` : '') +
-      (s.title ? `<h2 class="sw-copy__title">${esc(s.title)}</h2>` : '') +
+      (s.title ? `<div class="sw-copy__title" role="heading" aria-level="2">${esc(s.title)}</div>` : '') +
       (s.body ? `<p class="sw-copy__body">${esc(s.body).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>` : '') +
       (s.tags && s.tags.length ? `<ul class="sw-copy__tags">${s.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : '') +
       (s.cta ? `<div class="sw-copy__cta">${ctaBtns(s.cta)}</div>` : '');
@@ -196,11 +196,12 @@ function mountScrollWorld(container, config) {
     // design. Under reduced-motion we simply don't scrub; the looped clip still plays.
     if (s.loading || !s.clip) return;
     s.loading = true;
-    // Serve the lighter mobile encode on phones when one was provided.
-    const url = (isMobile() && s.clipM) ? s.clipM : s.clip;
+    // On slow/2G connections or when data-saver is on, prefer the lighter mobile encode.
+    const slowConn = navigator.connection && (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g' || navigator.connection.saveData);
+    const url = slowConn || isMobile() && s.clipM ? s.clipM : s.clip;
     const v = document.createElement('video');
     v.className = 'sw-scene__video';
-    v.muted = true; v.playsInline = true; v.loop = true; v.autoplay = true; v.preload = 'auto';
+    v.muted = true; v.playsInline = true; v.loop = true; v.autoplay = true; v.preload = isMobile() ? 'metadata' : 'auto';
     v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('autoplay', ''); v.setAttribute('loop', '');
     if (s.still) v.poster = s.still;
     v.src = url;   // direct src — blob fetch was fragile and silently failed on some CDNs/browsers
