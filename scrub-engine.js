@@ -429,14 +429,14 @@ function injectCSS() {
     .sw-copy{left:clamp(18px,5vw,64px);right:clamp(18px,5vw,64px);top:auto;bottom:clamp(64px,14vh,120px);transform:none;width:auto;max-width:560px;}
     .sw-copy{bottom:calc(clamp(56px,12dvh,110px) + env(safe-area-inset-bottom));}
     .sw-copy__title{font-size:clamp(1.9rem,7.5vw,2.7rem);text-shadow:0 2px 22px color-mix(in srgb,var(--sw-bg) 92%,transparent),0 1px 3px rgba(0,0,0,.7);}
-    .sw-copy__body{max-width:none;font-size:clamp(.98rem,3.6vw,1.1rem);text-shadow:0 1px 14px color-mix(in srgb,var(--sw-bg) 96%,transparent),0 1px 2px rgba(0,0,0,.65);} .sw-scene__video,.sw-scene__still{object-position:center 46%;}
+    .sw-copy__body{max-width:none;font-size:clamp(.98rem,3.6vw,1.1rem);text-shadow:0 1px 14px color-mix(in srgb,var(--sw-bg) 96%,transparent),0 1px 2px rgba(0,0,0,.65);} .sw-scene__video,.sw-scene__still{object-position:center center;}
     .sw-hint{bottom:calc(20px + env(safe-area-inset-bottom));}
     .sw-route{gap:16px;right:6px;} .sw-route__label{display:none;}
   }
   /* Portrait phones crop a 16:9 clip hard; keep the framing centred so the focal
      subject (which the camera dives toward) stays in view. */
   @media (max-width:860px) and (orientation:portrait){
-    .sw-scene__video,.sw-scene__still{object-position:center 44%;}
+    .sw-scene__video,.sw-scene__still{object-position:center center;}
   }
   /* Touch: give the route dots a finger-sized hit area without growing the visible dot. */
   @media (hover:none) and (pointer:coarse){
