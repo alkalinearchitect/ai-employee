@@ -209,7 +209,12 @@ function mountScrollWorld(container, config) {
         // prime the clip on load (muted play->pause) so the top frame paints
         // immediately without waiting for a scroll or a user gesture.
         v.addEventListener('seeked', () => { s.el.classList.add('has-clip'); }, { once: true });
-        v.addEventListener('loadeddata', () => { try { v.pause(); } catch (e) {} primeVideo(v); if (s.el.classList.contains('sw-scene--active')) s.el.classList.add('has-clip'); });
+        v.addEventListener('loadeddata', () => { try { v.pause(); } catch (e) {} primeVideo(v); s.el.classList.add('has-clip'); }, { once: true });
+        // Universal, reliable reveal: the instant the video is actually playing a
+        // painted frame, hide the still. Works on desktop + iOS without waiting
+        // for a scroll or user gesture. `playing` only fires once a real frame
+        // is on screen, so no blank-flash risk.
+        v.addEventListener('playing', () => { s.el.classList.add('has-clip'); }, { once: true });
         s.el.appendChild(v); s.video = v; s.hasClip = true;
       }).catch(() => { s.loading = false; });
   }
