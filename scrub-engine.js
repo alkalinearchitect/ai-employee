@@ -192,33 +192,26 @@ function mountScrollWorld(container, config) {
   }
 
   function loadClip(s) {
-    // Under prefers-reduced-motion we never load the clips at all — the stills stay up
-    // and simply cross-dissolve as you scroll. No scrubbed video motion, no decode cost.
-    if (reduce || s.loading || !s.clip) return;
+    // NOTE: video is shown regardless of prefers-reduced-motion — the clip is the
+    // design. Under reduced-motion we simply don't scrub; the looped clip still plays.
+    if (s.loading || !s.clip) return;
     s.loading = true;
     // Serve the lighter mobile encode on phones when one was provided.
     const url = (isMobile() && s.clipM) ? s.clipM : s.clip;
-    fetch(url).then(r => r.ok ? r.blob() : Promise.reject(new Error('404')))
-      .then(blob => {
-        const v = document.createElement('video');
-        v.className = 'sw-scene__video';
-        v.muted = true; v.playsInline = true; v.preload = 'auto'; v.autoplay = true;
-        v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('autoplay', '');
-        v.src = URL.createObjectURL(blob);
-        v.addEventListener('loadedmetadata', () => { s.ready = true; read(); });
-        // Reveal the video (hide the still poster) once a real frame has painted.
-        // On iOS a seeked-but-never-played muted video stays blank, so we also
-        // prime the clip on load (muted play->pause) so the top frame paints
-        // immediately without waiting for a scroll or a user gesture.
-        v.addEventListener('seeked', () => { s.el.classList.add('has-clip'); }, { once: true });
-        v.addEventListener('loadeddata', () => { try { v.pause(); } catch (e) {} primeVideo(v); s.el.classList.add('has-clip'); }, { once: true });
-        // Universal, reliable reveal: the instant the video is actually playing a
-        // painted frame, hide the still. Works on desktop + iOS without waiting
-        // for a scroll or user gesture. `playing` only fires once a real frame
-        // is on screen, so no blank-flash risk.
-        v.addEventListener('playing', () => { s.el.classList.add('has-clip'); }, { once: true });
-        s.el.appendChild(v); s.video = v; s.hasClip = true;
-      }).catch(() => { s.loading = false; });
+    const v = document.createElement('video');
+    v.className = 'sw-scene__video';
+    v.muted = true; v.playsInline = true; v.loop = true; v.autoplay = true; v.preload = 'auto';
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('autoplay', ''); v.setAttribute('loop', '');
+    if (s.still) v.poster = s.still;
+    v.src = url;   // direct src — blob fetch was fragile and silently failed on some CDNs/browsers
+    v.addEventListener('loadedmetadata', () => { s.ready = true; s.el.classList.add('has-clip'); read(); });
+    // Reveal as soon as a frame is available (more reliable than waiting for 'seeked').
+    v.addEventListener('loadeddata', () => {
+      s.el.classList.add('has-clip');
+      try { const p = v.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
+    });
+    v.addEventListener('error', () => { s.loading = false; s.hasClip = false; });  // keep still as fallback
+    s.el.appendChild(v); s.video = v; s.hasClip = true;
   }
 
   function read() {
