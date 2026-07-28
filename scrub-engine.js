@@ -201,15 +201,15 @@ function mountScrollWorld(container, config) {
     const url = slowConn || isMobile() && s.clipM ? s.clipM : s.clip;
     const v = document.createElement('video');
     v.className = 'sw-scene__video';
-    v.muted = true; v.playsInline = true; v.loop = true; v.autoplay = true; v.preload = isMobile() ? 'metadata' : 'auto';
-    v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('autoplay', ''); v.setAttribute('loop', '');
+    v.muted = true; v.playsInline = true; v.loop = true; v.preload = isMobile() ? 'metadata' : 'auto';
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('loop', '');
     if (s.still) v.poster = s.still;
     v.src = url;   // direct src — blob fetch was fragile and silently failed on some CDNs/browsers
     v.addEventListener('loadedmetadata', () => { s.ready = true; s.el.classList.add('has-clip'); read(); });
     // Reveal as soon as a frame is available (more reliable than waiting for 'seeked').
     v.addEventListener('loadeddata', () => {
       s.el.classList.add('has-clip');
-      try { const p = v.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
+      // Don't autoplay — raf() handles play/pause based on scene visibility
     });
     v.addEventListener('error', () => { s.loading = false; s.hasClip = false; });  // keep still as fallback
     s.el.appendChild(v); s.video = v; s.hasClip = true;
