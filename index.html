@@ -55,20 +55,12 @@
   .ha-foot{margin-top:64px;text-align:center;color:var(--sw-ink-soft);font-size:.85rem;}
   .ha-foot a{color:var(--sw-accent);text-decoration:none;}
   mark{background:color-mix(in srgb,var(--sw-accent) 35%,transparent);color:#fff;padding:0 4px;border-radius:3px;}
-  /* ---- persistent moving background (CIC-style aurora: glow + drifting particles) ---- */
-  .ha-aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:
-    radial-gradient(62% 46% at 78% 13%, color-mix(in srgb,var(--sw-accent) 28%,transparent), transparent 70%),
-    radial-gradient(52% 42% at 16% 90%, color-mix(in srgb,var(--sw-accent) 14%,transparent), transparent 72%);}
-  .ha-aurora__pt{position:absolute;width:9px;height:9px;border-radius:50%;background:color-mix(in srgb,var(--sw-accent) 72%,#fff);opacity:0;animation:ha-drift linear infinite;will-change:transform,opacity;}
-  .ha-aurora__pt--ring{background:transparent;border:1.5px solid color-mix(in srgb,var(--sw-accent) 55%,transparent);}
-  @keyframes ha-drift{0%{opacity:0;transform:translate(0,15vh) scale(.55)}14%{opacity:.55}84%{opacity:.4}100%{opacity:0;transform:translate(5vw,-25vh) scale(1)}}
-  @media (prefers-reduced-motion:reduce){.ha-aurora{display:none;}}
+
   .proof{font-style:italic;color:var(--sw-ink-soft);border-left:3px solid var(--sw-accent);padding-left:14px;margin:14px 0;}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;}}
 </style>
 </head>
 <body>
-  <div class="ha-aurora" id="aurora" aria-hidden="true"></div>
   <section id="world" aria-label="Dewey — your managed AI employee"></section>
 
   <div class="ha-after">
@@ -133,25 +125,6 @@
     </div>
   </div>
 
-  <script>
-    // seed drifting particles into the persistent aurora (CIC-style moving background)
-    (function(){
-      var a = document.getElementById('aurora'); if(!a) return;
-      var N = 34, frag = document.createDocumentFragment();
-      for (var i=0;i<N;i++){
-        var p = document.createElement('div');
-        p.className = 'ha-aurora__pt' + (i%4===0 ? ' ha-aurora__pt--ring' : '');
-        p.style.left = (Math.random()*100).toFixed(2)+'%';
-        p.style.top  = (Math.random()*100).toFixed(2)+'%';
-        var s = (0.5 + Math.random()*1.1).toFixed(2);
-        p.style.setProperty('--sw-sc', s);
-        p.style.animationDuration = (14 + Math.random()*16).toFixed(1)+'s';
-        p.style.animationDelay = (-Math.random()*22).toFixed(1)+'s';
-        frag.appendChild(p);
-      }
-      a.appendChild(frag);
-    })();
-  </script>
   <script src="scroll-world-engine.js"></script>
   <script>
     mountScrollWorld(document.getElementById('world'), {
