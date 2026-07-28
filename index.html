@@ -3,118 +3,120 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>The AI Employee — Managed AI Agents for $5,000/Month | Human Architect</title>
-<meta name="description" content="Dewey is a managed AI agent that runs your client fulfillment for $5,000/month. It builds your client's agent, onboards it into their Slack, and handles customer support — hands-off. Built by Human Architect." />
+<title>Dewey — Your $5,000/Month Managed AI Employee | Human Architect</title>
+<meta name="description" content="Stop doing the delivery. Dewey is a managed AI employee that builds your client's agent, onboards it into their Slack, and handles support — for a flat $5,000/month. Book a call." />
 <meta name="author" content="Human Architect" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="The AI Employee — Managed AI Agents for $5,000/Month" />
-<meta property="og:description" content="Dewey is a managed AI agent that fulfills client work for $5k/mo. It builds, onboards into Slack, and supports — you watch from your phone." />
-<meta property="og:image" content="assets/stills/s2.svg" />
+<meta property="og:title" content="Dewey — Your $5,000/Month Managed AI Employee" />
+<meta property="og:description" content="A managed AI employee that fulfills client work for $5k/mo. Built, onboarded into Slack, support handled. You watch from your phone." />
+<meta property="og:image" content="assets/stills/s5.svg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The AI Employee — Managed AI Agents for $5,000/Month" />
-<meta name="twitter:description" content="Dewey fulfills client work for $5k/mo. Builds the agent, onboards into Slack, handles support. Hands-off." />
-<meta name="twitter:image" content="assets/stills/s2.svg" />
+<meta name="twitter:title" content="Dewey — Your $5,000/Month Managed AI Employee" />
+<meta name="twitter:description" content="A managed AI employee that fulfills client work for $5k/mo. Built, onboarded, support handled. You watch from your phone." />
+<meta name="twitter:image" content="assets/stills/s5.svg" />
 <link rel="canonical" href="https://alkalinearchitect.github.io/ai-employee/" />
 <style>
   :root{
-    --sw-bg:#0c0814; --sw-ink:#f3eefb; --sw-ink-soft:#9a8fb8; --sw-accent:#7A5CFF;
+    --sw-bg:#0a0612; --sw-ink:#ffffff; --sw-ink-soft:#b9aee0; --sw-accent:#8B5CFF;
+    --sw-accent-2:#27c93f;
     --sw-font-display:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;
     --sw-font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
   }
   html,body{margin:0;background:var(--sw-bg);color:var(--sw-ink);font-family:var(--sw-font-body);-webkit-font-smoothing:antialiased;}
-  /* Pin the dark violet-night palette onto #world with ID specificity so it
-     beats the engine's default light theme injected on .sw-root (class, layered). */
   #world{
-    --sw-bg:#0c0814; --sw-ink:#f3eefb; --sw-ink-soft:#9a8fb8; --sw-accent:#7A5CFF;
+    --sw-bg:#0a0612; --sw-ink:#ffffff; --sw-ink-soft:#b9aee0; --sw-accent:#8B5CFF;
     --sw-font-display:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;
     --sw-font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
     min-height:100vh;
   }
-  /* ---- static content below the scroll-world (AEO/GEO + CTA) ---- */
   .ha-after{position:relative;z-index:5;background:var(--sw-bg);padding:0 0 120px;}
-  .ha-wrap{max-width:980px;margin:0 auto;padding:0 clamp(18px,5vw,48px);}
-  .ha-after h2{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.01em;}
-  .ha-after h3{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(1.2rem,2.6vw,1.6rem);margin:48px 0 10px;color:var(--sw-ink);}
-  .ha-after p{color:color-mix(in srgb,var(--sw-ink) 82%,var(--sw-ink-soft));line-height:1.65;font-size:clamp(1rem,1.4vw,1.12rem);}
-  .ha-after .eyebrow{font-family:var(--sw-font-display);font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
-  .ha-sep{height:1px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--sw-accent) 40%,transparent),transparent);margin:64px 0 8px;border:0;}
-  /* FAQ */
-  .faq details{border:1px solid color-mix(in srgb,var(--sw-accent) 22%,transparent);border-radius:14px;padding:0 18px;margin:12px 0;background:color-mix(in srgb,var(--sw-accent) 6%,#0c0814);}
-  .faq summary{cursor:pointer;font-weight:600;font-size:1.04rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .ha-wrap{max-width:1000px;margin:0 auto;padding:0 clamp(18px,5vw,48px);}
+  .ha-after h2{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.04;margin:0 0 10px;letter-spacing:-.02em;}
+  .ha-after h3{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(1.25rem,2.8vw,1.7rem);margin:46px 0 12px;}
+  .ha-after p{color:color-mix(in srgb,var(--sw-ink) 88%,var(--sw-ink-soft));line-height:1.68;font-size:clamp(1rem,1.4vw,1.14rem);}
+  .ha-after .eyebrow{font-family:var(--sw-font-display);font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
+  .ha-sep{height:1px;background:linear-gradient(90deg,transparent,var(--sw-accent),transparent);margin:64px 0 8px;border:0;}
+  .faq details{border:1px solid color-mix(in srgb,var(--sw-accent) 28%,transparent);border-radius:14px;padding:0 18px;margin:12px 0;background:color-mix(in srgb,var(--sw-accent) 9%,#0a0612);}
+  .faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
   .faq summary::-webkit-details-marker{display:none;}
-  .faq summary::after{content:"+";color:var(--sw-accent);font-size:1.4rem;line-height:1;}
+  .faq summary::after{content:"+";color:var(--sw-accent);font-size:1.5rem;line-height:1;}
   .faq details[open] summary::after{content:"–";}
-  .faq p{margin:0 0 16px;color:color-mix(in srgb,var(--sw-ink) 78%,var(--sw-ink-soft));}
-  /* CTA box */
-  .ha-cta{margin-top:48px;text-align:center;border:1px solid color-mix(in srgb,var(--sw-accent) 30%,transparent);border-radius:20px;padding:clamp(28px,5vw,52px);background:radial-gradient(120% 120% at 50% 0%,color-mix(in srgb,var(--sw-accent) 16%,#0c0814),#0c0814);}
-  .ha-cta h2{margin-bottom:12px;}
-  .ha-cta p{max-width:54ch;margin:0 auto 24px;}
-  .ha-btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1rem;padding:15px 30px;border-radius:999px;color:#0c0814;background:var(--sw-accent);box-shadow:0 8px 28px rgba(122,92,255,.5);transition:transform .2s;}
-  .ha-btn:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(122,92,255,.7);}
-  .ha-btn--ghost{color:var(--sw-ink);background:transparent;border:1.5px solid rgba(243,238,251,.6);box-shadow:none;margin-left:10px;}
-  .ha-btn--ghost:hover{background:rgba(243,238,251,.1);}
+  .faq p{margin:0 0 16px;color:color-mix(in srgb,var(--sw-ink) 80%,var(--sw-ink-soft));}
+  .price{display:flex;align-items:baseline;gap:10px;margin:18px 0 6px;}
+  .price .amt{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(3rem,9vw,5.5rem);color:var(--sw-accent);line-height:1;text-shadow:0 0 40px color-mix(in srgb,var(--sw-accent) 50%,transparent);}
+  .price .per{font-size:1.2rem;color:var(--sw-ink-soft);font-weight:600;}
+  .ha-cta{margin-top:46px;text-align:center;border:1px solid color-mix(in srgb,var(--sw-accent) 40%,transparent);border-radius:22px;padding:clamp(30px,6vw,56px);background:radial-gradient(120% 130% at 50% 0%,color-mix(in srgb,var(--sw-accent) 22%,#0a0612),#0a0612);box-shadow:0 0 60px color-mix(in srgb,var(--sw-accent) 18%,transparent);}
+  .ha-cta h2{margin-bottom:14px;}
+  .ha-cta p{max-width:56ch;margin:0 auto 26px;}
+  .ha-btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1.05rem;padding:16px 34px;border-radius:999px;color:#0a0612;background:var(--sw-accent);box-shadow:0 8px 30px rgba(139,92,255,.6);transition:transform .2s,box-shadow .2s;}
+  .ha-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(139,92,255,.85);}
+  .ha-btn--ghost{color:#fff;background:transparent;border:1.6px solid rgba(255,255,255,.7);box-shadow:none;margin-left:10px;}
+  .ha-btn--ghost:hover{background:rgba(255,255,255,.12);}
   .ha-foot{margin-top:64px;text-align:center;color:var(--sw-ink-soft);font-size:.85rem;}
   .ha-foot a{color:var(--sw-accent);text-decoration:none;}
-  mark{background:color-mix(in srgb,var(--sw-accent) 30%,transparent);color:var(--sw-ink);padding:0 3px;border-radius:3px;}
-  @media (prefers-reduced-motion:reduce){ *{animation:none!important;} }
+  mark{background:color-mix(in srgb,var(--sw-accent) 35%,transparent);color:#fff;padding:0 4px;border-radius:3px;}
+  .proof{font-style:italic;color:var(--sw-ink-soft);border-left:3px solid var(--sw-accent);padding-left:14px;margin:14px 0;}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;}}
 </style>
 </head>
 <body>
-  <section id="world" aria-label="The AI Employee — scroll experience"></section>
+  <section id="world" aria-label="Dewey — your managed AI employee"></section>
 
   <div class="ha-after">
     <div class="ha-wrap">
       <hr class="ha-sep" />
-      <span class="eyebrow">The model, named</span>
-      <h2>Dewey — The Managed AI Employee</h2>
-      <p>Most businesses buy an AI tool and then have to run it. <mark>Dewey is the opposite: you buy a managed outcome, and the agent does the running.</mark> For a flat <strong>$5,000 per month</strong>, Dewey builds your client's bespoke AI agent, onboards it directly into their Slack, and handles their customer support after launch. You stop doing the work — you watch it get solved from your phone.</p>
+      <span class="eyebrow">The package</span>
+      <h2>Dewey — your $5,000/month managed AI employee</h2>
+      <p>You stop doing the delivery. <mark>Dewey is a managed AI agent that runs as an employee for your business or your client's</mark> — built, onboarded, and fulfilled, for one flat fee. No tool to configure. No hire to manage. Just work, done.</p>
 
-      <h3>What "managed" actually means</h3>
-      <p>A managed AI agent is not a chatbot you configure. It is a deployed system with one job: fulfill the client's work without you in the loop. Dewey scopes the client, builds their agent from your proven playbook, wires it into their team's actual communication channel (Slack), and then absorbs the day-to-day support load. <mark>The owner's role becomes oversight, not operation.</mark></p>
+      <div class="price"><span class="amt">$5,000</span><span class="per">/ month · per client</span></div>
+      <p class="proof">"This guy closes $5K/month managed agent clients and his AI agent does the fulfillment. His agent builds the client's agent, onboards it into their Slack, and handles the customer support after." — verified market proof, 2026-07-28</p>
 
-      <h3>The fulfillment architecture</h3>
-      <p>The reason this model holds up at $5k/mo is the four-layer build:</p>
-      <p><strong>1. Build.</strong> Dewey assembles the client's agent from your knowledge layer — not a generic template. One fact, one home.</p>
-      <p><strong>2. Onboard.</strong> The agent ships into the client's own Slack. Their team talks to it where they already work.</p>
-      <p><strong>3. Fulfill.</strong> The agent handles customer support and recurring tasks. Problems get solved without a human in the middle.</p>
-      <p><strong>4. Payoff.</strong> You collect $5,000/month per client, hands-off, while the agent compounds your delivery capacity.</p>
+      <h3>What you get for the $5k</h3>
+      <p><strong>1. Built.</strong> A bespoke AI employee assembled from your knowledge layer — not a generic template. One fact, one home.</p>
+      <p><strong>2. Onboarded.</strong> It lands inside your Slack on day one. Your team talks to it where they already work. Adoption is instant.</p>
+      <p><strong>3. Fulfilled.</strong> It handles customer support and recurring tasks. Problems get solved without you in the loop.</p>
+      <p><strong>4. Watched.</strong> Health monitoring with Telegram alerts. You see it work from your phone — not in it.</p>
 
-      <h3>Why it works now</h3>
-      <p>Managed-agent services are early, not saturated. The market is still explaining the model on podcasts — which means the first movers with a proven fulfillment layer win the category. <mark>Your edge is the knowledge layer: a real company context the agent operates from, not a prompt someone pasted into ChatGPT.</mark></p>
+      <h3>Why this beats hiring</h3>
+      <p>A hire costs more, quits, sleeps, and scales linearly. Dewey runs 24/7, costs a flat $5k, and <mark>your delivery capacity compounds because the agent does the fulfilling</mark>. The owner's role becomes oversight, not operation.</p>
+
+      <h3>Your unfair edge</h3>
+      <p>Most "AI agencies" resell paid tools (Orgo, Composio, agentmail) and bleed margin. Dewey is <strong>self-hosted on your own infrastructure</strong> — same result, higher margin, total control. That is the moat.</p>
 
       <div class="faq" id="faq">
         <h3>Frequently asked questions</h3>
-        <details>
-          <summary>What is a managed AI agent?</summary>
-          <p>A managed AI agent is a deployed AI system that performs a defined body of work for a client on an ongoing basis, operated by the provider rather than the client. With Dewey, Human Architect builds, hosts, and maintains the agent; the client pays a flat monthly fee and receives fulfilled work — not a tool to figure out themselves.</p>
+        <details open>
+          <summary>What exactly is a managed AI employee?</summary>
+          <p>A managed AI employee is a deployed AI system that performs a defined body of work for you on an ongoing basis — operated by us, not by you. You pay a flat monthly fee and receive fulfilled work, not a dashboard to figure out.</p>
         </details>
         <details>
-          <summary>How much does the AI Employee cost?</summary>
-          <p>The Dewey managed-agent service is priced at <strong>$5,000 per client per month</strong>. That single fee covers building the client's bespoke agent, onboarding it into their Slack, and handling their ongoing customer-support fulfillment.</p>
+          <summary>How much does Dewey cost?</summary>
+          <p><strong>$5,000 per client, per month.</strong> That single fee covers building your bespoke agent, onboarding it into your Slack, and handling ongoing customer-support fulfillment.</p>
         </details>
         <details>
           <summary>What does Dewey do after it is built?</summary>
-          <p>After launch, Dewey handles the client's customer support and recurring operational tasks from inside their Slack. The client's team gets answers and completed work in the channel they already use; you monitor outcomes rather than doing the work.</p>
+          <p>After launch it handles your customer support and recurring operational tasks from inside your Slack. Your team gets answers and completed work in the channel they already use; you monitor outcomes rather than doing the work.</p>
         </details>
         <details>
-          <summary>Do I need to be technical to sell managed agents?</summary>
-          <p>No. The offer is sold as a managed outcome. The technical fulfillment — building, onboarding, and maintaining the agent — is delivered by the system. Your job is to bring clients and oversee, not to write code.</p>
+          <summary>Do I need to be technical?</summary>
+          <p>No. The offer is sold as a managed outcome. The technical fulfillment — building, onboarding, and maintaining the agent — is delivered by the system. Your job is to own the client relationship, not to write code.</p>
         </details>
         <details>
-          <summary>How is this different from a chatbot or a no-code tool?</summary>
-          <p>A chatbot waits for prompts. A no-code tool waits for you to build the flow. Dewey is none of that: it is a managed employee that owns a recurring outcome for a client, wired into their real workspace, for a recurring fee. The difference is accountability — it is paid to deliver, not to be available.</p>
+          <summary>How is this different from a chatbot?</summary>
+          <p>A chatbot waits for prompts. Dewey is a managed employee that owns a recurring outcome for you, wired into your real workspace, for a recurring fee. The difference is accountability — it is paid to deliver, not to be available.</p>
         </details>
         <details>
           <summary>Who is this for?</summary>
-          <p>Founders, agencies, and operators who want recurring revenue from AI without being trapped in delivery. It is also for businesses that need their own agent built, onboarded, and supported without hiring a technical team.</p>
+          <p>Founders, agencies, and operators who want recurring revenue or hands-off fulfillment without being trapped in delivery. Also for businesses that need their own agent built, onboarded, and supported without hiring a technical team.</p>
         </details>
       </div>
 
       <div class="ha-cta">
         <span class="eyebrow">Start here</span>
         <h2>Get your managed AI employee</h2>
-        <p>Book a call and we will scope your first Dewey deployment — or your client's. Flat $5,000/month, built, onboarded, and fulfilled.</p>
-        <a class="ha-btn" href="https://beacons.ai/humanarchitect" target="_blank" rel="noopener">Book a call</a>
+        <p>Book a call. We scope your first Dewey deployment — built, onboarded, and fulfilled for a flat $5,000/month. Spots are limited; the category is early.</p>
+        <a class="ha-btn" href="https://beacons.ai/humanarchitect" target="_blank" rel="noopener">Book a call — $5k/mo</a>
         <a class="ha-btn ha-btn--ghost" href="https://substack.com/@humanarchitect" target="_blank" rel="noopener">Read the playbook</a>
       </div>
 
@@ -132,59 +134,59 @@
       sections: [
         {
           id: 'gap', label: 'The Gap',
-          accent: '#5b5170',
+          accent: '#C41E3A',
           still: 'assets/stills/s1.svg',
-          eyebrow: 'Where most businesses live',
-          title: 'You bought the AI tool. Nobody runs it.',
-          body: 'Every company now "has AI." Almost none have an agent that actually does the work. The tool sits idle while the founder stays in the loop, doing the delivery by hand. That gap — between owning AI and being run by it — is where money leaks.',
+          eyebrow: 'The problem you are paying for',
+          title: 'You bought the AI. Nobody runs it.',
+          body: 'Every company now "has AI." Almost none have an agent that actually does the work. The tool sits idle while you stay in the loop, doing the delivery by hand. That gap is where your margin leaks.',
           tags: ['Idle tools', 'Founder in the loop', 'Leaked margin']
         },
         {
-          id: 'build', label: 'Build',
-          accent: '#7A5CFF',
+          id: 'build', label: 'Built',
+          accent: '#8B5CFF',
           still: 'assets/stills/s2.svg',
-          eyebrow: 'Step one — the agent',
-          title: 'Dewey builds the client’s agent.',
-          body: 'Not a template. A bespoke AI employee assembled from your knowledge layer — one fact, one home. It is scoped to the client’s real work, not a demo. This is the managed part: you hand over an outcome, not a dashboard.',
+          eyebrow: 'Step 1 — the employee',
+          title: 'We build your agent.',
+          body: 'Not a template. A bespoke AI employee assembled from your knowledge layer — one fact, one home. Scoped to your real work, not a demo. You hand over an outcome; we hand back a worker.',
           tags: ['Bespoke build', 'Knowledge layer', 'Scoped to work'],
-          cta: { primary: { label: 'See the model', href: '#faq' }, secondary: { label: 'Book a call', href: 'https://beacons.ai/humanarchitect' } }
+          cta: { primary: { label: 'See the package', href: '#faq' }, secondary: { label: 'Book a call', href: 'https://beacons.ai/humanarchitect' } }
         },
         {
-          id: 'onboard', label: 'Onboard',
+          id: 'onboard', label: 'Onboarded',
           accent: '#9B7EBD',
           still: 'assets/stills/s3.svg',
-          eyebrow: 'Step two — into their world',
-          title: 'It lands inside their Slack.',
-          body: 'The agent onboards directly into the client’s own workspace. Their team talks to it where they already work — no new app, no training deck. Adoption is instant because it meets people in the channel they live in.',
-          tags: ['Slack-native', 'Zero training', 'Instant adoption']
+          eyebrow: 'Step 2 — into your world',
+          title: 'It lands in your Slack.',
+          body: 'The agent onboards directly into your workspace. Your team talks to it where they already work — no new app, no training deck. Adoption is instant because it meets people where they live.',
+          tags: ['Slack-native', 'Zero training', 'Day-one adoption']
         },
         {
-          id: 'fulfill', label: 'Fulfill',
-          accent: '#7A5CFF',
+          id: 'fulfill', label: 'Fulfilled',
+          accent: '#8B5CFF',
           still: 'assets/stills/s4.svg',
-          eyebrow: 'Step three — the loop closes',
-          title: 'The agent handles the support.',
+          eyebrow: 'Step 3 — the loop closes',
+          title: 'It handles the support.',
           body: 'After launch, Dewey absorbs customer support and recurring tasks. Problems get solved without a human in the middle. You watch client issues resolve from your phone — the work happens, and you are not in it.',
           tags: ['Hands-off support', 'Recurring tasks', 'You watch']
         },
         {
-          id: 'payoff', label: 'Payoff',
+          id: 'payoff', label: 'The Number',
           accent: '#27c93f',
           still: 'assets/stills/s5.svg',
-          eyebrow: 'The number that matters',
+          eyebrow: 'The only metric that matters',
           title: '$5,000 a month. Per client. Hands-off.',
-          body: 'Managed-agent clients pay a flat fee for a managed outcome. Your delivery capacity compounds because the agent does the fulfilling. The owner’s role becomes oversight, not operation. That is the whole point.',
+          body: 'Managed-agent clients pay a flat fee for a managed outcome. Your delivery capacity compounds because the agent does the fulfilling. The owner\'s role becomes oversight, not operation.',
           tags: ['Recurring revenue', 'Flat $5k/mo', 'Compounding capacity']
         },
         {
           id: 'finale', label: 'You, the Architect',
-          accent: '#7A5CFF',
+          accent: '#8B5CFF',
           still: 'assets/stills/s6.svg',
           eyebrow: 'The rebuild',
           title: 'You architect. The agent operates.',
           body: 'The common enemy is the weakness inside the loop — the founder trapped in delivery. Dewey removes you from the work so you can build the system. This is the managed-agent era, and the first movers with a real fulfillment layer own it.',
           tags: ['Own the system', 'First-mover', 'Agent era'],
-          cta: { primary: { label: 'Get Dewey', href: 'https://beacons.ai/humanarchitect' }, secondary: { label: 'Read the playbook', href: 'https://substack.com/@humanarchitect' } }
+          cta: { primary: { label: 'Get Dewey — $5k/mo', href: 'https://beacons.ai/humanarchitect' }, secondary: { label: 'Read the playbook', href: 'https://substack.com/@humanarchitect' } }
         }
       ]
     });
