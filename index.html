@@ -53,9 +53,12 @@
   .ha-after .eyebrow{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
   /* ---- text moved OUT of the video: the in-video copy overlay is hidden so the
        video shows 100% clean. All pitch copy lives in the .ha-after flow section
-       below the video (no card, no scrim, nothing over the footage). ---- */
-  .sw-copylayer{display:none !important;}
-  .sw-copy{display:none !important;}
+       below the video (no card, no scrim, nothing over the footage).
+       NOTE: the scroll-world engine injects its .sw-copy rules inside @layer sw,
+       which outranks plain unlayered rules here — so we scope under .sw-root AND
+       keep !important to win the cascade. ---- */
+  .sw-root .sw-copylayer,
+  .sw-root .sw-copy{display:none !important;}
   .ha-sep{height:1px;background:linear-gradient(90deg,transparent,var(--sw-accent),transparent);margin:64px 0 8px;border:0;}
   .faq details{border:1px solid color-mix(in srgb,var(--sw-accent) 28%,transparent);border-radius:14px;padding:0 18px;margin:12px 0;background:color-mix(in srgb,var(--sw-accent) 9%,#08060f);}
   .faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
