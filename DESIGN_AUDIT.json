@@ -1,0 +1,33 @@
+{
+  "persona": "visual-ux-designer",
+  "scores": {
+    "visual_hierarchy": 7,
+    "brand_cohesion": 8,
+    "typography": 7,
+    "mobile_ux": 5,
+    "emotional_tone": 8,
+    "cta_clarity": 8
+  },
+  "overall": 7,
+  "top_weakness": "Mobile: ~31MB of video fetched as full Blobs (incl. 1080p desktop connectors) with GOP 2.68-4.38s on hero/ads1/ads3 -> steppy scrubbing that breaks the signature 'camera flight' premium feel and burns cellular data.",
+  "top_3_fixes": [
+    {
+      "issue": "hero/ads1/ads3 encoded with GOP 2.68-4.38s (VIDEO_AUDIT FAIL). The engine scrubs currentTime on Blobs, so sparse keyframes force the decoder to seek to distant I-frames -> janky, steppy camera motion that undermines the Awwwards-grade 'fly-through' and looks cheap on phones.",
+      "fix": "Re-encode all dive clips with -g 24 -crf 23 -movflags +faststart (leave conn_* single-keyframe transitions as-is). Verified in VIDEO_AUDIT: hero 9.21MB->6.29MB, avg GOP 2.68s->0.80s. Cuts payload ~30% and makes scrubbing buttery.",
+      "effort": "medium",
+      "impact": "high"
+    },
+    {
+      "issue": "On phones connectorsMobile is omitted, so the engine falls back to the 1080p desktop conn_*.mp4 (5 x ~2.5-3.5MB ~= 13MB) -- heavier than the 720p dive clips and wasteful on cellular.",
+      "fix": "Add a connectorsMobile array in the mountScrollWorld config reusing the m/ dive encodes (or generate 720p connector variants) so phones pull lightweight transitions instead of 1080p masters.",
+      "effort": "low",
+      "impact": "medium"
+    },
+    {
+      "issue": "The <video> element has no poster attribute and the hero still is loading='lazy'; before the JS reveal fires or on slow decode there is a brief blank/black-frame risk, and segments within 1.6vh fetch their full 8-10MB Blob even when far off-screen.",
+      "fix": "Set poster=<still> on the <video> in loadClip (belt-and-suspenders over the JS still toggle) and make the first/hero still loading='eager' so above-the-fold is instant; tighten the prefetch gate from 1.6vh to ~1.0vh to curb off-screen Blob downloads.",
+      "effort": "low",
+      "impact": "medium"
+    }
+  ]
+}
