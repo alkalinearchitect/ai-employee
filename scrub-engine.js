@@ -110,7 +110,9 @@ function mountScrollWorld(container, config) {
   const topbar = el('div', 'sw-topbar');
   if (config.brand) {
     const brand = el('a', 'sw-brand'); brand.href = (config.brand.href || '#');
-    brand.appendChild(el('span', 'sw-brand__mark'));
+    const mark = el('span', 'sw-brand__mark');
+    mark.innerHTML = '<svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 3l5 6h-10l5-6z" fill="var(--sw-accent)"/><path d="M6 12c0-4 4.5-7 10-7s10 3 10 7v9c0 5-4.5 9-10 9s-10-4-10-9v-9z" fill="color-mix(in srgb,var(--sw-accent) 22%,#08060f)" stroke="var(--sw-accent)" stroke-width="1.6"/><circle cx="11.5" cy="13.5" r="3" fill="#08060f" stroke="var(--sw-accent)" stroke-width="1.4"/><circle cx="20.5" cy="13.5" r="3" fill="#08060f" stroke="var(--sw-accent)" stroke-width="1.4"/><circle cx="11.5" cy="13.5" r="1.1" fill="var(--sw-accent)"/><circle cx="20.5" cy="13.5" r="1.1" fill="var(--sw-accent)"/><path d="M16 17l-2.2 2.4h4.4L16 17z" fill="var(--sw-accent)"/><path d="M11 23c1.6-2 3.2-3 5-3s3.4 1 5 3" stroke="var(--sw-accent)" stroke-width="1.4" stroke-linecap="round" fill="none"/><path d="M13.5 9.5l-2-3M18.5 9.5l2-3" stroke="var(--sw-accent)" stroke-width="1.4" stroke-linecap="round"/></svg>';
+    brand.appendChild(mark);
     const nm = el('span', 'sw-brand__name'); nm.textContent = config.brand.name || ''; brand.appendChild(nm);
     topbar.appendChild(brand);
   }
@@ -374,7 +376,7 @@ function injectCSS() {
   .sw-scrollbar span{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--sw-accent);}
   .sw-topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(14px,2.4vw,26px) clamp(18px,5vw,64px);}
   .sw-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--sw-ink);}
-  .sw-brand__mark{width:24px;height:28px;border-radius:7px 7px 10px 10px;background:linear-gradient(160deg,var(--sw-accent),color-mix(in srgb,var(--sw-accent) 60%,#000));box-shadow:0 6px 14px color-mix(in srgb,var(--sw-accent) 40%,transparent);}
+  .sw-brand__mark{width:28px;height:28px;display:grid;place-items:center;filter:drop-shadow(0 4px 12px color-mix(in srgb,var(--sw-accent) 45%,transparent));}
   .sw-brand__name{font-family:var(--sw-font-display);font-weight:700;font-size:1.1rem;}
   .sw-nav{display:flex;gap:4px;padding:5px;background:color-mix(in srgb,#fff 55%,transparent);backdrop-filter:blur(10px);border:1px solid color-mix(in srgb,var(--sw-accent) 16%,transparent);border-radius:999px;}
   .sw-nav__item{font:inherit;font-size:.82rem;color:var(--sw-ink-soft);border:0;background:transparent;cursor:pointer;padding:7px 14px;border-radius:999px;transition:color .25s,background .25s;}
