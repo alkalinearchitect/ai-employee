@@ -208,6 +208,10 @@ function mountScrollWorld(container, config) {
         // painted — on iOS a seeked-but-never-played muted video stays blank, so
         // hiding the still on metadata alone would flash an empty scene.
         v.addEventListener('seeked', () => { s.el.classList.add('has-clip'); }, { once: true });
+        // Desktop fallback: reveal once decodable even if no seek has fired yet
+        // (e.g. parked at top of page). iOS stays gated on 'seeked' (canplay can
+        // fire before first paint there).
+        if (!isMobile()) v.addEventListener('canplay', () => { s.el.classList.add('has-clip'); }, { once: true });
         v.addEventListener('loadeddata', () => { try { v.pause(); } catch (e) {} if (userReady) primeVideo(v); });
         s.el.appendChild(v); s.video = v; s.hasClip = true;
       }).catch(() => { s.loading = false; });
