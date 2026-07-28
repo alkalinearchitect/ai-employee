@@ -29,6 +29,13 @@
   .ha-after h3{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(1.25rem,2.8vw,1.7rem);margin:46px 0 12px;}
   .ha-after p{color:color-mix(in srgb,var(--sw-ink) 88%,var(--sw-ink-soft));line-height:1.68;font-size:clamp(1rem,1.4vw,1.14rem);}
   .ha-after .eyebrow{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
+  /* ---- extra legibility scrim over the video so copy is always readable ---- */
+  .sw-copylayer::before{background:linear-gradient(90deg,color-mix(in srgb,var(--sw-bg) 92%,transparent) 0%,color-mix(in srgb,var(--sw-bg) 70%,transparent) 42%,transparent 78%) !important;}
+  .sw-copy__title{text-shadow:0 2px 24px color-mix(in srgb,var(--sw-bg) 92%,transparent),0 1px 3px rgba(0,0,0,.6) !important;}
+  .sw-copy__body{text-shadow:0 1px 14px color-mix(in srgb,var(--sw-bg) 95%,transparent),0 1px 2px rgba(0,0,0,.55) !important;}
+  @media (max-width:860px){
+    .sw-copylayer::before{width:100% !important;height:72% !important;top:auto !important;bottom:0 !important;background:linear-gradient(0deg,color-mix(in srgb,var(--sw-bg) 94%,transparent) 6%,color-mix(in srgb,var(--sw-bg) 72%,transparent) 50%,transparent 100%) !important;}
+  }
   .ha-sep{height:1px;background:linear-gradient(90deg,transparent,var(--sw-accent),transparent);margin:64px 0 8px;border:0;}
   .faq details{border:1px solid color-mix(in srgb,var(--sw-accent) 28%,transparent);border-radius:14px;padding:0 18px;margin:12px 0;background:color-mix(in srgb,var(--sw-accent) 9%,#08060f);}
   .faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}

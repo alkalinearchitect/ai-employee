@@ -200,15 +200,16 @@ function mountScrollWorld(container, config) {
       .then(blob => {
         const v = document.createElement('video');
         v.className = 'sw-scene__video';
-        v.muted = true; v.playsInline = true; v.preload = 'auto';
-        v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+        v.muted = true; v.playsInline = true; v.preload = 'auto'; v.autoplay = true;
+        v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('autoplay', '');
         v.src = URL.createObjectURL(blob);
         v.addEventListener('loadedmetadata', () => { s.ready = true; read(); });
-        // Reveal the video (hide the still poster) only once a real frame has
-        // painted — on iOS a seeked-but-never-played muted video stays blank, so
-        // hiding the still on metadata alone would flash an empty scene.
+        // Reveal the video (hide the still poster) once a real frame has painted.
+        // On iOS a seeked-but-never-played muted video stays blank, so we also
+        // prime the clip on load (muted play->pause) so the top frame paints
+        // immediately without waiting for a scroll or a user gesture.
         v.addEventListener('seeked', () => { s.el.classList.add('has-clip'); }, { once: true });
-        v.addEventListener('loadeddata', () => { try { v.pause(); } catch (e) {} if (userReady) primeVideo(v); });
+        v.addEventListener('loadeddata', () => { try { v.pause(); } catch (e) {} primeVideo(v); if (s.el.classList.contains('sw-scene--active')) s.el.classList.add('has-clip'); });
         s.el.appendChild(v); s.video = v; s.hasClip = true;
       }).catch(() => { s.loading = false; });
   }
