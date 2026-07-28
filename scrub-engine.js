@@ -198,19 +198,24 @@ function mountScrollWorld(container, config) {
     s.loading = true;
     // On slow/2G connections or when data-saver is on, prefer the lighter mobile encode.
     const slowConn = navigator.connection && (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g' || navigator.connection.saveData);
-    const url = slowConn || isMobile() && s.clipM ? s.clipM : s.clip;
+    const url = ((slowConn || isMobile()) && s.clipM) ? s.clipM : s.clip;
     const v = document.createElement('video');
     v.className = 'sw-scene__video';
     v.muted = true; v.playsInline = true; v.loop = true; v.preload = isMobile() ? 'metadata' : 'auto';
     v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('loop', '');
     if (s.still) v.poster = s.still;
     v.src = url;   // direct src — blob fetch was fragile and silently failed on some CDNs/browsers
-    v.addEventListener('loadedmetadata', () => { s.ready = true; s.el.classList.add('has-clip'); read(); });
+    v.addEventListener('loadedmetadata', () => { s.ready = true; read(); });
     // Reveal as soon as a frame is available (more reliable than waiting for 'seeked').
     v.addEventListener('loadeddata', () => {
-      s.el.classList.add('has-clip');
-      // Don't autoplay — raf() handles play/pause based on scene visibility
+      if (isMobile()) {
+        try { v.pause(); } catch (e) {}
+        if (userReady) primeVideo(v);
+      } else {
+        try { v.play().then(() => { v.pause(); v.currentTime = 0; }).catch(() => {}); } catch(e) {}
+      }
     });
+    v.addEventListener('seeked', () => { s.el.classList.add('has-clip'); }, { once: true });
     v.addEventListener('error', () => { s.loading = false; s.hasClip = false; });  // keep still as fallback
     s.el.appendChild(v); s.video = v; s.hasClip = true;
   }
@@ -301,7 +306,7 @@ function mountScrollWorld(container, config) {
   let userReady = false;
   function primeVideo(v) {
     if (!isMobile() || !v) return;
-    try { const p = v.play(); if (p && p.then) p.then(() => { try { v.pause(); } catch (e) {} }).catch(() => {}); }
+    try { const p = v.play(); if (p && p.then) p.then(() => { try { v.pause(); } catch (e) {} try { var sc = v.closest('.sw-scene'); if (sc) sc.classList.add('has-clip'); } catch(_) {} }).catch(() => {}); }
     catch (e) {}
   }
   function onFirstGesture() {
