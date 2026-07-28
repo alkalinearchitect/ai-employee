@@ -51,12 +51,29 @@
   .ha-after h3{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(1.25rem,2.8vw,1.7rem);margin:46px 0 12px;}
   .ha-after p{color:color-mix(in srgb,var(--sw-ink) 88%,var(--sw-ink-soft));line-height:1.68;font-size:clamp(1rem,1.4vw,1.14rem);}
   .ha-after .eyebrow{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
-  /* ---- text moved OUT of the video: the in-video copy overlay is hidden so the
-       video shows 100% clean. All pitch copy lives in the .ha-after flow section
-       below the video (no card, no scrim, nothing over the footage).
-       NOTE: the scroll-world engine injects its .sw-copy rules inside @layer sw,
-       which outranks plain unlayered rules here — so we scope under .sw-root AND
-       keep !important to win the cascade. ---- */
+  /* ---- FIRST-VIEW HERO CARD (normal DOM, immune to engine @layer sw) ------
+       The engine's in-video copy is hidden (see .sw-root .sw-copy rule below) because
+       it blocked the video. This normal DOM card carries the headline + CTA instead.
+       It docks at the bottom of the FIRST screen, is small, and scrolls away naturally
+       with the page — so it never sits over the .ha-after pitch below, and the video
+       stays visible everywhere outside the card. ---- */
+  .ha-hero{
+    position:absolute; top:calc(100vh - 210px); left:50%; transform:translateX(-50%);
+    z-index:40; width:min(680px,calc(100vw - 28px));
+    background:rgba(8,6,15,.82);
+    border:1px solid color-mix(in srgb,var(--sw-accent) 38%,transparent);
+    border-radius:18px; padding:16px 20px 18px; text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,.45);
+    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  }
+  .ha-hero__eyebrow{display:block;font:700 .72rem/1.2 ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);margin-bottom:6px;}
+  .ha-hero__title{font:700 clamp(1.15rem,3.4vw,1.7rem)/1.1 ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;color:var(--sw-ink);margin:0 0 6px;letter-spacing:-.01em;}
+  .ha-hero__sub{margin:0 0 12px;color:color-mix(in srgb,var(--sw-ink) 82%,var(--sw-ink-soft));font-size:.95rem;line-height:1.45;}
+  .ha-hero__btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;padding:11px 24px;border-radius:999px;color:#08060f;background:var(--sw-accent);box-shadow:0 6px 22px rgba(122,92,255,.6);transition:transform .2s;}
+  .ha-hero__btn:hover{transform:translateY(-1px);}
+  @media (max-width:520px){ .ha-hero{top:calc(100vh - 180px);padding:13px 14px 15px;} }
+  /* ---- the engine's in-video copy overlay is hidden so the video is never blocked.
+       Scoped under .sw-root + !important to beat the engine's @layer sw cascade. ---- */
   .sw-root .sw-copylayer,
   .sw-root .sw-copy{display:none !important;}
   .ha-sep{height:1px;background:linear-gradient(90deg,transparent,var(--sw-accent),transparent);margin:64px 0 8px;border:0;}
@@ -87,6 +104,14 @@
   <div id="top"></div>
   <div id="world"></div>
   <div class="ha-word">Owl — your $5,000/month managed AI employee. Built. Onboarded. Fulfilled. You watch from your phone.</div>
+
+  <!-- FIRST-VIEW HERO: compact card, visible on landing, scrolls away after 1 screen. Normal DOM element — not the engine copy layer. -->
+  <div class="ha-hero" role="banner">
+    <span class="ha-hero__eyebrow">Your $5,000/month managed AI employee</span>
+    <h1 class="ha-hero__title">Owl builds, onboards &amp; fulfills your AI agent.</h1>
+    <p class="ha-hero__sub">Built. Onboarded. Fulfilled. You watch from your phone.</p>
+    <a class="ha-hero__btn" href="https://beacons.ai/humanarchitect" target="_blank" rel="noopener">Book a call — $5k/mo</a>
+  </div>
 
   <script src="scrub-engine.js"></script>
   <script>
