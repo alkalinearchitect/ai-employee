@@ -208,12 +208,6 @@ function mountScrollWorld(container, config) {
         // painted — on iOS a seeked-but-never-played muted video stays blank, so
         // hiding the still on metadata alone would flash an empty scene.
         v.addEventListener('seeked', () => { s.el.classList.add('has-clip'); }, { once: true });
-        // Universal reveal: once the first frame is decoded+painted (loadeddata,
-        // where we already pause) reveal the video on every device including iOS,
-        // so a parked top-of-page view still shows the clip instead of the still.
-        // (canplay is NOT used on iOS — it can fire before the first paint.)
-        v.addEventListener('loadeddata', () => { s.el.classList.add('has-clip'); }, { once: true });
-        if (!isMobile()) v.addEventListener('canplay', () => { s.el.classList.add('has-clip'); }, { once: true });
         v.addEventListener('loadeddata', () => { try { v.pause(); } catch (e) {} if (userReady) primeVideo(v); });
         s.el.appendChild(v); s.video = v; s.hasClip = true;
       }).catch(() => { s.loading = false; });

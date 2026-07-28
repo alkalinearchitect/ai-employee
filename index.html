@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -9,59 +9,144 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Dewey — Your $5,000/Month Managed AI Employee" />
 <meta property="og:description" content="A managed AI employee that fulfills client work for $5k/mo. Built, onboarded into Slack, support handled. You watch from your phone." />
-<meta property="og:image" content="assets/stills/s5.svg" />
+<meta property="og:image" content="assets/hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Dewey — Your $5,000/Month Managed AI Employee" />
 <meta name="twitter:description" content="A managed AI employee that fulfills client work for $5k/mo. Built, onboarded, support handled. You watch from your phone." />
-<meta name="twitter:image" content="assets/stills/s5.svg" />
+<meta name="twitter:image" content="assets/hero.jpg" />
 <link rel="canonical" href="https://alkalinearchitect.github.io/ai-employee/" />
 <style>
-  :root{
-    --sw-bg:#0a0612; --sw-ink:#ffffff; --sw-ink-soft:#b9aee0; --sw-accent:#8B5CFF;
-    --sw-accent-2:#27c93f;
-    --sw-font-display:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;
-    --sw-font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+  :root, .sw-root {
+    --sw-bg:#08060f; --sw-ink:#f4f1fb; --sw-ink-soft:#9a8fc0; --sw-accent:#7A5CFF;
   }
-  html,body{margin:0;background:var(--sw-bg);color:var(--sw-ink);font-family:var(--sw-font-body);-webkit-font-smoothing:antialiased;}
-  #world{
-    --sw-bg:#0a0612; --sw-ink:#ffffff; --sw-ink-soft:#b9aee0; --sw-accent:#8B5CFF;
-    --sw-font-display:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;
-    --sw-font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
-    min-height:100vh;
-  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--sw-bg); }
+  #world { min-height: 100vh; }
+  .ha-word { position: fixed; bottom: 12px; left: 14px; z-index: 50; font: 10px/1.4 -apple-system, system-ui, sans-serif; color: #7a6ca8; background: #140e26cc; border: 1px solid #2a2142; padding: 7px 11px; border-radius: 9px; letter-spacing: .3px; }
   .ha-after{position:relative;z-index:5;background:color-mix(in srgb,var(--sw-bg) 86%,transparent);padding:0 0 120px;}
   .ha-wrap{max-width:1000px;margin:0 auto;padding:0 clamp(18px,5vw,48px);}
-  .ha-after h2{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.04;margin:0 0 10px;letter-spacing:-.02em;}
-  .ha-after h3{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(1.25rem,2.8vw,1.7rem);margin:46px 0 12px;}
+  .ha-after h2{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.04;margin:0 0 10px;letter-spacing:-.02em;}
+  .ha-after h3{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(1.25rem,2.8vw,1.7rem);margin:46px 0 12px;}
   .ha-after p{color:color-mix(in srgb,var(--sw-ink) 88%,var(--sw-ink-soft));line-height:1.68;font-size:clamp(1rem,1.4vw,1.14rem);}
-  .ha-after .eyebrow{font-family:var(--sw-font-display);font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
+  .ha-after .eyebrow{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
   .ha-sep{height:1px;background:linear-gradient(90deg,transparent,var(--sw-accent),transparent);margin:64px 0 8px;border:0;}
-  .faq details{border:1px solid color-mix(in srgb,var(--sw-accent) 28%,transparent);border-radius:14px;padding:0 18px;margin:12px 0;background:color-mix(in srgb,var(--sw-accent) 9%,#0a0612);}
+  .faq details{border:1px solid color-mix(in srgb,var(--sw-accent) 28%,transparent);border-radius:14px;padding:0 18px;margin:12px 0;background:color-mix(in srgb,var(--sw-accent) 9%,#08060f);}
   .faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
   .faq summary::-webkit-details-marker{display:none;}
   .faq summary::after{content:"+";color:var(--sw-accent);font-size:1.5rem;line-height:1;}
   .faq details[open] summary::after{content:"–";}
   .faq p{margin:0 0 16px;color:color-mix(in srgb,var(--sw-ink) 80%,var(--sw-ink-soft));}
   .price{display:flex;align-items:baseline;gap:10px;margin:18px 0 6px;}
-  .price .amt{font-family:var(--sw-font-display);font-weight:700;font-size:clamp(3rem,9vw,5.5rem);color:var(--sw-accent);line-height:1;text-shadow:0 0 40px color-mix(in srgb,var(--sw-accent) 50%,transparent);}
+  .price .amt{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(3rem,9vw,5.5rem);color:var(--sw-accent);line-height:1;text-shadow:0 0 40px color-mix(in srgb,var(--sw-accent) 50%,transparent);}
   .price .per{font-size:1.2rem;color:var(--sw-ink-soft);font-weight:600;}
-  .ha-cta{margin-top:46px;text-align:center;border:1px solid color-mix(in srgb,var(--sw-accent) 40%,transparent);border-radius:22px;padding:clamp(30px,6vw,56px);background:radial-gradient(120% 130% at 50% 0%,color-mix(in srgb,var(--sw-accent) 22%,#0a0612),#0a0612);box-shadow:0 0 60px color-mix(in srgb,var(--sw-accent) 18%,transparent);}
+  .ha-cta{margin-top:46px;text-align:center;border:1px solid color-mix(in srgb,var(--sw-accent) 40%,transparent);border-radius:22px;padding:clamp(30px,6vw,56px);background:radial-gradient(120% 130% at 50% 0%,color-mix(in srgb,var(--sw-accent) 22%,#08060f),#08060f);box-shadow:0 0 60px color-mix(in srgb,var(--sw-accent) 18%,transparent);}
   .ha-cta h2{margin-bottom:14px;}
   .ha-cta p{max-width:56ch;margin:0 auto 26px;}
-  .ha-btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1.05rem;padding:16px 34px;border-radius:999px;color:#0a0612;background:var(--sw-accent);box-shadow:0 8px 30px rgba(139,92,255,.6);transition:transform .2s,box-shadow .2s;}
-  .ha-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(139,92,255,.85);}
+  .ha-btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1.05rem;padding:16px 34px;border-radius:999px;color:#08060f;background:var(--sw-accent);box-shadow:0 8px 30px rgba(122,92,255,.6);transition:transform .2s,box-shadow .2s;}
+  .ha-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(122,92,255,.85);}
   .ha-btn--ghost{color:#fff;background:transparent;border:1.6px solid rgba(255,255,255,.7);box-shadow:none;margin-left:10px;}
   .ha-btn--ghost:hover{background:rgba(255,255,255,.12);}
   .ha-foot{margin-top:64px;text-align:center;color:var(--sw-ink-soft);font-size:.85rem;}
   .ha-foot a{color:var(--sw-accent);text-decoration:none;}
   mark{background:color-mix(in srgb,var(--sw-accent) 35%,transparent);color:#fff;padding:0 4px;border-radius:3px;}
-
   .proof{font-style:italic;color:var(--sw-ink-soft);border-left:3px solid var(--sw-accent);padding-left:14px;margin:14px 0;}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;}}
 </style>
 </head>
 <body>
-  <section id="world" aria-label="Dewey — your managed AI employee"></section>
+  <div id="top"></div>
+  <div id="world"></div>
+  <div class="ha-word">Dewey — your $5,000/month managed AI employee. Built. Onboarded. Fulfilled. You watch from your phone.</div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: 'Dewey', href: '#top' },
+      cta: { label: 'Book a call', href: 'https://beacons.ai/humanarchitect' },
+      hint: 'scroll to fly through',
+      diveScroll: 1.25,
+      connScroll: 0.7,
+      atmosphere: true,
+      nav: true,
+      sections: [
+        {
+          id: 'gap', label: 'The Gap',
+          still: 'assets/hero.jpg',
+          clip: 'assets/vid/hero.mp4',
+          clipMobile: 'assets/vid/m/hero.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'The problem you are paying for',
+          title: 'You bought the AI. Nobody runs it.',
+          body: 'Every company now "has AI." Almost none have an agent that actually does the work. The tool sits idle while you stay in the loop, doing the delivery by hand. That gap is where your margin leaks.',
+          tags: ['Idle tools', 'Founder in the loop', 'Leaked margin'],
+          cta: { primary: { label: 'See the package', href: '#faq' }, secondary: { label: 'Book a call', href: 'https://beacons.ai/humanarchitect' } }
+        },
+        {
+          id: 'build', label: 'Built',
+          still: 'assets/ads1.jpg',
+          clip: 'assets/vid/ads1.mp4',
+          clipMobile: 'assets/vid/m/ads1.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'Step 1 — the employee',
+          title: 'We build your agent.',
+          body: 'Not a template. A bespoke AI employee assembled from your knowledge layer — one fact, one home. Scoped to your real work, not a demo. You hand over an outcome; we hand back a worker.',
+          tags: ['Bespoke build', 'Knowledge layer', 'Scoped to work']
+        },
+        {
+          id: 'onboard', label: 'Onboarded',
+          still: 'assets/ads2.jpg',
+          clip: 'assets/vid/ads2.mp4',
+          clipMobile: 'assets/vid/m/ads2.mp4',
+          accent: '#9B7EBD',
+          eyebrow: 'Step 2 — into your world',
+          title: 'It lands in your Slack.',
+          body: 'The agent onboards directly into your workspace. Your team talks to it where they already work — no new app, no training deck. Adoption is instant because it meets people where they live.',
+          tags: ['Slack-native', 'Zero training', 'Day-one adoption']
+        },
+        {
+          id: 'fulfill', label: 'Fulfilled',
+          still: 'assets/ads3.jpg',
+          clip: 'assets/vid/ads3.mp4',
+          clipMobile: 'assets/vid/m/ads3.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'Step 3 — the loop closes',
+          title: 'It handles the support.',
+          body: 'After launch, Dewey absorbs customer support and recurring tasks. Problems get solved without a human in the middle. You watch client issues resolve from your phone — the work happens, and you are not in it.',
+          tags: ['Hands-off support', 'Recurring tasks', 'You watch']
+        },
+        {
+          id: 'payoff', label: 'The Number',
+          still: 'assets/ads1.jpg',
+          clip: 'assets/vid/ads1.mp4',
+          clipMobile: 'assets/vid/m/ads1.mp4',
+          accent: '#27c93f',
+          eyebrow: 'The only metric that matters',
+          title: '$5,000 a month. Per client. Hands-off.',
+          body: 'Managed-agent clients pay a flat fee for a managed outcome. Your delivery capacity compounds because the agent does the fulfilling. The owner\'s role becomes oversight, not operation.',
+          tags: ['Recurring revenue', 'Flat $5k/mo', 'Compounding capacity']
+        },
+        {
+          id: 'finale', label: 'You, the Architect',
+          still: 'assets/hero.jpg',
+          clip: 'assets/vid/hero.mp4',
+          clipMobile: 'assets/vid/m/hero.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'The rebuild',
+          title: 'You architect. The agent operates.',
+          body: 'The common enemy is the weakness inside the loop — the founder trapped in delivery. Dewey removes you from the work so you can build the system. This is the managed-agent era, and the first movers with a real fulfillment layer own it.',
+          tags: ['Own the system', 'First-mover', 'Agent era'],
+          cta: { primary: { label: 'Get Dewey — $5k/mo', href: 'https://beacons.ai/humanarchitect' }, secondary: { label: 'Read the playbook', href: 'https://substack.com/@humanarchitect' } }
+        }
+      ],
+      connectors: [
+        'assets/vid/conn_hero_ads1.mp4',
+        'assets/vid/conn_ads1_ads2.mp4',
+        'assets/vid/conn_ads2_ads3.mp4',
+        'assets/vid/conn_ads1_ads2.mp4',
+        'assets/vid/conn_hero_ads1.mp4'
+      ],
+    });
+  </script>
 
   <div class="ha-after">
     <div class="ha-wrap">
@@ -124,94 +209,5 @@
       <p class="ha-foot">Built by <a href="https://alkalinearchitect.github.io/human-architect-site/" target="_blank" rel="noopener">Human Architect</a>. Dewey is a managed AI-agent service. Results depend on the client and the engagement; no income is guaranteed.</p>
     </div>
   </div>
-
-  <script src="scroll-world-engine.js"></script>
-  <script>
-    mountScrollWorld(document.getElementById('world'), {
-      brand: { name: 'Human Architect', href: '#world' },
-      hint: 'scroll',
-      nav: true,
-      atmosphere: true,
-      diveScroll: 1.25,
-      connScroll: 0.7,
-      connectors: [
-        'assets/vid/conn_hero_ads1.mp4',
-        'assets/vid/conn_ads1_ads2.mp4',
-        'assets/vid/conn_ads2_ads3.mp4',
-        'assets/vid/conn_ads1_ads2.mp4',
-        'assets/vid/conn_hero_ads1.mp4'
-      ],
-      sections: [
-        {
-          id: 'gap', label: 'The Gap',
-          accent: '#C41E3A',
-          still: 'assets/stills/s1.svg',
-          clip: 'assets/vid/hero.mp4',
-          clipMobile: 'assets/vid/m/hero.mp4',
-          eyebrow: 'The problem you are paying for',
-          title: 'You bought the AI. Nobody runs it.',
-          body: 'Every company now "has AI." Almost none have an agent that actually does the work. The tool sits idle while you stay in the loop, doing the delivery by hand. That gap is where your margin leaks.',
-          tags: ['Idle tools', 'Founder in the loop', 'Leaked margin']
-        },
-        {
-          id: 'build', label: 'Built',
-          accent: '#8B5CFF',
-          still: 'assets/stills/s2.svg',
-          clip: 'assets/vid/ads1.mp4',
-          clipMobile: 'assets/vid/m/ads1.mp4',
-          eyebrow: 'Step 1 — the employee',
-          title: 'We build your agent.',
-          body: 'Not a template. A bespoke AI employee assembled from your knowledge layer — one fact, one home. Scoped to your real work, not a demo. You hand over an outcome; we hand back a worker.',
-          tags: ['Bespoke build', 'Knowledge layer', 'Scoped to work'],
-          cta: { primary: { label: 'See the package', href: '#faq' }, secondary: { label: 'Book a call', href: 'https://beacons.ai/humanarchitect' } }
-        },
-        {
-          id: 'onboard', label: 'Onboarded',
-          accent: '#9B7EBD',
-          still: 'assets/stills/s3.svg',
-          clip: 'assets/vid/ads2.mp4',
-          clipMobile: 'assets/vid/m/ads2.mp4',
-          eyebrow: 'Step 2 — into your world',
-          title: 'It lands in your Slack.',
-          body: 'The agent onboards directly into your workspace. Your team talks to it where they already work — no new app, no training deck. Adoption is instant because it meets people where they live.',
-          tags: ['Slack-native', 'Zero training', 'Day-one adoption']
-        },
-        {
-          id: 'fulfill', label: 'Fulfilled',
-          accent: '#8B5CFF',
-          still: 'assets/stills/s4.svg',
-          clip: 'assets/vid/ads3.mp4',
-          clipMobile: 'assets/vid/m/ads3.mp4',
-          eyebrow: 'Step 3 — the loop closes',
-          title: 'It handles the support.',
-          body: 'After launch, Dewey absorbs customer support and recurring tasks. Problems get solved without a human in the middle. You watch client issues resolve from your phone — the work happens, and you are not in it.',
-          tags: ['Hands-off support', 'Recurring tasks', 'You watch']
-        },
-        {
-          id: 'payoff', label: 'The Number',
-          accent: '#27c93f',
-          still: 'assets/stills/s5.svg',
-          clip: 'assets/vid/ads1.mp4',
-          clipMobile: 'assets/vid/m/ads1.mp4',
-          eyebrow: 'The only metric that matters',
-          title: '$5,000 a month. Per client. Hands-off.',
-          body: 'Managed-agent clients pay a flat fee for a managed outcome. Your delivery capacity compounds because the agent does the fulfilling. The owner\'s role becomes oversight, not operation.',
-          tags: ['Recurring revenue', 'Flat $5k/mo', 'Compounding capacity']
-        },
-        {
-          id: 'finale', label: 'You, the Architect',
-          accent: '#8B5CFF',
-          still: 'assets/stills/s6.svg',
-          clip: 'assets/vid/hero.mp4',
-          clipMobile: 'assets/vid/m/hero.mp4',
-          eyebrow: 'The rebuild',
-          title: 'You architect. The agent operates.',
-          body: 'The common enemy is the weakness inside the loop — the founder trapped in delivery. Dewey removes you from the work so you can build the system. This is the managed-agent era, and the first movers with a real fulfillment layer own it.',
-          tags: ['Own the system', 'First-mover', 'Agent era'],
-          cta: { primary: { label: 'Get Dewey — $5k/mo', href: 'https://beacons.ai/humanarchitect' }, secondary: { label: 'Read the playbook', href: 'https://substack.com/@humanarchitect' } }
-        }
-      ]
-    });
-  </script>
 </body>
 </html>
