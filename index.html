@@ -80,12 +80,14 @@
   .sw-root .sw-copy{
     position:absolute; left:clamp(18px,5vw,64px); right:auto;
     top:auto; bottom:clamp(28px,7vh,74px); transform:none !important;
-    width:min(44vw,480px); padding:0;
+    width:min(36vw,380px); padding:0;
     background:transparent;
     border:none;
     box-shadow:none;
     backdrop-filter:none; -webkit-backdrop-filter:none;
   }
+  .sw-root .sw-copy__body{font-size:clamp(.88rem,1.1vw,1rem);max-width:34ch;}
+  .sw-root .sw-copy__title{font-size:clamp(1.6rem,3.4vw,2.4rem);}
   .sw-root .sw-copylayer::before{background:transparent !important;}
 
   @media (max-width:860px){

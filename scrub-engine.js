@@ -267,15 +267,25 @@ function mountScrollWorld(container, config) {
   }
 
   function raf() {
-    const eps = isMobile() ? 0.02 : 0.008;   // coarser seek step on phones = fewer decodes
+    const eps = isMobile() ? 0.02 : 0.008;
+    // Find the most visible scene (highest opacity)
+    let activeScene = null, bestOp = -1;
+    for (let i = 0; i < NSEG; i++) {
+      const s = SEGMENTS[i];
+      const op = parseFloat(s.el.style.opacity) || 0;
+      if (op > bestOp) { bestOp = op; activeScene = s; }
+    }
     for (let i = 0; i < NSEG; i++) {
       const s = SEGMENTS[i];
       if (!s.hasClip || !s.ready || !s.video) continue;
-      // Never queue a seek while the decoder is still resolving the last one.
-      // On phones a fast flick would otherwise pile up seeks and freeze the clip;
-      // cur keeps lerping, so we snap to the latest target the moment it's free.
       if (s.video.seeking) continue;
-      if (!s.visible && Math.abs(s.cur - s.target) < 0.002) continue;
+      // Only play the active scene's video; pause all others to save decode cost
+      if (s !== activeScene && s.visible) {
+        if (!s.video.paused) { try { s.video.pause(); } catch(e){} }
+        continue;
+      }
+      if (s !== activeScene && !s.visible && Math.abs(s.cur - s.target) < 0.002) continue;
+      if (s === activeScene && s.video.paused) { try { const p=s.video.play(); if(p&&p.catch)p.catch(()=>{}); } catch(e){} }
       s.cur += (s.target - s.cur) * (reduce ? 1 : 0.18);
       const dur = s.video.duration || 1;
       const t = clamp(s.cur, 0, 0.999) * dur;
