@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Owl — Managed AI Employee for UK Businesses | £5k/Month</title>
+<meta name="description" content="A managed AI employee that delivers real work — not a dashboard. Built, onboarded, fulfilled. One flat £5k/month." />
+<meta name="author" content="Owl" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Owl — A Managed AI Employee" />
+<meta property="og:description" content="Built, onboarded, fulfilled. One AI employee in your Slack for a flat £5k/month." />
+<meta property="og:image" content="https://alkalinearchitect.github.io/ai-employee/assets/hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Owl — £5k/month Managed AI Employee" />
+<meta name="twitter:description" content="Built, onboarded, fulfilled. One flat price." />
+<meta name="twitter:image" content="https://alkalinearchitect.github.io/ai-employee/assets/hero.jpg" />
+<link rel="canonical" href="https://alkalinearchitect.github.io/ai-employee/" />
+<meta name="theme-color" content="#08060f" />
+<meta name="robots" content="index, follow" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237A5CFF'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='700' font-size='20' fill='%23fff'>O</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "name":"Owl Managed AI Employee",
+  "description":"A managed AI employee built, onboarded, and fulfilled for your business for a flat £5,000/month.",
+  "brand":{"@type":"Brand","name":"Owl"},
+  "offers":{"@type":"Offer","price":"5000","priceCurrency":"GBP","priceSpecification":{"@type":"UnitPriceSpecification","price":"5000","priceCurrency":"GBP","unitText":"per client per month"},"availability":"https://schema.org/InStock"},
+  "knowsAbout":["managed AI employee","AI agent fulfillment","Slack automation","AI agency","business process automation","Fulfillment Layer","knowledge layer","managed agent"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is a managed AI employee and how much does it cost?","acceptedAnswer":{"@type":"Answer","text":"A managed AI employee is a deployed AI system that owns a defined body of work for you on an ongoing basis — built, onboarded, and fulfilled by us for one flat £5,000 per client, per month."}},
+    {"@type":"Question","name":"How is this different from a chatbot?","acceptedAnswer":{"@type":"Answer","text":"A chatbot waits for prompts. Owl owns a recurring outcome inside your workspace, under a flat monthly fee. It is paid to deliver, not to be available."}},
+    {"@type":"Question","name":"Do I need to be technical?","acceptedAnswer":{"@type":"Answer","text":"No. We handle the build, onboarding, and ongoing support. You tell us what work you want off your plate, then watch it happen."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://***@type":"Organization","name":"Owl","url":"https://alkalinearchitect.github.io/ai-employee/","description":"Managed AI employee — £5,000/month. Built, onboarded, fulfilled.","parentOrganization":{"@type":"Organization","name":"Human Architect"}}
+</script>
+<style>
+  :root, .sw-root { --sw-bg:#08060f; --sw-ink:#f4f1fb; --sw-ink-soft:#9a8fc0; --sw-accent:#7A5CFF; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--sw-bg); }
+  #world { min-height: 100vh; }
+  .ha-word { position: fixed; bottom: 12px; left: 14px; z-index: 50; font: 10px/1.4 -apple-system, system-ui, sans-serif; color: #9a8fc0; background: #140e26cc; border: 1px solid #2a2142; padding: 7px 11px; border-radius: 9px; letter-spacing: .3px; }
+  .ha-after{position:relative;z-index:30;background:color-mix(in srgb,var(--sw-bg) 86%,transparent);padding:0 0 120px;}
+  .ha-wrap{max-width:1000px;margin:0 auto;padding:0 clamp(18px,5vw,48px);}
+  .ha-after h2{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.04;margin:0 0 10px;letter-spacing:-.02em;}
+  .ha-after h3{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(1.25rem,2.8vw,1.7rem);margin:46px 0 12px;}
+  .ha-after p{color:color-mix(in srgb,var(--sw-ink) 88%,var(--sw-ink-soft));line-height:1.68;font-size:clamp(1rem,1.4vw,1.14rem);}
+  .ha-after .eyebrow{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sw-accent);display:block;margin-bottom:6px;}
+  .sw-root .sw-copylayer{display:block !important;}
+  .sw-root .sw-copy{display:block !important;}
+  .sw-root .sw-copy{
+    position:absolute; left:clamp(18px,5vw,64px); right:auto;
+    top:auto; bottom:clamp(28px,7vh,74px); transform:none !important;
+    width:min(36vw,380px); padding:18px 20px;
+    background:linear-gradient(180deg,rgba(8,6,15,0.15) 0%,rgba(8,6,15,0.55) 50%,rgba(8,6,15,0.85) 100%);
+    border:none; box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none;
+  }
+  .sw-root .sw-copy__body{font-size:clamp(.88rem,1.1vw,1rem);max-width:34ch;text-shadow:0 1px 3px rgba(0,0,0,.6);}
+  .sw-root .sw-copy__title{font-size:clamp(1.6rem,3.4vw,2.4rem);text-shadow:0 2px 8px rgba(0,0,0,.5);}
+  .sw-root .sw-copylayer::before{background:transparent !important;}
+  @media (max-width:860px){
+    .sw-root .sw-copy{left:clamp(14px,4vw,24px);right:clamp(14px,4vw,24px);width:auto;bottom:clamp(56px,12dvh,110px);padding:14px 16px;}
+  }
+  .ha-sep{height:1px;background:linear-gradient(90deg,transparent,var(--sw-accent),transparent);margin:64px 0 8px;border:0;}
+  .faq details{border:1px solid color-mix(in srgb,var(--sw-accent) 28%,transparent);border-radius:14px;padding:0 18px;margin:12px 0;background:color-mix(in srgb,var(--sw-accent) 9%,#08060f);}
+  .faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";color:var(--sw-accent);font-size:1.5rem;line-height:1;}
+  .faq details[open] summary::after{content:"–";}
+  .faq p{margin:0 0 16px;color:color-mix(in srgb,var(--sw-ink) 80%,var(--sw-ink-soft));}
+  .price{display:flex;align-items:baseline;gap:10px;margin:18px 0 6px;}
+  .price .amt{font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(3rem,9vw,5.5rem);color:var(--sw-accent);line-height:1;text-shadow:0 0 40px color-mix(in srgb,var(--sw-accent) 50%,transparent);}
+  .price .per{font-size:1.2rem;color:var(--sw-ink-soft);font-weight:600;}
+  .ha-cta{margin-top:46px;text-align:center;border:1px solid color-mix(in srgb,var(--sw-accent) 40%,transparent);border-radius:22px;padding:clamp(30px,6vw,56px);background:radial-gradient(120% 130% at 50% 0%,color-mix(in srgb,var(--sw-accent) 22%,#08060f),#08060f);box-shadow:0 0 60px color-mix(in srgb,var(--sw-accent) 18%,transparent);}
+  .ha-cta h2{margin-bottom:14px;}
+  .ha-cta p{max-width:56ch;margin:0 auto 26px;}
+  .ha-btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1.05rem;padding:16px 34px;border-radius:999px;color:#08060f;background:var(--sw-accent);box-shadow:0 8px 30px rgba(122,92,255,.6);transition:transform .2s,box-shadow .2s;}
+  .ha-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(122,92,255,.85);}
+  .ha-btn--ghost{color:#fff;background:transparent;border:1.6px solid rgba(255,255,255,.7);box-shadow:none;margin-left:10px;}
+  .ha-foot{margin-top:64px;text-align:center;color:var(--sw-ink-soft);font-size:.85rem;}
+  .ha-foot a{color:var(--sw-accent);text-decoration:none;}
+  mark{background:color-mix(in srgb,var(--sw-accent) 35%,transparent);color:#fff;padding:0 4px;border-radius:3px;}
+  .proof{font-style:italic;color:var(--sw-ink-soft);border-left:3px solid var(--sw-accent);padding-left:14px;margin:14px 0;}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;}}
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+  <noscript>
+    <div style="max-width:640px;margin:0 auto;padding:80px 24px;text-align:center;color:#f4f1fb;font-family:system-ui,sans-serif">
+      <h1 style="font-size:2rem;color:#7A5CFF;margin:0 0 16px">Owl — Your Managed AI Employee</h1>
+      <p style="font-size:1.1rem;line-height:1.6;color:#9a8fc0">A managed AI employee that ships your work. Built, onboarded, and fulfilled for a flat £5,000/month. No tool to configure. No hire to babysit. It ships the work; you own the result.</p>
+      <p style="margin-top:32px"><a href="https://beacons.ai/humanarchitect" style="color:#7A5CFF;font-weight:600">Book a call →</a></p>
+    </div>
+  </noscript>
+  <div class="ha-word">Owl — your £5k/month managed AI employee. Built. Onboarded. Fulfilled. You watch from your phone.</div>
+
+  <script src="scrub-engine.js?v=v4final"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: 'Owl', href: '#top' },
+      cta: { label: 'Book a call', href: 'https://beacons.ai/humanarchitect' },
+      hint: 'scroll to fly through',
+      diveScroll: 1.25,
+      connScroll: 0.7,
+      atmosphere: true,
+      nav: true,
+      sections: [
+        {
+          id: 'gap', label: 'The Gap',
+          still: 'assets/hero.jpg',
+          clip: 'assets/vid/hero.mp4',
+          clipMobile: 'assets/vid/m/hero.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'The fulfillment gap',
+          title: 'You bought the AI. Nobody runs it.',
+          body: 'Most operators have AI. Almost none have an agent that ships. **The tool sits idle while you do the delivery by hand — and your margin bleeds out through that gap every single week.** You do not have an AI problem. You have a fulfillment problem.',
+          tags: ['Idle tools', 'Manual delivery', 'Bleeding margin'],
+          cta: { primary: { label: 'Get Owl — £5k/mo', href: '#faq' }, secondary: { label: 'Book a call', href: 'https://beacons.ai/humanarchitect' } }
+        },
+        {
+          id: 'build', label: 'Built',
+          still: 'assets/ads1.jpg',
+          clip: 'assets/vid/ads1.mp4',
+          clipMobile: 'assets/vid/m/ads1.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'Step 1 — Build',
+          title: 'We forge your operator.',
+          body: 'Not a template. **A bespoke AI employee assembled from your knowledge layer — one fact, one system — scoped to the outcome you actually sell, not a demo that dies in a week.** You hand over the work; we hand back a worker that delivers it. Most "AI builds" are toys that quietly stop working. This one ships, and it keeps shipping.',
+          tags: ['Custom build', 'One source of truth', 'Ships the work']
+        },
+        {
+          id: 'onboard', label: 'Onboarded',
+          still: 'assets/ads2.jpg',
+          clip: 'assets/vid/ads2.mp4',
+          clipMobile: 'assets/vid/m/ads2.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'Step 2 — Onboard',
+          title: 'It lands in your Slack.',
+          body: 'The agent drops into your Slack on day one. Your team talks to it where work already happens. No new app. **Adoption is instant because it meets people where they live, not where you wish they would.** An agent in the channel is leverage. A tool in a tab is not.',
+          tags: ['Slack-native', 'Zero training', 'Day-one adoption']
+        },
+        {
+          id: 'fulfill', label: 'Fulfilled',
+          still: 'assets/ads3.jpg',
+          clip: 'assets/vid/ads3.mp4',
+          clipMobile: 'assets/vid/m/ads3.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'Step 3 — Fulfill',
+          title: 'It runs the support.',
+          body: 'After launch, Owl handles customer support and daily tasks end to end. Problems close without a human in the middle. **Client issues resolve from your phone. The work happens, and you are nowhere near it.** This is the part that compounds while you sleep.',
+          tags: ['Hands-off support', 'Daily tasks', 'Compounds while you sleep']
+        },
+        {
+          id: 'payoff', label: 'The Number',
+          still: 'assets/payoff.jpg',
+          clip: 'assets/vid/payoff.mp4',
+          clipMobile: 'assets/vid/m/payoff.mp4',
+          accent: '#27c93f',
+          eyebrow: 'The only metric',
+          title: '£5,000 a month. Per client. Hands-off.',
+          body: '**£5,000 a month. Per client. Hands-off.** Your delivery capacity compounds because the agent does the fulfilling — every client makes you more, not busier. A salary caps your growth at the speed of one hire. **Owl removes the cap.**',
+          tags: ['Recurring revenue', 'Flat £5k/mo', 'Compounding capacity']
+        },
+        {
+          id: 'finale', label: 'You, the Operator',
+          still: 'assets/finale.jpg',
+          clip: 'assets/vid/finale.mp4',
+          clipMobile: 'assets/vid/m/finale.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'The handoff',
+          title: 'You brief. The agent delivers.',
+          body: 'The AI agent era belongs to operators who delegate, not do. Owl pulls you out of delivery so you run the system instead of staffing it. **The first operators to move on this will own the category. The window is open now, not later.** Most will watch. The operator moves. Bring one workflow to a 20-minute call.',
+          tags: ['Own the system', 'First-mover', 'Agent era'],
+          cta: { primary: { label: 'Get Owl — £5k/mo', href: 'https://beacons.ai/humanarchitect' } }
+        }
+      ],
+    });
+  </script>
+
+  <div class="ha-after">
+    <div class="ha-wrap">
+      <hr class="ha-sep" />
+      <span class="eyebrow">The package</span>
+      <h2>Owl — your £5,000/month managed AI employee</h2>
+      <p>Owl is an AI employee that does the work for you. We build it. It lands in your Slack. It handles support and daily tasks. You watch it run from your phone. One flat price. No surprises.</p>
+
+      <div class="price"><span class="amt">£5,000</span><span class="per">/ month · per client</span></div>
+      <p class="proof"><strong>"Operators are closing £5K/month clients while their agents handle the build, onboarding, and support. We'll show you how on the call."</strong></p>
+
+      <h3>What you get</h3>
+      <ol style="padding-left:1.4em;color:color-mix(in srgb,var(--sw-ink) 88%,var(--sw-ink-soft));line-height:1.8;font-size:1.02rem;">
+        <li><strong>A custom AI employee.</strong> Built for your exact work. Not a template that fits nobody.</li>
+        <li><strong>It lives in your Slack.</strong> Your team talks to it where they already work. No new app to learn.</li>
+        <li><strong>It handles the support.</strong> Customer questions get answered. Problems get solved. You're not in the middle.</li>
+        <li><strong>You watch from your phone.</strong> Health alerts go to Telegram. You see it working. You're free to be anywhere.</li>
+      </ol>
+
+      <h3>The Fulfillment Layer — your moat</h3>
+      <p><strong>Most "AI agencies" resell paid tools and pass those costs straight to you. Owl runs self-hosted on your own infrastructure — no per-seat vendor fees, no lock-in, total control.</strong> That is the moat. Three parts make it real: <strong>(1)</strong> the agent is built from your knowledge, not a template; <strong>(2)</strong> it lives in your Slack, where work already happens; <strong>(3)</strong> it closes support without you in the loop.</p>
+
+      <div class="faq" id="faq">
+        <h3>Questions people ask</h3>
+        <details open>
+          <summary>What is a managed AI employee and how much does it cost?</summary>
+          <p><strong>A managed AI employee is a deployed AI system that owns a defined body of work for you on an ongoing basis — built, onboarded, and fulfilled by us for one flat £5,000 per client, per month.</strong> You receive completed work, not a dashboard to figure out.</p>
+        </details>
+        <details>
+          <summary>How is this different from a chatbot?</summary>
+          <p><strong>A chatbot waits for prompts. Owl owns a recurring outcome inside your workspace, under a flat monthly fee.</strong> It is paid to deliver, not to be available.</p>
+        </details>
+        <details>
+          <summary>Do I need to know tech?</summary>
+          <p>No. You don't touch code. You don't configure anything. We handle all of that. Your job is to tell us what work you want off your plate, then watch it happen.</p>
+        </details>
+        <details>
+          <summary>How soon can it be live?</summary>
+          <p>Within 48 hours of a signed agreement and intake material.</p>
+        </details>
+        <details>
+          <summary>What if it doesn't work?</summary>
+          <p>If it misses the agreed target by day 30, you get a partial refund. We only win if you get value.</p>
+        </details>
+      </div>
+
+      <div class="ha-cta">
+        <span class="eyebrow">Ready?</span>
+        <h2>Let's build your AI employee</h2>
+        <p>Book a call. Tell us what work you want off your plate. We'll scope it, build it, and get it running in your Slack. Flat £5,000 a month. No obligation.</p>
+        <ul style="max-width:56ch;margin:0 auto 26px;text-align:left;color:color-mix(in srgb,var(--sw-ink) 88%,var(--sw-ink-soft));line-height:1.7;font-size:1.02rem;">
+          <li><strong>1. We scope your first agent</strong> — you tell us the work, we figure out the rest.</li>
+          <li><strong>2. You see a live demo</strong> — not slides. A real agent doing real work.</li>
+          <li><strong>3. You get a flat £5k/mo price</strong> — no surprises, no pressure.</li>
+        </ul>
+        <a class="ha-btn" href="https://beacons.ai/humanarchitect" target="_blank" rel="noopener">Book a call — £5k/mo</a>
+      </div>
+
+      <div class="ha-foot">
+        <p>Owl is part of Human Architect. Built on Hermes + Orgo. UK-first, UK-hosted where required.</p>
+        <p><a href="https://beacons.ai/humanarchitect">Book a call</a> · <a href="https://alkalinearchitect.github.io/ai-employee/">Home</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
