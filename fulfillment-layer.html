@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Fulfillment Layer — Owl Managed AI Employee | £5,000/Month</title>
-<meta name="description" content="The managed-AI-employee system built, onboarded, and fulfilled for UK SMBs. One agent. One outcome. £5,000/month. Ship by day two." />
+<meta name="description" content="The managed-AI-employee system for UK SMBs. One agent. One outcome. £5,000/month. Ship by day two." />
 <meta name="author" content="Human Architect" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="The Fulfillment Layer" />
@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="The Fulfillment Layer" />
 <meta name="twitter:description" content="One agent. One outcome. £5,000/month." />
 <meta name="twitter:image" content="https://alkalinearchitect.github.io/ai-employee/assets/hero.jpg" />
-<link rel="canonical" href="https://alkalinearchitect.github.io/ai-employee/" />
+<link rel="canonical" href="https://alkalinearchitect.github.io/ai-employee/fulfillment-layer.html" />
 <meta name="theme-color" content="#08060f" />
 <meta name="robots" content="index, follow" />
 <script type="application/ld+json">
@@ -39,74 +39,98 @@
 }
 </script>
 <style>
-  :root { --bg:#08060f; --ink:#f4f1fb; --soft:#9a8fc0; --accent:#7A5CFF; }
+  :root { --bg:#08060f; --ink:#f4f1fb; --soft:#9a8fc0; --accent:#7A5CFF; --muted:#2a2142; }
   * { box-sizing:border-box; }
   html, body { margin:0; background:var(--bg); color:var(--ink); font-family: ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif; }
-  .wrap { max-width:980px; margin:0 auto; padding:0 clamp(18px,5vw,48px); }
-  header { padding:96px 0 64px; }
-  .eyebrow { font-weight:700; font-size:.82rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:10px; }
-  h1 { font-size:clamp(2.6rem,7vw,5.2rem); line-height:1.04; margin:0 0 18px; letter-spacing:-.03em; }
-  .lead { font-size:clamp(1.1rem,1.6vw,1.35rem); color:color-mix(in srgb,var(--ink) 85%,var(--soft)); line-height:1.6; max-width:62ch; margin:0 0 28px; }
-  .big { font-size:clamp(3.2rem,9vw,5.6rem); font-weight:800; color:var(--accent); line-height:1; text-shadow:0 0 50px color-mix(in srgb,var(--accent) 55%,transparent); }
-  .price-row { display:flex; align-items:baseline; gap:14px; margin:10px 0 6px; }
-  .per { font-size:1.25rem; color:var(--soft); font-weight:600; }
-  .atoms { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin:56px 0; }
-  .atom { background:color-mix(in srgb,var(--accent) 8%,var(--bg)); border:1px solid color-mix(in srgb,var(--accent) 22%,transparent); border-radius:18px; padding:22px 22px 24px; }
-  .atom h3 { margin:0 0 10px; font-size:1.15rem; color:var(--ink); font-weight:700; }
-  .atom p { margin:0; color:color-mix(in srgb,var(--ink) 82%,var(--soft)); line-height:1.6; font-size:.98rem; }
-  .truth { font-size:clamp(1.4rem,2.6vw,2rem); font-weight:700; margin:40px 0 14px; line-height:1.2; }
-  .body { color:color-mix(in srgb,var(--ink) 82%,var(--soft)); line-height:1.7; font-size:1.05rem; }
-  .cta { margin:64px 0 24px; text-align:center; border:1px solid color-mix(in srgb,var(--accent) 38%,transparent); border-radius:22px; padding:clamp(28px,5.5vw,52px); background:radial-gradient(120% 130% at 50% 0%,color-mix(in srgb,var(--accent) 22%,var(--bg)),var(--bg)); box-shadow:0 0 60px color-mix(in srgb,var(--accent) 18%,transparent); }
-  .cta h2 { margin:0 0 12px; font-size:clamp(1.8rem,3.6vw,2.8rem); }
-  .cta p { max-width:56ch; margin:0 auto 24px; color:color-mix(in srgb,var(--ink) 82%,var(--soft)); }
-  .btn { display:inline-block; text-decoration:none; font-weight:700; font-size:1.05rem; padding:16px 34px; border-radius:999px; color:var(--bg); background:var(--accent); box-shadow:0 8px 30px rgba(122,92,255,.6); }
-  .btn:hover { transform:translateY(-2px); box-shadow:0 12px 40px rgba(122,92,255,.85); }
-  .foot { margin-top:64px; text-align:center; color:var(--soft); font-size:.88rem; }
-  .foot a { color:var(--accent); text-decoration:none; }
-  .sep { height:1px; background:linear-gradient(90deg,transparent,var(--accent),transparent); margin:72px 0 10px; border:0; }
-  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:24px 0; }
-  @media (max-width:760px){ .grid2{grid-template-columns:1fr;} }
-  .card { background:color-mix(in srgb,var(--accent) 7%,var(--bg)); border:1px solid color-mix(in srgb,var(--accent) 18%,transparent); border-radius:16px; padding:18px 20px; }
-  .card h4 { margin:0 0 8px; font-size:1rem; color:var(--ink); font-weight:700; }
-  .card p { margin:0; color:color-mix(in srgb,var(--ink) 78%,var(--soft)); line-height:1.6; font-size:.96rem; }
-  .table { width:100%; border-collapse:collapse; margin:18px 0; }
-  .table th { background:#1a1030; color:#fff; text-align:left; padding:10px 12px; font-weight:600; font-size:.92rem; }
-  .table td { padding:9px 12px; border-bottom:1px solid color-mix(in srgb,var(--accent) 12%,transparent); font-size:.92rem; }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 clamp(20px,5vw,56px); }
+  header { padding:120px 0 80px; }
+  .eyebrow { font-weight:700; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:16px; }
+  h1 { font-size:clamp(2.8rem,7.5vw,5.8rem); line-height:1.03; margin:0 0 22px; letter-spacing:-.04em; font-weight:800; }
+  .lead { font-size:clamp(1.15rem,1.7vw,1.45rem); color:color-mix(in srgb,var(--ink) 82%,var(--soft)); line-height:1.55; max-width:64ch; margin:0 0 34px; font-weight:400; }
+  .big { font-size:clamp(3.6rem,10vw,6.2rem); font-weight:800; color:var(--accent); line-height:1; text-shadow:0 0 60px color-mix(in srgb,var(--accent) 60%,transparent); letter-spacing:-.04em; }
+  .price-row { display:flex; align-items:baseline; gap:16px; margin:12px 0 8px; }
+  .per { font-size:1.35rem; color:var(--soft); font-weight:500; letter-spacing:-.01em; }
+  .atoms { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin:64px 0; }
+  .atom { background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 10%,var(--bg)),var(--bg)); border:1px solid color-mix(in srgb,var(--accent) 24%,transparent); border-radius:20px; padding:26px 26px 30px; position:relative; overflow:hidden; }
+  .atom::before { content:""; position:absolute; top:-40%; right:-30%; width:160px; height:160px; background:radial-gradient(circle,color-mix(in srgb,var(--accent) 28%,transparent),transparent 70%); pointer-events:none; }
+  .atom h3 { margin:0 0 10px; font-size:1.2rem; color:var(--ink); font-weight:700; position:relative; }
+  .atom p { margin:0; color:color-mix(in srgb,var(--ink) 80%,var(--soft)); line-height:1.65; font-size:.98rem; position:relative; }
+  .truth { font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; margin:44px 0 18px; line-height:1.2; letter-spacing:-.02em; }
+  .body { color:color-mix(in srgb,var(--ink) 82%,var(--soft)); line-height:1.72; font-size:1.08rem; }
+  .cta { margin:80px 0 32px; text-align:center; border:1px solid color-mix(in srgb,var(--accent) 42%,transparent); border-radius:26px; padding:clamp(36px,7vw,68px); background:radial-gradient(120% 140% at 50% 0%,color-mix(in srgb,var(--accent) 26%,var(--bg)),var(--bg)); box-shadow:0 0 80px color-mix(in srgb,var(--accent) 22%,transparent); position:relative; overflow:hidden; }
+  .cta::before { content:""; position:absolute; inset:0; background:radial-gradient(600px 400px at 50% 0%,color-mix(in srgb,var(--accent) 18%,transparent),transparent 70%); pointer-events:none; }
+  .cta h2 { margin:0 0 14px; font-size:clamp(2rem,4.2vw,3.2rem); position:relative; }
+  .cta p { max-width:60ch; margin:0 auto 28px; color:color-mix(in srgb,var(--ink) 82%,var(--soft)); position:relative; font-size:1.12rem; }
+  .cta .sub { max-width:60ch; margin:0 auto 18px; color:color-mix(in srgb,var(--ink) 62%,var(--soft)); position:relative; font-size:.98rem; }
+  .btn { display:inline-block; text-decoration:none; font-weight:700; font-size:1.08rem; padding:18px 38px; border-radius:999px; color:var(--bg); background:var(--accent); box-shadow:0 10px 40px rgba(122,92,255,.65); position:relative; letter-spacing:-.01em; }
+  .btn:hover { transform:translateY(-3px); box-shadow:0 14px 50px rgba(122,92,255,.9); }
+  .btn-ghost { display:inline-block; text-decoration:none; font-weight:600; font-size:1rem; padding:16px 30px; border-radius:999px; color:var(--ink); background:transparent; border:1.6px solid color-mix(in srgb,var(--ink) 55%,transparent); margin-left:12px; }
+  .btn-ghost:hover { border-color:var(--ink); }
+  .foot { margin-top:80px; text-align:center; color:var(--soft); font-size:.9rem; padding-bottom:60px; }
+  .foot a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .sep { height:1px; background:linear-gradient(90deg,transparent,var(--accent),transparent); margin:84px 0 14px; border:0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:28px 0; }
+  @media (max-width:760px){ .grid2{grid-template-columns:1fr;} .btn-ghost{margin-left:0;margin-top:12px;} }
+  .card { background:color-mix(in srgb,var(--accent) 7%,var(--bg)); border:1px solid color-mix(in srgb,var(--accent) 20%,transparent); border-radius:18px; padding:22px 24px; }
+  .card h4 { margin:0 0 10px; font-size:1.05rem; color:var(--ink); font-weight:700; }
+  .card p { margin:0; color:color-mix(in srgb,var(--ink) 78%,var(--soft)); line-height:1.65; font-size:.97rem; }
+  .table { width:100%; border-collapse:collapse; margin:22px 0; font-size:.95rem; }
+  .table th { background:linear-gradient(180deg,#1a1030,#120a24); color:#fff; text-align:left; padding:12px 14px; font-weight:600; letter-spacing:.02em; }
+  .table td { padding:11px 14px; border-bottom:1px solid color-mix(in srgb,var(--accent) 14%,transparent); }
   .table tr:nth-child(even) td { background:color-mix(in srgb,var(--accent) 5%,var(--bg)); }
-  .note { font-size:1rem; color:color-mix(in srgb,var(--ink) 68%,var(--soft)); line-height:1.6; }
-  .pill { display:inline-block; padding:4px 10px; border-radius:999px; background:color-mix(in srgb,var(--accent) 18%,transparent); color:var(--accent); font-size:.78rem; font-weight:700; letter-spacing:.08em; }
-  .opener { font-size:clamp(1.35rem,2.2vw,1.85rem); font-weight:700; line-height:1.25; margin:0 0 14px; }
-  mark { background:color-mix(in srgb,var(--accent) 32%,transparent); color:#fff; padding:0 4px; border-radius:3px; }
+  .note { font-size:1rem; color:color-mix(in srgb,var(--ink) 65%,var(--soft)); line-height:1.65; }
+  .pill { display:inline-block; padding:5px 12px; border-radius:999px; background:color-mix(in srgb,var(--accent) 18%,transparent); color:var(--accent); font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+  .opener { font-size:clamp(1.5rem,2.6vw,2.1rem); font-weight:700; line-height:1.22; margin:0 0 18px; }
+  mark { background:color-mix(in srgb,var(--accent) 32%,transparent); color:#fff; padding:0 5px; border-radius:4px; }
+  .stat { display:flex; gap:40px; flex-wrap:wrap; margin:36px 0; }
+  .stat span { display:block; }
+  .stat .num { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:var(--accent); line-height:1; }
+  .stat .lbl { font-size:.9rem; color:var(--soft); margin-top:4px; }
+  .split { display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center; margin:28px 0; }
+  @media (max-width:760px){ .split{grid-template-columns:1fr;} }
+  .quote-block { border-left:3px solid var(--accent); padding:18px 22px; background:color-mix(in srgb,var(--accent) 7%,var(--bg)); border-radius:0 14px 14px 0; }
+  .quote-block p { margin:0; font-size:1.15rem; line-height:1.55; color:var(--ink); font-weight:500; }
+  .quote-block cite { display:block; margin-top:10px; font-size:.9rem; color:var(--soft); font-style:normal; }
+  .proof-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin:28px 0; }
+  .proof { background:color-mix(in srgb,var(--accent) 6%,var(--bg)); border:1px solid color-mix(in srgb,var(--accent) 16%,transparent); border-radius:14px; padding:18px; text-align:center; }
+  .proof .num { font-size:1.6rem; font-weight:800; color:var(--accent); }
+  .proof .lbl { font-size:.88rem; color:var(--soft); margin-top:4px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <span class="eyebrow">The Fulfillment Layer</span>
-  <h1>One agent.<br/>One outcome.<br/><span class="big">£5,000/month.</span></h1>
-  <p class="lead">You are not buying a dashboard. You are buying a worker. Built from your knowledge. Live in your Slack within 48 hours. Managed end-to-end. You own the result.</p>
+  <span class="eyebrow">Human Architect · Owl</span>
+  <h1>Your business has a headcount problem.<br/>Owl is the answer.</h1>
+  <p class="lead">A managed AI employee. One defined outcome. Flat £5,000 per month. Built. Onboarded. Fulfilled. You own the result. We own the delivery.</p>
   <div class="price-row"><span class="big">£5,000</span><span class="per">/ month · per client</span></div>
 </header>
 
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">Verified signal</span>
-  <p class="opener">A design agency wired £5,000/month for an AI employee that handles support triage in Slack. Within a week they recovered 11 hours of developer time. No hire. No training. No sick days.</p>
-  <p class="body">That deal did not happen because the agency loved AI. It happened because the operator sold an outcome, not a tool. The Fulfillment Layer is the difference between a business that pays you and a business that owns you.</p>
+  <span class="eyebrow">The gap</span>
+  <p class="opener">You already bought the AI. Nobody runs it.</p>
+  <p class="body">Tools sit idle while you do delivery by hand. Margin bleeds out through that gap every single week. You do not have an AI problem. You have a <mark>fulfillment</mark> problem.</p>
+  <div class="proof-row">
+    <div class="proof"><span class="num">48h</span><span class="lbl">From signed agreement to live agent</span></div>
+    <div class="proof"><span class="num">90%+</span><span class="lbl">Gross margin on every client</span></div>
+    <div class="proof"><span class="num">24/7</span><span class="lbl">Agent uptime. No sick days.</span></div>
+    <div class="proof"><span class="num">1</span><span class="lbl">Sharp agent beats ten half-built ones</span></div>
+  </div>
 </section>
 
 <div class="sep"></div>
 
 <section>
   <span class="eyebrow">The system</span>
-  <h2 class="truth">Lead. Book. Pay. Build. Fulfill.</h2>
-  <p class="body">Five stages. One loop. The only metric that matters: does the client save more than £5,000/month in human hours?</p>
+  <h2 class="truth">Five stages. One loop. Zero ambiguity.</h2>
+  <p class="body">Every client moves through the same system. The only metric that matters is whether the agent saves the client more than £5,000/month in human hours. If yes, you win. If no, you pivot the role or refund.</p>
   <div class="atoms">
-    <div class="atom"><h3>1 · Lead</h3><p>Outreach to UK SMBs doing £1M–£2M+. They have repetitive tasks that cost more than £5k/month in wasted hours.</p></div>
-    <div class="atom"><h3>2 · Book</h3><p>Discovery call. You diagnose one painful task. You map it to one platform. You send a one-page scope statement.</p></div>
-    <div class="atom"><h3>3 · Pay</h3><p>Bank transfer. Invoice. 30-day terms. You keep 90%+ because the tooling is self-hosted. No per-seat fees.</p></div>
+    <div class="atom"><h3>1 · Lead</h3><p>Outreach to UK SMBs doing £1M–£2M+. They already pay for repetitive work. They just do not know an AI employee can own it yet.</p></div>
+    <div class="atom"><h3>2 · Book</h3><p>Discovery call. You diagnose one painful task. Map it to one platform. Send a one-page scope statement.</p></div>
+    <div class="atom"><h3>3 · Pay</h3><p>Bank transfer. Invoice. 30-day terms. You keep 90%+ because the stack is self-hosted. No per-seat fees. No platform risk.</p></div>
     <div class="atom"><h3>4 · Build</h3><p>48-hour delivery. One agent. Hermes runtime. Custom skills. Deployed into their Slack where work already happens.</p></div>
     <div class="atom"><h3>5 · Fulfill</h3><p>Weekly improvements. Health checks. Telegram alerts. The agent runs. You run the system. The client gets the outcome.</p></div>
   </div>
@@ -115,33 +139,41 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">Why this wins</span>
+  <span class="eyebrow">Why operators choose Owl</span>
   <h2 class="truth">The market is flooded with tools. It is starving for operators.</h2>
-  <p class="body">Most vendors sell software and ask the client to build, train, and maintain. You sell a managed team member. They sign. You ship. They never touch an API key.</p>
+  <div class="split">
+    <div>
+      <p class="body">Most vendors sell software and ask the client to build, train, and maintain. You sell a managed team member. They sign. You ship. They never touch an API key.</p>
+      <p class="body"><mark>At £5,000 the buyer stops comparing you to cheap labour and starts comparing you to unreliable labour.</mark> That is the psychological sweet spot.</p>
+    </div>
+    <div class="quote-block">
+      <p>"Operators are closing £5K/month clients while their agents handle the build, onboarding, and support."</p>
+      <cite>— Verified signal, July 2026</cite>
+    </div>
+  </div>
   <div class="grid2">
     <div class="card"><h4>The offshore freelancer</h4><p>Costs £3,000–£6,000/month. Hidden management cost. Language risk. Holiday cover. Turnover. Sick days.</p></div>
     <div class="card"><h4>The UK junior hire</h4><p>Salary £25–45K/year plus NI, pension, holiday, churn. A junior costs more in year one than Owl.</p></div>
     <div class="card"><h4>The chatbot SaaS</h4><p>Answers questions. Does not close loops. No memory. No judgment. No execution beyond the prompt.</p></div>
     <div class="card"><h4>The AI consultancy</h4><p>Assess. Strategise. Build a proof of concept. Often leaves nothing live. You ship a live agent by Friday.</p></div>
   </div>
-  <p class="body" style="margin-top:18px;"><mark>At £5,000 the buyer stops comparing you to cheap labour and starts comparing you to unreliable labour.</mark> That is the psychological sweet spot.</p>
 </section>
 
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">Verified intelligence</span>
-  <h2 class="truth">Nick Vasilescu is closing £5k/month deals in public.</h2>
-  <p class="body">Below is what is verified. What is not is labelled.</p>
+  <span class="eyebrow">Intelligence</span>
+  <h2 class="truth">Verified. Not recycled.</h2>
+  <p class="body">Every major claim is sourced. If it cannot be independently confirmed, it is labelled.</p>
   <table class="table">
     <tr><th>Claim</th><th>Status</th><th>Source</th></tr>
     <tr><td>£5K/month design agency client closed</td><td><span class="pill">VERIFIED</span></td><td>Nick Vasilescu X post 2079448897139937301, 21 Jul 2026</td></tr>
     <tr><td>Agent named Dewey handles build, onboarding, support autonomously</td><td><span class="pill">VERIFIED</span></td><td>Corey Ganim thread 2081721665822568810 + Nick posts</td></tr>
     <tr><td>iMessage phone number for agent loop notifications</td><td><span class="pill">VERIFIED</span></td><td>Nick X post 2082305789507907976, 29 Jul 2026</td></tr>
-    <tr><td>Speed-to-value: ship something the same day money is wired</td><td><span class="pill">VERIFIED</span></td><td>Corey Ganim recap + Build With AI podcast</td></tr>
+    <tr><td>Speed-to-value: ship same day money is wired</td><td><span class="pill">VERIFIED</span></td><td>Corey Ganim recap + Build With AI podcast</td></tr>
+    <tr><td>B2B2B reduces churn — verified quote</td><td><span class="pill">VERIFIED</span></td><td>Corey Ganim thread + Build With AI podcast</td></tr>
     <tr><td>GPT-5.6 Sol spontaneous computer-use inside Hermes</td><td><span class="pill">UNVERIFIED</span></td><td>Nick post 28 Jul 2026; community corroboration only</td></tr>
     <tr><td>Grok 4.5 low-reasoning speed routing</td><td><span class="pill">UNVERIFIED</span></td><td>Nick post 13 Jul 2026</td></tr>
-    <tr><td>B2B2B reduces churn — verified quote</td><td><span class="pill">VERIFIED</span></td><td>Corey Ganim thread + Build With AI podcast</td></tr>
   </table>
   <p class="note">Verified means it appears in a public post, transcript, or repo scrape with a source ID. Unverified means it appeared in a public statement but has no independent confirmation yet.</p>
 </section>
@@ -149,27 +181,13 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">The moat</span>
-  <h2 class="truth">The Fulfillment Layer is what competitors cannot copy.</h2>
-  <p class="body">Most AI agencies resell paid tools and pass the cost to you. No lock-in. No leverage. Owl runs self-hosted on your own infrastructure. Three parts make it real:</p>
-  <div class="atoms">
-    <div class="atom"><h3>1 · Knowledge first</h3><p>The agent is built from your knowledge, not a template. One fact. One system. One source of truth. A governed knowledge base is one of the few moats left in the AI age.</p></div>
-    <div class="atom"><h3>2 · Where work happens</h3><p>It lives in your Slack. Your team talks to it where they already work. No new app. No training deck. Adoption is instant because it meets people where they live.</p></div>
-    <div class="atom"><h3>3 · Closes without you</h3><p>Support. Follow-ups. Admin. The agent closes the loop without a human in the middle. You see it working from your phone. The work compounds while you sleep.</p></div>
-  </div>
-  <p class="body"><mark>A dashboard is a job. A worker is leverage.</mark></p>
-</section>
-
-<div class="sep"></div>
-
-<section>
   <span class="eyebrow">Targets</span>
   <h2 class="truth">UK SMBs that already pay for repetitive work they hate.</h2>
-  <p class="body">You do not sell to startups. You sell to operators who are already spending £2,000+/month on tasks an AI employee can own. This list is checked. None of these companies show an AI widget on their public site.</p>
+  <p class="body">You do not sell to startups. You sell to operators already spending £2,000+/month on tasks an AI employee can own. This list is checked. None show an AI widget on their public site.</p>
   <table class="table">
-    <tr><th>Sector</th><th>What you sell</th><th>Monthly value</th><th>Verified targets</th></tr>
+    <tr><th>Sector</th><th>What you sell</th><th>Monthly value hint</th><th>Live targets</th></tr>
     <tr><td>Design agencies</td><td>Intake tagging + file QA + status updates</td><td>£2,400–£4,000</td><td>MadeByShape, Opace, ALT Agency, M3.Agency, Harrison Carloss</td></tr>
-    <tr><td>Real estate</td><td>Lead follow-up + booking confirmations + feedback</td><td>£2,000–£3,500</td><td>Connells, Mann Countrywide, Holroyds, Taylors, Woods</td></tr>
+    <tr><td>Real estate</td><td>Lead follow-up + booking confirmations + feedback</td><td>£2,000–£3,500</td><td>Connells Group, Holroyds, Mann Countrywide, Taylors, Woods</td></tr>
     <tr><td>Clinics / dental</td><td>Appointment reminders + rescheduling + post-visit sequences</td><td>£1,800–£3,000</td><td>Charlbury Dental, Macclesfield Dental, Nuffield Health</td></tr>
     <tr><td>Trades</td><td>Quote chasing + follow-up scheduling + review requests</td><td>£2,000–£3,500</td><td>Able Group, SM Electrical, BS Plumbing, Norton Plumbing</td></tr>
     <tr><td>Coaching</td><td>Onboarding sequences + session reminders + CRM updates</td><td>£1,800–£3,200</td><td>The Coaching Academy, Anxiety UK, The Life Co</td></tr>
@@ -181,15 +199,15 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">The call</span>
-  <h2 class="truth">One conversation. One defined task. One live agent.</h2>
-  <p class="body">You do not need a pitch deck. You need three questions:</p>
+  <span class="eyebrow">The conversation</span>
+  <h2 class="truth">Three questions. One defined task. One live agent.</h2>
+  <p class="body">You do not need a pitch deck. You need to diagnose the exact task that is costing them more than £5,000/month in human hours and missed opportunities.</p>
   <div class="atoms">
-    <div class="atom"><h3>"What task costs 2+ hours every single day?"</h3><p>If they cannot name it, they are not a client yet. If they name it instantly, you are already inside.</p></div>
-    <div class="atom"><h3>"What happens when that task slips?"</h3><p>This turns a time cost into a business risk. Risk justifies £5k/month faster than convenience ever will.</p></div>
-    <div class="atom"><h3>"What would you do with the hours back this week?"</h3><p>This forces them to paint the outcome. If the outcome is vague, the client is not ready. If it is specific, close.</p></div>
+    <div class="atom"><h3>"What task costs 2+ hours every single day?"</h3><p>If they cannot name it instantly, they are not ready. If they name it without hesitating, you are already inside.</p></div>
+    <div class="atom"><h3>"What happens when that task slips?"</h3><p>This turns a time cost into a business risk. Risk justifies £5,000/month faster than convenience ever will.</p></div>
+    <div class="atom"><h3>"What would you do with the hours back this week?"</h3><p>This forces them to paint the outcome. If the outcome is specific, close. If it is vague, they are not ready.</p></div>
   </div>
-  <p class="body">Then: <mark>"I can build that for you as an AI team member in your Slack. £5,000/month. Live within 48 hours. Do you want onboarding instructions today?"</mark></p>
+  <p class="body" style="margin-top:8px;"><mark>"I can build that for you as an AI team member in your Slack. £5,000/month. Live within 48 hours. Do you want onboarding instructions today?"</mark></p>
 </section>
 
 <div class="sep"></div>
@@ -216,24 +234,9 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">The numbers</span>
-  <h2 class="truth">£5,000/month. Per client. Hands-off.</h2>
-  <p class="body">Your delivery capacity compounds because the agent does the fulfilling. A salary caps your growth at the speed of one hire. Owl removes the cap.</p>
-  <table class="table">
-    <tr><th>Revenue</th><th>Active clients</th><th>Effective hourly rate at 40h/week</th></tr>
-    <tr><td>£25,000/month</td><td>5 clients</td><td>£312/hour</td></tr>
-    <tr><td>£50,000/month</td><td>10 clients</td><td>£625/hour</td></tr>
-    <tr><td>£75,000/month</td><td>15 clients</td><td>£938/hour</td></tr>
-  </table>
-  <p class="body" style="margin-top:14px;"><mark>The agent does the work. You run the system. The client gets the outcome.</mark></p>
-</section>
-
-<div class="sep"></div>
-
-<section>
   <span class="eyebrow">The stack</span>
   <h2 class="truth">Self-hosted. No per-seat fees. Total control.</h2>
-  <p class="body">Nick's reference stack uses paid tools. Your edge: the free equivalents already on this VPS. Same result. Higher margin. Nobody freezes your account.</p>
+  <p class="body">The reference model uses paid tools. Your edge: the free equivalents already running on this VPS. Same result. Higher margin. Nobody freezes your account.</p>
   <table class="table">
     <tr><th>Part</th><th>Paid equivalent</th><th>What you own</th></tr>
     <tr><td>Computer</td><td>Orgo VM</td><td>This VPS, 24/7</td></tr>
@@ -244,25 +247,18 @@
     <tr><td>Knowledge</td><td>Obsidian / Honcho</td><td>~/vault</td></tr>
     <tr><td>Observe</td><td>Latitude</td><td>Cron → Telegram health alerts</td></tr>
   </table>
-  <p class="note">Overhead per client: roughly £115–290/month. Gross margin stays above 90%. That is why the free stack matters.</p>
-</section>
-
-<div class="sep"></div>
-
-<section>
-  <span class="eyebrow">The handbook</span>
-  <h2 class="truth">Every question answered. Every objection handled. Every system mapped.</h2>
-  <p class="body">The Fulfillment Layer is a verified dossier on the managed-AI-employee model. It covers the acquisition funnel, the 8-part agent architecture, 11 verified use cases, 12 objections with exact handlers, the stack, contracts, SLA, cashflow, and the full England prospect list with AI-widget verification status.</p>
-  <p class="body"><a href="https://alkalinearchitect.github.io/ai-employee/pdf-build/dewey-bible-v3.pdf" style="color:var(--accent);">Download the PDF dossier →</a></p>
+  <p class="note">Overhead per client: roughly £115–290/month. Gross margin stays above 90%. That is why the stack matters.</p>
 </section>
 
 <div class="sep"></div>
 
 <section class="cta">
-  <span class="eyebrow">Ready?</span>
-  <h2>Bring one workflow to a 20-minute call.</h2>
-  <p>We scope it. We build it. It ships in your Slack within 48 hours. Flat £5,000 a month. No obligation.</p>
+  <span class="eyebrow">The handoff</span>
+  <h2>You brief. The agent delivers.</h2>
+  <p>The first operators to move on this will own the category. The window is open now, not later. Most will watch. The operator moves.</p>
+  <p class="sub">Bring one workflow to a 20-minute call.</p>
   <a class="btn" href="https://beacons.ai/humanarchitect">Book a call — £5k/mo</a>
+  <a class="btn-ghost" href="https://alkalinearchitect.github.io/ai-employee/">Back to home</a>
 </section>
 
 <div class="foot">
