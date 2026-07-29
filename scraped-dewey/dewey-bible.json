@@ -1,0 +1,226 @@
+{
+  "title": "Dewey / Nick Vasilescu Full Intelligence Bible",
+  "owner_profile": {
+    "name": "Nick Vasilescu",
+    "handles": [
+      "@nickvasiles on X",
+      "@nickvasilescu on GitHub/Instagram",
+      "linkedin.com/in/nick-vasilescu-426445392"
+    ],
+    "location": "San Francisco Bay Area",
+    "role": "Cofounder of Orgo",
+    "focus": "Building AI computer-using agents / managed AI employee business",
+    "verified_followers_x": "14,293 as of 2026-07-29"
+  },
+  "verified_posts_raw": [
+    {
+      "id": "2076431897748734272",
+      "date": "2026-07-12",
+      "likes": 156,
+      "retweets": 5,
+      "text": "the people who get the most out of hermes are using it as a chief of staff, AI employee, or a co-founder\n\nhermes is seriously a workhorse\n\nwhen your agent just *gets* you, its hard to go back to anything else\n\ni just talk to my Dewey all day - he does everything for me"
+    },
+    {
+      "id": "2076704016181219547",
+      "date": "2026-07-13",
+      "likes": 57,
+      "retweets": 3,
+      "text": "the future of work is in an imessage groupchat\n\ndewey (my hermes agent) is now onboarding customers for me\n\nhe's setting up the computer workspace and hermes agents for my clients\n\nrunning him on grok 4.5 (low reasoning) and it is a dream\n\nso fast\n\npretty soon dewey will be on calls :)"
+    },
+    {
+      "id": "2076704276186013970",
+      "date": "2026-07-13",
+      "likes": 8,
+      "retweets": 0,
+      "text": "oh btw im using @orgo mcp for dewey to be able to spin up new computers and hermes agents inside of them\n\nhe manages the entire fleet of agents in orgo using the mcp\n\npretty sick"
+    },
+    {
+      "id": "2076711676460888115",
+      "date": "2026-07-13",
+      "likes": 27,
+      "retweets": 2,
+      "text": "dewey is my forward deployed engineer\n\nonboarded a customer\n\nset him up with his hermes agent \"titan\"\n\nhas perfect context of my entire fleet of computers (200+ on orgo)\n\ngonna go for a walk now - customer success is solved"
+    },
+    {
+      "id": "2082207349671157892",
+      "date": "2026-07-28",
+      "likes": 161,
+      "retweets": 8,
+      "text": "brb setting up a team of Hermes agents inside Buzz\n\neach w/ their own Orgo VM, ofc\n\naccepting that i, the human, am the bottleneck\n\ntime to let the agents do what they promised society\n\nabundance is here.\n\nfreedom, alas."
+    },
+    {
+      "id": "2082305789507907976",
+      "date": "2026-07-29",
+      "likes": 13,
+      "retweets": 0,
+      "text": "fun tip on loops -\n\ngive your agent an imessage phone number and let it text you whenever it needs anything\n\nsomething so nice about a blue bubble text from your agent asking for a hand"
+    },
+    {
+      "id": "2079448897139937301",
+      "date": "2026-07-21",
+      "likes": 990,
+      "retweets": 56,
+      "text": "My Hermes agent builds AI employees for me.\n\nJust closed another $5K-a-month customer today for an AI employee for a design agency.\n\nI'm not even building any of it.\n\nI have Dewey, my Hermes agent, building out the entire Hermes agent for this design agency and onboarding the agent into Slack for me.\n\nAll I do is ask the questions, make sure it gets recorded in Granola (my ai notetaker), and then Dewey takes it over from there.\n\nCrazy world we live in."
+    }
+  ],
+  "corey_ganim_full_thread": {
+    "source": "https://x.com/coreyganim/status/2081721665822568810",
+    "date": "2026-07-27",
+    "likes": 146,
+    "retweets": 13,
+    "text": "This guy closes $5K/month managed agent clients and his AI agent does the fulfillment.\n\nHis agent Dewey builds the client's agent, onboards it into their Slack, and handles the customer support after.\n\n@nickvasiles watches client problems get solved from his phone while he's on a walk.\n\nHe came back on the Build With AI podcast to walk through the entire system. Here's what I learned:\n\n1. Agents building agents is here. Dewey built a $5K/month client's agent on @Orgo and onboarded it into their Slack himself.\n\n2. The company behind Hermes is hiring forward deployed engineers for enterprise. The SMB and mid-market layer beneath is up for grabs.\n\n3. His agent has its own email, phone, and card. Dewey signed up for Higgsfield and paid for it himself.\n\n4. Customer support runs without him. Dewey sits in iMessage group chats with clients and fixes issues on the fly.\n\n5. The 80/20 stack: harness (Hermes or OpenClaw), model, Orgo computer, Agent Mail, Agent Phone, Obsidian, Honcho for memory, Composio, Latitude.\n\n6. https://t.co/WRM72MyLfm packages the agent card, email, and phone for about $20/month.\n\n7. Templatize once, deploy forever. Save your ideal stack as an Orgo template and one-click clone it for every client.\n\n8. Nobody pays $5K/month for an agent that doesn't make them money. Build the client an agent, then help them resell it to THEIR customers. B2B2B never churns.\n\n9. Skills come from a context dump. The client dumps everything into Slack and Dewey turns the discovery call transcript into skills.\n\n10. Sell to real businesses, not startups. SMBs doing $1M to $2M minimum pay more and ask fewer questions.\n\nNick put Dewey's entire build into a simple blueprint. Anyone can set this up and be texting their agent in under 2 minutes.\n\nGrab the blueprint here: https://t.co/0glk6ymfuo"
+  },
+  "github": [
+    {
+      "repo": "nickvasilescu/nicks-stack",
+      "stars": 104,
+      "forks": 30,
+      "version": "0.2.2",
+      "url": "https://github.com/nickvasilescu/nicks-stack",
+      "description": "Ready-to-run Hermes AI agent template for Orgo with Telegram QR onboarding, 13 MCPs, 1Password secrets, Obsidian vault.",
+      "components": [
+        "Hermes v0.18",
+        "gpt-5.5 default / swappable to gpt-5.6-sol",
+        "Telegram QR onboarding, no BotFather",
+        "13 MCPs: AgentMail, AgentCard, AgentPhone, Composio +1000 apps, Latitude, Orgo, x-docs, X API x2, Linear, ideabrowser, vidiq, obsidian-vault",
+        "1Password secret plane with 19-key map",
+        "orgo-desktop-local custom plugin with 11 key-less desktop tools",
+        "AgentPhone webhook bridge supervised",
+        "Latitude telemetry plugin",
+        "Dewey SOUL.md + 21 genericized skills",
+        "HermesVault Obsidian vault"
+      ]
+    },
+    {
+      "repo": "nickvasilescu/hermes-desktop-os1",
+      "stars": 513,
+      "forks": 89,
+      "url": "https://github.com/nickvasilescu/hermes-desktop-os1",
+      "description": "Native macOS workspace for Hermes Agent on Orgo cloud computers and SSH hosts. Fork of dodo-reach/hermes-desktop."
+    }
+  ],
+  "community": {
+    "name": "Agent Empire",
+    "url": "https://www.skool.com/agentempire",
+    "members": "1.3k",
+    "cost": "Free",
+    "recommended_pricing": "$5K/month per client, unlimited agents",
+    "key_threads": [
+      "How My AI Agent Builds and Supports $5K/Month Client Agents",
+      "Building an Agent Agency | Day 34",
+      "NEW: The $50K/Month One-Person AI Agent Business (Full Blueprint)"
+    ]
+  },
+  "videos": [
+    {
+      "title": "How to make f*ck you money selling managed AI agents",
+      "channel": "Build With AI - Corey Ganim",
+      "date": "2026-07-27",
+      "views": "3,053",
+      "url": "https://www.youtube.com/watch?v=vZTxDqOTCmk",
+      "duration": "42:49",
+      "timestamps": [
+        "0:00 Intro",
+        "1:29 Meet Dewey",
+        "2:03 Onboarding a Client Agent Live",
+        "4:00 Enterprise Demand for Agents",
+        "9:02 Orgo: Cloud Computers for Agents",
+        "12:05 Orgo Discount & Setup",
+        "13:02 Spinning Up Agents from Templates",
+        "15:32 Productizing Agents",
+        "19:50 Why Clients Pay $5K/Month",
+        "22:56 The B2B2B Reseller Model",
+        "27:22 The Full 80/20 Agent Stack",
+        "33:01 From Invoice to Live Agent in 48 Hours",
+        "36:24 Turning Call Transcripts Into Skills",
+        "39:27 Paid Assessments as Lead-Ins",
+        "41:02 Where to Find Nick"
+      ]
+    },
+    {
+      "title": "Sell AI Employees to Small Businesses (just steal mine)",
+      "channel": "Nick Vasilescu",
+      "url": "https://www.youtube.com/watch?v=fAhwYrjmQRk",
+      "views": "13K"
+    },
+    {
+      "title": "The $50K/Month One-Person AI Agent Business (Full Blueprint)",
+      "channel": "Agent Empire / Nick Vasilescu",
+      "views": "11K",
+      "url": "https://www.youtube.com/watch?v=Y7FVj4njob0"
+    }
+  ],
+  "podcasts": [
+    {
+      "title": "184 How to make $5K per month per client selling managed AI agents",
+      "podcast": "Build With AI",
+      "url": "https://podcasts.apple.com/dk/podcast/184-how-to-make-f-ck-you-money-selling-managed-ai-agents/id1689819329?i=1000778465731"
+    }
+  ],
+  "business_model": {
+    "offer": "Managed AI employee — an always-on Hermes agent built and supported for the client",
+    "price": "$5,000/month per client",
+    "pricing_note": "Skool community notes Nick recommends $5K/month for unlimited agents in practice likely 3-5 agents per client",
+    "delivery_guarantee": "Same-day or within 48 hours after payment/wire",
+    "target_client": "Real businesses doing $1M–$2M+ annual revenue",
+    "role_split": {
+      "human": "Discovery calls, relationship, close deal, answer agent questions",
+      "agent": "Build client agent, onboard into Slack/Telegram, ongoing support/CS, deploy VMs"
+    },
+    "key_process": [
+      "Discovery call recorded in Granola",
+      "Client dumps docs/context into Slack",
+      "Discovery transcript turned into skills automatically",
+      "Templated stack cloned for each client via Orgo",
+      "Agent built and onboarded autonomously by Dewey",
+      "Client wired money; agent live same day/48h"
+    ],
+    "ai_employee_capabilities": [
+      "24/7 support/customer success",
+      "Lead followup",
+      "Task execution",
+      "Ops automation",
+      "Can own email, phone number, virtual card",
+      "Can book cloud computers and manage fleet"
+    ]
+  },
+  "stack_80_20": {
+    "harness": "Hermes Agent or OpenClaw",
+    "models": "gpt-5.5 default via Nous; gpt-5.6-sol via OpenAI-Codex provider if preferred; Grok 4.5 for low-reasoning speed",
+    "cloud_computer": "Orgo VM — 8GB RAM / 4 CPU minimum per docs.orgo.ai",
+    "messaging": "Telegram, Slack, iMessage, SMS via AgentPhone webhook bridge",
+    "knowledge_base": "Obsidian HermesVault",
+    "memory": "Honcho",
+    "integrations": "Composio +1000 apps",
+    "observability": "Latitude",
+    "agent_services": "AgentMail, AgentCard, AgentPhone",
+    "notetaker": "Granola for discovery call recording",
+    "macos_workspace": "OS1 app optional for operator control"
+  },
+  "confirmed_client_examples": [
+    {
+      "client_type": "design agency",
+      "agent_platform": "Slack",
+      "price": "$5K/month",
+      "closer_date": "2026-07-21"
+    },
+    {
+      "client_type": "unknown named Titan",
+      "agent_name": "Titan",
+      "notes": "Onboarded by Dewey into Slack"
+    }
+  ],
+  "expansion_signals_2026_07": [
+    "2026-07-28: testing multiple Hermes agents inside Buzz workspace, each with own Orgo VM",
+    "2026-07-29: giving agents their own iMessage phone number for loop notifications",
+    "Using GPT-5.6 Sol spontaneous computer-use mode inside Hermes preferred over APIs"
+  ],
+  "unverified_gaps": [
+    "Exact Hermes profile configs used in production for client agents",
+    "Exact prompts for turning discovery transcript into skills",
+    "Full video transcripts; only metadata/timestamps extracted successfully",
+    "Exact Slack scopes used in production",
+    "Agent Mail / Agent Phone exact provisioning steps from key to live phone number",
+    "Whether current VPS factory matches Orgo template model or is simplified for hosting-already-here deployment"
+  ]
+}

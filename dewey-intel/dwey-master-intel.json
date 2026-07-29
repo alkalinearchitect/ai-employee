@@ -1,0 +1,70 @@
+{
+  "owner": "Nick Vasilescu (@nickvasiles)",
+  "verified_sources": [
+    "X posts: 2079448897139937301, 2076431897748734272, 2076704016181219547, 2076704276186013970, 2076711676460888115",
+    "Corey Ganim summary: https://x.com/coreyganim/status/2081721665822568810",
+    "podcasts/x Bios: Agent Empire Skool, YouTube channel U5tjZ-hUXI4jz5btDsqx04Q",
+    "github.com/nickvasilescu"
+  ],
+  "timeline": [
+    "2026-07-12: Nick posts about Dewey as chief of staff / AI employee / co-founder",
+    "2026-07-13: Future of work iMessage groupchat post; uses @orgo MCP to spin up new computers and Hermes agents; onboarded customer and set up agent Titan; fleet 200+ on Orgo",
+    "2026-07-21: Closed another $5K/month design agency customer; Dewey built Hermes agent and onboarded to Slack; discovery recorded in Granola",
+    "2026-07-27: Corey Ganim podcast summary with numbered system breakdown"
+  ],
+  "business_model": {
+    "offer": "Managed AI employee / AI agent",
+    "price": "$5,000/month per client",
+    "recommended_packaging": "unlimited agents per client in practice likely 3-5 agents",
+    "target_market": "Real businesses/SMBs doing $1M–$2M+ revenue per Nick/Corey summaries",
+    "delivery_speed": "Same day or within 48 hours after payment",
+    "value_prop": "Agent that never sleeps, handles support/lead followup/tasks, rides in client team chat"
+  },
+  "dwey_system": {
+    "personal_agent": "Dewey",
+    "on_platforms": "iMessage, Slack, Telegram, possibly Buzz as of 2026-07-28",
+    "autonomy": "Sends/receives texts, books computers, deploys agents, manages fleet via Orgo MCP",
+    "latest_upgrades_2026_07": [
+      "iMessage loop gives agent phone-number texting channel",
+      "GPT-5.6 Sol spontaneous computer use inside Hermes preferred over APIs"
+    ]
+  },
+  "stack_80_20": [
+    "Harness: Hermes Agent or OpenClaw",
+    "Model: preferred low-reasoning fast model for some flows e.g. Grok 4.5; also GPT 5.6 Sol for computer use",
+    "Cloud computer: Orgo VM",
+    "Memory/context: Honcho",
+    "Knowledge base: Obsidian",
+    "Integrations: Composio, Latitude",
+    "Comms: Agent Mail, Agent Phone, iMessage, Slack",
+    "Notetaker: Granola"
+  ],
+  "deployment_process": [
+    "Discovery call recorded in Granola",
+    "Client dumps all docs/context into Slack",
+    "Discovery transcript turned into skills",
+    "Use templatized Orgo stack; one-click clone per client",
+    "Dewey builds client Hermes agent and onboards into Slack",
+    "Client pays wire; agent live same day/48h"
+  ],
+  "client_agents_named_examples": [
+    "Titan — Hermes agent for one client"
+  ],
+  "scalable_unit": "Orgo template: save ideal stack once, clone per client",
+  "quotes": [
+    "agents building agents is here",
+    "nobody pays $5K/month for an agent that doesn't make them money",
+    "build the client an agent, then help them resell it to THEIR customers. B2B2B never churns",
+    "the valuable skill is asking the right questions and knowing which tool to point the agent at",
+    "speed to value wins. the same day a client wires money, ship them something. agent live by day two",
+    "sell to real businesses, not startups. SMBs doing $1M to $2M minimum pay more and ask fewer questions",
+    "accepting that i, the human, am the bottleneck. time to let the agents do what they promised society"
+  ],
+  "gaps_unverified": [
+    "Exact Hermes profile configs for deployment",
+    "Exact prompts for discovery-to-skills conversion",
+    "Slack scopes/Permissions checklist used in production",
+    "Exact Agent Mail / Agent Phone provisioning details",
+    "Github repo contents beyond referenced files already reviewed"
+  ]
+}
