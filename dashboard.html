@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit="cover" />
+<title>Owl — Agent Operations Dashboard</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237A5CFF'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='700' font-size='20' fill='%23fff'>O</text></svg>" />
+<style>
+  :root { --bg:#08060f; --bg2:#0f0f1a; --ink:#f4f1fb; --muted:#9a8fc0; --accent:#7A5CFF; --ok:#27c93f; --warn:#f5a623; --bad:#ff4d4d; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, sans-serif; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px clamp(18px,5vw,48px); }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; border-bottom: 1px solid color-mix(in srgb,var(--accent) 20%,transparent); margin-bottom: 24px; }
+  header h1 { font-size: 22px; margin: 0; letter-spacing: -0.2px; }
+  header .badge { font-size: 12px; color: var(--accent); background: color-mix(in srgb,var(--accent) 12%,var(--bg)); border: 1px solid color-mix(in srgb,var(--accent) 25%,transparent); padding: 6px 10px; border-radius: 999px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 920px){ .grid { grid-template-columns: repeat(2, 1fr); } }
+  .card { background: var(--bg2); border: 1px solid color-mix(in srgb,var(--accent) 18%,transparent); border-radius: 18px; padding: 18px; }
+  .card .label { font-size: 12px; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
+  .card .value { font-size: 32px; font-weight: 700; margin-top: 6px; }
+  .card .sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+  th, td { text-align: left; padding: 12px 10px; font-size: 14px; border-bottom: 1px solid color-mix(in srgb,var(--accent) 12%,transparent); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .pill.ok { color: var(--ok); background: color-mix(in srgb,var(--ok) 12%,var(--bg)); border: 1px solid color-mix(in srgb,var(--ok) 25%,transparent); }
+  .pill.warn { color: var(--warn); background: color-mix(in srgb,var(--warn) 12%,var(--bg)); border: 1px solid color-mix(in srgb,var(--warn) 25%,transparent); }
+  .pill.bad { color: var(--bad); background: color-mix(in srgb,var(--bad) 12%,var(--bg)); border: 1px solid color-mix(in srgb,var(--bad) 25%,transparent); }
+  .section { margin-top: 28px; }
+  .section h2 { font-size: 18px; margin: 0 0 10px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; font-weight: 600; font-size: 14px; text-decoration: none; color: var(--bg); background: var(--accent); }
+  .btn.secondary { color: var(--ink); background: transparent; border: 1px solid color-mix(in srgb,var(--accent) 35%,transparent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Owl — Operations Dashboard</h1>
+      <div class="badge">Operator: Human Architect</div>
+    </header>
+
+    <section class="section">
+      <div class="grid">
+        <div class="card">
+          <div class="label">Revenue</div>
+          <div class="value" id="revenue">£5,000</div>
+          <div class="sub">per client / month</div>
+        </div>
+        <div class="card">
+          <div class="label">Active clients</div>
+          <div class="value" id="clients">0</div>
+          <div class="sub">profiles running</div>
+        </div>
+        <div class="card">
+          <div class="label">Agents healthy</div>
+          <div class="value" id="healthy">0</div>
+          <div class="sub">replies in last 6h</div>
+        </div>
+        <div class="card">
+          <div class="label">Alerts</div>
+          <div class="value" id="alerts">0</div>
+          <div class="sub">needs attention</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="actions">
+        <a class="btn" href="https://beacons.ai/humanarchitect" target="_blank" rel="noopener">Book a call</a>
+        <a class="btn secondary" href="https://alkalinearchitect.github.io/ai-employee/dashboard.html" target="_blank" rel="noopener">Operator dashboard</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Client agents</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Client</th>
+            <th>Agent</th>
+            <th>Channel</th>
+            <th>Status</th>
+            <th>Last ping</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="client-table">
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Recent alerts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Client</th>
+            <th>Level</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody id="alert-table">
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    const API = location.origin.includes("127.0.0.1") || location.origin.includes("localhost") ? "" : "/backend";
+
+    function statusPill(s) {
+      if (s === "healthy") return `<span class="pill ok">Healthy</span>`;
+      if (s === "warning") return `<span class="pill warn">Warning</span>`;
+      return `<span class="pill bad">Down</span>`;
+    }
+    function alertPill(l) {
+      if (l === "ok") return `<span class="pill ok">Info</span>`;
+      if (l === "warn") return `<span class="pill warn">Warn</span>`;
+      return `<span class="pill bad">Critical</span>`;
+    }
+
+    async function loadState(){
+      try {
+        const r = await fetch((API || "/") + "/api/state");
+        const s = await r.json();
+        const agents = s.agents || {};
+        document.getElementById("clients").textContent = agents.fleet ?? 0;
+        const healthyEl = document.getElementById("healthy");
+        healthyEl.textContent = agents.healthy ?? 0;
+        healthyEl.style.color = agents.healthy > 0 ? "var(--ok)" : "var(--bad)";
+
+        const cron = s.cron || {};
+        const failEl = document.getElementById("alerts");
+        failEl.textContent = cron.failures_24h ?? 0;
+        failEl.style.color = (cron.failures_24h ?? 0) > 0 ? "var(--warn)" : "var(--ok)";
+
+        document.getElementById("revenue").textContent = "£5,000";
+
+        const fleet = await fetch((API || "/") + "/api/agents/fleet").then(x=>x.json()).catch(()=>[]);
+        document.getElementById("client-table").innerHTML = fleet.map(c => `
+          <tr>
+            <td>${c.client || c.name}</td>
+            <td>${c.name}</td>
+            <td>${c.channel || "—"}</td>
+            <td>${statusPill(c.status)}</td>
+            <td>${c.pid ? "live" : "offline"}</td>
+            <td><a class="btn secondary" href="#">Manage</a></td>
+          </tr>
+        `).join("") || `<tr><td colspan="6" style="color:var(--muted)">No agents</td></tr>`;
+
+        const alerts = await fetch((API || "/") + "/api/agents/alerts").then(x=>x.json()).catch(()=>[]);
+        document.getElementById("alert-table").innerHTML = alerts.slice(0,20).map(a => `
+          <tr>
+            <td>${a.time}</td>
+            <td>${a.client || a.source}</td>
+            <td>${alertPill(a.level)}</td>
+            <td>${a.message}</td>
+          </tr>
+        `).join("") || `<tr><td colspan="4" style="color:var(--muted)">No alerts</td></tr>`;
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    loadState();
+    setInterval(loadState, 120000);
+  </script>
+</body>
+</html>

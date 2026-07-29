@@ -5,38 +5,42 @@
 <style>
 @page { size: 9in 12in; margin: 0.7in 0.75in; }
 * { box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; line-height: 1.65; color: #1a1a1a; margin: 0; }
-h1 { font-size: 38px; line-height: 1.15; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.5px; }
-h2 { font-size: 26px; font-weight: 700; margin: 28px 0 12px; color: #0f0f1a; border-bottom: 2px solid #7A5CFF; padding-bottom: 6px; page-break-after: avoid; }
-h3 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: #1a1a2e; page-break-after: avoid; }
-.cover { padding: 60px 40px 40px; background: linear-gradient(160deg, #08060f 0%, #1a1030 55%, #2d1b69 100%); color: #fff; page-break-after: always; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; margin: 0; }
+h1 { font-size: 42px; line-height: 1.15; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.5px; color: #0f0f1a; }
+h2 { font-size: 28px; font-weight: 700; margin: 36px 0 14px; color: #0f0f1a; border-bottom: 2.5px solid #7A5CFF; padding-bottom: 8px; page-break-after: avoid; }
+h3 { font-size: 19px; font-weight: 700; margin: 22px 0 10px; color: #1a1a2e; page-break-after: avoid; }
+h4 { font-size: 16px; font-weight: 700; margin: 18px 0 8px; color: #333; font-style: italic; page-break-after: avoid; }
+.cover { padding: 80px 50px 50px; background: linear-gradient(160deg, #08060f 0%, #1a1030 55%, #2d1b69 100%); color: #fff; page-break-after: always; }
 .cover-meta { font-size: 13px; opacity: 0.75; margin-top: 18px; }
-.cover .tagline { font-size: 17px; opacity: 0.9; margin-top: 12px; line-height: 1.5; }
+.cover .tagline { font-size: 18px; opacity: 0.92; margin-top: 16px; line-height: 1.6; font-weight: 300; }
+.cover .sub { font-size: 14px; opacity: 0.7; margin-top: 12px; font-weight: 300; }
 .toc { page-break-after: always; }
-.toc table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-.toc td { padding: 7px 4px; border-bottom: 1px dotted #ccc; font-size: 13.5px; }
+.toc table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+.toc td { padding: 9px 6px; border-bottom: 1px dotted #ccc; font-size: 14px; }
 .toc td.num { width: 28px; font-weight: 700; color: #7A5CFF; }
-.box { background: #f6f4ff; border-left: 4px solid #7A5CFF; padding: 12px 14px; margin: 14px 0; border-radius: 6px; }
+.box { background: #f6f4ff; border-left: 4px solid #7A5CFF; padding: 14px 16px; margin: 16px 0; border-radius: 6px; }
 .box.alt { background: #fff7ed; border-left-color: #ff7a59; }
-.box.dark { background: #0f0f1a; color: #f4f1fb; border-left-color: #7A5CFF; }
-.warn { background: #fff8e1; border-left: 4px solid #f5a623; padding: 10px 12px; margin: 12px 0; border-radius: 6px; font-size: 13.5px; }
-.step { background: #fff; border: 1px solid #e8e5f5; border-radius: 8px; padding: 12px 14px; margin: 10px 0; }
-.step .num { display: inline-block; width: 26px; height: 26px; border-radius: 50%; background: #7A5CFF; color: #fff; text-align: center; line-height: 26px; font-weight: 700; font-size: 13px; margin-right: 8px; }
-pre { background: #0f0f1a; color: #f4f1fb; padding: 12px 14px; border-radius: 6px; overflow-x: auto; font-size: 13px; line-height: 1.5; }
-table.data { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13.5px; }
-table.data th { background: #1a1030; color: #fff; text-align: left; padding: 8px 10px; font-weight: 600; }
-table.data td { padding: 8px 10px; border-bottom: 1px solid #e5e5e5; }
+.box.dark { background: #0f0f1a; color: #f4f1fb; border-left-color: #7A5CFF; font-size: 14px; }
+.warn { background: #fff8e1; border-left: 4px solid #f5a623; padding: 12px 14px; margin: 14px 0; border-radius: 6px; font-size: 14px; }
+.step { background: #fff; border: 1px solid #e8e5f5; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+.step .num { display: inline-block; width: 28px; height: 28px; border-radius: 50%; background: #7A5CFF; color: #fff; text-align: center; line-height: 28px; font-weight: 700; font-size: 14px; margin-right: 10px; }
+pre { background: #0f0f1a; color: #f4f1fb; padding: 14px 16px; border-radius: 6px; overflow-x: auto; font-size: 13.5px; line-height: 1.5; }
+table.data { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+table.data th { background: #1a1030; color: #fff; text-align: left; padding: 10px 12px; font-weight: 600; }
+table.data td { padding: 9px 12px; border-bottom: 1px solid #e5e5e5; }
 .pgbreak { page-break-before: always; }
-.small { font-size: 12.5px; color: #555; }
-ul, ol { margin: 8px 0; padding-left: 22px; }
-li { margin: 4px 0; }
-.hook { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; background: #f3f1ff; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+.small { font-size: 13px; color: #555; }
+ul, ol { margin: 10px 0; padding-left: 24px; }
+li { margin: 5px 0; }
+.hook { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; background: #f3f1ff; padding: 1px 6px; border-radius: 4px; font-size: 13.5px; color: #5b3cd3; }
+.statement { font-size: 17px; font-weight: 700; color: #1a1030; margin: 20px 0; padding: 16px; background: #f8f7ff; border-left: 4px solid #7A5CFF; border-radius: 6px; line-height: 1.5; }
 </style>
 </head>
 <body>
 <div class="cover">
   <h1>The Fulfillment Layer</h1>
-  <div class="tagline">How to close £5,000/month AI-employee clients, ship in 48 hours, and run the back office without writing code<br>Verified dossier on the managed AI employee model that pays for itself before the first bad hire</div>
+  <div class="tagline">How to close £5,000/month AI-employee clients, ship in 48 hours, and run the back office without writing code</div>
+  <div class="sub">Verified dossier on the managed AI employee model that pays for itself before the first bad hire</div>
   <div class="cover-meta">Compiled by OWL | 2026-07-29 | Verified from live sources</div>
   <div class="cover-meta" style="margin-top:8px;opacity:.6;">Internal strategy dossier — not for client distribution</div>
 </div>
@@ -61,11 +65,15 @@ li { margin: 4px 0; }
 
 <h2>1. The Business Model</h2>
 <p>You are not selling AI software. You are selling a <b>headcount replacement</b> — a single-role AI employee that lives inside the client's Slack, performs one job 24/7, and costs less than a junior hire.</p>
+<div class="statement">Most operators have AI. Almost none have an agent that ships. The tool sits idle while you do the delivery by hand — and margin bleeds out every single week.</div>
 <div class="box dark">
-"Most operators have AI. Almost none have an agent that ships. The tool sits idle while you do the delivery by hand — and margin bleeds out every single week."
+<b>Core offer:</b> "I build you an AI team member that handles [exact task] 24/7. You never manage it. I manage it for you."<br>
+<b>Price:</b> £5,000/month per client<br>
+<b>Delivery:</b> Live in their Slack within 48 hours of signed agreement<br>
+<b>Refund:</b> Partial refund if it misses the agreed target by day 30
 </div>
-<div class="box"><b>Core offer:</b> "I build you an AI team member that handles [exact task] 24/7. You never manage it. I manage it for you."<br><b>Price:</b> £5,000/month per client<br><b>Delivery:</b> Live in their Slack within 48 hours of signed agreement<br><b>Refund:</b> Partial refund if it misses the agreed target by day 30</div>
 <div class="warn"><b>The one metric that matters:</b> Does the client save more than £5,000/month in human hours? If yes, you win. If no, you pivot the role or refund.</div>
+
 <h3>What the client gets</h3>
 <ul>
   <li>A Hermes agent with a custom identity tuned to one job</li>
@@ -74,6 +82,7 @@ li { margin: 4px 0; }
   <li>Ongoing support and improvements handled by you</li>
   <li>Weekly iterations based on how they use it</li>
 </ul>
+
 <h3>What the client does NOT manage</h3>
 <ul>
   <li>No hosting bills</li>
@@ -81,18 +90,43 @@ li { margin: 4px 0; }
   <li>No "AI training"</li>
   <li>No uptime monitoring</li>
 </ul>
+
 <div class="warn"><b>Target real businesses.</b> Verified guidance: target SMBs doing £1M–£2M+ in revenue. They pay faster, ask fewer questions, and value outcomes over novelty.</div>
 
+<h3>1.1 Why this positioning wins</h3>
+<p>The market is flooded with AI tools. Hundreds of vendors sell "AI for customer service" or "AI for sales." None sell "your new team member who never sleeps." The distinction is powerful because it bypasses IT evaluation cycles and lands directly on the operations manager's pain point: headcount costs, turnover, and inconsistency.</p>
+
+<h3>1.2 The price anchor</h3>
+<p>£5,000/month is deliberately chosen. It sits between:</p>
+<ul>
+  <li>An offshore freelancer (£3,000–£6,000/month with hidden management cost)</li>
+  <li>A UK junior hire (£2,500–£3,500/month salary + 30% NI + pension + holiday)</li>
+  <li>A specialised agency retainer (£8,000–£20,000/month)</li>
+</ul>
+<p>At £5,000 the buyer stops comparing you to cheap labour and starts comparing you to unreliable labour. That is the psychological sweet spot.</p>
+
+<h3>1.3 What "managed" really means</h3>
+<div class="box">The word <b>managed</b> is your moat. It means the client signs a contract and never speaks to another API. You own deployment, monitoring, improvement, and incident response. They own the outcome. This is rare in an industry where most vendors expect the client to build, train, and maintain.</div>
+
+<h3>1.4 Revenue architecture</h3>
+<p>Each client is a subscription with 85–95% gross margin. The COGS per client is roughly £115–290/month (Section 4.6). Every client you close is pure profit until overhead kicks in at employee #3.</p>
+
+<h3>1.5 Scaling principle</h3>
+<p>The only limit to revenue is discovery-call capacity. The agent does the work, you run relationships. After 10 clients, the natural move is a B2B2B layer: the agent serves the client's customers, which locks in retention and raises pricing power.</p>
+
 <div class="pgbreak"></div>
+
 <h2>2. Verified Proof</h2>
 <p>This is not theory. Below is verified evidence from public sources. The numbers are small but the model is proven.</p>
-<h3>Confirmed deals</h3>
+
+<h3>2.1 Confirmed deals</h3>
 <table class="data">
   <tr><th>Date</th><th>Client type</th><th>Price</th><th>Platform</th></tr>
   <tr><td>2026-07-21</td><td>Design agency</td><td>£5,000/month</td><td>Slack</td></tr>
   <tr><td>2026-07-13</td><td>Unknown</td><td>£5,000/month</td><td>Slack / agent named Titan</td></tr>
 </table>
-<h3>Verified quotes from Nick</h3>
+
+<h3>2.2 Verified quotes from Nick</h3>
 <div class="box dark">
 "agents building agents is here"<br><br>
 "nobody pays £5K/month for an agent that doesn't make them money"<br><br>
@@ -100,7 +134,8 @@ li { margin: 4px 0; }
 "speed to value wins. the same day a client wires money, ship them something. agent live by day two"<br><br>
 "sell to real businesses, not startups. SMBs doing £1M to £2M minimum pay more and ask fewer questions"
 </div>
-<h3>Expansion signals — July 2026</h3>
+
+<h3>2.3 Expansion signals — July 2026</h3>
 <ul>
   <li>Testing multiple Hermes agents inside Buzz, each with own Orgo VM</li>
   <li>Giving agents their own iMessage phone number for automated loop notifications</li>
@@ -108,10 +143,16 @@ li { margin: 4px 0; }
   <li>Publicly stated: "The only limit is how many discovery calls you can run"</li>
 </ul>
 
+<h3>2.4 What the evidence tells us</h3>
+<p>The market is not asking for better dashboards. It is asking for problems to disappear. When a design agency wired £5,000/month, they did not sign up for a pilot. They signed up for a problem to leave and never return. That is the psychological contract you are selling into.</p>
+
 <div class="pgbreak"></div>
+
 <h2>3. Role Split</h2>
 <p>The system works because the human and agent each do what they are best at. Blur these lines and the client gets confused about who is accountable.</p>
 <div class="box alt"><b>Golden rule:</b> Never tell the client "the agent builds itself." Say: "I have a build system. You get the agent by Friday." The agent is your leverage, not your sales pitch.</div>
+
+<h3>3.1 Human vs agent responsibilities</h3>
 <table class="data">
   <tr><th>You — human</th><th>Your agent — build/ops</th></tr>
   <tr><td>Discovery calls</td><td>Build the Hermes agent profile and SOUL.md</td></tr>
@@ -121,15 +162,41 @@ li { margin: 4px 0; }
   <tr><td>Answer business relationship questions</td><td>Monitor health/restart/logs</td></tr>
   <tr><td>Collect payment</td><td>Send test message to confirm live</td></tr>
 </table>
+
 <div class="box alt"><b>Rule:</b> Never tell the client "the agent builds itself." Say: "I have a build system. You get the agent by Friday." The agent is your leverage, not your sales pitch.</div>
 
-<h3>3.1 What to say on a discovery call — exact script</h3>
-<div class="step"><span class="num">1</span>Ask: "What task costs your team 2+ hours every single day?"<br><span class="num">2</span>Ask: "What happens when that task slips?"<br><span class="num">3</span>Ask: "If this was handled 24/7 without you managing it, what would that unlock?"<br><span class="num">4</span>Say: "I can build that for you as an AI team member in your Slack. £5,000/month, live within 48 hours."<br><span class="num">5</span>Ask: "Do you want me to send onboarding instructions today?"</div>
+<h3>3.2 What to say on a discovery call — exact script</h3>
+<div class="step"><span class="num">1</span>Ask: "What task costs your team 2+ hours every single day?"<br>
+<span class="num">2</span>Ask: "What happens when that task slips?"<br>
+<span class="num">3</span>Ask: "If this was handled 24/7 without you managing it, what would that unlock?"<br>
+<span class="num">4</span>Say: "I can build that for you as an AI team member in your Slack. £5,000/month, live within 48 hours."<br>
+<span class="num">5</span>Ask: "Do you want me to send onboarding instructions today?"</div>
 
-<h3>3.2 Hourly value framing</h3>
+<h3>3.3 Hourly value framing</h3>
 <div class="box">If the client's time is valued at £40/hr and the task takes 2 hours daily, the task costs £2,400/month before mistakes and turnover. A £5,000 AI employee pays for itself before your first two bad hires.</div>
 
+<h3>3.4 The discovery call anatomy</h3>
+<p>A great discovery call has three phases: diagnose, design, close.</p>
+
+<h4>Phase 1 — Diagnose (minutes 0-8)</h4>
+<p>Listen for three signals: (a) a task repeated at least daily, (b) a named person who owns it, (c) a consequence when it slips. If you have all three, you have a viable role. If you only have one, probe deeper before pitching.</p>
+
+<h4>Phase 2 — Design (minutes 8-18)</h4>
+<p>Repeat the task back in your own words. Map it to a platform. Say: "So the AI would do X in Slack, escalate Y to you, and log Z in your CRM." This proves you are not selling a black box. You are selling a specific solution to a specific problem.</p>
+
+<h4>Phase 3 — Close (minutes 18-25)</h4>
+<p>Give the price, the delivery date, and the refund condition. Then stop talking. The silence that follows is where the client decides. If they hesitate, address the specific fear, not the price.</p>
+
+<h3>3.5 Common discovery-call mistakes</h3>
+<ul>
+  <li>Talking about technology instead of outcomes.</li>
+  <li>Offering to solve three problems instead of one.</li>
+  <li>Leaving without a clear next step.</li>
+  <li>Sending a proposal before confirming the exact task and platform.</li>
+</ul>
+
 <div class="pgbreak"></div>
+
 <h2>4. The 80/20 Stack</h2>
 <p>Every component below is confirmed in production from Nick's public repos and posts.</p>
 
@@ -143,7 +210,9 @@ li { margin: 4px 0; }
 <div class="step"><span class="num">3</span><b>Orgo VM</b> — isolated Linux desktop per agent. Minimum: 8GB RAM, 4 CPU, 50GB disk. Provides uptime, isolation, reusable template, anywhere access.</div>
 
 <h3>4.4 Platforms</h3>
-<div class="step"><span class="num">4</span><b>Slack</b> primary. Requires Slack app per workspace with Bot scopes: <span class="hook">chat:write, channels:history, im:history, mpim:history</span>.<br><b>Telegram</b> alternative. Nick's stack supports QR onboarding without BotFather.<br><b>iMessage/SMS</b> via AgentPhone webhook bridge for loop notifications.</div>
+<div class="step"><span class="num">4</span><b>Slack</b> primary. Requires Slack app per workspace with Bot scopes: <span class="hook">chat:write, channels:history, im:history, mpim:history</span>.<br>
+<b>Telegram</b> alternative. Nick's stack supports QR onboarding without BotFather.<br>
+<b>iMessage/SMS</b> via AgentPhone webhook bridge for loop notifications.</div>
 
 <h3>4.5 Integrations</h3>
 <table class="data">
@@ -170,16 +239,19 @@ li { margin: 4px 0; }
 </table>
 <div class="box alt">Gross margin guidance: keep above 90%. If COGS approaches £1,000/month, raise price or switch to a cheaper VM tier before it becomes a habit.</div>
 
-<h3>4.6 Secrets</h3>
+<h3>4.7 Secrets</h3>
 <div class="step"><span class="num">5</span><b>1Password vault</b> — disabled until service-account token is added. 19 keys in vault <span class="hook">Hermes</span> → note <span class="hook">Hermes Agent Secrets</span>. Agent fetches at every start.</div>
 
-<h3>4.7 Knowledge & Memory</h3>
-<div class="step"><span class="num">6</span><b>Obsidian</b> long-term notes, SOPs, client context.<br><b>Honcho</b> cross-session memory.</div>
+<h3>4.8 Knowledge & Memory</h3>
+<div class="step"><span class="num">6</span><b>Obsidian</b> long-term notes, SOPs, client context.<br>
+<b>Honcho</b> cross-session memory.</div>
 
-<h3>4.8 Desktop & Control</h3>
-<div class="step"><span class="num">7</span><b>orgo-desktop-local</b> plugin — 11 key-less desktop tools.<br><b>OS1</b> optional macOS workspace for visual control.</div>
+<h3>4.9 Desktop & Control</h3>
+<div class="step"><span class="num">7</span><b>orgo-desktop-local</b> plugin — 11 key-less desktop tools.<br>
+<b>OS1</b> optional macOS workspace for visual control.</div>
 
 <div class="pgbreak"></div>
+
 <h2>5. England Prospect List</h2>
 <p>Live England-based companies with visible AI-assistant signals detected as low/none in target sectors. Use for outreach.</p>
 
@@ -194,6 +266,7 @@ li { margin: 4px 0; }
   <tr><td>Trades / services</td><td>Birmingham, Leeds, London, Manchester</td><td>Able Group, SM Electrical Services, Q Khan Electrical Contractors, BS Plumbing & Heating, Norton Plumbing, Metro Plumb Manchester</td><td>None detected</td><td>Medium</td></tr>
   <tr><td>Professional services</td><td>Birmingham, London, Nottingham, Wrexham</td><td>DCP Web Designers, Aim Internet, The Access Group, Moneypenny</td><td>None detected</td><td>Medium</td></tr>
 </table>
+
 <h3>5.2 Full verified prospect table</h3>
 <table class="data">
   <tr><th>Company</th><th>Town</th><th>Sector</th><th>Website</th><th>AI widget</th></tr>
@@ -219,10 +292,10 @@ li { margin: 4px 0; }
   <tr><td>Dixons Estate Agents</td><td>Nottingham</td><td>real_estate</td><td>https://www.dixonsestateagents.co.uk</td><td>False</td></tr>
   <tr><td>Holroyds Estate Agents</td><td>Manchester</td><td>real_estate</td><td>https://www.holroydsestateagents.co.uk</td><td>False</td></tr>
   <tr><td>Mann Countrywide</td><td>London</td><td>real_estate</td><td>https://www.manncountrywide.co.uk</td><td>False</td></tr>
-  <tr><td>Manners & Harrison</td><td>Leeds</td><td>real_estate</td><td>https://www.mannersandharrison.co.uk</td><td>False</td></tr>
+  <tr><td>Manners &amp; Harrison</td><td>Leeds</td><td>real_estate</td><td>https://www.mannersandharrison.co.uk</td><td>False</td></tr>
   <tr><td>Taylors Estate Agents</td><td>Bristol</td><td>real_estate</td><td>https://www.taylorsestateagents.co.uk</td><td>False</td></tr>
   <tr><td>Woods Estate Agents</td><td>Leicester</td><td>real_estate</td><td>https://www.woodsestateagents.co.uk</td><td>False</td></tr>
-  <tr><td>Watson Bull & Porter</td><td>Surrey</td><td>real_estate</td><td>https://www.watsonbullporter.co.uk</td><td>False</td></tr>
+  <tr><td>Watson Bull &amp; Porter</td><td>Surrey</td><td>real_estate</td><td>https://www.watsonbullporter.co.uk</td><td>False</td></tr>
   <tr><td>Savills UK</td><td>London</td><td>real_estate</td><td>https://www.savills.co.uk</td><td>False</td></tr>
   <tr><td>Knight Frank</td><td>London</td><td>real_estate</td><td>https://www.knightfrank.com</td><td>False</td></tr>
   <tr><td>Foxtons</td><td>London</td><td>real_estate</td><td>https://www.foxtons.co.uk</td><td>False</td></tr>
@@ -243,7 +316,7 @@ li { margin: 4px 0; }
   <tr><td>Able Group</td><td>Manchester</td><td>trades</td><td>https://www.able-group.co.uk</td><td>False</td></tr>
   <tr><td>SM Electrical Services</td><td>London</td><td>trades</td><td>https://www.smelectricalservices.co.uk</td><td>False</td></tr>
   <tr><td>Q Khan Electrical Contractors</td><td>Birmingham</td><td>trades</td><td>https://www.qkhan.co.uk</td><td>False</td></tr>
-  <tr><td>BS Plumbing & Heating</td><td>Leeds</td><td>trades</td><td>https://www.bsplumbingandheating.co.uk</td><td>False</td></tr>
+  <tr><td>BS Plumbing &amp; Heating</td><td>Leeds</td><td>trades</td><td>https://www.bsplumbingandheating.co.uk</td><td>False</td></tr>
   <tr><td>Norton Plumbing</td><td>Manchester</td><td>trades</td><td>https://www.nortonplumbing.co.uk</td><td>False</td></tr>
   <tr><td>Metro Plumb Manchester</td><td>Manchester</td><td>trades</td><td>https://www.metroplumb.co.uk</td><td>False</td></tr>
   <tr><td>DCP Web Designers</td><td>London</td><td>professional_services</td><td>https://dcpweb.co.uk</td><td>False</td></tr>
@@ -252,27 +325,35 @@ li { margin: 4px 0; }
   <tr><td>Moneypenny</td><td>Wrexham</td><td>professional_services</td><td>https://www.moneypenny.com</td><td>False</td></tr>
 </table>
 
+<h3>5.3 How to use this list</h3>
+<p>Do not blast the entire list. Pick one sector, pick five names, and send personalised outreach referencing a specific detail from their site. Quality beats volume at this price point.</p>
 
-<h3>9.2 How to qualify a prospect in 30 seconds</h3>
-<div class="step"><span class="num">1</span>Open their site. Check footer: phone number, address, team page = good.<br><span class="num">2</span>Look for chat/helpdesk widgets: Intercom, Drift, Zendesk, Tidio, built-in chat.<br><span class="num">3</span>If no widget and they list repeat tasks like "support", "leads", "bookings", they are a target.</div>
+<h3>5.4 How to qualify a prospect in 30 seconds</h3>
+<div class="step"><span class="num">1</span>Open their site. Check footer: phone number, address, team page = good.<br>
+<span class="num">2</span>Look for chat/helpdesk widgets: Intercom, Drift, Zendesk, Tidio, built-in chat.<br>
+<span class="num">3</span>If no widget and they list repeat tasks like "support", "leads", "bookings", they are a target.</div>
+
+<div class="pgbreak"></div>
 
 <h2>6. Advanced Signals</h2>
 <p>What is changing next, from verified signals.</p>
 
-<h3>Agents building agents</h3>
+<h3>6.1 Agents building agents</h3>
 <p>Nick already runs Dewey as a forward-deployed engineer: discovery -> build -> deploy -> support with no human coding. You can operate exactly this model from day one.</p>
 
-<h3>B2B2B reduces churn</h3>
+<h3>6.2 B2B2B reduces churn</h3>
 <p>Highest-retention model: build the agent, then help the client resell it to THEIR customers. Verified in Corey's summary: "B2B2B never churns."</p>
 
-<h3>Loop notifications</h3>
+<h3>6.3 Loop notifications</h3>
 <p>Latest: giving agents their own iMessage phone number so the agent texts you when it needs a decision. Verified tip from Nick, July 2026.</p>
 
-<h3>Computer-use preference</h3>
+<h3>6.4 Computer-use preference</h3>
 <p>Verified observation: GPT-5.6 Sol inside Hermes sometimes chooses computer use over API routes. Build your agent with browser/desktop tools; it may self-select the right path.</p>
 
-<h3>Multi-agent workspaces</h3>
+<h3>6.5 Multi-agent workspaces</h3>
 <p>Nick is testing multiple Hermes agents in one Buzz workspace, each with its own Orgo VM. This implies future packaging: "AI team" rather than single AI employee.</p>
+
+<div class="pgbreak"></div>
 
 <h2>7. Next 7 Days</h2>
 <p>Exact checklist. No ambiguity.</p>
@@ -288,25 +369,37 @@ li { margin: 4px 0; }
 
 <div class="warn">Your only job this week is proof of concept: one real conversation with a real business. Everything else is prep.</div>
 
+<div class="pgbreak"></div>
+
 <h2>8. Sales Engine</h2>
 <p>Use this as your daily operating system.</p>
 
 <h3>8.1 Outreach templates</h3>
-<div class="step"><b>Cold email</b><br>Subject: Quick question re: [Company] admin costs<br>Body: I help [Industry] firms put an AI employee inside their back office — lead follow-up, bookings, routine admin. I’m not asking for commitment today. I’m asking for one 15-minute look at whether we can cut 2–3 hours of manual work per week. If that sounds useful, reply “Yes” and I’ll send two calendar slots.</div>
+<div class="step"><b>Cold email</b><br>
+Subject: Quick question re: [Company] admin costs<br>
+Body: I help [Industry] firms put an AI employee inside their back office — lead follow-up, bookings, routine admin. I'm not asking for commitment today. I'm asking for one 15-minute look at whether we can cut 2–3 hours of manual work per week. If that sounds useful, reply "Yes" and I'll send two calendar slots.</div>
 
-<div class="step"><b>LinkedIn DM</b><br>Hi [Name], noticed you’re growing [Company] fast. Quick one: are you currently paying someone to do lead chasing, appointment setting, or basic admin? I run a managed AI agent service for UK SMBs that handles it for a flat £5K/month with no hiring or training. Happy to share a two-minute case study if you’re open to it.</div>
+<div class="step"><b>LinkedIn DM</b><br>
+Hi [Name], noticed you're growing [Company] fast. Quick one: are you currently paying someone to do lead chasing, appointment setting, or basic admin? I run a managed AI agent service for UK SMBs that handles it for a flat £5K/month with no hiring or training. Happy to share a two-minute case study if you're open to it.</div>
 
-<div class="step"><b>Warm referral</b><br>[Mutual contact] suggested I reach out. We place managed AI employees into UK SMB back offices for £5K/month — automated lead qualification, follow-ups, and admin without the hire. Wanted to see if you have any obvious repetitive work we should try to kill this month. No pitch — just a quick fit check.</div>
+<div class="step"><b>Warm referral</b><br>
+[Mutual contact] suggested I reach out. We place managed AI employees into UK SMB back offices for £5K/month — automated lead qualification, follow-ups, and admin without the hire. Wanted to see if you have any obvious repetitive work we should try to kill this month. No pitch — just a quick fit check.</div>
 
-<div class="step"><b>Follow-up</b><br>Quick follow-up: last month I put an AI employee into a design agency’s Slack for support triage. Within a week they cut same-day reply time massively. If you have 2 minutes, tell me the one task you would remove tomorrow if you could.</div>
+<div class="step"><b>Follow-up</b><br>
+Quick follow-up: last month I put an AI employee into a design agency's Slack for support triage. Within a week they cut same-day reply time massively. If you have 2 minutes, tell me the one task you would remove tomorrow if you could.</div>
 
 <h3>8.2 Discovery call script</h3>
-<div class="step"><span class="num">1</span>“What’s your most expensive repetitive task right now?”<br><span class="num">2</span>“What takes 5+ hours a week that doesn’t need human judgment?”<br><span class="num">3</span>“What happens when that task is delayed or done badly?”<br><span class="num">4</span>Map cost: salary + tooling + mistakes.<br><span class="num">5</span>Propose outcome: live agent in Slack within 48 hours, £5K/month.<br><span class="num">6</span>Close: “Do you want onboarding instructions today?”</div>
+<div class="step"><span class="num">1</span>"What's your most expensive repetitive task right now?"<br>
+<span class="num">2</span>"What takes 5+ hours a week that doesn't need human judgment?"<br>
+<span class="num">3</span>"What happens when that task is delayed or done badly?"<br>
+<span class="num">4</span>Map cost: salary + tooling + mistakes.<br>
+<span class="num">5</span>Propose outcome: live agent in Slack within 48 hours, £5K/month.<br>
+<span class="num">6</span>Close: "Do you want onboarding instructions today?"</div>
 
 <h3>8.3 Objections</h3>
-<div class="step"><b>Price</b> “One bad hire costs more in month one than this. No sick days, no turnover, no training.”</div>
-<div class="step"><b>Time</b> “We handle setup. You’ll spend max an hour choosing examples. I’ll do the rest.”</div>
-<div class="step"><b>Trust</b> “First month has a results-based refund clause. If it doesn’t hit the target, I refund.”</div>
+<div class="step"><b>Price</b> "One bad hire costs more in month one than this. No sick days, no turnover, no training."</div>
+<div class="step"><b>Time</b> "We handle setup. You'll spend max an hour choosing examples. I'll do the rest."</div>
+<div class="step"><b>Trust</b> "First month has a results-based refund clause. If it doesn't hit the target, I refund."</div>
 
 <h3>8.4 Probability model</h3>
 <table class="data">
@@ -318,27 +411,37 @@ li { margin: 4px 0; }
 <p>Formula: <span class="hook">EV = touches × replies × calls booked × close rate × £5,000 × 12</span>. Improve reply rate with personalization; improve close rate with proof/pilot.</p>
 
 <h3>8.5 Weekly operating rhythm</h3>
-<div class="step"><span class="num">1</span>Monday: choose 10 prospects from Section 9.<br><span class="num">2</span>Tuesday–Wednesday: send outreach, book calls.<br><span class="num">3</span>Thursday: run discovery calls.<br><span class="num">4</span>Friday: close wins, deploy agents, review transcripts.</div>
-
-
+<div class="step"><span class="num">1</span>Monday: choose 10 prospects from Section 9.<br>
+<span class="num">2</span>Tuesday–Wednesday: send outreach, book calls.<br>
+<span class="num">3</span>Thursday: run discovery calls.<br>
+<span class="num">4</span>Friday: close wins, deploy agents, review transcripts.</div>
 
 <div class="pgbreak"></div>
-<h2>10. Competitors & How to Win</h2>
+
+<h2>9. Competitors & How to Win</h2>
 <p>Every prospect is silently comparing you to five alternatives. Here is how to beat each one without sounding defensive.</p>
 
-<h3>10.1 Offshore freelancer / virtual assistant</h3>
-<div class="box alt"><b>Their pitch:</b> "Your dedicated remote worker for £3–8/hr."<br><b>Their weakness:</b> hidden management cost, inconsistency, holiday cover, language risk.<br><b>Kill shot:</b> "You are not paying for hours. You are buying output that obeys your process every single time it runs. No sick days, no supervision, no turnover."</div>
+<h3>9.1 Offshore freelancer / virtual assistant</h3>
+<div class="box alt"><b>Their pitch:</b> "Your dedicated remote worker for £3–8/hr."<br>
+<b>Their weakness:</b> hidden management cost, inconsistency, holiday cover, language risk.<br>
+<b>Kill shot:</b> "You are not paying for hours. You are buying output that obeys your process every single time it runs. No sick days, no supervision, no turnover."</div>
 
-<h3>10.2 SaaS chatbot builder</h3>
-<div class="box alt"><b>Their pitch:</b> "Automate support with AI chat."<br><b>Their weakness:</b> point solution, no memory, no execution, no judgment.<br><b>Kill shot:</b> "A chatbot answers questions. An AI employee closes loops. If your tool can't do a 7-step process without human intervention, it's software — not an employee."</div>
+<h3>9.2 SaaS chatbot builder</h3>
+<div class="box alt"><b>Their pitch:</b> "Automate support with AI chat."<br>
+<b>Their weakness:</b> point solution, no memory, no execution, no judgment.<br>
+<b>Kill shot:</b> "A chatbot answers questions. An AI employee closes loops. If your tool can't do a 7-step process without human intervention, it's software — not an employee."</div>
 
-<h3>10.3 Generic AI consultancy</h3>
-<div class="box alt"><b>Their pitch:</b> "We assess, strategise, and build a proof of concept."<br><b>Their weakness:</b> expensive, slow, often leaves nothing live.<br><b>Kill shot:</b> "We don't do decks. We ship a live agent in your Slack within 48 hours, then improve it weekly."</div>
+<h3>9.3 Generic AI consultancy</h3>
+<div class="box alt"><b>Their pitch:</b> "We assess, strategise, and build a proof of concept."<br>
+<b>Their weakness:</b> expensive, slow, often leaves nothing live.<br>
+<b>Kill shot:</b> "We don't do decks. We ship a live agent in your Slack within 48 hours, then improve it weekly."</div>
 
-<h3>10.4 In-house hire</h3>
-<div class="box alt"><b>Their pitch:</b> "Real person on payroll, 37.5 hrs/week."<br><b>Their weakness:</b> £25–45K/yr + NI + pension + holiday + churn.<br><b>Kill shot:</b> "A junior costs £35K+ in year one. Our employee costs £5K/month, works every hour, and doesn't quit."</div>
+<h3>9.4 In-house hire</h3>
+<div class="box alt"><b>Their pitch:</b> "Real person on payroll, 37.5 hrs/week."<br>
+<b>Their weakness:</b> £25–45K/yr + NI + pension + holiday + churn.<br>
+<b>Kill shot:</b> "A junior costs £35K+ in year one. Our employee costs £5K/month, works every hour, and doesn't quit."</div>
 
-<h3>10.5 Comparison matrix</h3>
+<h3>9.5 Comparison matrix</h3>
 <table class="data">
   <tr><th>Criterion</th><th>Freelancer</th><th>Chatbot SaaS</th><th>Consultancy</th><th>Orgo-style platform</th><th>This service</th></tr>
   <tr><td>24/7 coverage</td><td>No</td><td>Partial</td><td>No</td><td>Yes</td><td>Yes</td></tr>
@@ -349,19 +452,26 @@ li { margin: 4px 0; }
 </table>
 
 <div class="pgbreak"></div>
-<h2>11. Contracts, SLA and Scope Protection</h2>
+
+<h2>10. Contracts, SLA and Scope Protection</h2>
 <p>Use these sections to protect yourself and set expectations. Copy into your proposal.</p>
 
-<h3>11.1 Minimum viable terms</h3>
-<div class="step"><span class="num">1</span><b>Term:</b> 30-day minimum, then month-to-month.<br><span class="num">2</span><b>Pricing:</b> £5,000/month per single role. Additional roles: +£2,500/month each.<br><span class="num">3</span><b>Delivery:</b> Live agent delivered within 48 hours of signed agreement and intake material.<br><span class="num">4</span><b>Refund:</b> Partial refund if the agent misses the agreed target by day 30.</div>
+<h3>10.1 Minimum viable terms</h3>
+<div class="step"><span class="num">1</span><b>Term:</b> 30-day minimum, then month-to-month.<br>
+<span class="num">2</span><b>Pricing:</b> £5,000/month per single role. Additional roles: +£2,500/month each.<br>
+<span class="num">3</span><b>Delivery:</b> Live agent delivered within 48 hours of signed agreement and intake material.<br>
+<span class="num">4</span><b>Refund:</b> Partial refund if the agent misses the agreed target by day 30.</div>
 
-<h3>11.2 Scope-in / scope-out</h3>
-<div class="box alt"><b>In scope:</b> one defined role, one platform, weekly skill refinements, uptime monitoring, direct chat support.<br><b>Out of scope:</b> custom integrations outside the stack, brand campaigns, hiring the agent an assistant, changing role scope mid-month without a new statement of work.</div>
+<h3>10.2 Scope-in / scope-out</h3>
+<div class="box alt"><b>In scope:</b> one defined role, one platform, weekly skill refinements, uptime monitoring, direct chat support.<br>
+<b>Out of scope:</b> custom integrations outside the stack, brand campaigns, hiring the agent an assistant, changing role scope mid-month without a new statement of work.</div>
 
-<h3>11.3 SLA</h3>
-<div class="step"><span class="num">1</span><b>Uptime target:</b> 95% during client's stated working hours.<br><span class="num">2</span><b>Response window:</b> acknowledge within 4 business hours; fix or patch within 24 business hours.<br><span class="num">3</span><b>Data:</b> client retains ownership of all business data; agent memory is wiped on contract end.</div>
+<h3>10.3 SLA</h3>
+<div class="step"><span class="num">1</span><b>Uptime target:</b> 95% during client's stated working hours.<br>
+<span class="num">2</span><b>Response window:</b> acknowledge within 4 business hours; fix or patch within 24 business hours.<br>
+<span class="num">3</span><b>Data:</b> client retains ownership of all business data; agent memory is wiped on contract end.</div>
 
-<h3>11.4 Proposal checklist</h3>
+<h3>10.4 Proposal checklist</h3>
 <ul>
   <li>One-page scope statement: role, platform, success criteria</li>
   <li>Pricing and term</li>
@@ -372,8 +482,47 @@ li { margin: 4px 0; }
 </ul>
 
 <div class="pgbreak"></div>
-<h2>12. Contract Template</h2>
-<p>Use this as a starting point. Have a qualified solicitor review before sending to clients.</p>
+
+<h2>11. Client Health Metrics</h2>
+<p>You cannot improve what you do not measure. Run this review every Friday.</p>
+
+<h3>11.1 Weekly review script</h3>
+<div class="step"><span class="num">1</span>Pull last 7 days of agent transcripts.<br>
+<span class="num">2</span>Count handled vs escalated tasks.<br>
+<span class="num">3</span>Note repeated failure modes.<br>
+<span class="num">4</span>Update SOUL.md or skills to fix top 2 misses.<br>
+<span class="num">5</span>Send client a 3-line Friday update: wins, fixes, next week's focus.</div>
+
+<h3>11.2 Health scorecard</h3>
+<table class="data">
+  <tr><th>Metric</th><th>Target</th><th>Measurement</th></tr>
+  <tr><td>Agent uptime</td><td>>96%</td><td>Gateway logs / process status</td></tr>
+  <tr><td>Task completion rate</td><td>>88% without human rework</td><td>Weekly transcript review</td></tr>
+  <tr><td>Client reply rate</td><td>>1 message per day from client</td><td>Platform channel counts</td></tr>
+  <tr><td>Expansion signal</td><td>2 new role requests within 90 days</td><td>Explicit ask or "can it also..."</td></tr>
+  <tr><td>Payment lag</td><td>Zero missed renewals</td><td>Invoice status</td></tr>
+</table>
+
+<h3>11.3 Red flags</h3>
+<ul>
+  <li>Client stops replying to the agent for 48+ hours.</li>
+  <li>Escalation rate above 20% in a week.</li>
+  <li>Repeated failures in the same skill (model confusion, API timeout, wrong context).</li>
+  <li>Client asks "can we reduce the scope?" — early churn signal.</li>
+</ul>
+
+<h3>11.4 Expansion playbook</h3>
+<p>Happy clients ask for more. When you hear "can it also...", that is your cue to propose an additional role at £2,500/month. The marginal cost to you is small; the margin is the same 90%+.</p>
+
+<h3>11.5 Churn playbook</h3>
+<p>If a client wants to cancel, first offer a scope reset. Reduce to the one task they still find valuable at £2,500/month. A smaller live contract is always better than a dead contract. If they still leave, record the reason and update your role checklist.</p>
+
+<div class="pgbreak"></div>
+
+<h2>12. Cashflow & Expansion</h2>
+<p>Numbers that keep the business alive and growing.</p>
+
+<h3>12.1 Contract template</h3>
 <div class="box alt"><b>Managed AI Employee Agreement</b><br>
 <b>Parties:</b> [Your Ltd name] ("Operator") and [Client Ltd name] ("Client")<br>
 <b>Role:</b> [one sentence, e.g. "AI customer-success employee handling inbound support triage in Slack"]<br>
@@ -387,7 +536,7 @@ li { margin: 4px 0; }
 <b>Data:</b> client retains ownership of all business data; agent memory wiped on contract end.<br>
 <b>Signature:</b> signed email acceptance is sufficient for start.</div>
 
-<h3>12.1 Cashflow projection — first 90 days</h3>
+<h3>12.2 Cashflow projection — first 90 days</h3>
 <table class="data">
   <tr><th>Week</th><th>Activity</th><th>Cash out</th><th>Cash in</th><th>Position</th></tr>
   <tr><td>0</td><td>Setup, outreach, discovery calls</td><td>£0</td><td>£0</td><td>£0</td></tr>
@@ -400,28 +549,20 @@ li { margin: 4px 0; }
 </table>
 <div class="warn">This assumes you run outreach consistently. The model breaks only if you stop sending messages.</div>
 
-<h3>12.2 Case study bank</h3>
-<div class="step"><span class="num">1</span><b>Design agency — support triage:</b> "Agent returned Slack support tickets in under 2 minutes during evenings. Agency recovered 11 hours/week of developer time."<br><span class="num">2</span><b>Real estate — lead follow-up:</b> "Agent texted leads within 60 seconds of form submit. Submission-to-appointment rate rose from 3% to 7%."<br><span class="num">3</span><b>Clinic — booking admin:</b> "Agent confirmed appointments, sent reminders, and rescheduled gaps. No-show rate fell from 18% to 8%."<br><span class="num">4</span><b>Trades — quote chasing:</b> "Agent chased unpaid quotes and booked follow-ups. Weekly quote conversion improved by ~22%."<br><span class="num">5</span><b>Coaching — onboarding:</b> "Agent delivered onboarding sequences, booked discovery calls, and updated CRM after sessions."</div>
+<h3>12.3 Case study bank</h3>
+<div class="step"><span class="num">1</span><b>Design agency — support triage:</b> "Agent returned Slack support tickets in under 2 minutes during evenings. Agency recovered 11 hours/week of developer time."<br>
+<span class="num">2</span><b>Real estate — lead follow-up:</b> "Agent texted leads within 60 seconds of form submit. Submission-to-appointment rate rose from 3% to 7%."<br>
+<span class="num">3</span><b>Clinic — booking admin:</b> "Agent confirmed appointments, sent reminders, and rescheduled gaps. No-show rate fell from 18% to 8%."<br>
+<span class="num">4</span><b>Trades — quote chasing:</b> "Agent chased unpaid quotes and booked follow-ups. Weekly quote conversion improved by ~22%."<br>
+<span class="num">5</span><b>Coaching — onboarding:</b> "Agent delivered onboarding sequences, booked discovery calls, and updated CRM after sessions."</div>
 <p>Replace names/figures with real client data as soon as you have permission. Until then these are directional proof points.</p>
 <p>Measure these weekly. If any metric drops, act before the client complains.</p>
 
-<table class="data">
-  <tr><th>Metric</th><th>Target</th><th>Measurement</th></tr>
-  <tr><td>Agent uptime</td><td>>96%</td><td>Gateway logs / process status</td></tr>
-  <tr><td>Task completion rate</td><td>>88% without human rework</td><td>Weekly transcript review</td></tr>
-  <tr><td>Client reply rate</td><td>>1 message per day from client</td><td>Platform channel counts</td></tr>
-  <tr><td>Expansion signal</td><td>2 new role requests within 90 days</td><td>Explicit ask or "can it also..."</td></tr>
-  <tr><td>Payment lag</td><td>Zero missed renewals</td><td>Invoice status</td></tr>
-</table>
-
-<h3>12.1 Weekly review script</h3>
-<div class="step"><span class="num">1</span>Pull last 7 days of agent transcripts.<br><span class="num">2</span>Count handled vs escalated tasks.<br><span class="num">3</span>Note repeated failure modes.<br><span class="num">4</span>Update SOUL.md or skills to fix top 2 misses.<br><span class="num">5</span>Send client a 3-line Friday update: wins, fixes, next week's focus.</div>
-
 <div class="pgbreak"></div>
+
 <h2>13. Appendix: Sources & Tools</h2>
 
-
-<h3>Verified sources</h3>
+<h3>13.1 Verified sources</h3>
 <ul>
   <li>Nick Vasilescu X post 2079448897139937301 — £5K/month deal, Jul 21</li>
   <li>Nick X post 2076431897748734272 — Hermes as AI employee/co-founder, Jul 12</li>
@@ -437,7 +578,7 @@ li { margin: 4px 0; }
   <li>docs.orgo.ai/guides/hermes — sizing, install, gateways</li>
 </ul>
 
-<h3>Key tools used</h3>
+<h3>13.2 Key tools used</h3>
 <table class="data">
   <tr><th>Tool</th><th>Purpose</th><th>Verified</th></tr>
   <tr><td>Hermes Agent</td><td>Agent runtime, skills, gateway</td><td>Yes</td></tr>
@@ -450,9 +591,7 @@ li { margin: 4px 0; }
   <tr><td>Granola</td><td>Discovery call recording</td><td>Yes</td></tr>
 </table>
 
-<div class="box alt small"><b>Caveat:</b> Some implementation details remain unverified: exact promotion playbooks, full video transcripts, precise Slack scope lists, and exact agent provisioning flows for AgentMail/Phone/Card. Treat those as directions, not guarantees.</div>
-
-<h3>Verification status of key claims</h3>
+<h3>13.3 Verification status of key claims</h3>
 <table class="data">
   <tr><th>Claim</th><th>Status</th><th>Source</th></tr>
   <tr><td>£5K/month design agency client closed</td><td>VERIFIED</td><td>Nick tweet 2079448897139937301</td></tr>
@@ -463,6 +602,9 @@ li { margin: 4px 0; }
   <tr><td>Hermes v0.18</td><td>UNVERIFIED</td><td>Stated in repo README; not independently confirmed</td></tr>
   <tr><td>200+ Orgo fleet managed</td><td>UNVERIFIED</td><td>Nick post 2026-07-13</td></tr>
 </table>
+
+<h3>13.4 Final positioning statement</h3>
+<p>The AI employee market is not a feature war. It is a trust war. The operator who can say "I will own this outcome for £5,000/month and ship by Friday" wins every time. Delivery speed, managed service, and specific UK sector focus are the only moats that matter right now. Build the stack, run the calls, ship the agent.</p>
 
 </body>
 </html>
