@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="Managed AI employee. One agent. One outcome. £5k/month." />
 <meta name="twitter:image" content="https://alkalinearchitect.github.io/ai-employee/assets/hero.jpg" />
 <link rel="canonical" href="https://alkalinearchitect.github.io/ai-employee/" />
-<meta name="theme-color" content="#0a1628" />
+<meta name="theme-color" content="#000000" />
 <meta name="robots" content="index, follow" />
 <script type="application/ld+json">
 {
@@ -39,54 +39,94 @@
 }
 </script>
 <style>
-  :root {
-    --bg:#0a1a2e; --bg2:#0f2137; --bg3:#132b47;
-    --ink:#e9f3ff; --soft:#b8cde0; --muted:#6e86a8;
-    --accent:#05d5a0; --accent2:#00b4d8;
-    --ok:#22c55e; --warn:#f59e0b; --bad:#ef4444;
+  :root{
+    --bg:#000000;
+    --bg-soft:#0f0f0f;
+    --surface:#1c1c1c;
+    --surface-hover:#242424;
+    --border:#2a2a2a;
+    --ink:#ffffff;
+    --soft:#a1a1aa;
+    --muted:#71717a;
+    --primary:#26b65a;
+    --primary-ring:#88d6a3;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;line-height:1.55}
-  a{color:var(--accent2);text-decoration:none}
-  .wrap{max-width:1024px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
-  header{padding:88px 0 56px;text-align:center}
-  .eyebrow{font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:14px}
-  h1{font-size:clamp(2.2rem,7vw,5rem);line-height:1.04;margin:0 0 16px;letter-spacing:-.04em;font-weight:800}
-  .lead{font-size:clamp(1.05rem,1.6vw,1.28rem);color:var(--soft);max-width:62ch;margin:0 auto 22px;font-weight:400}
-  .price-row{display:inline-flex;align-items:baseline;gap:10px;margin:6px 0 10px}
-  .big{font-size:clamp(2.8rem,7vw,4.6rem);font-weight:800;color:var(--accent);line-height:1;text-shadow:0 0 50px color-mix(in srgb,var(--accent) 55%,transparent);letter-spacing:-.04em}
-  .per{font-size:1.1rem;color:var(--soft);font-weight:500}
-  .cta{margin:36px auto 20px;text-align:center}
-  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1.02rem;padding:16px 32px;border-radius:999px;color:var(--bg);background:var(--accent);box-shadow:0 12px 44px rgba(5,213,160,.55)}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 54px rgba(5,213,160,.75)}
-  .btn-ghost{display:inline-block;text-decoration:none;font-weight:600;font-size:.98rem;padding:14px 28px;border-radius:999px;color:var(--ink);background:transparent;border:1.6px solid color-mix(in srgb,var(--ink) 55%,transparent);margin-left:10px}
-  .sep{height:1px;background:linear-gradient(90deg,transparent,var(--accent2),transparent);margin:60px 0 12px;border:0}
-  .opener{font-size:clamp(1.35rem,2.4vw,1.9rem);font-weight:700;margin:0 0 12px;line-height:1.22}
-  .body{color:color-mix(in srgb,var(--ink) 82%,var(--soft));line-height:1.7;font-size:1.02rem;max-width:68ch}
-  .proof-row{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 6px}
-  .proof{background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 12%,var(--bg)),var(--bg));border:1px solid color-mix(in srgb,var(--accent) 24%,transparent);border-radius:16px;padding:14px 14px 16px;flex:1 1 140px;text-align:center}
-  .num{font-size:1.45rem;font-weight:800;color:var(--accent);display:block}
-  .lbl{font-size:.82rem;color:var(--soft);margin-top:2px;display:block}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
-  .card{background:color-mix(in srgb,var(--bg3) 60%,var(--bg2));border:1px solid color-mix(in srgb,var(--accent2) 18%,transparent);border-radius:16px;padding:18px 18px 20px}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary-ring);text-decoration:none}
+  .wrap{max-width:64rem;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+  /* nav */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:1.02rem}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);box-shadow:0 0 12px var(--primary)}
+  .nav-cta{font-size:.86rem;font-weight:600;color:var(--soft);border:1px solid var(--border);padding:8px 16px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--primary);color:var(--ink)}
+
+  /* hero */
+  header{padding:clamp(70px,12vw,130px) 0 64px;text-align:center;position:relative}
+  .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);display:block;margin-bottom:18px}
+  h1{font-size:clamp(2.5rem,8vw,5.2rem);line-height:1.02;margin:0 0 20px;letter-spacing:-.045em;font-weight:800}
+  .lead{font-size:clamp(1.05rem,1.7vw,1.3rem);color:var(--soft);max-width:52ch;margin:0 auto 28px;font-weight:400}
+  .price-row{display:inline-flex;align-items:baseline;gap:10px;margin:4px 0 8px}
+  .big{font-size:clamp(3rem,8vw,5rem);font-weight:800;color:var(--primary);line-height:1;text-shadow:0 0 60px color-mix(in srgb,var(--primary) 45%,transparent);letter-spacing:-.05em}
+  .per{font-size:1.05rem;color:var(--soft);font-weight:500}
+  .cta{margin:34px auto 16px;text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1rem;padding:15px 30px;border-radius:999px;color:#06210f;background:var(--primary);box-shadow:0 10px 40px rgba(38,182,90,.4);transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 54px rgba(38,182,90,.6)}
+  .btn-ghost{display:inline-block;text-decoration:none;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:999px;color:var(--ink);background:transparent;border:1px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--primary);color:var(--primary-ring)}
+
+  .sep{height:1px;background:var(--border);margin:64px 0 12px;border:0}
+
+  /* sections */
+  section{margin-top:8px}
+  .eyebrow-2{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--primary);display:block;margin-bottom:14px}
+  .opener{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;margin:0 0 14px;line-height:1.2;letter-spacing:-.02em}
+  .body{color:var(--soft);line-height:1.7;font-size:1.02rem;max-width:66ch}
+  .note{font-size:.95rem;color:var(--muted);line-height:1.6}
+
+  .proof-row{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0 6px}
+  .proof{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 14px;flex:1 1 130px;text-align:center}
+  .num{font-size:1.5rem;font-weight:800;color:var(--primary);display:block}
+  .lbl{font-size:.8rem;color:var(--soft);margin-top:3px;display:block}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px}
+  .card:hover{background:var(--surface-hover);border-color:#3a3a3a}
   .card h4{margin:0 0 8px;font-size:1.02rem;font-weight:700;color:var(--ink)}
-  .card p{margin:0;color:color-mix(in srgb,var(--ink) 78%,var(--soft));font-size:.95rem;line-height:1.6}
-  .table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.95rem}
-  .table th{background:linear-gradient(180deg,#132a47,#0f2137);color:#fff;text-align:left;padding:12px 12px;font-weight:600;letter-spacing:.02em;border-bottom:1px solid color-mix(in srgb,var(--accent2) 22%,transparent)}
-  .table td{padding:11px 12px;border-bottom:1px solid color-mix(in srgb,var(--accent2) 12%,transparent);color:var(--ink)}
-  .pill{display:inline-block;padding:5px 11px;border-radius:999px;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-  mark{background:color-mix(in srgb,var(--accent) 32%,transparent);color:#fff;padding:0 5px;border-radius:4px}
-  .note{font-size:.97rem;color:var(--muted);line-height:1.6}
-  .foot{margin-top:70px;text-align:center;color:var(--soft);font-size:.9rem;padding-bottom:60px}
-  .foot a{color:var(--accent2);font-weight:600}
-  @media(max-width:760px){.grid2{grid-template-columns:1fr}}
+  .card p{margin:0;color:var(--soft);font-size:.94rem;line-height:1.6}
+
+  .table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.94rem}
+  .table th{background:var(--surface);color:var(--ink);text-align:left;padding:12px 14px;font-weight:600;letter-spacing:.02em;border-bottom:1px solid var(--border)}
+  .table td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--soft)}
+  .pill{display:inline-block;padding:4px 11px;border-radius:999px;background:color-mix(in srgb,var(--primary) 18%,transparent);color:var(--primary-ring);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid color-mix(in srgb,var(--primary) 30%,transparent)}
+
+  code,.mono{font-family:var(--mono)}
+  pre{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;overflow:auto;font-family:var(--mono);font-size:.84rem;color:var(--soft);line-height:1.6}
+
+  /* trust row */
+  .trust{display:flex;gap:28px;flex-wrap:wrap;align-items:center;justify-content:center;opacity:.6;margin:18px 0 4px}
+  .trust span{font-family:var(--mono);font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+
+  .foot{margin-top:80px;text-align:center;color:var(--soft);font-size:.9rem;padding:40px 0 64px;border-top:1px solid var(--border)}
+  .foot a{color:var(--primary-ring);font-weight:600}
+
+  @media(max-width:760px){.grid2{grid-template-columns:1fr}.table{font-size:.86rem}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+<nav>
+  <div class="brand"><span class="dot"></span> Owl · Human Architect</div>
+  <a class="nav-cta" href="https://beacons.ai/humanarchitect">Book a call</a>
+</nav>
+
 <header>
-  <span class="eyebrow">Human Architect · Owl</span>
+  <span class="eyebrow">Managed AI Employees</span>
   <h1>One agent.<br/>One outcome.<br/>Flat £5k.</h1>
   <p class="lead">A managed AI employee for UK SMBs. Built, onboarded, fulfilled. You own the result. We own the delivery.</p>
   <div class="price-row"><span class="big">£5k</span><span class="per">/ month · per client</span></div>
@@ -99,7 +139,7 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">Why operators choose Owl</span>
+  <span class="eyebrow-2">Why operators choose Owl</span>
   <p class="opener">The market is flooded with tools. It is starving for operators.</p>
   <p class="body">Most vendors sell software and ask the client to build, train, and maintain. You sell a managed team member. They sign. You ship. They never touch an API key.</p>
   <div class="grid2">
@@ -113,7 +153,7 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">The system</span>
+  <span class="eyebrow-2">The system</span>
   <p class="opener">Five stages. One loop. Zero ambiguity.</p>
   <p class="body">Every client moves through the same system. The only metric that matters is whether the agent saves the client more than £5,000/month in human hours. If yes, you win. If no, pivot the role or refund.</p>
   <div class="proof-row">
@@ -127,7 +167,7 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">Intelligence</span>
+  <span class="eyebrow-2">Intelligence</span>
   <p class="opener">Verified. Not recycled.</p>
   <p class="body">Every major claim is sourced. If it cannot be independently confirmed, it is labelled.</p>
   <table class="table">
@@ -144,7 +184,7 @@
 <div class="sep"></div>
 
 <section>
-  <span class="eyebrow">The stack</span>
+  <span class="eyebrow-2">The stack</span>
   <p class="opener">Self-hosted. No per-seat fees. Total control.</p>
   <p class="body">The reference model uses paid tools. Your edge: the free equivalents already running on this VPS. Same result. Higher margin. Nobody freezes your account.</p>
   <table class="table">
@@ -158,12 +198,15 @@
     <tr><td>Observability</td><td>Latitude</td><td>Cron → Telegram health alerts</td></tr>
   </table>
   <p class="note">Overhead per client: roughly £115–290/month. Gross margin stays above 90%. That is why the stack matters.</p>
+  <pre>owl deploy &lt;client&gt; --job "lead follow-up" --platform telegram
+# isolated profile · one bot token · one outcome
+# live in 48h, or the first month is refunded</pre>
 </section>
 
 <div class="sep"></div>
 
 <section id="faq">
-  <span class="eyebrow">Objections</span>
+  <span class="eyebrow-2">Objections</span>
   <p class="opener">Objections are requests for reassurance, not rejection.</p>
   <p class="body">Acknowledge. Reframe. Close.</p>
   <table class="table">
@@ -183,13 +226,15 @@
 
 <div class="sep"></div>
 
-<section class="cta">
-  <span class="eyebrow">The handoff</span>
-  <h2 style="margin:0 0 12px;font-size:clamp(1.8rem,3.8vw,2.8rem)">Bring one workflow to a 20-minute call.</h2>
-  <p>The first operators to move on this will own the category. The window is open now, not later. Most will watch. The operator moves.</p>
-  <p class="sub">Bring one workflow. Leave with a one-page scope statement.</p>
-  <a class="btn" href="https://beacons.ai/humanarchitect">Book a call — £5k/mo</a>
-  <a class="btn-ghost" href="#faq">Questions</a>
+<section class="cta" style="flex-direction:column;align-items:center;text-align:center;padding-top:20px">
+  <span class="eyebrow-2">The handoff</span>
+  <h2 style="margin:0 0 12px;font-size:clamp(1.8rem,3.8vw,2.8rem);letter-spacing:-.03em">Bring one workflow to a 20-minute call.</h2>
+  <p class="body" style="margin:0 auto 8px">The first operators to move on this will own the category. The window is open now, not later. Most will watch. The operator moves.</p>
+  <p class="note" style="margin-bottom:24px">Bring one workflow. Leave with a one-page scope statement.</p>
+  <div class="cta" style="margin:0">
+    <a class="btn" href="https://beacons.ai/humanarchitect">Book a call — £5k/mo</a>
+    <a class="btn-ghost" href="#faq">Questions</a>
+  </div>
 </section>
 
 <div class="foot">
