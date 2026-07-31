@@ -107,6 +107,49 @@ VERIFIED: Listed in nicks-stack README + Corey Ganim thread.
 
 ---
 
+## 5.5 Verified METHODS (from Nick's own YouTube transcripts + X posts, 2026-07-31)
+
+**A. The 8 components of a useful AI employee (from "build an AI employee" masterclass, video fAhwYrjmQRk):**
+1. Computer (Orgo VM / VPS)
+2. Email (domain alias)
+3. Phone number (AgentPhone / iMessage)
+4. Comms channel (Telegram / Slack — "meet the customer where they are")
+5. Tools & connectors (Composio +1000 apps, MCPs)
+6. Card (AgentCard — so the agent can spend autonomously)
+7. Knowledge base (Obsidian vault — "one fact, one home")
+8. Observability (Latitude — fleet-wide signal monitoring)
+
+**B. Architecture: 1 orchestrator + N sub-agents (VERIFIED from transcript):**
+- Build ONE strong general-purpose main agent = orchestrator.
+- It hands off to specialized sub-agents: outbound lead gen, sales follow-up, content/assets, support, etc.
+- WHY: isolation minimizes blast radius — "if you can create sub agents, you minimize the blast radius of things that can go wrong."
+- T's /root/dewey/AGENTS.md already mirrors this (orchestrator + 4 sub-agents).
+
+**C. Business build/fulfill method (from managed-agent workshop w/ Jordan, video kdvm_kRZk8A):**
+- Charge $5K/month, EVERYTHING included (usage, agents, tokens). No separate line items.
+- Crawl-walk-run onboarding: "set it up with Slack. Talk to it in Slack for a little bit." Don't oneshot.
+- Onboarding a client agent ≈ onboarding a new human employee ("your intern on day three").
+- Most common client interface: Telegram + Slack.
+- Orgo computer has Slack pre-installed; agent can self-configure Slack/Telegram via computer-use.
+
+**D. OCA offer framework (from xTxb922RCP0 — OpenClaw Agency pitch):**
+- OLD model: high-ticket one-off, 30–45 days custom code, weak retainer. SCRAPPED.
+- NEW offer: charge retainer UP FRONT, deliver ONE full automation in <7 days, money-back guarantee if not fulfilled in 7 days.
+- "You give them an entire automation under 7 days — you just infiltrated their business with the agent."
+- Then expand to fleet / B2B2B resell.
+
+**E. X posting patterns (VERIFIED — how Nick markets):**
+- Lead with a RESULT + a contrarian hook: "My Hermes agent builds AI employees for me. Just closed another $5K/mo customer. I'm not even building any of it."
+- Show the human's tiny role: "All I do is ask the questions, record in Granola, Dewey takes over."
+- Punch down on skepticism: Corey Ganim reply "bUt wHy wOuLd SoMeOnE pAy $5k/mo WhEn ClAuDe Is $20" → rebut with value (no maternity leave, no complaints, half cost of a domestic employee).
+- Shoutout ecosystem (#orgo #orca_build) — network effects.
+- Post cadence: multiple posts/day, same-day as wins.
+
+**F. Discovery → delivery (consolidated, VERIFIED):**
+1. Discovery call (Nick uses Granola notetaker to record).
+2. Hand brief to Dewey → Dewey builds the client's Hermes agent + onboards to Slack.
+3. 48h to live. Weekly improvements included.
+
 ## 6. Verified Signals
 
 - Closed $5K/month client on 2026-07-21 (design agency, Slack onboarded)
@@ -209,12 +252,12 @@ A: Tyson Architect / HumanitAI. Dewey is our managed AI-employee service. Revenu
 
 ## 12. Open Gaps / UNVERIFIED
 
-- Exact Hermes profile configs used in production for client agents
-- Exact prompts for turning discovery transcript into skills
-- Full video transcripts: only metadata/timestamps extracted
-- Exact Slack scopes used in production
-- Agent Mail / Agent Phone exact provisioning steps
-- Whether current VPS factory matches Orgo template or uses simplified hosting-already-here model
+- Exact Hermes profile configs used in production for client agents (T's factory uses generic SOUL.md template, not Nick's 21 genericized skills)
+- Exact prompts for turning discovery transcript → skills (Nick mentions Granola→skills but no public prompt)
+- Agent Mail / Agent Phone exact provisioning steps (Nick uses paid services; T uses free stack — gap by design)
+- Whether current VPS factory matches Orgo template — NO, T uses simplified self-hosted model (hosting already here)
+- XQUIK_API_KEY not set on VPS → programmatic X scraping blocked; direct web_extract of X posts works
+- TRANSCRIPT_API_KEY not held → YouTube transcripts pulled via prior session scrape (7 transcripts in /root/dewey/nick_vids/)
 
 ---
 
