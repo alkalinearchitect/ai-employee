@@ -139,6 +139,27 @@
   .foot{text-align:center;color:var(--soft);font-size:.9rem;padding:36px 0 96px;border-top:1px solid var(--border)}
   .foot a{color:var(--primary-ring);font-weight:600}
 
+  /* ---- ROI calculator ---- */
+  .roi{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:50rem;margin:28px auto 0;text-align:left}
+  .roi .field{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+  .roi label{display:block;font-size:.86rem;color:var(--soft);margin-bottom:10px;font-weight:600}
+  .roi input[type=range]{width:100%;accent-color:var(--primary)}
+  .roi .val{float:right;color:var(--primary-ring);font-family:var(--mono);font-weight:700}
+  .roi-out{margin:24px auto 0;max-width:50rem;background:color-mix(in srgb,var(--primary) 10%,var(--surface));border:1px solid var(--primary);border-radius:14px;padding:22px 24px;text-align:center}
+  .roi-out .num{font-size:clamp(2rem,5vw,3rem);font-weight:800;color:var(--primary);line-height:1;text-shadow:0 0 40px color-mix(in srgb,var(--primary) 40%,transparent)}
+  .roi-out .lbl{color:var(--soft);font-size:.95rem;margin-top:8px}
+  @media(max-width:720px){.roi{grid-template-columns:1fr}}
+
+  /* ---- Industry tabs ---- */
+  .tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:26px 0 18px}
+  .tab{border:1px solid var(--border);background:var(--surface);color:var(--soft);font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:999px;cursor:pointer;min-height:44px}
+  .tab[aria-selected=true]{border-color:var(--primary);color:var(--ink);background:color-mix(in srgb,var(--primary) 12%,var(--surface))}
+  .panel{display:none;max-width:60rem;margin:0 auto;text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px}
+  .panel[data-active=true]{display:block}
+  .panel .tag{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:10px}
+  .panel h3{margin:0 0 6px;color:var(--ink);font-size:1.05rem}
+  .panel p{margin:0;color:var(--soft);font-size:.96rem;line-height:1.65}
+
   /* ---- Scroll-reveal system (JS-gated so no-JS shows everything) ---- */
   .js .reveal{opacity:0;transform:translateY(24px);
     transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);
@@ -197,6 +218,10 @@
 
 <main id="main">
 
+<section class="reveal" style="padding-top:0">
+  <p class="body" style="max-width:62ch;font-size:1.08rem"><strong style="color:var(--ink)">Not a tool you configure. A self-hosted employee you own — and can resell.</strong> Most "AI for business" sells you software to babysit. Owl builds, runs, and maintains the agent on your own server, as an asset that becomes a revenue line. That's the difference between a cost and a hire.</p>
+</section>
+
 <section class="reveal">
   <span class="eyebrow-2">The problem</span>
   <h2>Every business drowns in work that shouldn't need a human</h2>
@@ -208,6 +233,22 @@
   <span class="eyebrow-2">The math most miss</span>
   <h2>A real hire costs more, and asks for more</h2>
   <p class="body">A decent UK employee runs £30k–£45k before you add National Insurance, onboarding, and the three-month ramp to usefulness. Then they take leave, they quit, they have off days. Owl is <strong style="color:var(--ink)">£5,000 a month, no recruitment, no employment law, no maternity leave, no complaints, and it never clocks out.</strong> It works while you sleep and improves while you don't watch. The question isn't "why pay £5k for an AI agent?" — it's "why pay far more for a human to do the work an agent does better, 24/7?"</p>
+</section>
+
+<section class="reveal">
+  <span class="eyebrow-2">Your numbers</span>
+  <h2>How much is a missed lead actually costing you?</h2>
+  <p class="body">Slide the numbers to match your business. The calculator runs in your browser — no data leaves the page. It shows what an Owl agent recovers by catching the leads your old process drops.</p>
+  <div class="roi">
+    <div class="field"><label>Enquiries per month <span class="val" id="roiLeadsV">200</span></label><input type="range" id="roiLeads" min="10" max="2000" step="10" value="200"></div>
+    <div class="field"><label>% you currently lose <span class="val" id="roiDropV">30%</span></label><input type="range" id="roiDrop" min="5" max="80" step="5" value="30"></div>
+    <div class="field"><label>Avg value per customer (£) <span class="val" id="roiValV">500</span></label><input type="range" id="roiVal" min="50" max="10000" step="50" value="500"></div>
+    <div class="field"><label>Owl recovery rate <span class="val" id="roiRecV">80%</span></label><input type="range" id="roiRec" min="20" max="100" step="5" value="80"></div>
+  </div>
+  <div class="roi-out">
+    <div class="num" id="roiOut">£24,000</div>
+    <div class="lbl">recovered every year by an Owl agent</div>
+  </div>
 </section>
 
 <section class="reveal">
@@ -225,6 +266,22 @@
     <div class="card reveal" data-delay="2"><div class="ic">✉</div><h3>Inbox triage</h3><p>The noise sorted, the drafts written, the right things routed. Your inbox managed, not ignored.</p></div>
     <div class="card reveal" data-delay="3"><div class="ic">▦</div><h3>Ops reporting</h3><p>Yesterday's numbers pulled, formatted, and sent before stand-up. The report writes itself.</p></div>
   </div>
+</section>
+
+<section class="reveal">
+  <span class="eyebrow-2">Built for your trade</span>
+  <h2>One workflow. Your industry.</h2>
+  <p class="body">Owl isn't a generic bot. It owns the recurring job that drains your specific business. Pick yours:</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-panel="pTrades">Trades &amp; services</button>
+    <button class="tab" role="tab" aria-selected="false" data-panel="pClinic">Clinics &amp; health</button>
+    <button class="tab" role="tab" aria-selected="false" data-panel="pLaw">Law &amp; professional</button>
+    <button class="tab" role="tab" aria-selected="false" data-panel="pEcom">E-commerce</button>
+  </div>
+  <div class="panel" id="pTrades" data-active="true"><span class="tag">Trades &amp; services</span><h3>Quote requests that used to die in your inbox</h3><p>Every "how much to fit a boiler?" message gets an instant reply, a qualification question, and a booked site visit — even at 9pm. You arrive to a diary that's already full.</p></div>
+  <div class="panel" id="pClinic" data-active="false"><span class="tag">Clinics &amp; health</span><h3>Appointment slots that fill themselves</h3><p>New enquiry? Owl answers, checks the next free slot, sends the reminder, and chases the no-shows. Cancellations get rebooked before the chair goes cold.</p></div>
+  <div class="panel" id="pLaw" data-active="false"><span class="tag">Law &amp; professional</span><h3>Intake that never sleeps</h3><p>Every referral and web enquiry is acknowledged in seconds, qualified against your criteria, and routed to the right solicitor with a follow-up booked. No lead waits till Monday.</p></div>
+  <div class="panel" id="pEcom" data-active="false"><span class="tag">E-commerce</span><h3>Abandoned carts that come back</h3><p>Owl chases every abandoned checkout, answers product questions, and recovers the order your old flow let slip. Post-purchase follow-up drives the repeat sale.</p></div>
 </section>
 
 <section class="reveal">
@@ -384,6 +441,35 @@
         });
       }, {threshold:0}).observe(hero);
     }
+  }
+})();
+
+(function(){
+  var L=document.getElementById('roiLeads'),D=document.getElementById('roiDrop'),V=document.getElementById('roiVal'),R=document.getElementById('roiRec');
+  if(L){
+    function fmt(n){return '£'+Math.round(n).toLocaleString('en-GB');}
+    function calc(){
+      var l=+L.value,d=+D.value/100,v=+V.value,r=+R.value/100;
+      document.getElementById('roiLeadsV').textContent=l;
+      document.getElementById('roiDropV').textContent=(d*100)+'%';
+      document.getElementById('roiValV').textContent=fmt(v);
+      document.getElementById('roiRecV').textContent=(r*100)+'%';
+      document.getElementById('roiOut').textContent=fmt(l*d*v*r*12);
+    }
+    [L,D,V,R].forEach(function(el){el.addEventListener('input',calc);});
+    calc();
+  }
+  var tabs=document.querySelectorAll('.tab');
+  if(tabs.length){
+    tabs.forEach(function(t){
+      t.addEventListener('click',function(){
+        tabs.forEach(function(x){x.setAttribute('aria-selected','false');});
+        t.setAttribute('aria-selected','true');
+        document.querySelectorAll('.panel').forEach(function(p){p.setAttribute('data-active','false');});
+        var el=document.getElementById(t.getAttribute('data-panel'));
+        if(el) el.setAttribute('data-active','true');
+      });
+    });
   }
 })();
 </script>
