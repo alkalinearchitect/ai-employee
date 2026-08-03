@@ -49,150 +49,120 @@
 }
 </script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
   :root{
-    --bg:#000000; --bg-soft:#0f0f0f; --surface:#1c1c1c; --surface-hover:#242424;
-    --border:#2a2a2a; --ink:#ffffff; --soft:#a1a1aa; --muted:#9a9aa3;
-    --primary:#15a35a; --primary-ring:#5fbf8a;
+    --bg:#000000; --bg-soft:#0b0b0b; --surface:#141414; --surface-hover:#1c1c1c;
+    --border:#242424; --border-strong:#333333; --ink:#ffffff; --soft:#a8a8b0; --muted:#7c7c85;
+    --primary:#16a35a; --primary-ring:#5fbf8a;
     --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
     --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
-  /* Inter loaded self-contained-free via Google Fonts (no runtime dep on Pages build; link is async, system-ui fallback kept) */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
   *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:var(--primary-ring);text-decoration:none}
-  .skip-link{position:absolute;left:-999px;top:0;background:var(--primary);color:#06210f;padding:10px 16px;border-radius:8px;font-weight:700;z-index:50}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--primary);color:#04150b;padding:10px 16px;border-radius:8px;font-weight:700;z-index:50}
   .skip-link:focus{left:12px;top:12px}
   :focus-visible{outline:2px solid var(--primary-ring);outline-offset:3px;border-radius:4px}
-  .wrap{max-width:60rem;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+  .wrap{max-width:68rem;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
 
-  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--border)}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:1.02rem}
-  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);box-shadow:0 0 12px var(--primary)}
-  .nav-cta{font-size:.86rem;font-weight:600;color:var(--soft);border:1px solid var(--border);padding:11px 18px;border-radius:10px;min-height:44px;display:inline-flex;align-items:center}
-  .nav-cta:hover{border-color:var(--primary);color:var(--ink)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:1.1rem}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--primary);box-shadow:0 0 10px var(--primary)}
+  .nav-cta{font-size:.85rem;font-weight:600;color:var(--ink);border:1px solid var(--border-strong);padding:11px 20px;border-radius:10px;min-height:44px;display:inline-flex;align-items:center;transition:border-color .15s,color .15s}
+  .nav-cta:hover{border-color:var(--primary);color:var(--primary-ring)}
 
-  header{padding:clamp(64px,11vw,120px) 0 56px;text-align:center;position:relative;background:radial-gradient(60% 50% at 50% 0%, rgba(21,163,90,.06), transparent 70%)}
-  .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:18px}
-  h1{font-size:clamp(2.3rem,7vw,4.6rem);line-height:1.04;margin:0 0 20px;letter-spacing:-.04em;font-weight:800}
-  .lead{font-size:clamp(1.05rem,1.7vw,1.3rem);color:var(--soft);max-width:54ch;margin:0 auto 16px;font-weight:400}
-  .subhook{font-size:1.02rem;color:var(--muted);max-width:48ch;margin:0 auto 26px}
-  .price-row{display:inline-flex;align-items:baseline;gap:10px;margin:4px 0 8px}
-  .big{font-size:clamp(2.6rem,7vw,4.4rem);font-weight:800;color:var(--primary);line-height:1;text-shadow:0 0 32px color-mix(in srgb,var(--primary) 28%,transparent);letter-spacing:-.05em}
-  .per{font-size:1.05rem;color:var(--soft);font-weight:500}
-  .cta{margin:32px auto 8px;text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:1rem;padding:15px 30px;border-radius:10px;color:#06210f;background:var(--primary);box-shadow:0 8px 28px rgba(38,182,90,.28), 0 0 0 1px color-mix(in srgb,var(--primary-ring) 40%,transparent) inset;transition:transform .15s ease,box-shadow .15s ease;min-height:48px}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(38,182,90,.42), 0 0 0 1px color-mix(in srgb,var(--primary-ring) 60%,transparent) inset}
-  .btn-ghost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:10px;color:var(--ink);background:transparent;border:1px solid var(--border);min-height:48px}
+  /* HERO — left aligned, editorial, video front and center */
+  header{padding:clamp(48px,8vw,92px) 0 clamp(40px,6vw,64px);position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:22px}
+  h1{font-size:clamp(2.6rem,6.4vw,5.2rem);line-height:.98;margin:0 0 22px;letter-spacing:-.045em;font-weight:900}
+  h1 .accent{color:var(--primary)}
+  .lead{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--soft);max-width:46ch;margin:0 0 26px;font-weight:400}
+  .price{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;letter-spacing:-.03em;margin:0 0 6px}
+  .price small{font-size:.95rem;font-weight:500;color:var(--muted);letter-spacing:0}
+  .guarantee-line{font-size:.95rem;color:var(--soft);margin:0 0 28px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:1rem;padding:15px 30px;border-radius:10px;color:#04150b;background:var(--primary);box-shadow:0 6px 22px rgba(22,163,90,.30);transition:transform .15s ease,box-shadow .15s ease;min-height:48px}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(22,163,90,.45)}
+  .btn-ghost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:10px;color:var(--ink);background:transparent;border:1px solid var(--border-strong);min-height:48px}
   .btn-ghost:hover{border-color:var(--primary);color:var(--primary-ring)}
 
-  main section{padding:clamp(48px,8vw,88px) 0}
-  .eyebrow-2{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:14px;text-align:center}
-  h2{font-size:clamp(1.5rem,3vw,2.3rem);font-weight:700;margin:0 0 14px;line-height:1.18;letter-spacing:-.02em;text-align:center}
-  .body{color:var(--soft);line-height:1.7;font-size:1.05rem;max-width:64ch;margin:0 auto;text-align:center}
+  /* HERO VIDEO */
+  .hero-video{position:relative;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--surface);aspect-ratio:4/5}
+  .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-video .tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--primary-ring);background:rgba(0,0,0,.6);border:1px solid var(--border-strong);padding:6px 10px;border-radius:8px}
 
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px;text-align:center}
-  .card:hover{background:var(--surface-hover);border-color:#3a3a3a}
-  .card .ic{width:38px;height:38px;border-radius:10px;background:color-mix(in srgb,var(--primary) 16%,transparent);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--primary-ring);font-weight:800;font-size:1.1rem}
-  .card h3{margin:0 0 6px;font-size:1.05rem;font-weight:700;color:var(--ink)}
-  .card p{margin:0;color:var(--soft);font-size:.92rem;line-height:1.55}
+  /* FULL-BLEED STATEMENT */
+  .statement{padding:clamp(56px,9vw,104px) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-soft)}
+  .statement h2{font-size:clamp(1.8rem,4.4vw,3.4rem);line-height:1.08;letter-spacing:-.035em;font-weight:800;max-width:20ch;margin:0}
 
-  .parts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:28px 0;text-align:left}
-  .part{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
-  .part .n{font-family:var(--mono);font-size:.74rem;color:var(--primary);font-weight:700;flex:0 0 auto;margin-top:3px;letter-spacing:.08em}
-  .part h3{margin:0 0 4px;font-size:.98rem;font-weight:700;color:var(--ink)}
-  .part p{margin:0;color:var(--soft);font-size:.88rem;line-height:1.5}
-  .part.moat{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 8%,var(--surface))}
+  main section{padding:clamp(56px,9vw,104px) 0}
+  .eyebrow-2{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:14px}
+  h3.sec{font-size:clamp(1.6rem,3.2vw,2.5rem);font-weight:800;margin:0 0 14px;line-height:1.1;letter-spacing:-.03em}
+  .body{color:var(--soft);line-height:1.7;font-size:1.05rem;max-width:60ch}
 
-  .cmp{width:100%;border-collapse:collapse;margin:28px 0;font-size:.92rem;text-align:left}
-  .cmp th,.cmp td{padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top}
-  .cmp thead th{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
-  .cmp td:first-child{color:var(--soft);font-weight:600}
-  .cmp .owl-col{color:var(--ink);font-weight:600}
-  .cmp .them-col{color:var(--muted)}
-  .cmp tr:last-child td{border-bottom:none}
-  .contrarian{font-size:clamp(1.1rem,2vw,1.5rem);font-weight:700;line-height:1.3;max-width:32ch;margin:0 auto 8px;text-align:center;color:var(--ink)}
-
-  .guarantee{display:flex;flex-direction:column;gap:12px;max-width:46rem;margin:24px auto 0}
-  .grow{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:14px 16px}
-  .grow .ck{color:var(--primary-ring);font-weight:800;font-size:1.1rem;line-height:1.4}
-  .grow p{margin:0;color:var(--soft);font-size:.96rem}
-  .grow strong{color:var(--ink)}
-
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 8px;counter-reset:s}
-  .step{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px;text-align:center}
-  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--primary);font-weight:700;letter-spacing:.1em}
-  .step h3{margin:8px 0 6px;font-size:1.02rem;font-weight:700;color:var(--ink)}
-  .step p{margin:0;color:var(--soft);font-size:.9rem;line-height:1.5}
-
-  .faq{max-width:48rem;margin:28px auto 0;text-align:left}
-  .faq details{border:1px solid #2a2a2a;border-radius:12px;padding:4px 18px;margin-bottom:10px;background:var(--surface)}
-  .faq details[open]{border-color:#3a3a3a}
-  .faq summary{font-weight:700;color:var(--ink);cursor:pointer;padding:14px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--primary);font-weight:800;font-size:1.3rem;line-height:1}
-  .faq details[open] summary::after{content:"–"}
-  .faq p{margin:0 0 16px;color:var(--soft);font-size:.95rem;line-height:1.65}
-
-  .book{max-width:46rem;margin:0 auto;text-align:center}
-  .book .lead{margin-bottom:18px}
-
-  .foot{text-align:center;color:var(--soft);font-size:.9rem;padding:36px 0 96px;border-top:1px solid var(--border)}
-  .foot a{color:var(--primary-ring);font-weight:600}
-
-  /* ---- ROI calculator ---- */
-  .roi{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:50rem;margin:28px auto 0;text-align:left}
+  /* ROI calculator — prominent */
+  .roi{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:52rem;margin:30px 0}
   .roi .field{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
   .roi label{display:block;font-size:.86rem;color:var(--soft);margin-bottom:10px;font-weight:600}
   .roi input[type=range]{width:100%;accent-color:var(--primary)}
   .roi .val{float:right;color:var(--primary-ring);font-family:var(--mono);font-weight:700}
-  .roi-out{margin:24px auto 0;max-width:50rem;background:color-mix(in srgb,var(--primary) 10%,var(--surface));border:1px solid var(--primary);border-radius:14px;padding:22px 24px;text-align:center}
-  .roi-out .num{font-size:clamp(2rem,5vw,3rem);font-weight:800;color:var(--primary);line-height:1;text-shadow:0 0 40px color-mix(in srgb,var(--primary) 40%,transparent)}
+  .roi-out{margin:24px 0 0;max-width:52rem;background:var(--surface);border:1px solid var(--border-strong);border-left:3px solid var(--primary);border-radius:14px;padding:22px 24px}
+  .roi-out .num{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;color:var(--primary);line-height:1;letter-spacing:-.04em}
   .roi-out .lbl{color:var(--soft);font-size:.95rem;margin-top:8px}
-  @media(max-width:720px){.roi{grid-template-columns:1fr}}
+  @media(max-width:720px){.roi{grid-template-columns:1fr}.hero-grid{grid-template-columns:1fr}.hero-video{aspect-ratio:16/10}}
 
-  /* ---- Industry tabs ---- */
-  .tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:26px 0 18px}
+  /* 8 parts — tighter grid */
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+  .part{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+  .part .n{font-family:var(--mono);font-size:.72rem;color:var(--primary);font-weight:700;flex:0 0 auto;margin-top:3px;letter-spacing:.08em}
+  .part h4{margin:0 0 4px;font-size:1rem;font-weight:700;color:var(--ink)}
+  .part p{margin:0;color:var(--soft);font-size:.88rem;line-height:1.5}
+  .part.moat{border-color:var(--primary);background:linear-gradient(180deg,rgba(22,163,90,.07),var(--surface))}
+  @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+
+  /* comparison */
+  .cmp{width:100%;border-collapse:collapse;margin:28px 0;font-size:.92rem}
+  .cmp th,.cmp td{padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top;text-align:left}
+  .cmp thead th{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .cmp td:first-child{color:var(--soft);font-weight:600}
+  .cmp .owl-col{color:var(--ink);font-weight:600}
+  .cmp .them-col{color:var(--muted)}
+  .cmp tr:last-child td{border-bottom:none}
+
+  /* guarantee grid */
+  .grow{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:16px 18px;margin-bottom:12px;max-width:48rem}
+  .grow .ck{color:var(--primary-ring);font-weight:800;font-size:1.1rem;line-height:1.4}
+  .grow p{margin:0;color:var(--soft);font-size:.96rem}
+  .grow strong{color:var(--ink)}
+
+  /* industry tabs */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
   .tab{border:1px solid var(--border);background:var(--surface);color:var(--soft);font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:10px;cursor:pointer;min-height:44px}
-  .tab[aria-selected=true]{border-color:var(--primary);color:var(--ink);background:color-mix(in srgb,var(--primary) 12%,var(--surface))}
-  .panel{display:none;max-width:60rem;margin:0 auto;text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px}
+  .tab[aria-selected=true]{border-color:var(--primary);color:var(--ink);background:linear-gradient(180deg,rgba(22,163,90,.10),var(--surface))}
+  .panel{display:none;max-width:60rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px}
   .panel[data-active=true]{display:block}
-  .panel .tag{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:10px}
-  .panel h3{margin:0 0 6px;color:var(--ink);font-size:1.05rem}
+  .panel .tag{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary-ring);margin-bottom:10px}
+  .panel h4{margin:0 0 6px;color:var(--ink);font-size:1.05rem}
   .panel p{margin:0;color:var(--soft);font-size:.96rem;line-height:1.65}
 
-  /* ---- Scroll-reveal system (JS-gated so no-JS shows everything) ---- */
-  .js .reveal{opacity:0;transform:translateY(24px);
-    transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);
-    will-change:opacity,transform}
-  .js .reveal.reveal-visible{opacity:1;transform:none}
-  .js .reveal[data-delay="1"]{transition-delay:.08s}
-  .js .reveal[data-delay="2"]{transition-delay:.16s}
-  .js .reveal[data-delay="3"]{transition-delay:.24s}
-  .js .reveal[data-delay="4"]{transition-delay:.32s}
-  .js .reveal[data-delay="5"]{transition-delay:.40s}
-  .js .reveal[data-delay="6"]{transition-delay:.48s}
-  @media (prefers-reduced-motion:reduce){
-    .js .reveal{opacity:1!important;transform:none!important;transition:none!important}
-  }
+  .book{padding:clamp(56px,9vw,104px) 0;text-align:center;border-top:1px solid var(--border);background:var(--bg-soft)}
+  .book .lead{margin:0 auto 22px}
+  .foot{text-align:center;color:var(--muted);font-size:.88rem;padding:36px 0 96px;border-top:1px solid var(--border)}
 
-  /* ---- Sticky bottom CTA ---- */
-  .sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;
-    display:flex;align-items:center;justify-content:space-between;gap:12px;
-    padding:14px clamp(16px,5vw,40px);
-    padding-bottom:calc(14px + env(safe-area-inset-bottom));
-    background:rgba(15,15,15,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-    border-top:1px solid var(--border);
-    transform:translateY(110%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+  /* scroll reveal */
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
+  .js .reveal.reveal-visible{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+
+  /* sticky bar */
+  .sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px clamp(16px,5vw,40px);padding-bottom:calc(14px + env(safe-area-inset-bottom));background:rgba(10,10,10,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--border);transform:translateY(110%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
   .sticky-bar.is-visible{transform:translateY(0)}
   .sticky-bar .lbl{color:var(--ink);font-weight:600;font-size:.95rem;line-height:1.25}
   .sticky-bar .lbl small{display:block;color:var(--soft);font-weight:400;font-size:.78rem}
   .sticky-bar .btn{font-size:.95rem;padding:12px 22px}
   body.cta-open{padding-bottom:72px;transition:padding-bottom .35s ease}
   @media (max-width:560px){.sticky-bar .lbl small{display:none}}
-
-  @media(max-width:720px){.grid3,.steps{grid-template-columns:1fr}.parts{grid-template-columns:1fr}.cmp{font-size:.82rem}.cmp th,.cmp td{padding:10px 10px}}
 </style>
 </head>
 <body>
@@ -204,43 +174,41 @@
   <a class="nav-cta" href="#book">Book a call</a>
 </nav>
 
-<header class="reveal">
-  <span class="eyebrow">Managed AI employee · UK-first</span>
-  <h1>Your best hire this year<br/>won't be a person.</h1>
-  <p class="lead">Owl is a managed AI employee for UK businesses doing £1M–£2M. We build it, switch it on inside your company, and run it — so your team stops doing the work that drains them and starts doing the work that grows you.</p>
-  <p class="subhook">One flat £5,000/month. Live in 48 hours. If it hasn't paid for itself by day 30, the first month is on us.</p>
-  <p class="subhook" style="color:var(--primary-ring);font-weight:600">Every enquiry your team misses today is revenue you'll never recover. Owl catches all of it — at 2am, on holiday, forever.</p>
-  <div class="price-row"><span class="big">£5k</span><span class="per">/ month · per client · everything included</span></div>
-  <div class="cta">
-    <a class="btn" href="#book">Book a 20-minute call</a>
-    <a class="btn-ghost" href="#how">How it works</a>
+<header>
+  <div class="hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Managed AI employee · UK-first</span>
+      <h1>Your best hire this year <span class="accent">won't be a person.</span></h1>
+      <p class="lead">Owl is a managed AI employee for UK businesses doing £1M–£2M. We build it, switch it on inside your company, and run it — so your team stops doing the work that drains them and starts doing the work that grows you.</p>
+      <p class="price">£5,000 <small>/ month · per client · everything included</small></p>
+      <p class="guarantee-line">Live in 48 hours. If it hasn't paid for itself by day 30, the first month is on us.</p>
+      <div class="cta">
+        <a class="btn" href="#book">Book a 20-minute call</a>
+        <a class="btn-ghost" href="#calc">See the maths</a>
+      </div>
+    </div>
+    <div class="hero-video reveal">
+      <span class="tag">● Live — Owl working a real lead</span>
+      <video src="assets/vid/hero.mp4" muted autoplay loop playsinline poster="assets/hero.jpg"></video>
+    </div>
   </div>
-  <p style="margin:14px 0 0;font-size:.9rem;color:var(--muted)"><a href="#demo" style="color:var(--primary-ring);font-weight:600">&#9656; Watch a 90-second demo</a> — see an Owl agent work a live lead.</p>
 </header>
 
+</div>
+
+<section class="statement">
+  <div class="wrap">
+    <h2 class="reveal">Every lead your team misses today is revenue you'll never get back.</h2>
+  </div>
+</section>
+
+<div class="wrap">
 <main id="main">
 
-<section class="reveal" style="padding-top:0">
-  <p class="body" style="max-width:62ch;font-size:1.08rem"><strong style="color:var(--ink)">Not a tool you configure. A self-hosted employee you own — and can resell.</strong> Most "AI for business" sells you software to babysit. Owl builds, runs, and maintains the agent on your own server, as an asset that becomes a revenue line. That's the difference between a cost and a hire.</p>
-</section>
-
 <section class="reveal">
-  <span class="eyebrow-2">The problem</span>
-  <h2>Every business drowns in work that shouldn't need a human</h2>
-  <p class="body">Leads go cold while your team puts out fires. The inbox became a second job nobody applied for. Reporting eats the morning and nobody reads it. You've bought AI tools before — they sit unused, because nobody maintains them. And hiring takes the three months you don't have.</p>
-  <p class="body" style="margin-top:18px"><strong style="color:var(--ink)">Owl takes that recurring work off your plate.</strong> Not the work that needs judgement — the work that just needs to happen, every day, without fail. That's what a managed AI employee is for.</p>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">The math most miss</span>
-  <h2>A real hire costs more, and asks for more</h2>
-  <p class="body">A decent UK employee runs £30k–£45k before you add National Insurance, onboarding, and the three-month ramp to usefulness. Then they take leave, they quit, they have off days. Owl is <strong style="color:var(--ink)">£5,000 a month, no recruitment, no employment law, no maternity leave, no complaints, and it never clocks out.</strong> It works while you sleep and improves while you don't watch. The question isn't "why pay £5k for an AI agent?" — it's "why pay far more for a human to do the work an agent does better, 24/7?"</p>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">Your numbers</span>
-  <h2>How much is a missed lead actually costing you?</h2>
-  <p class="body">Slide the numbers to match your business. The calculator runs in your browser — no data leaves the page. It shows what an Owl agent recovers by catching the leads your old process drops.</p>
+  <span class="eyebrow-2">The maths most miss</span>
+  <h3 class="sec" id="calc">A real hire costs more, and asks for more.</h3>
+  <p class="body">A decent UK employee runs £30k–£45k before National Insurance, onboarding, and the three-month ramp to usefulness. Then they take leave, they quit, they have off days. Owl is £5,000 a month — no recruitment, no employment law, no maternity leave, no complaints, and it never clocks out. The question isn't "why pay £5k for an AI agent?" It's "why pay far more for a human to do the work an agent does better, 24/7?"</p>
   <div class="roi">
     <div class="field"><label>Enquiries per month <span class="val" id="roiLeadsV">200</span></label><input type="range" id="roiLeads" min="10" max="2000" step="10" value="200"></div>
     <div class="field"><label>% you currently lose <span class="val" id="roiDropV">30%</span></label><input type="range" id="roiDrop" min="5" max="80" step="5" value="30"></div>
@@ -249,30 +217,54 @@
   </div>
   <div class="roi-out">
     <div class="num" id="roiOut">£24,000</div>
-    <div class="lbl">recovered every year by an Owl agent</div>
+    <div class="lbl">recovered every year by an Owl agent. Slide the numbers to match your business — the calculator runs in your browser, no data leaves the page.</div>
   </div>
 </section>
 
 <section class="reveal">
-  <span class="eyebrow-2">Why we exist</span>
-  <h2>We're not building software. We're building your first non-human workforce.</h2>
-  <p class="body">Most businesses were built to be bottlenecked by people — one person per task, one task per hour, one sick day at a time. Owl exists to break that. Every repetitive job that keeps a UK business small should be owned by an agent that never sleeps, never forgets, and never asks for a raise. This isn't automation as a feature. It's the operating system for the future workforce — and your business should be running on it before a competitor is.</p>
+  <span class="eyebrow-2">What your Owl agent actually is</span>
+  <h3 class="sec">A managed employee with a full operating stack.</h3>
+  <p class="body">One central brain directs four specialist agents: one finds and chases leads, one follows up and closes, one produces your content and assets, one does the fulfilment work. Every Owl agent is built on eight parts — miss one and it's a toy, not a worker.</p>
+  <div class="grid2">
+    <div class="part reveal" data-delay="1"><span class="n">01</span><div><h4>Its own computer</h4><p>A dedicated server for your agent alone. No shared tenant, no neighbour noise, no other client's data near yours.</p></div></div>
+    <div class="part reveal" data-delay="2"><span class="n">02</span><div><h4>Its own email</h4><p>A domain address in your name. It sends and receives as a real member of your team.</p></div></div>
+    <div class="part reveal" data-delay="3"><span class="n">03</span><div><h4>A live line</h4><p>A working Telegram line. Message it, it answers. Reachable, not a black box.</p></div></div>
+    <div class="part reveal" data-delay="4"><span class="n">04</span><div><h4>Your channels</h4><p>Wired into your Slack or Telegram. It works where your team already talks.</p></div></div>
+    <div class="part reveal" data-delay="5"><span class="n">05</span><div><h4>Real tools</h4><p>It uses your systems — files, the web, the terminal behind it. It does the job, not just describes it.</p></div></div>
+    <div class="part reveal" data-delay="6"><span class="n">06</span><div><h4>Simple billing</h4><p>One invoice, one price, every month. No per-seat maths, no usage surprises.</p></div></div>
+    <div class="part moat reveal" data-delay="1"><span class="n">07</span><div><h4>A memory of your business</h4><p>One governed knowledge layer — "one fact, one home." Pricing, customers, do-and-don'ts, all in a single source. This is the edge: it stays accurate because it knows you, not the open internet.</p></div></div>
+    <div class="part reveal" data-delay="2"><span class="n">08</span><div><h4>Watching it</h4><p>Health checks run constantly and alert us before your customer ever notices.</p></div></div>
+  </div>
 </section>
 
 <section class="reveal">
-  <span class="eyebrow-2">What you get</span>
-  <h2>Pick one workflow. Watch it run itself.</h2>
-  <p class="body">Most teams start with the thing that costs them the most time. Your Owl agent owns it completely — it works in your Slack or Telegram, alongside your people, not in some separate app nobody opens.</p>
-  <div class="grid3">
-    <div class="card reveal" data-delay="1"><div class="ic">↗</div><h3>Lead follow-up</h3><p>Every enquiry chased within minutes, qualified, and booked. No lead goes cold because someone was busy.</p></div>
-    <div class="card reveal" data-delay="2"><div class="ic">✉</div><h3>Inbox triage</h3><p>The noise sorted, the drafts written, the right things routed. Your inbox managed, not ignored.</p></div>
-    <div class="card reveal" data-delay="3"><div class="ic">▦</div><h3>Ops reporting</h3><p>Yesterday's numbers pulled, formatted, and sent before stand-up. The report writes itself.</p></div>
-  </div>
+  <span class="eyebrow-2">Why others fall short</span>
+  <h3 class="sec">Most "AI for business" never shows up to work.</h3>
+  <table class="cmp">
+    <thead><tr><th>&nbsp;</th><th>Owl</th><th>Everyone else</th></tr></thead>
+    <tbody>
+      <tr><td>Who does the work</td><td class="owl-col">Fully managed. We run it, you get the outcome. You never touch the tech.</td><td class="them-col">You configure it, maintain it, fix it when it breaks.</td></tr>
+      <tr><td>Where data lives</td><td class="owl-col">Self-hosted on your own isolated server. Your data stays yours.</td><td class="them-col">Locked in a vendor's cloud, metered and exposed.</td></tr>
+      <tr><td>What you get</td><td class="owl-col">An AI team: a brain plus four specialists across email, Telegram and Slack.</td><td class="them-col">A single bot doing one narrow job on one channel.</td></tr>
+      <tr><td>How you profit</td><td class="owl-col">Resell-ready — offer it to your own customers under your label. It becomes revenue, not cost.</td><td class="them-col">You're the end user. A bill that only grows.</td></tr>
+      <tr><td>Time to live</td><td class="owl-col">Live in 48 hours — or your money back.</td><td class="them-col">Weeks of setup, discovery calls, upfront fees.</td></tr>
+      <tr><td>The cost</td><td class="owl-col">Flat £5,000/month. No setup fee, no per-seat surprises.</td><td class="them-col">Upfront build fees plus rising per-call costs.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="reveal">
+  <span class="eyebrow-2">Your guarantee</span>
+  <h3 class="sec">Four promises. No fine print.</h3>
+  <div class="grow"><span class="ck">✓</span><p><strong>Live in 48 hours.</strong> Or the first month is refunded — automatically, no form, no debate.</p></div>
+  <div class="grow"><span class="ck">✓</span><p><strong>Saves you more than £5k/month.</strong> Measured at day 30 against the human hours it replaced. If not, first month refunded.</p></div>
+  <div class="grow"><span class="ck">✓</span><p><strong>Your data stays yours.</strong> Isolated environment, scoped — not blanket — access. Portable on exit.</p></div>
+  <div class="grow"><span class="ck">✓</span><p><strong>No contract. Cancel anytime.</strong> Month to month. Stay because it works, not because you're trapped.</p></div>
 </section>
 
 <section class="reveal">
   <span class="eyebrow-2">Built for your trade</span>
-  <h2>One workflow. Your industry.</h2>
+  <h3 class="sec">One workflow. Your industry.</h3>
   <p class="body">Owl isn't a generic bot. It owns the recurring job that drains your specific business. Pick yours:</p>
   <div class="tabs" role="tablist">
     <button class="tab" role="tab" aria-selected="true" data-panel="pTrades">Trades &amp; services</button>
@@ -280,135 +272,31 @@
     <button class="tab" role="tab" aria-selected="false" data-panel="pLaw">Law &amp; professional</button>
     <button class="tab" role="tab" aria-selected="false" data-panel="pEcom">E-commerce</button>
   </div>
-  <div class="panel" id="pTrades" data-active="true"><span class="tag">Trades &amp; services</span><h3>Quote requests that used to die in your inbox</h3><p>Every "how much to fit a boiler?" message gets an instant reply, a qualification question, and a booked site visit — even at 9pm. You arrive to a diary that's already full.</p></div>
-  <div class="panel" id="pClinic" data-active="false"><span class="tag">Clinics &amp; health</span><h3>Appointment slots that fill themselves</h3><p>New enquiry? Owl answers, checks the next free slot, sends the reminder, and chases the no-shows. Cancellations get rebooked before the chair goes cold.</p></div>
-  <div class="panel" id="pLaw" data-active="false"><span class="tag">Law &amp; professional</span><h3>Intake that never sleeps</h3><p>Every referral and web enquiry is acknowledged in seconds, qualified against your criteria, and routed to the right solicitor with a follow-up booked. No lead waits till Monday.</p></div>
-  <div class="panel" id="pEcom" data-active="false"><span class="tag">E-commerce</span><h3>Abandoned carts that come back</h3><p>Owl chases every abandoned checkout, answers product questions, and recovers the order your old flow let slip. Post-purchase follow-up drives the repeat sale.</p></div>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">Inside the agent</span>
-  <h2>What your Owl agent actually is</h2>
-  <p class="body">Owl isn't a chatbot you have to configure. It's a managed employee with a full operating stack — one central brain that directs four specialist agents: one finds and chases leads, one follows up and closes, one produces your content and assets, one does the fulfilment work. Every Owl agent is built on eight parts, because miss one and it's a toy, not a worker.</p>
-  <div class="parts">
-    <div class="part reveal" data-delay="1"><span class="n">01</span><div><h3>Its own computer</h3><p>A dedicated server for your agent alone. No shared tenant, no neighbour noise, no other client's data anywhere near yours.</p></div></div>
-    <div class="part reveal" data-delay="2"><span class="n">02</span><div><h3>Its own email</h3><p>A domain address in your name. It sends and receives as a real member of your team.</p></div></div>
-    <div class="part reveal" data-delay="3"><span class="n">03</span><div><h3>A live phone line</h3><p>A working Telegram line. Message it, it answers. It's reachable, not a black box.</p></div></div>
-    <div class="part reveal" data-delay="4"><span class="n">04</span><div><h3>Your channels</h3><p>Wired straight into your Slack or Telegram. It works where your team already talks — not in a new app nobody adopts.</p></div></div>
-    <div class="part reveal" data-delay="5"><span class="n">05</span><div><h3>Real tools</h3><p>It can use your systems — files, the web, the terminal behind it. It does the job, not just describes it.</p></div></div>
-    <div class="part reveal" data-delay="6"><span class="n">06</span><div><h3>Simple billing</h3><p>One invoice, one price, every month. No per-seat maths, no usage surprises.</p></div></div>
-    <div class="part moat reveal" data-delay="1"><span class="n">07</span><div><h3>A memory of your business</h3><p>One governed knowledge layer — "one fact, one home." Your pricing, your customers, your do-and-don'ts, all in a single source it draws from. This is the edge: the agent stays accurate because it knows you, not a generic internet.</p></div></div>
-    <div class="part reveal" data-delay="2"><span class="n">08</span><div><h3>Watching it</h3><p>Health checks run constantly and alert us the moment something looks wrong — usually before your customer ever notices.</p></div></div>
-  </div>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">Why others fall short</span>
-  <h2>Most "AI for business" never shows up to work</h2>
-  <p class="contrarian">Three kinds of vendor will try to sell you AI. None of them do what Owl does.</p>
-  <div class="body" style="text-align:left;max-width:62ch">
-    <p><strong style="color:var(--ink)">The chatbot builder</strong> hands you a widget and a blank canvas. You become the operator — wiring prompts, babysitting failures, patching integrations at midnight. It does one narrow job on one channel. It has no memory of your business. And you can't resell it.</p>
-    <p><strong style="color:var(--ink)">The agency</strong> sells you a project, not an outcome. They charge £3k–£4k upfront, then £350–£500 a month, and hand you a half-built bot to finish yourself. The invoice clears; you're on your own.</p>
-    <p><strong style="color:var(--ink)">The rented-stack operator</strong> resells someone else's cloud. Your data lives in their environment. Your price creeps every time they raise theirs. And if they flip a switch, your "employee" breaks.</p>
-  </div>
-  <table class="cmp">
-    <thead><tr><th>&nbsp;</th><th class="owl-col">Owl</th><th class="them-col">Everyone else</th></tr></thead>
-    <tbody>
-      <tr><td>Who does the work</td><td class="owl-col">Fully managed. We run it, you receive the outcome. You never touch the tech.</td><td class="them-col">You configure it, maintain it, and fix it when it breaks.</td></tr>
-      <tr><td>Where data lives</td><td class="owl-col">Self-hosted on your own isolated server. Your data stays in your environment.</td><td class="them-col">Locked into a vendor's cloud, metered and exposed.</td></tr>
-      <tr><td>What you get</td><td class="owl-col">An AI team: a central brain plus four specialists across email, Telegram and Slack.</td><td class="them-col">A single bot doing one narrow job on one channel.</td></tr>
-      <tr><td>How you profit</td><td class="owl-col">Resell-ready — we help you offer the agent to your own customers under your label. It becomes revenue, not cost.</td><td class="them-col">You're the end user. It's a bill that only grows.</td></tr>
-      <tr><td>Time to live</td><td class="owl-col">Live in 48 hours — or your money back.</td><td class="them-col">Weeks of setup, discovery calls, upfront fees.</td></tr>
-      <tr><td>The cost</td><td class="owl-col">Flat £5,000/month. No setup fee, no per-seat surprises.</td><td class="them-col">Upfront build fees plus rising per-call platform costs.</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="how" class="reveal">
-  <span class="eyebrow-2">Speed to value</span>
-  <h2>Live in 48 hours. Then it ramps, like a real hire.</h2>
-  <p class="body">Most vendors take weeks to scope and months to deliver. Owl is working before your next team meeting. One call, one workflow, two days — no discovery marathon, no statement of work the size of a novel.</p>
-  <p class="body" style="margin-top:16px">And like onboarding a new employee, it gets better weekly. Day one it's useful. Week two it knows your tone. By month two it's running the workflow better than the person who used to own it — because we keep improving it, included in the flat fee.</p>
-  <div class="steps">
-    <div class="step reveal" data-delay="1"><div class="n">STEP 01</div><h3>Book a 20-minute call</h3><p>We pin down one workflow and write down exactly what "done" looks like.</p></div>
-    <div class="step reveal" data-delay="2"><div class="n">STEP 02</div><h3>We build it</h3><p>Your isolated agent is switched on in Slack or Telegram, loaded with your business knowledge.</p></div>
-    <div class="step reveal" data-delay="3"><div class="n">STEP 03</div><h3>Live in 48h</h3><p>You watch the work get done. We run it from there, with health checks every day.</p></div>
-  </div>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">The retention model</span>
-  <h2>Start with one. Expand to a fleet.</h2>
-  <p class="body">Here's the part other vendors can't copy. You don't buy one automation — you get a foothold inside your business. Start with lead follow-up. Then we expand to the next workflow. Then the next. Before long you've got a fleet of agents, each owning a piece of the operation.</p>
-  <div class="grow"><span class="ck">↻</span><p>And the agent that runs your business can be put under your own label and sold to your customers. The agent that handles your lead follow-up becomes the agent you offer your clients for fulfilment. That covers Owl many times over — so it isn't a cost, it's a profit line. And it means you never churn, because Owl is now part of what you sell.</p></div>
-  <p class="body" style="margin-top:20px">One agent. Your business. Your customers. One monthly price the resale covers several times.</p>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">Your role is tiny</span>
-  <h2>You ask the questions. The agent does the rest.</h2>
-  <p class="body">This isn't a tool you have to learn. You bring one workflow to a 20-minute call. After that, your involvement is checking the output from your phone. No dashboards to master, no prompts to write, no model to pick. The work gets done and you watch it.</p>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">The cost of doing nothing</span>
-  <h2>Every day without an Owl agent is revenue already lost.</h2>
-  <p class="body">A lead that goes cold today doesn't come back tomorrow — it goes to the competitor who answered in 30 seconds. An inbox that buries an enquiry this week is a customer you'll never meet. The question was never "can we afford an AI employee?" — it's "how much is the status quo quietly costing us?" Owl pays for itself the first time it catches a lead your old process would have dropped. Most businesses find that's within the first week.</p>
-</section>
-
-<section class="reveal">
-  <span class="eyebrow-2">Data &amp; isolation</span>
-  <h2>Your data never leaves your control</h2>
-  <p class="body">Owl runs on an isolated server with scoped access — it sees what it needs to do the job, not everything. Your knowledge layer is portable: if you ever leave, you take it with you. UK-hosted by default, because your data staying yours isn't a feature, it's the floor.</p>
-  <div class="guarantee">
-    <div class="grow"><span class="ck">✓</span><p><strong>Live in 48 hours.</strong> Or the first month is refunded — automatically, no debate, no form to fill.</p></div>
-    <div class="grow"><span class="ck">✓</span><p><strong>Saves you more than £5k/month.</strong> We measure it at day 30 against the human hours it replaced. If it doesn't, the first month is refunded.</p></div>
-    <div class="grow"><span class="ck">✓</span><p><strong>Your data stays yours.</strong> Isolated environment, scoped — not blanket — access. Portable on exit.</p></div>
-    <div class="grow"><span class="ck">✓</span><p><strong>No contract. Cancel anytime.</strong> Month to month, no lock-in. Stay because it works, not because you're trapped.</p></div>
-  </div>
-</section>
-
-<section class="reveal" id="demo">
-  <span class="eyebrow-2">90-second demo</span>
-  <h2>Watch an Owl agent work a live lead.</h2>
-  <p class="body">No slides. No pitch. Just the agent doing the job — chasing, qualifying, and booking, while you watch.</p>
-  <div class="card reveal" style="max-width:42rem;margin:18px auto 0">
-    <div class="ic" style="margin-bottom:8px">&#9654;</div>
-    <h3>Live demo</h3>
-    <video src="assets/vid/hero.mp4" muted autoplay loop playsinline style="width:100%;border-radius:10px;border:1px solid var(--border);margin-top:10px"></video>
-    <p>An Owl agent, working a real lead — chasing, qualifying, and booking, while you watch.</p>
-  </div>
-</section>
-
-<section class="reveal" id="proof">
-  <span class="eyebrow-2">The proof</span>
-  <h2>See it work. Then decide.</h2>
-  <p class="body">Owl is built to be verified, not trusted on faith. Every client gets a live dashboard showing the work done, the leads chased, and the hours reclaimed — measured against the human cost it replaced. On the call we walk you through a live client dashboard in your exact industry, end to end, so you see the proof before you decide.</p>
-  <div class="grid3">
-    <div class="card reveal" data-delay="1"><div class="ic">&#9642;</div><h3>Live dashboards</h3><p>Every action logged, every saving measured. Open the hood any time.</p></div>
-    <div class="card reveal" data-delay="2"><div class="ic">&#9654;</div><h3>Call &amp; chat recordings</h3><p>Hear exactly how your Owl agent handles a real lead — start to close.</p></div>
-    <div class="card reveal" data-delay="3"><div class="ic">&#8644;</div><h3>Before / after</h3><p>The same workflow, before Owl and after. The gap is the ROI.</p></div>
-  </div>
-</section>
-
-<section class="reveal" id="book">
-  <span class="eyebrow-2">Book a call</span>
-  <h2>Bring one workflow to a 20-minute call.</h2>
-  <div class="book">
-    <p class="lead">Leave with a one-page scope statement — no obligation, no pitch. Tell us the workflow that drains your week, and we'll show you exactly what an Owl agent would do with it.</p>
-    <div class="cta" style="margin:0">
-      <a class="btn" href="https://beacons.ai/humanarchitect">Book a 20-minute call</a>
-    </div>
-    <p class="body" style="margin-top:18px;font-size:.95rem;color:var(--muted)">Or send a message and we'll come back within one business day.</p>
-  </div>
+  <div class="panel" id="pTrades" data-active="true"><span class="tag">Trades &amp; services</span><h4>Quote requests that used to die in your inbox</h4><p>Every "how much to fit a boiler?" message gets an instant reply, a qualification question, and a booked site visit — even at 9pm. You arrive to a diary that's already full.</p></div>
+  <div class="panel" id="pClinic" data-active="false"><span class="tag">Clinics &amp; health</span><h4>Appointment slots that fill themselves</h4><p>New enquiry? Owl answers, checks the next free slot, sends the reminder, chases no-shows. Cancellations get rebooked before the chair goes cold.</p></div>
+  <div class="panel" id="pLaw" data-active="false"><span class="tag">Law &amp; professional</span><h4>Intake that never sleeps</h4><p>Every referral and web enquiry acknowledged in seconds, qualified against your criteria, routed to the right solicitor with a follow-up booked. No lead waits till Monday.</p></div>
+  <div class="panel" id="pEcom" data-active="false"><span class="tag">E-commerce</span><h4>Abandoned carts that come back</h4><p>Owl chases every abandoned checkout, answers product questions, recovers the order your old flow let slip. Post-purchase follow-up drives the repeat sale.</p></div>
 </section>
 
 </main>
+</div>
 
+<section class="book" id="book">
+  <div class="wrap">
+    <span class="eyebrow-2">Book a call</span>
+    <h3 class="sec">Bring one workflow to a 20-minute call.</h3>
+    <p class="lead">Leave with a one-page scope statement — no obligation, no pitch. Tell us the workflow that drains your week, and we'll show you exactly what an Owl agent would do with it.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn" href="https://beacons.ai/humanarchitect">Book a 20-minute call</a>
+    </div>
+    <p class="body" style="margin:18px auto 0;font-size:.95rem;color:var(--muted)">Or send a message and we'll come back within one business day.</p>
+  </div>
+</section>
+
+<div class="wrap">
 <div class="foot">
   <p>Owl is a managed AI employee. UK-first, self-hosted, your data stays in your environment.</p>
 </div>
-
 </div>
 
 <div class="sticky-bar" role="region" aria-label="Book a call">
@@ -420,60 +308,22 @@
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window) || reduce){
-    els.forEach(function(el){el.classList.add('reveal-visible')});
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){ e.target.classList.add('reveal-visible'); io.unobserve(e.target); }
-      });
-    }, {threshold:0.15, rootMargin:'0px 0px -10% 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  }
-  var hero = document.querySelector('header');
-  var bar  = document.querySelector('.sticky-bar');
-  if(hero && bar){
-    if(!('IntersectionObserver' in window)){
-      bar.classList.add('is-visible');
-    } else {
-      new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          var past = !e.isIntersecting;
-          bar.classList.toggle('is-visible', past);
-          document.body.classList.toggle('cta-open', past);
-        });
-      }, {threshold:0}).observe(hero);
-    }
-  }
+  if(!('IntersectionObserver' in window) || reduce){ els.forEach(function(el){el.classList.add('reveal-visible')}); }
+  else { var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('reveal-visible'); io.unobserve(e.target); } }); }, {threshold:0.15, rootMargin:'0px 0px -10% 0px'}); els.forEach(function(el){ io.observe(el); }); }
+  var hero = document.querySelector('header'); var bar = document.querySelector('.sticky-bar');
+  if(hero && bar){ if(!('IntersectionObserver' in window)){ bar.classList.add('is-visible'); } else { new IntersectionObserver(function(entries){ entries.forEach(function(e){ var past=!e.isIntersecting; bar.classList.toggle('is-visible',past); document.body.classList.toggle('cta-open',past); }); }, {threshold:0}).observe(hero); } }
 })();
-
 (function(){
   var L=document.getElementById('roiLeads'),D=document.getElementById('roiDrop'),V=document.getElementById('roiVal'),R=document.getElementById('roiRec');
-  if(L){
-    function fmt(n){return '£'+Math.round(n).toLocaleString('en-GB');}
-    function calc(){
-      var l=+L.value,d=+D.value/100,v=+V.value,r=+R.value/100;
-      document.getElementById('roiLeadsV').textContent=l;
-      document.getElementById('roiDropV').textContent=(d*100)+'%';
-      document.getElementById('roiValV').textContent=fmt(v);
-      document.getElementById('roiRecV').textContent=(r*100)+'%';
-      document.getElementById('roiOut').textContent=fmt(l*d*v*r*12);
-    }
-    [L,D,V,R].forEach(function(el){el.addEventListener('input',calc);});
-    calc();
+  if(L){ function fmt(n){return '£'+Math.round(n).toLocaleString('en-GB');}
+    function calc(){ var l=+L.value,d=+D.value/100,v=+V.value,r=+R.value/100;
+      document.getElementById('roiLeadsV').textContent=l; document.getElementById('roiDropV').textContent=(d*100)+'%';
+      document.getElementById('roiValV').textContent=fmt(v); document.getElementById('roiRecV').textContent=(r*100)+'%';
+      document.getElementById('roiOut').textContent=fmt(l*d*v*r*12); }
+    [L,D,V,R].forEach(function(el){el.addEventListener('input',calc);}); calc();
   }
   var tabs=document.querySelectorAll('.tab');
-  if(tabs.length){
-    tabs.forEach(function(t){
-      t.addEventListener('click',function(){
-        tabs.forEach(function(x){x.setAttribute('aria-selected','false');});
-        t.setAttribute('aria-selected','true');
-        document.querySelectorAll('.panel').forEach(function(p){p.setAttribute('data-active','false');});
-        var el=document.getElementById(t.getAttribute('data-panel'));
-        if(el) el.setAttribute('data-active','true');
-      });
-    });
-  }
+  if(tabs.length){ tabs.forEach(function(t){ t.addEventListener('click',function(){ tabs.forEach(function(x){x.setAttribute('aria-selected','false');}); t.setAttribute('aria-selected','true'); document.querySelectorAll('.panel').forEach(function(p){p.setAttribute('data-active','false');}); var el=document.getElementById(t.getAttribute('data-panel')); if(el) el.setAttribute('data-active','true'); }); }); }
 })();
 </script>
 </body>
