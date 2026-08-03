@@ -71,11 +71,10 @@
   .nav-cta{font-size:.85rem;font-weight:600;color:var(--ink);border:1px solid var(--border-strong);padding:11px 20px;border-radius:10px;min-height:44px;display:inline-flex;align-items:center;transition:border-color .15s,color .15s}
   .nav-cta:hover{border-color:var(--primary);color:var(--primary-ring)}
 
-  /* HERO — left aligned, editorial, video front and center */
-  header{padding:clamp(48px,8vw,92px) 0 clamp(40px,6vw,64px);position:relative}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  /* HERO — left aligned, editorial, single column */
+  header{padding:clamp(56px,9vw,104px) 0 clamp(44px,7vw,72px);position:relative}
   .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:22px}
-  h1{font-size:clamp(2.6rem,6.4vw,5.2rem);line-height:.98;margin:0 0 22px;letter-spacing:-.045em;font-weight:900}
+  h1{font-size:clamp(2.6rem,6.4vw,5.2rem);line-height:.98;margin:0 0 22px;letter-spacing:-.045em;font-weight:900;max-width:16ch}
   h1 .accent{color:var(--primary)}
   .lead{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--soft);max-width:46ch;margin:0 0 26px;font-weight:400}
   .price{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;letter-spacing:-.03em;margin:0 0 6px}
@@ -87,10 +86,6 @@
   .btn-ghost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:10px;color:var(--ink);background:transparent;border:1px solid var(--border-strong);min-height:48px}
   .btn-ghost:hover{border-color:var(--primary);color:var(--primary-ring)}
 
-  /* HERO VIDEO */
-  .hero-video{position:relative;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--surface);aspect-ratio:4/5}
-  .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
-  .hero-video .tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--primary-ring);background:rgba(0,0,0,.6);border:1px solid var(--border-strong);padding:6px 10px;border-radius:8px}
 
   /* FULL-BLEED STATEMENT */
   .statement{padding:clamp(56px,9vw,104px) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-soft)}
@@ -110,7 +105,7 @@
   .roi-out{margin:24px 0 0;max-width:52rem;background:var(--surface);border:1px solid var(--border-strong);border-left:3px solid var(--primary);border-radius:14px;padding:22px 24px}
   .roi-out .num{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;color:var(--primary);line-height:1;letter-spacing:-.04em}
   .roi-out .lbl{color:var(--soft);font-size:.95rem;margin-top:8px}
-  @media(max-width:720px){.roi{grid-template-columns:1fr}.hero-grid{grid-template-columns:1fr}.hero-video{aspect-ratio:16/10}}
+  @media(max-width:720px){.roi{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
 
   /* 8 parts — tighter grid */
   .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
@@ -175,21 +170,15 @@
 </nav>
 
 <header>
-  <div class="hero-grid">
-    <div class="reveal">
-      <span class="eyebrow">Managed AI employee · UK-first</span>
-      <h1>Your best hire this year <span class="accent">won't be a person.</span></h1>
-      <p class="lead">Owl is a managed AI employee for UK businesses doing £1M–£2M. We build it, switch it on inside your company, and run it — so your team stops doing the work that drains them and starts doing the work that grows you.</p>
-      <p class="price">£5,000 <small>/ month · per client · everything included</small></p>
-      <p class="guarantee-line">Live in 48 hours. If it hasn't paid for itself by day 30, the first month is on us.</p>
-      <div class="cta">
-        <a class="btn" href="#book">Book a 20-minute call</a>
-        <a class="btn-ghost" href="#calc">See the maths</a>
-      </div>
-    </div>
-    <div class="hero-video reveal">
-      <span class="tag">● Live — Owl working a real lead</span>
-      <video src="assets/vid/hero.mp4" muted autoplay loop playsinline poster="assets/hero.jpg"></video>
+  <div class="reveal">
+    <span class="eyebrow">Managed AI employee · UK-first</span>
+    <h1>Your best hire this year <span class="accent">won't be a person.</span></h1>
+    <p class="lead">Owl is a managed AI employee for UK businesses doing £1M–£2M. We build it, switch it on inside your company, and run it — so your team stops doing the work that drains them and starts doing the work that grows you.</p>
+    <p class="price">£5,000 <small>/ month · per client · everything included</small></p>
+    <p class="guarantee-line">Live in 48 hours. If it hasn't paid for itself by day 30, the first month is on us.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Book a 20-minute call</a>
+      <a class="btn-ghost" href="#calc">See the maths</a>
     </div>
   </div>
 </header>
