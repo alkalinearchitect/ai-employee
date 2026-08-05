@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# AI training / answer engines
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://alkalinearchitect.github.io/ai-employee/sitemap.xml

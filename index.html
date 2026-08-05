@@ -24,6 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <meta name="theme-color" content="#08080B" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='7' fill='%23a855f7'/></svg>" />
 <meta name="robots" content="index, follow" />
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
@@ -33,7 +34,22 @@
   "name":"Owl Managed AI Employee",
   "description":"A managed AI employee built, onboarded, and fulfilled for your business for a flat £5,000/month.",
   "brand":{"@type":"Brand","name":"Owl"},
-  "offers":{"@type":"Offer","price":"5000","priceCurrency":"GBP","priceSpecification":{"@type":"UnitPriceSpecification","price":"5000","priceCurrency":"GBP","unitText":"per client per month"},"availability":"https://schema.org/InStock"}
+  "seller":{"@type":"Organization","name":"Human Architect","url":"https://alkalinearchitect.github.io/ai-employee/"},
+  "url":"https://alkalinearchitect.github.io/ai-employee/",
+  "image":"https://alkalinearchitect.github.io/ai-employee/assets/hero.jpg",
+  "areaServed":{"@type":"Country","name":"GB"},
+  "offers":{"@type":"Offer","price":"5000","priceCurrency":"GBP","priceSpecification":{"@type":"UnitPriceSpecification","price":"5000","priceCurrency":"GBP","unitText":"per client per month"},"availability":"https://schema.org/InStock","url":"https://alkalinearchitect.github.io/ai-employee/#book"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Human Architect",
+  "url":"https://alkalinearchitect.github.io/ai-employee/",
+  "logo":"https://alkalinearchitect.github.io/ai-employee/assets/hero.jpg",
+  "areaServed":{"@type":"Country","name":"GB"},
+  "sameAs":["https://beacons.ai/humanarchitect"]
 }
 </script>
 <script type="application/ld+json">
@@ -143,6 +159,14 @@
 
   .book{padding:clamp(56px,9vw,104px) 0;text-align:center;border-top:1px solid var(--border);background:var(--bg-soft)}
   .book .lead{margin:0 auto 22px}
+  .faq{display:grid;gap:14px;max-width:60rem;margin-top:26px}
+  .qa{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:12px;padding:18px 22px}
+  .qa h3{margin:0 0 8px;font-size:1.05rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .qa p{margin:0;color:var(--soft);font-size:.98rem;line-height:1.65}
+  .qa strong{color:var(--ink)}
+  .deeper{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;max-width:60rem}
+  .deeper a{font-size:.92rem;font-weight:600;color:var(--primary-ring);border:1px solid var(--border-strong);padding:11px 18px;border-radius:10px;min-height:44px;display:inline-flex;align-items:center}
+  .deeper a:hover{border-color:var(--primary);color:var(--ink)}
   .foot{text-align:center;color:var(--muted);font-size:.88rem;padding:36px 0 96px;border-top:1px solid var(--border)}
 
   /* scroll reveal */
@@ -183,14 +207,17 @@
 
 <nav>
   <div class="brand"><span class="dot"></span> Owl</div>
-  <a class="nav-cta" href="#book">Book a call</a>
+  <div style="display:flex;gap:8px;align-items:center">
+    <a class="nav-cta" href="#faq" style="border-color:transparent">FAQ</a>
+    <a class="nav-cta" href="#book">Book a call</a>
+  </div>
 </nav>
 
 <header>
   <div class="reveal">
     <span class="eyebrow">Managed AI employee · UK-first</span>
     <h1>Your best hire this year <span class="accent">won't be a person.</span></h1>
-    <p class="lead">Owl is a managed AI employee for UK businesses doing £1M–£2M. We build it, switch it on inside your company, and run it, so your team stops doing the work that drains them and starts doing the work that grows the business.</p>
+    <p class="lead">Owl is a managed AI employee for UK small businesses doing £1M–£2M — an AI agent that owns one recurring workflow, fully run for you, with no technical team required. We build it, switch it on inside your company, and run it, so your team stops doing the work that drains them and starts doing the work that grows you.</p>
     <p class="price">£5,000 <small>/ month · per client · everything included</small></p>
     <p class="guarantee-line">Live in 48 hours. If it hasn't paid for itself by day 30, the first month is on us.</p>
     <p class="morph-line">Your agent owns the work that <span class="morph" data-words="drains your week|never gets done|costs you customers|steals your evenings">drains your week</span>.</p>
@@ -214,7 +241,7 @@
 
 <section class="reveal">
   <span class="eyebrow-2">What your Owl agent actually is</span>
-  <h2 class="sec">An AI employee that arrives fully equipped to work.</h3>
+  <h2 class="sec">What a managed AI employee for small business includes.</h3>
   <p class="body">One central brain directs four specialist agents: one finds and chases leads, one follows up and closes, one produces your content and assets, one does the fulfilment work. Every Owl agent is built on eight parts. Miss one and it's a toy, not a worker.</p>
   <div class="grid2">
     <div class="part reveal" data-delay="1"><span class="n">01</span><div><h4>Its own computer</h4><p>A dedicated server for your agent alone. No shared tenant, no neighbour noise, no other client's data near yours.</p></div></div>
@@ -230,7 +257,7 @@
 
 <section class="reveal">
   <span class="eyebrow-2">Why others fall short</span>
-  <h2 class="sec">Most "AI for business" never shows up to work.</h3>
+  <h2 class="sec">Why most AI for business never shows up to work.</h3>
   <div style="overflow-x:auto">
       <table class="cmp">
     <thead><tr><th>&nbsp;</th><th>Owl</th><th>Everyone else</th></tr></thead>
@@ -275,10 +302,43 @@
 </main>
 </div>
 
+<section class="reveal">
+  <div class="wrap">
+    <span class="eyebrow-2">Go deeper</span>
+    <h2 class="sec">The frameworks behind every Owl agent.</h2>
+    <p class="body">Owl isn't a chatbot with a prompt. It's built on <strong>the 8-Part Agent Stack</strong> — a dedicated computer, own email, live line, your channels, real tools, simple billing, the <strong>One Fact, One Home</strong> memory layer, and constant watching. The work is owned end-to-end by <strong>a brain plus four specialists</strong>, and backed by <strong>the Four Owl Promises</strong>: live in 48 hours, saves you more than £5k/month, your data stays yours, cancel anytime.</p>
+    <div class="deeper">
+      <a href="owl_bible.html">The Owl Bible — full build spec</a>
+      <a href="bottleneck-bible.html">The Bottleneck Bible</a>
+      <a href="fulfillment-layer.html">The fulfilment layer</a>
+      <a href="owl-non-human-intelligence.pdf">White paper (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="faq">
+  <div class="wrap">
+    <span class="eyebrow-2">Frequently asked questions</span>
+    <h2 class="sec">Managed AI employee — your questions, answered.</h2>
+    <div class="faq">
+      <div class="qa reveal"><h3>What is a managed AI employee?</h3><p><strong>A managed AI employee is an AI agent built, onboarded, and fully operated inside your business</strong> for a flat monthly fee. Unlike a DIY tool, you never configure the tech — Owl runs the agent end to end and delivers the outcome.</p></div>
+      <div class="qa reveal"><h3>How fast is it live?</h3><p><strong>Your agent is live within 48 hours of the scoping call, or the first month is refunded.</strong> No setup fees, no discovery marathons.</p></div>
+      <div class="qa reveal"><h3>What if it doesn't save us money?</h3><p><strong>If the agent has not saved you more than £5,000/month in human hours by day 30, the first month is refunded.</strong> No debate.</p></div>
+      <div class="qa reveal"><h3>Is my data safe?</h3><p><strong>Your data stays within your environment.</strong> Owl runs on an isolated client VPS with controlled, scoped access — not blanket permission.</p></div>
+      <div class="qa reveal"><h3>How much does an AI employee cost in the UK?</h3><p><strong>Owl is a flat £5,000 per month per client</strong> — build, hosting, onboarding and operation included. No setup fees, no per-seat charges, no usage add-ons.</p></div>
+      <div class="qa reveal"><h3>Can I hire an AI employee without a technical team?</h3><p><strong>Yes. Owl is fully managed, so you need no developers, no IT setup, and no AI expertise.</strong> You bring one workflow to a 20-minute call; we build, host, and run the agent.</p></div>
+      <div class="qa reveal"><h3>How is a managed AI employee different from ChatGPT?</h3><p><strong>ChatGPT waits for prompts. A managed AI employee owns a workflow autonomously</strong> — chasing leads, triaging inboxes, sending reports on a schedule inside your Slack or Telegram.</p></div>
+      <div class="qa reveal"><h3>Is Owl a good AI agent for small businesses?</h3><p><strong>Owl is built for UK SMEs turning over £1M–£2M.</strong> Each agent owns one recurring workflow — lead follow-up, inbox triage, ops reporting — so small teams get enterprise-grade automation without hiring technical staff.</p></div>
+      <div class="qa reveal"><h3>Can I offer the agent to my own customers?</h3><p><strong>Yes. Owl is an optional white-label</strong> — offer the agent under your own brand, on your terms, single-tier with no recruitment. It becomes a revenue line, not a cost.</p></div>
+    </div>
+    <p class="body" style="margin-top:18px;font-size:.9rem;color:var(--muted)">These answers mirror Owl's structured-data FAQ so AI search engines (Google AI Overviews, ChatGPT, Perplexity) can cite them directly.</p>
+  </div>
+</section>
+
 <section class="book" id="book">
   <div class="wrap">
     <span class="eyebrow-2">Book a call</span>
-    <h2 class="sec">Bring one workflow to a 20-minute call.</h3>
+    <h2 class="sec">Hire an AI employee — book a 20-minute call.</h3>
     <p class="lead">Leave with a one-page scope statement, no obligation, no pitch. Tell us the workflow that drains your week, and we'll show you exactly what an Owl agent would do with it.</p>
     <div class="cta" style="justify-content:center">
         <a class="btn" href="https://beacons.ai/humanarchitect">Book a 20-minute call</a>
