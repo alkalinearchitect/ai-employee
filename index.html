@@ -300,6 +300,9 @@
   var hero = document.querySelector('header'); var bar = document.querySelector('.sticky-bar');
   if(hero && bar){ if(!('IntersectionObserver' in window)){ bar.classList.add('is-visible'); } else { new IntersectionObserver(function(entries){ entries.forEach(function(e){ var past=!e.isIntersecting; bar.classList.toggle('is-visible',past); document.body.classList.toggle('cta-open',past); }); }, {threshold:0}).observe(hero); } }
 })();
+</script>
+<script>
+(function(){
   var tabs=document.querySelectorAll('.tab');
   if(tabs.length){ tabs.forEach(function(t){ t.addEventListener('click',function(){ tabs.forEach(function(x){x.setAttribute('aria-selected','false');}); t.setAttribute('aria-selected','true'); document.querySelectorAll('.panel').forEach(function(p){p.setAttribute('data-active','false');}); var el=document.getElementById(t.getAttribute('data-panel')); if(el) el.setAttribute('data-active','true'); }); }); }
 })();
@@ -312,6 +315,14 @@
     setTimeout(function(){ i=(i+1)%words.length; m.textContent=words[i]; m.classList.remove('swap'); },350);
   },2400);
 })();
+</script>
+<script>
+/* SAFETY NET: if any reveal-visible logic ever fails, force all content visible after load. Page can never be blank. */
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.reveal-visible)').forEach(function(el){ el.classList.add('reveal-visible'); });
+  }, 1200);
+});
 </script>
 </body>
 </html>
