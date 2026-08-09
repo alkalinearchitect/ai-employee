@@ -1,0 +1,147 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@font-face { font-family:'Inter'; src:url('file:///root/fonts/Inter-Regular.ttf') format('truetype'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Inter'; src:url('file:///root/fonts/Inter-Medium.ttf')  format('truetype'); font-weight:500; font-style:normal; }
+@font-face { font-family:'Inter'; src:url('file:///root/fonts/Inter-Bold.ttf')    format('truetype'); font-weight:700; font-style:normal; }
+@page { size:9in 12in; margin:0; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { background:#000; }
+body { font-family:'Inter', sans-serif; color:#FFFFFF; -webkit-font-smoothing:antialiased; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+.page { position:relative; width:9in; height:12in; background:#000; overflow:hidden;
+  display:grid; grid-template-rows:1fr auto; grid-template-areas:'main' 'footrow';
+  padding:84px 95px 34px; page-break-after:always; break-after:page; }
+.page:last-child { page-break-after:auto; break-after:auto; }
+.main { grid-area:main; display:flex; flex-direction:column; justify-content:flex-start; min-height:0; overflow:hidden; }
+.footrow { grid-area:footrow; display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding-top:18px; border-top:1px solid #2a2a2e; }
+.foot { font-size:20pt; color:#b5b5be; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:calc(100% - 56px); }
+.pnum { font-size:20pt; color:#8a8a92; white-space:nowrap; }
+.page.cover { padding-top:84px; }
+.tick { position:absolute; width:28px; height:28px; pointer-events:none; }
+.tick.tl { top:40pt; left:40pt;  border-top:2px solid #8b5cf6; border-left:2px solid #8b5cf6; }
+.tick.tr { top:40pt; right:40pt; border-top:2px solid #8b5cf6; border-right:2px solid #8b5cf6; }
+.tick.bl { bottom:40pt; left:40pt;  border-bottom:2px solid #8b5cf6; border-left:2px solid #8b5cf6; }
+.tick.br { bottom:40pt; right:40pt; border-bottom:2px solid #8b5cf6; border-right:2px solid #8b5cf6; }
+.monogram { position:absolute; top:78px; right:95px; width:64pt; height:64pt; }
+.monogram svg { width:100%; height:100%; display:block; }
+.railidx { position:absolute; top:82px; left:95px; font-size:20pt; font-weight:500; letter-spacing:.10em; color:#8b5cf6; }
+.kicker { font-size:26pt; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:#8b5cf6; }
+.rule { width:100pt; height:6pt; background:#8b5cf6; margin:22px 0 30px; }
+.hairline { width:100%; height:1px; background:#2a2a2e; margin:26px 0 30px; }
+.cover-title { font-size:72pt; font-weight:700; line-height:1.02; letter-spacing:-.025em; color:#FFFFFF; }
+.cover-sub { font-size:38pt; font-weight:400; line-height:1.28; color:#EDEDED; max-width:14ch; }
+.headline { font-size:62pt; font-weight:700; line-height:1.06; letter-spacing:-.02em; color:#FFFFFF; }
+.body { font-size:38pt; font-weight:400; line-height:1.34; color:#EDEDED; }
+.body + .body { margin-top:26px; }
+.dim { color:#9a9aa2; }
+.accent { color:#8b5cf6; }
+.void { flex:1 1 auto; min-height:0; }
+.cover .main > .kicker { margin-bottom:26px; }
+.cards { display:grid; gap:22px; }
+.cards.two   { grid-template-columns:1fr 1fr; }
+.cards.one   { grid-template-columns:1fr; }
+.cards.three { grid-template-columns:1fr 1fr 1fr; }
+.card { border:1px solid #2a2a2e; background:none; padding:18px 18px 20px; min-height:0; }
+.cards.four { grid-template-columns:1fr 1fr 1fr 1fr; }
+.card.on { border-color:#8b5cf6; }
+.card .n { font-size:22pt; font-weight:700; color:#8b5cf6; letter-spacing:.06em; display:block; margin-bottom:8px; }
+.card .t { font-size:28pt; font-weight:500; line-height:1.12; color:#FFFFFF; }
+.card .d { font-size:19pt; font-weight:400; line-height:1.25; color:#b5b5be; margin-top:8px; }
+.stat { border-left:2px solid #8b5cf6; padding-left:26px; }
+.stat .big { font-size:62pt; font-weight:700; line-height:1; }
+.stat .lab { font-size:26pt; color:#9a9aa2; margin-top:10px; }
+.node-emblem { position:absolute; bottom:96px; right:95px; width:86pt; height:86pt; opacity:.85; }
+.node-bg { position:absolute; bottom:-120px; right:-120px; width:560px; height:560px; opacity:.10; pointer-events:none; }
+.node-emblem svg, .node-bg svg { width:100%; height:100%; display:block; }
+</style></head><body><section class="page cover"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="node-bg"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="50" y1="50" x2="50" y2="16" stroke="#8b5cf6" stroke-width="1.2"/>
+<line x1="50" y1="50" x2="84" y2="50" stroke="#8b5cf6" stroke-width="1.2"/>
+<line x1="50" y1="50" x2="50" y2="84" stroke="#8b5cf6" stroke-width="1.2"/>
+<line x1="50" y1="50" x2="16" y2="50" stroke="#8b5cf6" stroke-width="1.2"/>
+<circle cx="50" cy="50" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="50" cy="16" r="4" stroke="#8b5cf6" stroke-width="1.5"/>
+<circle cx="84" cy="50" r="4" stroke="#8b5cf6" stroke-width="1.5"/>
+<circle cx="50" cy="84" r="4" stroke="#8b5cf6" stroke-width="1.5"/>
+<circle cx="16" cy="50" r="4" stroke="#8b5cf6" stroke-width="1.5"/>
+<circle cx="50" cy="50" r="24" stroke="#8b5cf6" stroke-width="0.8" opacity="0.5"/>
+<circle cx="50" cy="50" r="34" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+</svg></div><div class="main"><div class="kicker">Owl · Non-Human Intelligence</div><h1 class="cover-title">Seven objections. One answer.</h1><div class="rule"></div><p class="cover-sub">One recurring workflow owned. £5,000 a month. Live in 48 hours.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="pnum">01</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">02 / 09</div><div class="main"><div class="kicker">Objection 01</div><div class="rule"></div><h2 class="headline">Hiring is the expensive option.</h2><div class="hairline"></div><p class="body">A junior's salary is the smallest number on the bill. Add tax, software, training, and the months before they are useful. Owl is one flat five thousand a month, live in 48 hours.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Obj 01</div><div class="pnum">02</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">03 / 09</div><div class="main"><div class="kicker">Objection 02</div><div class="rule"></div><h2 class="headline">It replaces the work, not the people.</h2><div class="hairline"></div><p class="body">Owl takes the recurring task your best person dreads — the quotes, the follow-ups, the admin that eats the day. Your team moves up to the work only humans should do.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Obj 02</div><div class="pnum">03</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">04 / 09</div><div class="main"><div class="kicker">Objection 03</div><div class="rule"></div><h2 class="headline">Your data never leaves its own box.</h2><div class="hairline"></div><p class="body">Owl runs on an isolated server with scoped access to only what it needs. Portable, so you take it with you. We cannot see what you have not permitted.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Obj 03</div><div class="pnum">04</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">05 / 09</div><div class="main"><div class="kicker">Objection 04</div><div class="rule"></div><h2 class="headline">If it breaks, you don't pay.</h2><div class="hairline"></div><p class="body">Owl is live in 48 hours or your first month is refunded. At day 30, if it has not saved you more than £5,000, we refund that month too.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Obj 04</div><div class="pnum">05</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">06 / 09</div><div class="main"><div class="kicker">Objection 05</div><div class="rule"></div><h2 class="headline">ChatGPT answers. Owl does.</h2><div class="hairline"></div><p class="body">ChatGPT waits for your team to type the right prompt and check the output. Owl owns one workflow end to end — it acts, follows up, closes the loop while you sleep.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Obj 05</div><div class="pnum">06</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">07 / 09</div><div class="main"><div class="kicker">Objection 06</div><div class="rule"></div><h2 class="headline">Fast is the point, not the risk.</h2><div class="hairline"></div><p class="body">The stack is already built — one brain and four specialists, configured, not coded from zero. We deploy it within two days. If we miss, the first month is free.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Obj 06</div><div class="pnum">07</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">08 / 09</div><div class="main"><div class="kicker">Objection 07</div><div class="rule"></div><h2 class="headline">Leave anytime. Take it with you.</h2><div class="hairline"></div><p class="body">Cancel whenever you want — no contract, no notice, no exit fee. Your Owl runs on a portable server, so the work and the setup travel with you.</p><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Obj 07</div><div class="pnum">08</div></div></section><section class="page"><div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div><div class="monogram"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 17 L20.5 8.5 L27 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M48 17 L43.5 8.5 L37 14.5" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="32" cy="34" r="22" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="24" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="40" cy="31" r="7" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="40" cy="31" r="2.4" stroke="#FFFFFF" stroke-width="2"/>
+<path d="M32 38 L32 44.5" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg></div><div class="railidx">09 / 09</div><div class="main"><div class="kicker">Close</div><div class="rule"></div><h2 class="headline">The first responder wins.</h2><div class="hairline"></div><div class="stat"><div class="big accent">7x</div><div class="lab">HBR: firms replying within an hour are 7x more likely to qualify a lead. 78% buy from the first to respond. Book the call. Live in 48 hours.</div></div><div class="void"></div></div><div class="footrow"><div class="foot">Owl — Operated by Human Architect</div><div class="foot dim">Close</div><div class="pnum">09</div></div></section></body></html>

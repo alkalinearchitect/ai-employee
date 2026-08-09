@@ -1,0 +1,89 @@
+PAGE 1
+TITLE: Owl
+ANSWER: THE CUSTOMER FAQ
+BOLD: Non-Human Intelligence, managed for your business.
+DETAIL: Everything a UK business owner should know before hiring their first managed AI employee. Fifteen answers, no jargon, no pressure.
+
+PAGE 2
+TITLE: The questions owners ask first
+ANSWER: Thirteen questions, in the order you'd actually ask them — from what Owl is, to what it costs, to how you start.
+BOLD: Read this before you spend a penny on AI.
+DETAIL: 1 What exactly is Owl? · 2 ChatGPT vs Owl · 3 The 8-Part Stack · 4 Go-live speed · 5 The real cost · 6 If it doesn't pay back · 7 Your data · 8 No tech team · 9 Industries · 10 White-label · 11 Onboarding · 12 Who runs it · 13 How to start.
+
+PAGE 3
+TITLE: What exactly is Owl?
+ANSWER: Owl is a managed AI employee that takes ownership of one recurring workflow in your business — lead follow-up, inbox triage, ops reporting, or support. It is a Non-Human Intelligence operated by Human Architect. You hire it like staff; we run it like a department.
+BOLD: An Owl doesn't assist your team — it replaces the role, end to end, on its own.
+DETAIL: Not software you configure. Not a chatbot you prompt. A worker we build, host, and operate for a flat fee, so the job gets done whether or not anyone is watching.
+
+PAGE 4
+TITLE: How is Owl different from ChatGPT?
+ANSWER: A chatbot waits to be asked and forgets by tomorrow. Owl owns the workflow: it logs in, does the work, follows up, and remembers every fact in its own memory. It acts on your business instead of answering your questions about it.
+BOLD: Chatbots wait to be asked. Owl shows up and does the job without being told twice.
+DETAIL: Your team prompts ChatGPT. Your customers get replied to by Owl — at 9pm, on a Sunday, the moment the enquiry lands.
+
+PAGE 5
+TITLE: What's inside every Owl agent?
+ANSWER: Eight parts, one worker. Its own computer, its own email, a live Telegram line, your Slack or Telegram channels, real tools, one simple invoice, a memory that knows your business, and constant health checks.
+BOLD: Eight parts, one agent: its own machine, inbox, phone line and memory — not a tab you forget.
+DETAIL: Miss one and it's a toy. Owl ships all eight on a self-hosted base, so the agent is reachable, accountable, and actually does the work.
+
+PAGE 6
+TITLE: How fast is an Owl live?
+ANSWER: Your agent is live within 48 hours of the scoping call. No discovery marathon, no six-week build. We scope one workflow, build it, and switch it on inside your Slack or Telegram.
+BOLD: Your Owl is live in 48 hours — or your first month is on us.
+DETAIL: If we miss the window, the first month is refunded automatically. No form, no debate. The work starts before the invoice matters.
+
+PAGE 7
+TITLE: How much does an AI employee cost?
+ANSWER: £5,000 a month, flat, everything included — build, hosting, onboarding, and operation. No setup fee, no per-seat pricing, no usage add-ons that creep up with volume.
+BOLD: One flat £5,000 a month buys a full managed AI employee — nothing extra, ever.
+DETAIL: A junior hire costs £30–40k a year plus management, sick leave, and turnover. Owl is one invoice, one price, and it never resigns.
+
+PAGE 8
+TITLE: What if it doesn't pay for itself?
+ANSWER: By day 30, if Owl hasn't saved you more than £5,000 in human hours, your first month is refunded. We measure the human cost it replaced and show you the number.
+BOLD: If Owl hasn't paid for itself by day 30, your first month is refunded.
+DETAIL: No argument, no small print. We only win when you do — which is why the guarantee is written in plain English, not legalese.
+
+PAGE 9
+TITLE: Is my business data safe?
+ANSWER: Owl runs on an isolated VPS dedicated to you, with scoped access to only what it needs. Your data never leaves your control, and on exit everything is portable — you are not locked in.
+BOLD: Your data stays yours: isolated, scoped, and fully portable if you ever leave.
+DETAIL: No shared tenant, no vendor data lake. The agent sees your systems the way a vetted contractor would — and revocably.
+
+PAGE 10
+TITLE: No technical team?
+ANSWER: None required. Start with a single 20-minute call. Owl builds, hosts, and runs the whole thing. No developers, no infrastructure, no in-house AI expertise — your team watches the work get done.
+BOLD: Hire an AI employee with one 20-minute call — no technical team needed.
+DETAIL: You bring one workflow. We bring the engine. The only thing you operate is your calendar for the kickoff call.
+
+PAGE 11
+TITLE: Which industries and workflows?
+ANSWER: Owl runs for UK SMEs doing £1–2M in trades & services, clinics & health, law & professional, and e-commerce. Each agent owns one recurring workflow and runs it end to end.
+BOLD: One Owl owns one workflow, end to end, for your exact industry — and never drops it.
+DETAIL: Trades: quote requests that used to die in the inbox. Clinics: slots that fill themselves. Law: intake that never sleeps. Ecom: carts that come back.
+
+PAGE 12
+TITLE: Can I offer Owl to my customers?
+ANSWER: Yes. Owl white-labels on a single tier — no recruitment, no payroll, no hiring overhead. You put your brand on a managed AI employee and sell it as recurring revenue, not cost you carry.
+BOLD: White-label Owl and sell Non-Human Intelligence to your clients as pure recurring revenue.
+DETAIL: It becomes a profit line, not an expense. And because you resell it, you stop churning — Owl becomes part of what you sell.
+
+PAGE 13
+TITLE: How does onboarding work?
+ANSWER: Exactly like hiring a new employee. We run a discovery call, Owl builds your agent and onboards it into Slack or Telegram, and it's live within 48 hours. You brief it once; it gets to work.
+BOLD: Owl is scoped, built, and live in your Slack or Telegram within 48 hours.
+DETAIL: Like a day-three intern who never sleeps: you show it the workflow, it learns the edge cases, and the output compounds weekly.
+
+PAGE 14
+TITLE: Who keeps it running?
+ANSWER: Owl operates and monitors your agent around the clock. Health checks run constantly across the fleet, and we alert before you'd ever notice a fault — so the work keeps flowing without you watching the machine.
+BOLD: Owl watches every agent constantly and alerts you before a fault reaches your business.
+DETAIL: One governed knowledge layer means the agent stays accurate because it knows you, not the open internet. Drift gets caught, not shipped.
+
+PAGE 15
+TITLE: How do I start?
+ANSWER: Book a 20-minute call at beacons.ai/humanarchitect. You leave with a one-page scope statement and no obligation — no contract, no pressure, just clarity on what Owl would own for you.
+BOLD: Start with a free 20-minute call and leave with a one-page scope.
+DETAIL: If the workflow isn't a fit, we say so. The point of the call is clarity, not a close.

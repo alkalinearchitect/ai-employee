@@ -1,0 +1,67 @@
+/* ============================================================
+   OWL PDF — ROBUST LAYOUT FIX (paste-ready)
+   Replaces the .page / .cover / .foot / .pnum rules in build_v2.py.
+   Root cause fixed: footer + page number move OUT of absolute
+   positioning and INTO the normal flow as a reserved grid row,
+   so the body can NEVER overlap them regardless of how tall it is.
+   ============================================================ */
+
+@page { size: 9in 12in; margin: 0; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body { background:#000; }
+
+/* PAGE: CSS grid with a reserved footer row.
+   - 1fr  = body cell (grows to fill space, clips inside itself)
+   - auto = footer row (sized to its content, always sits at the bottom)
+   Because the footer is its own grid track, body text physically
+   cannot reach it. overflow:hidden on .page stays only as a final
+   safety net. */
+.page {
+  position: relative;
+  width: 9in; height: 12in;
+  background: #000;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "main" "footrow";
+  padding: 84px 95px 34px;   /* bottom = old 30px footer gap */
+}
+.cover { padding-top: 84px; }            /* cover pages keep their top gap */
+
+/* BODY CELL: kicker/num + headline + body. Top-aligned, self-clipping. */
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 0;            /* CRITICAL: lets the cell clip instead of overflow */
+  overflow: hidden;
+}
+
+/* FOOTER ROW: normal flow, always below the body, never overlaps it. */
+.footrow {
+  grid-area: footrow;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding-top: 18px;
+}
+
+.kicker    { color:#8b5cf6; letter-spacing:.18em; text-transform:uppercase; font-size:26pt; font-weight:700; margin-bottom:26pt; }
+.headline  { font-family:'Inter'; font-weight:700; font-size:62pt; line-height:1.06; letter-spacing:-.02em; margin-bottom:24pt; max-width:17ch; }
+.body      { font-family:'Inter'; font-weight:400; font-size:38pt; line-height:1.4; color:#ededed; max-width:31ch; }
+.rule      { width:100px; height:6px; background:#8b5cf6; margin:30px 0; border-radius:3px; }
+/* footer/pnum are now STATIC (no absolute). ellipsis prevents any future
+   long-footer-vs-pnum collision; pnum always keeps its right-side slot. */
+.foot      { font-size:20pt; color:#9a9aa2; letter-spacing:.03em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width: calc(100% - 56px); }
+.pnum      { font-size:20pt; color:#6a6a72; white-space:nowrap; }
+.cover-title { font-family:'Inter'; font-weight:700; font-size:82pt; line-height:1.04; letter-spacing:-.03em; margin-bottom:22pt; max-width:13ch; }
+.cover-sub   { font-family:'Inter'; font-weight:400; font-size:38pt; line-height:1.4; color:#ededed; max-width:28ch; }
+.num       { color:#8b5cf6; font-weight:700; font-size:26pt; letter-spacing:.1em; margin-bottom:18pt; }
+
+.page:not(:last-child) { page-break-after:always; }
+
+/* The .wm watermark is stripped at render time (build_v2.py line 231),
+   so no watermark overlap exists. Leave the rule out or keep it absolute;
+   it is removed before print regardless. */
