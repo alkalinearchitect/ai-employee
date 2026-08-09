@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: "Inter"; src: url("file:///root/fonts/Inter-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("file:///root/fonts/Inter-Medium.ttf"); font-weight: 500; }
+@font-face { font-family: "Inter"; src: url("file:///root/fonts/Inter-Bold.ttf"); font-weight: 700; }
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+@page { size: 9in 12in; margin: 0; }
+html, body { background: #08080B; font-family: "Inter", sans-serif; }
+.page { width: 9in; height: 12in; background: #08080B; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center; padding: 96px 92px; page-break-after: always; }
+.page:last-child { page-break-after: auto; }
+.page.cover { justify-content: flex-start; padding-top: 104px; }
+.kicker { color: #8b5cf6; letter-spacing: .22em; text-transform: uppercase; font-size: 25px; font-weight: 700; margin-bottom: 42px; }
+.headline { font-weight: 700; font-size: 70px; line-height: 1.06; letter-spacing: -.025em; margin-bottom: 36px; max-width: 17ch; color: #FFFFFF; }
+.headline .v { color: #8b5cf6; }
+.body { font-size: 35px; line-height: 1.58; color: #C3C9D2; max-width: 40ch; }
+.body.sm { font-size: 30px; line-height: 1.52; color: #C3C9D2; max-width: 42ch; }
+.rule { width: 88px; height: 5px; background: #8b5cf6; margin: 44px 0; border-radius: 3px; }
+.foot { margin-top: 54px; font-size: 21px; color: #828990; letter-spacing: .04em; }
+.cover-title { font-weight: 700; font-size: 90px; line-height: 1.03; letter-spacing: -.03em; margin-bottom: 34px; max-width: 14ch; color: #FFFFFF; }
+.cover-sub { font-size: 36px; line-height: 1.5; color: #E9ECF1; max-width: 33ch; }
+.li { font-size: 32px; line-height: 1.5; color: #C3C9D2; margin-bottom: 24px; padding-left: 34px; position: relative; max-width: 43ch; }
+.li:before { content: ""; position: absolute; left: 0; top: 16px; width: 13px; height: 13px; background: #8b5cf6; border-radius: 3px; }
+.small { font-size: 23px; color: #828990; line-height: 1.5; margin-top: 38px; max-width: 44ch; }
+.bignum { font-size: 112px; font-weight: 700; color: #8b5cf6; line-height: 1; letter-spacing: -.03em; }
+.bignum-l { font-size: 29px; color: #C3C9D2; margin-top: 12px; max-width: 30ch; }
+.page.soft { background: #0E0E13; }
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<div class="page cover">
+  <div class="kicker">Non-Human Intelligence</div>
+  <div class="cover-title">Why we exist.</div>
+  <div class="cover-sub">A belief before a product. The reason NOHUMA builds managed agents instead of selling software.</div>
+  <div class="rule"></div>
+  <div class="body sm">By NOHUMA, an AI systems studio. Built on Simon Sinek's Golden Circle: why, then how, then what.</div>
+  <div class="foot">Human Architect · 2026</div>
+</div>
+
+<!-- 2 WHY -->
+<div class="page">
+  <div class="kicker">The Why</div>
+  <div class="headline">Your time should not be spent on work a machine can own.</div>
+  <div class="body">Not because machines are better. Because the recurring work draining your week is beneath you. It is beneath the person who built the business. It is beneath the price of your attention.</div>
+  <div class="rule"></div>
+  <div class="body sm">People do not buy what you do. They buy why you do it. So we start here, before the agent, before the price.</div>
+</div>
+
+<!-- 3 THE ENEMY -->
+<div class="page">
+  <div class="kicker">The Enemy</div>
+  <div class="headline">The weakness is inside the business, not outside it.</div>
+  <div class="body">The leads go cold because no one replies in time. The inbox grows because no one triages it. The follow-up dies because the human is already full. The enemy is not the market. It is the unaccountable default that lets the work pile up.</div>
+  <div class="rule"></div>
+  <div class="body sm">Every lead you miss while you sleep is a competitor's customer by morning.</div>
+</div>
+
+<!-- 4 THE BELIEF -->
+<div class="page">
+  <div class="kicker">The Belief</div>
+  <div class="headline">A machine can own the work. A human should own the decision.</div>
+  <div class="body">We do not believe in replacing judgement. We believe in removing the repetitive weight that stops judgement from happening at all. The agent does the doing. You stay in the room where it matters.</div>
+  <div class="rule"></div>
+  <div class="body sm">This is not automation for its own sake. It is accountability for your own time.</div>
+</div>
+
+<!-- 5 THE GAP -->
+<div class="page soft">
+  <div class="kicker">The Window</div>
+  <div class="bignum">54%</div>
+  <div class="bignum-l">of UK firms report using AI in 2026. The majority still do not, and most that do are not getting value.</div>
+  <div class="rule"></div>
+  <div class="body sm">The gap between using AI and winning with it is where the belief becomes money. Most companies have not crossed it. That is the opening.</div>
+  <div class="small">Source: British Chambers of Commerce, 2026 AI adoption tracker. US enterprise ~78% vs small firms ~20% (US Census BTOS, May 2026).</div>
+</div>
+
+<!-- 6 THE HOW -->
+<div class="page">
+  <div class="kicker">The How</div>
+  <div class="headline">We build the agent. We run it. You watch it land.</div>
+  <div class="li">A managed Non-Human Intelligence, not a tool you operate</div>
+  <div class="li">Its own computer, email, line, and your channels</div>
+  <div class="li">One brain plus four specialists, isolated for safety</div>
+  <div class="li">Self-hosted on your server, data stays yours</div>
+  <div class="small">The how exists only to serve the why. Remove the work, keep the control.</div>
+</div>
+
+<!-- 7 THE WHAT -->
+<div class="page">
+  <div class="kicker">The What</div>
+  <div class="headline">Flat &pound;5,000 a month. Live in 48 hours or refunded.</div>
+  <div class="body">One workflow, owned end to end. No setup, no seats, no usage maths. If it has not saved more than its cost in human hours by day 30, the first month is refunded, measured against your own timesheet.</div>
+  <div class="rule"></div>
+  <div class="body sm">The what is the smallest part. By the time you read the price, the belief has already done the selling.</div>
+</div>
+
+<!-- 8 CLOSE -->
+<div class="page cover">
+  <div class="kicker">The Invitation</div>
+  <div class="cover-title">Hire a Non-Human Intelligence.</div>
+  <div class="cover-sub">Twenty minutes. One workflow. A one-page scope statement, no obligation.</div>
+  <div class="rule"></div>
+  <div class="body sm">NOHUMA is a managed Non-Human Intelligence, built and operated in the UK by Human Architect. Self-hosted, your data stays in your environment.</div>
+  <div class="foot">Book a call: beacons.ai/humanarchitect</div>
+</div>
+
+</body>
+</html>
