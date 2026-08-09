@@ -1,183 +1,24 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<style>
-@font-face { font-family: "Inter"; src: url("file:///root/fonts/Inter-Regular.ttf"); font-weight: 400; }
-@font-face { font-family: "Inter"; src: url("file:///root/fonts/Inter-Medium.ttf"); font-weight: 500; }
-@font-face { font-family: "Inter"; src: url("file:///root/fonts/Inter-Bold.ttf"); font-weight: 700; }
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-@page { size: 9in 12in; margin: 0; }
-html, body { background: #000; font-family: "Inter", sans-serif; }
-.page { width: 9in; height: 12in; background: #000; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: center; padding: 95px 90px; page-break-after: always; }
-.page:last-child { page-break-after: auto; }
-.page.cover { justify-content: flex-start; padding-top: 96px; }
-.kicker { color: #8b5cf6; letter-spacing: .22em; text-transform: uppercase; font-size: 26px; font-weight: 700; margin-bottom: 44px; }
-.headline { font-weight: 700; font-size: 72px; line-height: 1.05; letter-spacing: -.02em; margin-bottom: 38px; max-width: 18ch; }
-.body { font-size: 36px; line-height: 1.55; color: #e4e4e8; max-width: 40ch; }
-.body.sm { font-size: 31px; line-height: 1.5; color: #c8c8cf; max-width: 42ch; }
-.rule { width: 90px; height: 6px; background: #8b5cf6; margin: 46px 0; border-radius: 3px; }
-.foot { margin-top: 56px; font-size: 21px; color: #8b8b93; letter-spacing: .04em; }
-.cover-title { font-weight: 700; font-size: 92px; line-height: 1.02; letter-spacing: -.025em; margin-bottom: 36px; max-width: 15ch; }
-.cover-sub { font-size: 37px; line-height: 1.5; color: #e4e4e8; max-width: 34ch; }
-.num { color: #8b5cf6; font-weight: 700; font-size: 24px; letter-spacing: .12em; margin-bottom: 26px; }
-.big { font-size: 116px; font-weight: 700; color: #8b5cf6; line-height: 1; letter-spacing: -.03em; }
-.biglabel { font-size: 30px; color: #c8c8cf; margin-top: 12px; max-width: 30ch; }
-.li { font-size: 33px; line-height: 1.5; color: #e4e4e8; margin-bottom: 26px; padding-left: 34px; position: relative; max-width: 44ch; }
-.li:before { content: ""; position: absolute; left: 0; top: 17px; width: 14px; height: 14px; background: #8b5cf6; border-radius: 3px; }
-.small { font-size: 23px; color: #7c7c86; line-height: 1.5; margin-top: 40px; max-width: 44ch; }
-.source { font-size: 20px; color: #6f6f78; margin-top: 30px; line-height: 1.45; }
-</style>
-</head>
-<body>
-
-<!-- 1 COVER -->
-<div class="page cover">
-  <div class="kicker">White Paper · Non-Human Intelligence</div>
-  <div class="cover-title">The Dewey Method</div>
-  <div class="cover-sub">How one managed-agent playbook builds real wealth while most companies have not implemented AI at all.</div>
-  <div class="rule"></div>
-  <div class="body sm">By NOHUMA. Built on the verified methods of Nick Vasilescu (Orgo, Agent Empire) and the managed-agent model he operates through his agent, Dewey.</div>
-  <div class="foot">Human Architect · 2026</div>
-</div>
-
-<!-- 2 THE WHY -->
-<div class="page">
-  <div class="kicker">Start With Why</div>
-  <div class="headline">Your time should not be spent on work a machine can own.</div>
-  <div class="body">That is the belief under every managed-agent business. Not "AI is cool." Not "automation saves money." The conviction that the recurring work draining your week is beneath you, and it can be handed to something that never sleeps.</div>
-  <div class="rule"></div>
-  <div class="body sm">Simon Sinek's Golden Circle says people do not buy what you do, they buy why you do it. The Dewey Method sells the why first, the agent last. This paper follows that order.</div>
-</div>
-
-<!-- 3 THE ENEMY -->
-<div class="page">
-  <div class="kicker">The Enemy</div>
-  <div class="headline">Every lead you miss while you sleep is a competitor's customer by morning.</div>
-  <div class="body">The work does not wait. Quotes go unanswered. Follow-ups die. Inboxes pile up. A human team cannot be on every channel at every hour, and hiring more people costs more than the work is worth.</div>
-  <div class="rule"></div>
-  <div class="body sm">The default is to let the work pile up. The Dewey Method removes the human from the equation entirely.</div>
-</div>
-
-<!-- 4 THE GAP -->
-<div class="page">
-  <div class="kicker">The Wealth Window</div>
-  <div class="headline">Most companies have not implemented AI. That is the opportunity.</div>
-  <div class="big">54%</div>
-  <div class="biglabel">of UK firms report using AI in 2026, up from 35% in 2025. The majority still do not, and most that do are not getting value.</div>
-  <div class="source">Source: British Chambers of Commerce, 2026 AI adoption tracker. In the US, enterprise adoption sits near 78% while small firms lag near 20% (US Census BTOS, May 2026).</div>
-</div>
-
-<!-- 5 THE VALUE GAP -->
-<div class="page">
-  <div class="kicker">Using vs Winning</div>
-  <div class="headline">There is a £78 billion gap between using AI and getting value from it.</div>
-  <div class="body">UK SMEs sit in that gap. They have heard of AI. A few have tried a chatbot. Almost none have an autonomous agent that owns a workflow end to end. That gap is where the money is made.</div>
-  <div class="rule"></div>
-  <div class="body sm">Whoever delivers the outcome, not the tool, captures the value. A managed agent that owns the work is the outcome.</div>
-  <div class="source">Source: SME Automate, UK SME AI Adoption Gap 2026 (£78bn value gap).</div>
-</div>
-
-<!-- 6 NICK'S METHOD INTRO -->
-<div class="page">
-  <div class="kicker">The Method</div>
-  <div class="headline">Nick Vasilescu sells managed AI employees at $5,000 a month.</div>
-  <div class="body">His agent, Dewey, builds, deploys, and supports client agents inside Slack and iMessage with almost no hands-on work from Nick. The human role is discovery, relationship, and close. The agent does the rest.</div>
-  <div class="rule"></div>
-  <div class="body sm">The method is repeatable. Below are the exact components, architecture, and offer he uses, verified from his own transcripts and posts.</div>
-  <div class="source">Source: Nick Vasilescu, Build With AI podcast #184; Orgo; Agent Empire. Methods verified 2026-07-31.</div>
-</div>
-
-<!-- 7 THE 8 COMPONENTS -->
-<div class="page">
-  <div class="kicker">The 8 Components of a Useful Agent</div>
-  <div class="headline">An agent is not a prompt. It is a worker with tools.</div>
-  <div class="li">A computer of its own (dedicated VM)</div>
-  <div class="li">An email address in the client's name</div>
-  <div class="li">A phone number or live messaging line</div>
-  <div class="li">The client's channels (Slack, Telegram, iMessage)</div>
-  <div class="li">Real tools and connectors (1,000+ apps)</div>
-  <div class="li">A way to spend (an agent card)</div>
-  <div class="li">A knowledge base, one fact one home</div>
-  <div class="li">Observability across the fleet</div>
-  <div class="small">Miss one and it is a toy. All eight and it is a worker.</div>
-</div>
-
-<!-- 8 ARCHITECTURE -->
-<div class="page">
-  <div class="kicker">Architecture</div>
-  <div class="headline">One brain. Four specialists.</div>
-  <div class="body">Build one strong general-purpose orchestrator. It talks to the client 99% of the time and hands off to specialised sub-agents: outbound lead generation, sales follow-up, content and assets, and support.</div>
-  <div class="rule"></div>
-  <div class="body sm">Why isolate? "If you can create sub-agents, you minimise the blast radius of things that can go wrong." One failing specialist cannot sink the whole operation.</div>
-</div>
-
-<!-- 9 ONBOARDING -->
-<div class="page">
-  <div class="kicker">Fulfilment</div>
-  <div class="headline">Onboard it like a new employee.</div>
-  <div class="body">Crawl, walk, run. Set it up in Slack. Let the client talk to it. Do not oneshot a custom build. The first week looks like training an intern on day three.</div>
-  <div class="rule"></div>
-  <div class="body sm">Most clients live in Telegram and Slack. The agent self-configures those channels through computer use. A client is live in 48 hours.</div>
-</div>
-
-<!-- 10 THE OCA OFFER -->
-<div class="page">
-  <div class="kicker">The Offer</div>
-  <div class="headline">Charge up front. Deliver in under 7 days. Or refund.</div>
-  <div class="body">Old model: a 30 to 45 day custom build on a weak retainer. New model: take the retainer up front, ship one full automation in under a week, and guarantee it. If it is not fulfilled in 7 days, the money comes back.</div>
-  <div class="rule"></div>
-  <div class="body sm">"You give them an entire automation under 7 days. You just infiltrated their business with the agent." Then expand to a fleet, and help them resell it to their own customers.</div>
-</div>
-
-<!-- 11 DISCOVERY TO DELIVERY -->
-<div class="page">
-  <div class="kicker">The Loop</div>
-  <div class="headline">Discovery call. Brief the agent. Live in 48 hours.</div>
-  <div class="li">Discovery call, recorded with a notetaker</div>
-  <div class="li">Brief handed to the builder agent (Dewey)</div>
-  <div class="li">Dewey builds the client's agent and onboards it to Slack</div>
-  <div class="li">48 hours to live, with weekly improvements included</div>
-  <div class="small">The human's job shrinks to: ask the questions, close the deal, answer the tricky ones.</div>
-</div>
-
-<!-- 12 WHY IT BUILDS WEALTH -->
-<div class="page">
-  <div class="kicker">Why It Builds Wealth</div>
-  <div class="headline">You sell the outcome. You deliver it while you sleep.</div>
-  <div class="body">A flat $5,000 a month, everything included, with no usage maths. The agent runs the client's workflow. You are not trading hours for money. You are operating a system that compounds.</div>
-  <div class="rule"></div>
-  <div class="body sm">Because most companies have not implemented AI, every client you land is early. The window is open now, not later.</div>
-</div>
-
-<!-- 13 THE RESALE LINE -->
-<div class="page">
-  <div class="kicker">The Revenue Line</div>
-  <div class="headline">Build the client an agent. Then help them resell it.</div>
-  <div class="body">A managed agent can be white-labelled: your brand, your terms, single tier, no recruitment. The client offers it to their own customers. That is B2B2B, and B2B2B never churns.</div>
-  <div class="rule"></div>
-  <div class="body sm">What started as a cost line for the client becomes a revenue line for you. That is the wealth mechanism.</div>
-</div>
-
-<!-- 14 THE GUARANTEE -->
-<div class="page">
-  <div class="kicker">The Proof Anchor</div>
-  <div class="headline">Live in 48 hours. Or the first month is free.</div>
-  <div class="body">The offer stands on a guarantee, not a pitch. If the agent has not saved more than its cost in human hours by day 30, measured against the client's own timesheet, the first month is refunded.</div>
-  <div class="rule"></div>
-  <div class="body sm">A guarantee from a named operator beats a feature list from a faceless tool. It is why the method closes.</div>
-</div>
-
-<!-- 15 CLOSE -->
-<div class="page cover">
-  <div class="kicker">The Window Is Open</div>
-  <div class="cover-title">Hire a Non-Human Intelligence.</div>
-  <div class="cover-sub">Twenty minutes. One workflow. A one-page scope statement, no obligation.</div>
-  <div class="rule"></div>
-  <div class="body sm">NOHUMA applies the Dewey Method for UK businesses: managed Non-Human Intelligence, built, hosted, and run for you. Flat £5,000 a month. Live in 48 hours or refunded.</div>
-  <div class="foot">Book a call: beacons.ai/humanarchitect</div>
-</div>
-
-</body>
-</html>
+<!DOCTYPE html><html lang='en-GB'><head><meta charset='utf-8'><style>@font-face { font-family:"Inter"; src:url("file:///root/fonts/Inter-Regular.ttf"); font-weight:400; }
+@font-face { font-family:"Inter"; src:url("file:///root/fonts/Inter-Medium.ttf"); font-weight:500; }
+@font-face { font-family:"Inter"; src:url("file:///root/fonts/Inter-Bold.ttf"); font-weight:700; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+@page { size:9in 12in; margin:0; }
+html, body { background:#08080B; font-family:"Inter",sans-serif; }
+.page { width:9in; height:12in; background:#08080B; overflow:hidden; display:flex; flex-direction:column; justify-content:center; padding:96px 92px; page-break-after:always; }
+.page:last-child { page-break-after:auto; }
+.page.cover { justify-content:flex-start; padding-top:104px; }
+.page.soft { background:#0E0E13; }
+.kicker { color:#8b5cf6; letter-spacing:.22em; text-transform:uppercase; font-size:25px; font-weight:700; margin-bottom:42px; }
+.headline { font-weight:700; font-size:67px; line-height:1.06; letter-spacing:-.025em; margin-bottom:36px; max-width:17ch; color:#FFFFFF; }
+.subhead { font-weight:700; font-size:50px; line-height:1.1; letter-spacing:-.02em; margin-bottom:30px; max-width:20ch; color:#FFFFFF; }
+.lead { font-size:38px; line-height:1.55; color:#E9ECF1; max-width:36ch; }
+.body { font-size:28px; line-height:1.58; color:#C3C9D2; max-width:40ch; }
+.foot { margin-top:54px; font-size:21px; color:#828990; letter-spacing:.04em; }
+.cover-title { font-weight:700; font-size:90px; line-height:1.03; letter-spacing:-.03em; margin-bottom:34px; max-width:14ch; color:#FFFFFF; }
+.cover-sub { font-size:38px; line-height:1.5; color:#E9ECF1; max-width:33ch; }
+.display-num { font-size:120px; font-weight:700; color:#8b5cf6; line-height:1; letter-spacing:-.03em; }
+.display-lbl { font-size:29px; color:#C3C9D2; margin-top:12px; max-width:30ch; }
+.rule { width:88px; height:5px; background:#8b5cf6; margin:44px 0; border-radius:3px; }
+.li { font-size:28px; line-height:1.5; color:#C3C9D2; margin-bottom:24px; padding-left:34px; position:relative; max-width:43ch; }
+.li:before { content:""; position:absolute; left:0; top:14px; width:13px; height:13px; background:#8b5cf6; border-radius:3px; }
+.small { font-size:21px; color:#828990; line-height:1.5; margin-top:38px; max-width:44ch; }</style></head><body><div class='page cover'><div class='kicker'>White Paper · Non-Human Intelligence</div><div class='cover-title'>The Dewey Method</div><div class='cover-sub'>How one managed-agent playbook builds real wealth while most companies have not implemented AI at all.</div><div class='rule'></div><div class='body'>By NOHUMA. Built on the verified methods of Nick Vasilescu (Orgo, Agent Empire) and the managed-agent model he operates through his agent, Dewey.</div><div class='foot'>Human Architect · 2026</div></div><div class='page '><div class='kicker'>Start With Why</div><div class='headline'>Your time should not be spent on work a machine can own.</div><div class='body'>That is the belief under every managed-agent business. Not 'AI is cool.' Not 'automation saves money.' The conviction that the recurring work draining your week is beneath you, and it can be handed to something that never sleeps.</div><div class='rule'></div><div class='body'>Simon Sinek's Golden Circle: people do not buy what you do, they buy why you do it. The Dewey Method sells the why first, the agent last.</div></div><div class='page '><div class='kicker'>The Enemy</div><div class='headline'>Every lead you miss while you sleep is a competitor's customer by morning.</div><div class='body'>The work does not wait. Quotes go unanswered. Follow-ups die. Inboxes pile up. A human team cannot be on every channel at every hour, and hiring more people costs more than the work is worth.</div><div class='rule'></div><div class='body'>The default is to let the work pile up. The Dewey Method removes the human from the equation entirely.</div></div><div class='page '><div class='kicker'>The Wealth Window</div><div class='headline'>Most companies have not implemented AI. That is the opportunity.</div><div class='display-num'>54%</div><div class='display-lbl'>of UK firms report using AI in 2026, up from 35% in 2025. The majority still do not, and most that do are not getting value.</div><div class='small'>Source: British Chambers of Commerce, 2026 AI adoption tracker. US enterprise ~78% vs small firms ~20% (US Census BTOS, May 2026).</div></div><div class='page '><div class='kicker'>Using vs Winning</div><div class='headline'>There is a &pound;78 billion gap between using AI and getting value from it.</div><div class='body'>UK SMEs sit in that gap. They have heard of AI. A few tried a chatbot. Almost none have an autonomous agent that owns a workflow end to end. That gap is where the money is made.</div><div class='rule'></div><div class='body'>Whoever delivers the outcome, not the tool, captures the value.</div><div class='small'>Source: SME Automate, UK SME AI Adoption Gap 2026.</div></div><div class='page '><div class='kicker'>The Method</div><div class='headline'>Nick Vasilescu sells managed AI employees at $5,000 a month.</div><div class='body'>His agent, Dewey, builds, deploys, and supports client agents inside Slack and iMessage with almost no hands-on work from Nick. The human role is discovery, relationship, and close. The agent does the rest.</div><div class='rule'></div><div class='body'>The method is repeatable. The components, architecture, and offer below are verified from his own transcripts and posts.</div><div class='small'>Source: Nick Vasilescu, Build With AI podcast #184; Orgo; Agent Empire. Verified 2026-07-31.</div></div><div class='page '><div class='kicker'>The 8 Components</div><div class='headline'>An agent is not a prompt. It is a worker with tools.</div><div class='li'>A computer of its own (dedicated VM)</div><div class='li'>An email address in the client's name</div><div class='li'>A phone number or live messaging line</div><div class='li'>The client's channels (Slack, Telegram, iMessage)</div><div class='li'>Real tools and connectors (1,000+ apps)</div><div class='li'>A way to spend (an agent card)</div><div class='li'>A knowledge base, one fact one home</div><div class='li'>Observability across the fleet</div><div class='small'>Miss one and it is a toy. All eight and it is a worker.</div></div><div class='page '><div class='kicker'>Architecture</div><div class='headline'>One brain. Four specialists.</div><div class='body'>Build one strong general-purpose orchestrator. It talks to the client 99% of the time and hands off to specialised sub-agents: outbound lead generation, sales follow-up, content and assets, and support.</div><div class='rule'></div><div class='body'>Why isolate? 'If you can create sub-agents, you minimise the blast radius of things that can go wrong.' One failing specialist cannot sink the whole operation.</div></div><div class='page '><div class='kicker'>Fulfilment</div><div class='headline'>Onboard it like a new employee.</div><div class='body'>Crawl, walk, run. Set it up in Slack. Let the client talk to it. Do not oneshot a custom build. The first week looks like training an intern on day three.</div><div class='rule'></div><div class='body'>Most clients live in Telegram and Slack. The agent self-configures those channels. A client is live in 48 hours.</div></div><div class='page '><div class='kicker'>The Offer</div><div class='headline'>Charge up front. Deliver in under 7 days. Or refund.</div><div class='body'>Old model: a 30 to 45 day custom build on a weak retainer. New model: take the retainer up front, ship one full automation in under a week, and guarantee it. If not fulfilled in 7 days, the money comes back.</div><div class='rule'></div><div class='body'>'You give them an entire automation under 7 days. You just infiltrated their business with the agent.' Then expand to a fleet, and help them resell it to their own customers.</div></div><div class='page '><div class='kicker'>The Loop</div><div class='headline'>Discovery call. Brief the agent. Live in 48 hours.</div><div class='li'>Discovery call, recorded with a notetaker</div><div class='li'>Brief handed to the builder agent (Dewey)</div><div class='li'>Dewey builds the client's agent and onboards it to Slack</div><div class='li'>48 hours to live, with weekly improvements included</div><div class='small'>The human's job shrinks to: ask the questions, close the deal, answer the tricky ones.</div></div><div class='page '><div class='kicker'>Why It Builds Wealth</div><div class='headline'>You sell the outcome. You deliver it while you sleep.</div><div class='body'>A flat $5,000 a month, everything included, with no usage maths. The agent runs the client's workflow. You are not trading hours for money. You are operating a system that compounds.</div><div class='rule'></div><div class='body'>Because most companies have not implemented AI, every client you land is early. The window is open now, not later.</div></div><div class='page '><div class='kicker'>The Revenue Line</div><div class='headline'>Build the client an agent. Then help them resell it.</div><div class='body'>A managed agent can be white-labelled: your brand, your terms, single tier, no recruitment. The client offers it to their own customers. That is B2B2B, and B2B2B never churns.</div><div class='rule'></div><div class='body'>What started as a cost line for the client becomes a revenue line for you. That is the wealth mechanism.</div></div><div class='page '><div class='kicker'>The Proof Anchor</div><div class='headline'>Live in 48 hours. Or the first month is free.</div><div class='body'>The offer stands on a guarantee, not a pitch. If the agent has not saved more than its cost in human hours by day 30, measured against the client's own timesheet, the first month is refunded.</div><div class='rule'></div><div class='body'>A guarantee from a named operator beats a feature list from a faceless tool. It is why the method closes.</div></div><div class='page cover'><div class='kicker'>The Window Is Open</div><div class='cover-title'>Hire a Non-Human Intelligence.</div><div class='cover-sub'>Twenty minutes. One workflow. A one-page scope statement, no obligation.</div><div class='rule'></div><div class='body'>NOHUMA applies the Dewey Method for UK businesses: managed Non-Human Intelligence, built, hosted, and run for you. Flat &pound;5,000 a month. Live in 48 hours or refunded.</div><div class='foot'>Book a call: beacons.ai/humanarchitect</div></div></body></html>
