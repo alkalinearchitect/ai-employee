@@ -2,8 +2,10 @@
 audit: what they do, their bottleneck, and how a managed AI employee helps.
 Real scraped signals + clearly-labelled assessment. Run: python3 app.py"""
 
-from flask import Flask, render_template_string, request
+from flask import Flask, render_template_string, request, send_file
 from assessor import assess
+from pdf_audit import build as build_pdf
+import tempfile, os
 
 app = Flask(__name__)
 
@@ -65,6 +67,10 @@ footer{color:var(--text-3);font-size:.8rem;border-top:1px solid var(--border);pa
     <div class="kicker">How a NOHUMA agent helps</div>
     <ul class="help">{% for h in r.how_we_help %}<li>{{h}}</li>{% endfor %}</ul>
     <p class="assess">Assessment: the industry, tells and numbers above are read live from the site. The bottleneck and "how we help" wording is our reasoned assessment from those signals — not a claim about the company. {{r.stack_note}}</p>
+    <form method="post" action="/audit-pdf" style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+      <input type="hidden" name="url" value="{{url}}">
+      <button type="submit">Download PDF audit</button>
+    </form>
   </div>
   {% endif %}
   <p class="sub" style="margin-top:40px;color:var(--text-3);font-size:.92rem">Try an industry that hasn't adopted AI yet — a dentist, solicitor, accountant, estate agent, garage, or care provider.</p>
@@ -91,5 +97,27 @@ def home():
     return render_template_string(PAGE, r=r, err=err, url=url)
 
 
+@app.route("/audit-pdf", methods=["POST"])
+def audit_pdf():
+  url = request.form.get("url", "").strip()
+  if not url.startswith("http"):
+      url = "https://" + url
+  try:
+      r = assess(url)
+  except Exception as e:
+      return f"Could not analyse that site: {type(e).__name__}", 400
+  if not r.get("ok"):
+      return r.get("reason", "analysis failed"), 400
+  fd, path = tempfile.mkstemp(suffix=".pdf", prefix="nohuma-audit-")
+  os.close(fd)
+  try:
+      build_pdf(r, path)
+  except Exception as e:
+      return f"PDF build failed: {type(e).__name__}", 500
+  fname = f"nohuma-audit-{r.get('domain','site')}.pdf"
+  return send_file(path, mimetype="application/pdf",
+                   as_attachment=True, download_name=fname)
+
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5005, debug=False)
+  app.run(host="0.0.0.0", port=5005, debug=False)
