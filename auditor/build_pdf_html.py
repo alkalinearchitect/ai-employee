@@ -157,7 +157,50 @@ z.append(page(f"""
 
 zernio_html = f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS}</style></head><body>" + "".join(z) + "</body></html>"
 
+# ---------- THE SHIFT (manifesto) ----------
+s = []
+s.append(page(f"""
+<div class="kick">Non-Human Intelligence · The Shift</div>
+<h1>The business world<br>is about to split<br>in two.</h1>
+<p class="lead">Companies that operate AI. And companies that are run by AI workers. The second group will not compete with the first. It will outrun it.</p>
+""", foot_right="Page 1"))
+
+s.append(page(f"""
+<div class="secnum">01 / The line</div>
+<h2>The difference<br>most miss</h2>
+<p>ChatGPT is a tool you <span class="v">operate</span>.</p>
+<p>NOHUMA is a worker that <span class="v">runs without you</span>.</p>
+<div class="rule"></div>
+<p>A tool saves you time when you remember to use it. A worker ships the result while you sleep — replies sent, invoices chased, slots booked, reports written. The business runs. You watch.</p>
+""", foot_right="Page 2"))
+
+s.append(page(f"""
+<div class="secnum">02 / Why it's revolutionary</div>
+<h2>This is not<br>faster software.</h2>
+<p class="bull">A tool stops the moment you stop typing. A worker doesn't.</p>
+<p class="bull">A tool is a cost you operate. A worker is leverage that compounds.</p>
+<p class="bull">You don't adopt it. You <span class="v">hire it</span> — and it shows up every day.</p>
+<div class="rule"></div>
+<p>The last time work restructured this hard, the businesses that moved first didn't win a little. They redrew the map. This is that moment, and almost no one is positioned for it yet.</p>
+""", foot_right="Page 3"))
+
+s.append(page(f"""
+<div class="secnum">03 / What we built</div>
+<h2>NOHUMA is a<br>worker, not a tool.</h2>
+<p>We build and run a worker inside your business for a flat &pound;5,000 a month. Its own computer, its own email, its own line to your customers. It does the job a person would — but it never sleeps, quits, or bills you for sick days.</p>
+<div class="rule"></div>
+<h2 style="font-size:34px;margin-top:8px">The offer</h2>
+<p class="bull">Live in 48 hours — or the first month is refunded.</p>
+<p class="bull">You watch it work from a real control panel.</p>
+<p class="bull">Month to month. Stay because it works.</p>
+<div class="rule"></div>
+<p style="font-size:17px;color:#8a8a92">The shift is happening. The only question is whether your business is among the ones run by a worker — or still operating tools and losing the hours a worker would have returned.</p>
+""", foot_right="Page 4"))
+
+shift_html = f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS}</style></head><body>" + "".join(s) + "</body></html>"
+
 os.makedirs(OUT, exist_ok=True)
 with open(f"{OUT}/audit_brief.html","w") as f: f.write(audit_html)
 with open(f"{OUT}/zernio_verdict.html","w") as f: f.write(zernio_html)
+with open(f"{OUT}/the_shift.html","w") as f: f.write(shift_html)
 print("HTML written")
