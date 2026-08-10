@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@page { size:9in 12in; margin:0; }
+* { margin:0; padding:0; box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body { background:#000000; font-family:Helvetica,Arial,sans-serif; }
+.page { width:9in; height:12in; background:#000000; overflow:hidden; display:flex; flex-direction:column; justify-content:center; padding:80px 76px; page-break-after:always; }
+.page:last-child { page-break-after:auto; }
+.page.cover { justify-content:flex-start; padding-top:88px; }
+.page.map { justify-content:flex-start; padding-top:70px; }
+.kicker { color:#FFFFFF; letter-spacing:.22em; text-transform:uppercase; font-size:23px; font-weight:700; margin-bottom:28px; }
+.headline { font-weight:700; font-size:62px; line-height:1.03; letter-spacing:-.02em; margin-bottom:26px; max-width:17ch; color:#FFFFFF; }
+.subhead { font-weight:700; font-size:45px; line-height:1.06; letter-spacing:-.015em; margin-bottom:20px; max-width:20ch; color:#FFFFFF; }
+.lead { font-size:31px; line-height:1.46; color:#FFFFFF; max-width:34ch; }
+.body { font-size:27px; line-height:1.44; color:#FFFFFF; max-width:42ch; }
+.big { font-size:38px; line-height:1.2; color:#FFFFFF; max-width:34ch; }
+.foot { margin-top:38px; font-size:19px; color:#FFFFFF; letter-spacing:.02em; max-width:50ch; }
+.rule { width:88px; height:5px; background:#FFFFFF; margin:30px 0; border-radius:3px; }
+.li { font-size:27px; line-height:1.4; color:#FFFFFF; margin-bottom:16px; padding-left:32px; position:relative; max-width:44ch; }
+.li:before { content:""; position:absolute; left:0; top:12px; width:13px; height:13px; background:#FFFFFF; border-radius:2px; }
+.pill { display:inline-block; border:2px solid #FFFFFF; border-radius:999px; padding:6px 17px; font-size:22px; font-weight:700; color:#FFFFFF; margin:0 9px 11px 0; }
+.row { margin-bottom:16px; }
+.lo { font-size:25px; line-height:1.4; color:#FFFFFF; max-width:46ch; }
+.co { font-size:33px; font-weight:700; color:#FFFFFF; line-height:1.12; }
+.tag { font-size:22px; line-height:1.36; color:#FFFFFF; margin-top:8px; max-width:47ch; font-style:italic; }
+.sm { font-size:22px; line-height:1.44; color:#FFFFFF; margin-top:18px; max-width:50ch; }
+.num { font-size:30px; font-weight:700; color:#FFFFFF; margin-right:13px; }
+.ocr { display:flex; align-items:baseline; margin-bottom:14px; }
+.box { border:2px solid #FFFFFF; border-radius:14px; padding:22px 28px; }
+.box .co { font-size:31px; }
+.money { display:flex; justify-content:space-between; align-items:baseline; border-bottom:2px solid #FFFFFF; padding:12px 0; }
+.money .l { font-size:29px; color:#FFFFFF; }
+.money .r { font-size:36px; font-weight:700; color:#FFFFFF; }
+.chk { font-size:26px; line-height:1.42; color:#FFFFFF; margin-bottom:14px; padding-left:34px; position:relative; max-width:45ch; }
+.chk:before { content:"\2713"; position:absolute; left:0; top:2px; font-weight:700; font-size:25px; }
+.warn { border:2px solid #FFFFFF; border-radius:14px; padding:20px 26px; }
+.warn .co { font-size:29px; margin-bottom:7px; }
+.toc { font-size:27px; line-height:1.7; color:#FFFFFF; max-width:46ch; }
+.toc b { display:inline-block; width:54px; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+<div class="kicker">NOHUMA · Non-Human Intelligence</div>
+<div class="headline">THE CONSTRUCTION BIBLE</div>
+<div class="rule"></div>
+<div class="big">What the Dewey/NOHUMA system actually is. What it can do. The tools it runs on. Every construction client, use case, and objection — broken down.</div>
+<div class="foot">Built by OWL for Human Architect · 9 Aug 2026. £5,000/month per client. System facts verified against the live Dewey clone (DEWEY_INTEL.md + dewey-knowledge-base.md). Market facts scraped (CITB, NLW, Mitie, Balfour, RICS, HBR/InsideSales). No invented stats or contacts.</div>
+</section>
+
+<!-- TOC -->
+<section class="page map">
+<div class="kicker">Contents</div>
+<div class="headline">The full breakdown</div>
+<div class="rule"></div>
+<div class="toc"><b>03</b> What NOHUMA is<br><b>04</b> The 8 parts of every AI employee<br><b>05</b> Architecture: 1 brain + 4 specialists<br><b>06</b> The 48-hour delivery method<br><b>07</b> The tools it runs on<br><b>08</b> Can it handle construction? (verdict)<br><b>09</b> The 5 construction bottlenecks<br><b>10</b> Segment 1 — Trade & specialist SMEs<br><b>11</b> Segment 2 — Housebuilders<br><b>12</b> Segment 3 — Tier-1 main contractors<br><b>13</b> Segment 4 — Social housing / RSLs<br><b>14</b> Segment 5 — Facilities management<br><b>15</b> Segment 6 — Infrastructure & civil<br><b>16</b> Segment 7 — Professional / QS / survey<br><b>17</b> Cross-cutting use cases<br><b>18</b> Your money model<br><b>19</b> The 30-day playbook<br><b>20</b> Copy-paste openers<br><b>21</b> FAQ — capabilities<br><b>22</b> FAQ — objections<br><b>23</b> Verified vs. to-confirm<br><b>24</b> Book the audit</div>
+</section>
+
+<!-- 3 WHAT -->
+<section class="page map">
+<div class="kicker">What NOHUMA is</div>
+<div class="headline">A managed AI employee, not a chatbot</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:20px;">NOHUMA is a managed AI employee — a persistent Hermes Agent wired into a client's actual stack (email, Slack, CRM, calendar, phone). It runs 24/7, owns a workflow, reports daily, and is built, deployed and supported for the client by the operator.</div>
+<div class="body" style="margin-bottom:20px;">The model is cloned from Nick Vasilescu's "Dewey": $5,000/month per client, everything included (agents, tokens, usage — no separate line items). T's clone lives at /root/dewey (orchestrator) + /root/client-agents (factory).</div>
+<div class="box"><div class="co">The promise</div><div class="lo" style="margin-top:8px;">Discovery call → agent built → onboarded to Slack/Telegram → live in 48 hours, or the first month is refunded. Day-30: if it hasn't saved &gt;£5k in client hours (measured vs timesheet), the first month is refunded.</div></div>
+<div class="foot">Revenue is T's personal Ltd income — never routed through the HumanitAI CIC. Booking: beacons.ai/humanarchitect.</div>
+</section>
+
+<!-- 4 EIGHT PARTS -->
+<section class="page map">
+<div class="kicker">The system, real</div>
+<div class="headline">The 8 parts of every AI employee</div>
+<div class="rule"></div>
+<div class="li"><b>1 · Computer</b> — isolated client VPS / VM (the agent's own machine).</div>
+<div class="li"><b>2 · Email</b> — domain alias per client.</div>
+<div class="li"><b>3 · Phone / IM</b> — Telegram, Slack, iMessage, SMS bridge.</div>
+<div class="li"><b>4 · Comms</b> — meets the customer in their own channel.</div>
+<div class="li"><b>5 · Tools</b> — Hermes skills + terminal/file/web + 1000+ app connectors.</div>
+<div class="li"><b>6 · Card</b> — AgentCard so the agent can spend autonomously (paid tier).</div>
+<div class="li"><b>7 · Knowledge</b> — client context vault, "one fact, one home."</div>
+<div class="li"><b>8 · Observability</b> — fleet-wide health monitoring → alerts.</div>
+<div class="foot">Verified from Nick's build masterclass transcript (fAhwYrjmQRk) + Corey Ganim thread. This is the actual spec, not a pitch.</div>
+</section>
+
+<!-- 5 ARCH -->
+<section class="page map">
+<div class="kicker">Architecture</div>
+<div class="headline">One brain. Four specialists.</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:20px;">One strong general-purpose orchestrator does 99% of the talking. It hands off to four specialized sub-agents. Isolation minimizes the blast radius — if one breaks, the others keep running.</div>
+<div class="box"><div class="co">The four specialists</div>
+<div class="lo" style="margin-top:8px;">· Outbound — lead generation & first touch<br>· Sales follow-up — nurture, chase, book<br>· Content / assets — proposals, reports, posts<br>· Support — tickets, tenant/customer comms</div></div>
+<div class="body" style="margin-top:20px;">For a construction client these map directly: outbound to FM/estates buyers, sales follow-up on tenders, content on PQQs/reports, support on tenant/ticket triage.</div>
+<div class="foot">T's /root/dewey/AGENTS.md already mirrors this 1+4 structure. The construction bible reuses it wholesale.</div>
+</section>
+
+<!-- 6 METHOD -->
+<section class="page map">
+<div class="kicker">Delivery method</div>
+<div class="headline">Live in 48 hours</div>
+<div class="rule"></div>
+<div class="ocr"><span class="num">1</span><span class="lo">Discovery call recorded (Granola-style notetaker).</span></div>
+<div class="ocr"><span class="num">2</span><span class="lo">Client dumps docs/context into Slack or Telegram.</span></div>
+<div class="ocr"><span class="num">3</span><span class="lo">Transcript turned into the agent's skills & SOP vault.</span></div>
+<div class="ocr"><span class="num">4</span><span class="lo">Templated stack cloned per client (isolated).</span></div>
+<div class="ocr"><span class="num">5</span><span class="lo">Agent built + onboarded by the orchestrator.</span></div>
+<div class="ocr"><span class="num">6</span><span class="lo">Client pays → agent live same day / within 48h.</span></div>
+<div class="body" style="margin-top:16px;">Onboarding ≈ a new human employee ("your intern on day three"). Crawl-walk-run: start in Slack, talk to it, expand. Weekly improvements included.</div>
+<div class="foot">Verified from the managed-agent workshop (kdvm_kRZk8A) + OCA offer framework (xTxb922RCP0).</div>
+</section>
+
+<!-- 7 TOOLS -->
+<section class="page map">
+<div class="kicker">The tools it uses</div>
+<div class="headline">What runs under the hood</div>
+<div class="rule"></div>
+<div class="li"><b>Harness:</b> Hermes Agent (the orchestrator + sub-agents).</div>
+<div class="li"><b>Models:</b> gpt-5.5 default via Nous; fast model for low-reasoning speed.</div>
+<div class="li"><b>Computer:</b> isolated VPS / Orgo VM (8GB/4CPU min).</div>
+<div class="li"><b>Messaging:</b> Telegram, Slack, iMessage, AgentPhone SMS bridge.</div>
+<div class="li"><b>Knowledge:</b> Obsidian vault — single source of truth.</div>
+<div class="li"><b>Memory:</b> Honcho — one fact, one home, no contradictions.</div>
+<div class="li"><b>Integrations:</b> Composio +1000 apps, 13 MCPs (CRM, email, docs, calendar).</div>
+<div class="li"><b>Observability:</b> Latitude — fleet health → Telegram alert.</div>
+<div class="foot">T's clone runs free-stack by default (self-hosted VPS, Beacons payments) vs Nick's paid Orgo/Composio/AgentMail tier — same capability, lower cost.</div>
+</section>
+
+<!-- 8 VERDICT -->
+<section class="page">
+<div class="kicker">Can it handle construction?</div>
+<div class="headline">Yes. It is built for exactly this.</div>
+<div class="rule"></div>
+<div class="body">Construction's problem is not building — it is the administrative tax around building: tendering, compliance, chasing, reporting. Those are document-and-workflow jobs. An AI employee owns document-and-workflow jobs 24/7.</div>
+<div class="body" style="margin-top:22px;">The 206,000-worker gap by 2030 (CITB) cannot be hired away. Automating the non-building work is the only lever left. NHUMA is that lever — per desk, per framework, per region.</div>
+<div class="big" style="margin-top:24px;">Verdict: fully capable of every use case in this bible, drafts-only, on the client's own stack.</div>
+<div class="foot">The only thing it can't do is swing a hammer. That was never the bottleneck.</div>
+</section>
+
+<!-- 9 BOTTLENECKS -->
+<section class="page map">
+<div class="kicker">The bottleneck map</div>
+<div class="headline">Five ways construction leaks money</div>
+<div class="rule"></div>
+<div class="ocr"><span class="num">01</span><span class="lo"><b>Tendering & PQQ admin</b> — SMEs spend significant time on PQQs, method statements and financial packs with no guarantee of winning.</span></div>
+<div class="ocr"><span class="num">02</span><span class="lo"><b>Business development</b> — no one consistently reaches the right buyer because the founder is on site.</span></div>
+<div class="ocr"><span class="num">03</span><span class="lo"><b>Payment & cashflow</b> — late payment is the sector's most overlooked crisis; chasing gets deprioritised.</span></div>
+<div class="ocr"><span class="num">04</span><span class="lo"><b>Compliance</b> — Building Safety Act, Awaab's Law (Oct 2025), PAS 2035, H&S documentation.</span></div>
+<div class="ocr"><span class="num">05</span><span class="lo"><b>Reporting & coordination</b> — daily logs, snag lists, handovers, subcontractor comms.</span></div>
+<div class="foot">Every segment below suffers at least three. NHUMA is built to remove them.</div>
+</section>
+
+<!-- 10 SEG1 -->
+<section class="page map">
+<div class="kicker">Segment 1 · Trade & Specialist SMEs</div>
+<div class="headline">Founders on the tools</div>
+<div class="rule"></div>
+<div class="co">Real clients</div>
+<div class="lo" style="margin-top:6px;">Pimlico Plumbers · Able Group · Aspect · + thousands regional (heating, electrical, roofing, drainage).</div>
+<div class="co" style="margin-top:16px;">POI</div>
+<div class="lo" style="margin-top:6px;">The owner/founder directly — no procurement layer. LinkedIn / FSB directory / Checkatrade.</div>
+<div class="co" style="margin-top:16px;">NHUMA use case</div>
+<div class="li">Drafts PQQs & quotes from site photos.</div>
+<div class="li">Chases invoices politely, 24/7.</div>
+<div class="li">Runs outbound to facilities managers & estate agents.</div>
+<div class="co" style="margin-top:16px;">Your income</div>
+<div class="lo" style="margin-top:6px;">£5,000/mo per SME. Target 5–10 in 6 months. Fastest yes.</div>
+</section>
+
+<!-- 11 SEG2 -->
+<section class="page map">
+<div class="kicker">Segment 2 · Housebuilders</div>
+<div class="headline">Volume & regional developers</div>
+<div class="rule"></div>
+<div class="co">Real clients</div>
+<div class="lo" style="margin-top:6px;">Barratt Redrow · Taylor Wimpey · Persimmon · Bellway · Vistry · Berkeley · Keepmoat · Crest Nicholson · Miller Homes · Bloor.</div>
+<div class="co" style="margin-top:16px;">POI</div>
+<div class="lo" style="margin-top:6px;"><b>✓ Mark Bailey</b> — Regional MD, London & Southern, Barratt Redrow (confirmed, trade press). Others: "Regional MD" / "Sales Director".</div>
+<div class="co" style="margin-top:16px;">NHUMA use case</div>
+<div class="li">Plot-sales follow-up & solicitor/surveyor chase.</div>
+<div class="li">Snag-list coordination across trades.</div>
+<div class="li">Building Safety Act document drafting.</div>
+<div class="co" style="margin-top:16px;">Your income</div>
+<div class="lo" style="margin-top:6px;">£5,000/mo per regional division. One group = multiple seats.</div>
+</section>
+
+<!-- 12 SEG3 -->
+<section class="page map">
+<div class="kicker">Segment 3 · Tier-1 Main Contractors</div>
+<div class="headline">The quoted giants</div>
+<div class="rule"></div>
+<div class="co">Real clients</div>
+<div class="lo" style="margin-top:6px;">Balfour Beatty (£10.0bn, 2024) · Kier · Morgan Sindall · Costain · Galliford Try · Laing O'Rourke · Mace · BAM Nuttall · Skanska UK · Willmott Dixon.</div>
+<div class="co" style="margin-top:16px;">POI</div>
+<div class="lo" style="margin-top:6px;">Pre-Construction Director / Bid Director. LinkedIn "[Company] + Preconstruction" or firm leadership page.</div>
+<div class="co" style="margin-top:16px;">NHUMA use case</div>
+<div class="li">PQQ engine — drafts 60–80% from past wins.</div>
+<div class="li">Subcontractor pre-qualification.</div>
+<div class="li">Daily site logs & supply-chain follow-up.</div>
+<div class="co" style="margin-top:16px;">Your income</div>
+<div class="lo" style="margin-top:6px;">£5,000/mo per framework lot / bid desk. Enterprise seat potential.</div>
+</section>
+
+<!-- 13 SEG4 -->
+<section class="page map">
+<div class="kicker">Segment 4 · Social Housing / RSLs</div>
+<div class="headline">Landlords under a legal clock</div>
+<div class="rule"></div>
+<div class="co">Real clients</div>
+<div class="lo" style="margin-top:6px;">L&Q · Clarion · Peabody · Hyde · Sanctuary · Sovereign Network Group · Places for People · Guinness Partnership · Notting Hill Genesis.</div>
+<div class="co" style="margin-top:16px;">POI</div>
+<div class="lo" style="margin-top:6px;"><b>✓ Richard Whitby</b> — Construction Director, L&Q (confirmed, directory). Others: "Director of Property / Repairs / Operations".</div>
+<div class="co" style="margin-top:16px;">NHUMA use case</div>
+<div class="li">Tenant report triage (damp/mould under Awaab's Law).</div>
+<div class="li">Appointment booking & contractor chase.</div>
+<div class="li">Compliance case-file generation.</div>
+<div class="co" style="margin-top:16px;">Your income</div>
+<div class="lo" style="margin-top:6px;">£5,000/mo per repairs/ops function. Multiple per RSL.</div>
+</section>
+
+<!-- 14 SEG5 -->
+<section class="page map">
+<div class="kicker">Segment 5 · Facilities Management</div>
+<div class="headline">The helpdesk economy</div>
+<div class="rule"></div>
+<div class="co">Real clients</div>
+<div class="lo" style="margin-top:6px;">Mitie (£4.51bn FY24) · ISS UK · Sodexo · CBRE · Bilfinger UK · EMCOR UK · ABM · Compass.</div>
+<div class="co" style="margin-top:16px;">POI</div>
+<div class="lo" style="margin-top:6px;"><b>✓ Jason Towse</b> — MD Business Services, Mitie. <b>✓ Franck Crosnier</b> — BD Director TFM, Mitie (both confirmed). Others: "New Business Director" / "MD".</div>
+<div class="co" style="margin-top:16px;">NHUMA use case</div>
+<div class="li">FM tender response drafting.</div>
+<div class="li">First-line ticket triage.</div>
+<div class="li">SLA reporting & outbound for new contracts.</div>
+<div class="co" style="margin-top:16px;">Your income</div>
+<div class="lo" style="margin-top:6px;">£5,000/mo per desk/division. Highest seat potential.</div>
+</section>
+
+<!-- 7 PROF -->
+<section class="page map">
+<div class="kicker">Segment 7 · Professional / QS / Survey</div>
+<div class="headline">The fee-earners</div>
+<div class="rule"></div>
+<div class="co">Real clients</div>
+<div class="lo" style="margin-top:6px;">Turner & Townsend · Arcadis · Rider Levett Bucknall · Gleeds · Currie & Brown · AECOM · regional QS partnerships · RICS practices.</div>
+<div class="co" style="margin-top:16px;">POI</div>
+<div class="lo" style="margin-top:6px;"><b>✓ Stephanie Marshall</b> — MD UK Real Estate Cost Management, Turner & Townsend (confirmed, press release). Others: "Partner" / "MD Cost".</div>
+<div class="co" style="margin-top:16px;">NHUMA use case</div>
+<div class="li">Fee proposals generated from scope.</div>
+<div class="li">Appointment packs & client reports.</div>
+<div class="li">Business development outbound.</div>
+<div class="co" style="margin-top:16px;">Your income</div>
+<div class="lo" style="margin-top:6px;">£5,000/mo per practice/partner group. Quick partner meeting = the sale.</div>
+</section>
+
+<!-- 17 USE CASES -->
+<section class="page map">
+<div class="kicker">Cross-cutting use cases</div>
+<div class="headline">What NHUMA does, daily</div>
+<div class="rule"></div>
+<div class="li"><b>Tender / PQQ engine</b> — drafts from past wins; your people polish the last 20–40%.</div>
+<div class="li"><b>Outbound BD</b> — hundreds of personalised reaches a week to the right buyer.</div>
+<div class="li"><b>Payment chase</b> — polite, persistent, fully logged.</div>
+<div class="li"><b>Compliance docs</b> — BSA, Homes Act, PAS 2035, H&S packs.</div>
+<div class="li"><b>Site & report automation</b> — daily logs, snag lists, handovers.</div>
+<div class="li"><b>Customer / tenant comms</b> — triage, booking, status, complaints.</div>
+<div class="foot">One NHUMA covers all six. Proof point: HBR/InsideSales — respond within 1 hour = 7x more likely to qualify a lead; 60x vs 24h+. NHUMA makes that automatic.</div>
+</section>
+
+<!-- 18 MONEY -->
+<section class="page map">
+<div class="kicker">Your money model</div>
+<div class="headline">Clients × £5,000/month</div>
+<div class="rule"></div>
+<div class="box">
+<div class="money"><span class="l">1 client</span><span class="r">£5,000 / mo</span></div>
+<div class="money"><span class="l">5 clients</span><span class="r">£25,000 / mo</span></div>
+<div class="money"><span class="l">10 clients</span><span class="r">£50,000 / mo</span></div>
+<div class="money" style="border-bottom:none;"><span class="l">20 clients</span><span class="r">£100,000 / mo</span></div>
+</div>
+<div class="sm">Annualised: 5 = £300k/yr · 10 = £600k/yr · 20 = £1.2m/yr. Enterprise buyers take multiple seats (per desk / region), so one logo can be 5–10 × £5k. Delivery cost per client is low (VPS + model + light oversight), so margin stays high. 99% of UK businesses are SMEs (RICS 2024) — the addressable base is enormous.</div>
+</section>
+
+<!-- 19 PLAYBOOK -->
+<section class="page map">
+<div class="kicker">The 30-day playbook</div>
+<div class="headline">From zero to first close</div>
+<div class="rule"></div>
+<div class="chk"><b>Days 1–3:</b> Pick Segments 1 & 7. List 20 named targets (10 SME, 10 professional).</div>
+<div class="chk"><b>Days 4–7:</b> Run the POI finder on all 20. Log name + role + real contact.</div>
+<div class="chk"><b>Days 8–14:</b> Send the opener. Book 5 free 20-min bottleneck audits.</div>
+<div class="chk"><b>Days 15–21:</b> Deliver audits. Show the £5k saving in writing. Propose 90-day pilot.</div>
+<div class="chk"><b>Days 22–30:</b> Close first 1–2 clients. Stand up NHUMA in 48h. Measure vs timesheet.</div>
+<div class="foot">One closed SME = £5k/mo, proof, and a reference for the enterprise pitch.</div>
+</section>
+
+<!-- 20 OPENERS -->
+<section class="page map">
+<div class="kicker">Copy-paste openers</div>
+<div class="headline">Say this. Watch replies.</div>
+<div class="rule"></div>
+<div class="co" style="font-size:27px;">To an SME founder</div>
+<div class="lo" style="margin-top:5px; font-style:italic;">"I free founders like you from tender admin and payment chasing with a managed AI employee — £5k/mo, live in 48h, or the first month's free. 20 mins to see your saving?"</div>
+<div class="co" style="font-size:27px; margin-top:16px;">To an enterprise bid/BD lead</div>
+<div class="lo" style="margin-top:5px; font-style:italic;">"Your team loses days to repeat PQQs. We run a managed AI employee that drafts 60–80% from past wins and pre-quals subs. 20-min audit, measured saving, or it's free."</div>
+<div class="co" style="font-size:27px; margin-top:16px;">To an RSL / compliance lead</div>
+<div class="lo" style="margin-top:5px; font-style:italic;">"Awaab's Law is a clock you're now on. We turn tenant reports into a tracked, compliant workflow with a managed AI employee. 20 mins to see it on your site?"</div>
+<div class="foot">Short. One ask. One proof point. The guarantee does the closing.</div>
+</section>
+
+<!-- 21 FAQ CAP -->
+<section class="page map">
+<div class="kicker">FAQ · capabilities</div>
+<div class="headline">"Can it actually…?"</div>
+<div class="rule"></div>
+<div class="lo"><b>Q: Draft a real PQQ?</b> Yes — from past wins + compliance docs in the client vault. Your people approve the final 20–40%.</div>
+<div class="lo" style="margin-top:12px;"><b>Q: Integrate with our CRM / Slack?</b> Yes — via 1000+ app connectors (Composio) and MCPs. It works inside your stack.</div>
+<div class="lo" style="margin-top:12px;"><b>Q: Handle multiple frameworks?</b> Yes — one seat per framework lot / bid desk / region.</div>
+<div class="lo" style="margin-top:12px;"><b>Q: Work for a 5-person SME?</b> Yes — that is exactly who it is for. No procurement layer, founder deals direct.</div>
+<div class="lo" style="margin-top:12px;"><b>Q: Who owns the agent & data?</b> The client. Isolated VPS, portable on exit. Not locked in.</div>
+<div class="lo" style="margin-top:12px;"><b>Q: White-label it?</b> Yes — single-tier white-label; it becomes your revenue line.</div>
+</section>
+
+<!-- 22 FAQ OBJ -->
+<section class="page map">
+<div class="kicker">FAQ · objections</div>
+<div class="headline">Kill the friction fast</div>
+<div class="rule"></div>
+<div class="lo"><b>"We already use software."</b> → "NHUMA operates it. It's the operator, not another login."</div>
+<div class="lo" style="margin-top:11px;"><b>"Will it send things blind?"</b> → "Drafts-only by default. Your people approve. Nothing goes out unapproved."</div>
+<div class="lo" style="margin-top:11px;"><b>"What if no saving?"</b> → "Day-30: if it hasn't saved &gt;£5k in your hours, the first month is refunded. Measured, not promised."</div>
+<div class="lo" style="margin-top:11px;"><b>"Data security?"</b> → "Isolated client VPS. Your data stays yours, leaves with you on exit."</div>
+<div class="lo" style="margin-top:11px;"><b>"Too expensive."</b> → "One monthly line replacing 2–3 admin hires you can't recruit anyway (206k gap by 2030)."</div>
+<div class="lo" style="margin-top:11px;"><b>"Replace our bid team?"</b> → "No — multiplies them. Same team, 3x throughput."</div>
+</section>
+
+<!-- 23 VERIFIED -->
+<section class="page map">
+<div class="kicker">Verified vs. to-confirm</div>
+<div class="headline">Read before you pitch</div>
+<div class="rule"></div>
+<div class="warn"><div class="co">✓ Verified</div>
+<div class="lo">System: 8 parts, 1+4 architecture, 48h delivery, tools (Hermes/Orgo/Composio/Obsidian/Honcho/Latitude) — from DEWEY_INTEL.md + dewey-knowledge-base.md. Market: CITB 206k by 2030; NLW £12.21 Apr 2025; construction wages +6.9% to Nov 2024; Mitie £4.51bn FY24; Balfour revenue £10.0bn 2024; Awaab's Law Oct 2025; RICS 99% UK businesses SMEs; HBR/InsideSales 7x/60x lead-response. POI: Bailey, Towse, Crosnier, Marshall, Whitby.</div></div>
+<div class="warn" style="margin-top:16px;"><div class="co">→ Confirm before relying</div>
+<div class="lo">Per-client "£X saved" = illustrative; Day-30 timesheet proves it. POI names beyond the 5 confirmed = roles to find via LinkedIn/Companies House/firm site. Exact construction-firm count not re-scraped this session — cite RICS SME stat instead.</div></div>
+<div class="foot">No invented stats. No fake contacts. Earn the logo, then use it.</div>
+</section>
+
+<!-- 24 CTA -->
+<section class="page cover">
+<div class="kicker">Start here</div>
+<div class="headline">Book the bottleneck audit.</div>
+<div class="rule"></div>
+<div class="big">One call. We map the leaks in your chosen segment and show the £5k saving in writing before you spend a penny.</div>
+<div class="foot">beacons.ai/humanarchitect · NOHUMA by Human Architect — a UK AI systems studio. Non-Human Intelligence, done for you.</div>
+</section>
+
+</body>
+</html>

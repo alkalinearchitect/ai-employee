@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@page { size:9in 12in; margin:0; }
+* { margin:0; padding:0; box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body { background:#000000; font-family:Helvetica,Arial,sans-serif; }
+.page { width:9in; height:12in; background:#000000; overflow:hidden; display:flex; flex-direction:column; justify-content:center; padding:88px 84px; page-break-after:always; }
+.page:last-child { page-break-after:auto; }
+.page.cover { justify-content:flex-start; padding-top:96px; }
+.page.map { justify-content:flex-start; padding-top:80px; }
+.kicker { color:#FFFFFF; letter-spacing:.22em; text-transform:uppercase; font-size:25px; font-weight:700; margin-bottom:34px; }
+.headline { font-weight:700; font-size:67px; line-height:1.05; letter-spacing:-.02em; margin-bottom:30px; max-width:17ch; color:#FFFFFF; }
+.subhead { font-weight:700; font-size:50px; line-height:1.08; letter-spacing:-.015em; margin-bottom:24px; max-width:20ch; color:#FFFFFF; }
+.lead { font-size:34px; line-height:1.5; color:#FFFFFF; max-width:34ch; }
+.body { font-size:29px; line-height:1.5; color:#FFFFFF; max-width:41ch; }
+.big { font-size:42px; line-height:1.25; color:#FFFFFF; max-width:34ch; }
+.foot { margin-top:46px; font-size:21px; color:#FFFFFF; letter-spacing:.02em; max-width:47ch; }
+.rule { width:88px; height:5px; background:#FFFFFF; margin:36px 0; border-radius:3px; }
+.li { font-size:29px; line-height:1.45; color:#FFFFFF; margin-bottom:20px; padding-left:32px; position:relative; max-width:42ch; }
+.li:before { content:""; position:absolute; left:0; top:13px; width:13px; height:13px; background:#FFFFFF; border-radius:2px; }
+.pill { display:inline-block; border:2px solid #FFFFFF; border-radius:999px; padding:7px 20px; font-size:24px; font-weight:700; color:#FFFFFF; margin:0 12px 14px 0; }
+.row { margin-bottom:22px; }
+.lo { font-size:27px; line-height:1.45; color:#FFFFFF; max-width:44ch; }
+.co { font-size:38px; font-weight:700; color:#FFFFFF; line-height:1.15; }
+.tag { font-size:24px; line-height:1.4; color:#FFFFFF; margin-top:10px; max-width:45ch; font-style:italic; }
+.sm { font-size:24px; line-height:1.5; color:#FFFFFF; margin-top:24px; max-width:47ch; }
+.num { font-size:33px; font-weight:700; color:#FFFFFF; margin-right:16px; }
+.ocr { display:flex; align-items:baseline; margin-bottom:18px; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+<div class="kicker">NOHUMA · Non-Human Intelligence</div>
+<div class="headline">WHO TO APPROACH IN UK CONSTRUCTION</div>
+<div class="rule"></div>
+<div class="big">A full target list, the bottlenecks they bleed from, and exactly how a £5,000/month AI employee closes them.</div>
+<div class="foot">Built by OWL for Human Architect · 9 August 2026 · Every company named is real and UK-based. Bottlenecks are sourced, not invented.</div>
+</section>
+
+<!-- TRUTH -->
+<section class="page">
+<div class="kicker">The truth about the sector</div>
+<div class="headline">The labour is gone. The admin stayed.</div>
+<div class="rule"></div>
+<div class="body">UK construction needs <b>206,000 more workers by 2030</b> (CITB, 2026 — about 41,200 a year). Wages rose 6.9% in the year to Nov 2024 and the National Living Wage hit £12.21 in April 2025. Yet the work that does not build — tendering, compliance, chasing, reporting — has not shrunk one inch.</div>
+<div class="body" style="margin-top:26px;">You cannot hire your way out of a 206,000-person gap by 2030. You can <b>automate the non-building work</b> so the humans you do have stay on site, billable, and off the screen.</div>
+<div class="foot">That is the wedge. Not "replace builders." Remove the administrative tax on every contract.</div>
+</section>
+
+<!-- BOTTLENECK MAP -->
+<section class="page map">
+<div class="kicker">The bottleneck map</div>
+<div class="headline">Five ways construction leaks money</div>
+<div class="rule"></div>
+<div class="row"><div class="ocr"><span class="num">01</span><span class="lo"><b>Tendering & PQQ admin.</b> SMEs spend significant time on PQQs, method statements and financial packs with no guarantee of winning. Larger firms bury them under specialist bid teams.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">02</span><span class="lo"><b>Business development.</b> No one is consistently reaching the right buyer — facilities managers, estates teams, procurement leads — because the founder is on site.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">03</span><span class="lo"><b>Payment & cashflow.</b> Late payment is the sector's most overlooked crisis. Chasing takes hours and gets deprioritised.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">04</span><span class="lo"><b>Compliance burden.</b> Building Safety Act, Homes Act / Awaab's Law, PAS 2035, H&S — documentation that grows while site teams shrink.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">05</span><span class="lo"><b>Reporting & coordination.</b> Daily logs, snag lists, handovers, subcontractor and supply-chain comms eat the day.</span></div></div>
+<div class="foot">Every segment below suffers at least three of these. NHUMA is built to remove them.</div>
+</section>
+
+<!-- HOW NOHUMA -->
+<section class="page">
+<div class="kicker">How NHUMA attacks it</div>
+<div class="headline">One brain. Four specialists. Zero recruitment.</div>
+<div class="rule"></div>
+<div class="body">A managed AI employee, self-hosted on an isolated client VPS, with scoped access to your email, your channels and your tools. It runs an <b>8-part stack</b>: its own computer, its own email, a live line, your channels, real tools, simple billing, one-fact-one-home memory, and constant health checks.</div>
+<div class="body" style="margin-top:24px;">It operates as <b>1 brain + 4 specialists</b> — outbound, sales follow-up, content, and support — working every day, never off sick, never billing overtime.</div>
+<div class="foot">Drafts-only by default. It proposes; your people approve. It never sends what it should not.</div>
+</section>
+
+<!-- TARGET MAP -->
+<section class="page map">
+<div class="kicker">The target map</div>
+<div class="headline">Seven segments to approach</div>
+<div class="rule"></div>
+<span class="pill">1 · Trade & Specialist SMEs</span><span class="pill">2 · Housebuilders</span><span class="pill">3 · Tier-1 Main Contractors</span><span class="pill">4 · Social Housing / RSLs</span><span class="pill">5 · Facilities Management</span><span class="pill">6 · Infrastructure & Civil</span><span class="pill">7 · Professional / QS / Survey</span>
+<div class="sm">Two tracks: the <b>Enterprise / Multi-Site</b> track (segments 2-6, £1bn+ revenue, volume + reliability framing) and the <b>SME / Studio</b> track (segments 1 & 7, founder-led, speed framing). Both buy the same £5,000/month. The next seven pages name real companies and the exact pitch for each.</div>
+</section>
+
+<!-- SEG 1 -->
+<section class="page map">
+<div class="kicker">Segment 1 · Trade & Specialist SMEs</div>
+<div class="headline">Plumbers, electricians, roofers, groundworkers</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:20px;">Founder-led, regional, £2-50M. No bid team, no admin. The bottleneck is winning and billing work while they are on the tools.</div>
+<div class="co">Who to approach (real UK firms)</div>
+<div class="lo" style="margin-top:8px;">Pimlico Plumbers (London) · Able Group (nationwide maintenance) · Aspect (property services) · Plus thousands of regional firms: heating, electrical, roofing, drainage.</div>
+<div class="co" style="margin-top:24px;">Bottleneck → NHUMA pitch</div>
+<div class="lo" style="margin-top:8px;">Tender/PQQ admin, quoting from photos, payment chase, scheduling → NHUMA drafts PQQs, auto-quotes from site photos, chases invoices politely, and runs outbound to facilities managers and estate agents.</div>
+<div class="foot">Closable via trade associations and local business networks. Lowest friction, fastest pilot.</div>
+</section>
+
+<!-- SEG 2 -->
+<section class="page map">
+<div class="kicker">Segment 2 · Housebuilders</div>
+<div class="headline">Volume & regional developers</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:18px;">Plot sales, buyer comms, snagging and Building Safety Act paperwork scale with every home. Margins are thin; admin is thick.</div>
+<div class="co">Who to approach (real UK firms)</div>
+<div class="lo" style="margin-top:8px;">Barratt Redrow (merged 2024) · Taylor Wimpey · Persimmon · Bellway · Vistry Group · Berkeley Group · Keepmoat (affordable/regional) · Crest Nicholson · Miller Homes · Bloor Homes.</div>
+<div class="co" style="margin-top:22px;">Bottleneck → NHUMA pitch</div>
+<div class="lo" style="margin-top:8px;">Plot-sales follow-up, solicitor/surveyor chase, snag-list coordination, Building Safety Act docs → NHUMA nurtures plot leads, chases the chain, coordinates snag lists, and drafts safety-case documents.</div>
+<div class="foot">Best entered through regional MDs and sales directors, not group procurement.</div>
+</section>
+
+<!-- SEG 3 -->
+<section class="page map">
+<div class="kicker">Segment 3 · Tier-1 Main Contractors</div>
+<div class="headline">The quoted giants</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:18px;">They have bid teams — and those teams are drowning in PQQs, supply-chain coordination and H&S documentation across dozens of live frameworks.</div>
+<div class="co">Who to approach (real UK firms)</div>
+<div class="lo" style="margin-top:8px;">Balfour Beatty (£10.0bn rev, 2024) · Kier · Morgan Sindall · Costain · Galliford Try · Laing O'Rourke · Mace · BAM Nuttall · Skanska UK · Willmott Dixon.</div>
+<div class="co" style="margin-top:22px;">Bottleneck → NHUMA pitch</div>
+<div class="lo" style="margin-top:8px;">PQQ volume, subcontractor pre-qual, daily site reports, supply-chain comms → NHUMA drafts PQQs from past wins, pre-quals subs, automates daily logs, and runs supply-chain follow-up.</div>
+<div class="foot">Sell to pre-construction / bid directors. Pilot on one framework lot.</div>
+</section>
+
+<!-- SEG 4 -->
+<section class="page map">
+<div class="kicker">Segment 4 · Social Housing / RSLs</div>
+<div class="headline">Landlords under inspection</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:18px;">The Homes Act 2018 and Awaab's Law (in force Oct 2025) make damp, mould and repairs legally urgent. Tenant comms and contractor coordination are now a compliance risk, not just a cost.</div>
+<div class="co">Who to approach (real UK RSLs)</div>
+<div class="lo" style="margin-top:8px;">L&Q · Clarion Housing · Peabody · Hyde · Sanctuary · Sovereign Network Group · Places for People · Guinness Partnership · Notting Hill Genesis.</div>
+<div class="co" style="margin-top:22px;">Bottleneck → NHUMA pitch</div>
+<div class="lo" style="margin-top:8px;">Repairs coordination, tenant triage, compliance docs, complaint handling → NHUMA triages tenant reports, books appointments, follows up contractors, and generates compliance case files for damp/mould.</div>
+<div class="foot">Frame as regulatory risk reduction, not cost saving. Reaches executives and compliance officers.</div>
+</section>
+
+<!-- SEG 5 -->
+<section class="page map">
+<div class="kicker">Segment 5 · Facilities Management</div>
+<div class="headline">The helpdesk economy</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:18px;">FM lives on tenders, SLAs and reactive tickets. Winning new contracts and proving SLA compliance are both document-heavy and both under-resourced.</div>
+<div class="co">Who to approach (real UK firms)</div>
+<div class="lo" style="margin-top:8px;">Mitie (FY24 rev £4.51bn) · ISS UK · Sodexo · CBRE · Bilfinger UK · EMCOR UK · ABM · Compass (catering/FM bought together).</div>
+<div class="co" style="margin-top:22px;">Bottleneck → NHUMA pitch</div>
+<div class="lo" style="margin-top:8px;">FM tender bids, helpdesk triage, SLA reporting, scheduling → NHUMA drafts tender responses, runs first-line ticket triage, automates SLA reports, and does outbound to win new contracts.</div>
+<div class="foot">Mitie alone is a £4.5bn-proof buyer. One enterprise logo opens the whole sector.</div>
+</section>
+
+<!-- SEG 6 -->
+<section class="page map">
+<div class="kicker">Segment 6 · Infrastructure & Civil</div>
+<div class="headline">Frameworks, permits, stakeholders</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:18px;">Highways, water, energy and rail run on framework lots, permits and stakeholder reporting. The document load is enormous and repeating.</div>
+<div class="co">Who to approach (real UK bodies & contractors)</div>
+<div class="lo" style="margin-top:8px;">Network Rail · National Grid · Severn Trent · Thames Water · Balfour Beatty (civil) · Morgan Sindall Infrastructure · Costain · Kier Highways · Amey · Jacobs · AECOM.</div>
+<div class="co" style="margin-top:22px;">Bottleneck → NHUMA pitch</div>
+<div class="lo" style="margin-top:8px;">Framework bid libraries, permit-to-work coordination, stakeholder reports → NHUMA builds a reusable bid library, coordinates permits, and drafts stakeholder progress reports.</div>
+<div class="foot">Largest contracts, longest sales cycles. Use a named framework as the entry hook.</div>
+</section>
+
+<!-- SEG 7 -->
+<section class="page map">
+<div class="kicker">Segment 7 · Professional / QS / Survey</div>
+<div class="headline">The fee-earners</div>
+<div class="rule"></div>
+<div class="body" style="margin-bottom:18px;">QS, cost consultancy, survey and architecture firms bill for expertise — but lose billable hours to proposals, appointment packs and client reporting.</div>
+<div class="co">Who to approach (real UK firms)</div>
+<div class="lo" style="margin-top:8px;">Turner & Townsend · Arcadis · Rider Levett Bucknall · Gleeds · Currie & Brown · AECOM · plus regional QS partnerships and RICS practices.</div>
+<div class="co" style="margin-top:22px;">Bottleneck → NHUMA pitch</div>
+<div class="lo" style="margin-top:8px;">Fee proposals, appointment docs, client reports, business dev → NHUMA generates fee proposals from scope, drafts appointment packs, automates client reports, and runs outbound for new instructions.</div>
+<div class="foot">High-margin, low-capital buyers. A partners' meeting is the whole sale.</div>
+</section>
+
+<!-- USE CASES -->
+<section class="page map">
+<div class="kicker">The use cases</div>
+<div class="headline">What NHUMA actually does, daily</div>
+<div class="rule"></div>
+<div class="li"><b>Tender / PQQ engine</b> — drafts from past wins, 60-80% first pass, your people polish.</div>
+<div class="li"><b>Outbound business development</b> — hundreds of personalised reach-outs a week to the right buyer.</div>
+<div class="li"><b>Payment chase</b> — polite, persistent, fully logged, never awkward.</div>
+<div class="li"><b>Compliance documents</b> — Building Safety Act, Homes Act, PAS 2035, H&S packs.</div>
+<div class="li"><b>Site & report automation</b> — daily logs, snag lists, handover packs.</div>
+<div class="li"><b>Customer / tenant comms</b> — triage, booking, status updates, complaint tracking.</div>
+<div class="foot">One NHUMA covers all six. It is one monthly line, not six new hires.</div>
+</section>
+
+<!-- OFFER -->
+<section class="page">
+<div class="kicker">The offer</div>
+<div class="headline">£5,000 a month. Everything included.</div>
+<div class="rule"></div>
+<div class="body">Flat fee. Self-hosted on an isolated client VPS — your data stays yours and leaves with you on exit. Live in <b>48 hours</b> of a scoping call, or the first month is refunded.</div>
+<div class="body" style="margin-top:24px;"><b>Day-30 guarantee:</b> if NHUMA has not saved more than £5,000 in human hours (measured against your timesheet), the first month is refunded. No argument.</div>
+<div class="body" style="margin-top:24px;">Cancel anytime. White-label single-tier — it becomes a revenue line, not a cost.</div>
+<div class="foot">We do not invoice savings we cannot prove. That is the difference between us and a chatbot vendor.</div>
+</section>
+
+<!-- HOW WE SELL -->
+<section class="page map">
+<div class="kicker">How to close</div>
+<div class="headline">The five-step sequence</div>
+<div class="rule"></div>
+<div class="row"><div class="ocr"><span class="num">1</span><span class="lo">Pick a segment from this list.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">2</span><span class="lo">Pick one named company and one buyer title.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">3</span><span class="lo">Run a free 20-minute bottleneck audit with them.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">4</span><span class="lo">Pilot 90 days at £5k/month, drafts-only.</span></div></div>
+<div class="row"><div class="ocr"><span class="num">5</span><span class="lo">Measure against their timesheet. Refund if not &gt;£5k saved.</span></div></div>
+<div class="foot">No invented case studies. We earn the logo, then use it. Start with Segment 1 or 7 — shortest cycle.</div>
+</section>
+
+<!-- CTA -->
+<section class="page cover">
+<div class="kicker">Start here</div>
+<div class="headline">Book the bottleneck audit.</div>
+<div class="rule"></div>
+<div class="big">One call. We map the leaks in your chosen segment and show the £5k saving in writing before you spend a penny.</div>
+<div class="foot">beacons.ai/humanarchitect · NOHUMA by Human Architect — a UK AI systems studio. Non-Human Intelligence, done for you.</div>
+</section>
+
+</body>
+</html>

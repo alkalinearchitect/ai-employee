@@ -19,7 +19,7 @@ SURFACE = colors.HexColor("#171a1d")
 ACC = colors.HexColor("#ffffff")
 BORDER = colors.HexColor("#262a2e")
 
-SC = 1.55
+SC = 2.15
 def sz(base):
     return int(base * SC)
 
@@ -40,8 +40,8 @@ ss = {
     "step_body": ParagraphStyle("step_body", fontName="Helvetica", fontSize=sz(11), textColor=INK, leading=sz(15), spaceAfter=6, leftIndent=14),
 }
 
-LM = RM = 18 * mm
-TM = BM = 14 * mm
+LM = RM = 14 * mm
+TM = BM = 12 * mm
 
 def bg_shape(c, d):
     c.saveState()
@@ -138,4 +138,4 @@ def build(path):
     print("PDF ->", path)
 
 if __name__ == "__main__":
-    build("/root/ai-employee/pdf-build/owl_dossier.pdf")
+    build("/root/owl_dossier.pdf")

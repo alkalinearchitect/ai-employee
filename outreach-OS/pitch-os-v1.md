@@ -4,7 +4,7 @@
 
 ---
 
-# SIEGFRIED GOLDEN CIRCLE
+# OWL GOLDEN CIRCLE
 ## WHY sells the idea
 ```
 WHY  →  what you believe
@@ -20,7 +20,7 @@ Rule: lead WHY. Close WHAT. Prove HOW with live proof.
 
 ---
 
-# SIEGFRIED SCREENDECK — OUTPUT SPEC
+# OWL SCREENDECK — OUTPUT SPEC
 ## Every page must do one of these only
 ```
 PAGE TYPES
@@ -47,7 +47,7 @@ PAGE TYPES
 
 ---
 
-# PITCH COPY — SIEGFRIED RULES
+# PITCH COPY — OWL RULES
 ## Copy style
 - no adverbs
 - no adjectives unless named or proven
@@ -55,7 +55,7 @@ PAGE TYPES
 - open with pain not product
 - make claims arguable or stop
 
-## SIEGFRIED OPENING TEMPLATE
+## OWL OPENING TEMPLATE
 ```
 Problem:
     [exact specific pain]
