@@ -96,8 +96,8 @@
   .lm{background:var(--chrome);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 1px 1px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(199,202,209,.34))}
   @media (prefers-reduced-motion:no-preference){.lm{animation:lmShift 7s ease-in-out infinite}}
   @keyframes lmShift{0%{background-position:0% 0%}50%{background-position:100% 0%}100%{background-position:0% 0%}}
-  /* ROTATING HEADLINE WORD — simple, robust text swap (no absolute positioning) */
-  #rot{display:inline-block;color:#fff;font-weight:300}
+  /* ROTATING HEADLINE WORD — removed (static headline per request) */
+  #rot{display:none}
 
   /* HERO INTRO — words stamp up out of a mask like forged steel, then steel sheen loops.
      Premium rule from verified refs (Code Metal / Obys / Made With GSAP): shine via
@@ -138,7 +138,7 @@
   .hero{padding:clamp(60px,9vw,112px) 0 clamp(48px,6vw,84px);display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center}
   .hero>div{min-width:0}
   .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:24px}
-  h1{font-family:var(--sans);font-weight:300;font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:1.04;margin:0 0 24px;letter-spacing:-.03em;max-width:20ch;padding-right:8px}
+  h1{font-family:var(--sans);font-weight:300;font-size:clamp(3rem,7vw,5.4rem);line-height:1.05;margin:0 0 24px;letter-spacing:-.03em;max-width:16ch;padding-right:8px}
   .lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--text-2);max-width:44ch;margin:0 0 30px;line-height:1.55}
   .price-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:14px}
   .price{display:flex;align-items:baseline;gap:8px}
@@ -278,7 +278,7 @@
 <header class="hero wrap">
   <div>
     <span class="eyebrow">Non-Human Intelligence</span>
-    <h1>Your next hire <span class="phrase"><span class="word"><span class="lm">won't</span></span> <span class="word"><span class="lm">be</span></span></span> <span id="rot">human.</span></h1>
+    <h1>Your next hire <span class="phrase"><span class="word"><span class="lm">won't</span></span> <span class="word"><span class="lm">be</span></span></span> human.</h1>
     <p class="lede">A managed agent that owns your most draining workflow. Built, hosted, and run for you. You get the outcome.</p>
     <div class="price-row">
       <div class="price"><span class="num">&pound;5,000</span><span class="per">/ month &middot; everything included</span></div>
@@ -438,21 +438,7 @@
       }, {threshold:0}).observe(hero);
     }
   }
-  /* HEADLINE ROTATOR — robust text swap with fade */
-  var rot = document.getElementById('rot');
-  if(rot){
-    var words = ['human.','an agent.','24/7.','automated.'];
-    var ri = 0;
-    setInterval(function(){
-      rot.style.transition = 'opacity .35s ease';
-      rot.style.opacity = '0';
-      setTimeout(function(){
-        ri = (ri+1) % words.length;
-        rot.textContent = words[ri];
-        rot.style.opacity = '1';
-      }, 350);
-    }, 2800);
-  }
+  /* HEADLINE ROTATOR — removed per request (static headline) */
 })();
 </script>
 
