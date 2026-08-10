@@ -33,8 +33,8 @@ a.bar("Live locations handled", 55, 55)
 a.gap(4)
 a.proof([
     "09:14  Scanned inbox — 289 emails, drafted 1 reply",
-    "09:16  Booking moved 3:00 PM for LA conflict",
     "09:15  Re: Q2 Budget Review — file attach failed, retrying",
+    "09:16  Booking moved 3:00 PM for LA conflict",
     "Status: 14 actions today · 1 warning · no human needed",
 ])
 a.gap(4)

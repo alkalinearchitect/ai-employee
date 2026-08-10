@@ -31,17 +31,19 @@ def _wrap(text, font, size, max_w):
     return simpleSplit(text, font, size, max_w)
 
 
-def _bar_row(c, x, y, label, value, maxval, max_w, bar_h=14):
-    """Draw a horizontal white bar (value/maxval) + label + value text."""
-    c.setFillColor(SOFT); c.setFont("Helvetica", 11)
-    c.drawString(x, y + bar_h + 2, label)
-    c.setFillColor(INK); c.setFont("Helvetica-Bold", 12)
-    c.drawRightString(x + max_w, y + bar_h + 2, str(value))
-    # track
-    c.setFillColor(LINE); c.rect(x, y, max_w, bar_h, fill=1, stroke=0)
-    # bar
-    w = max(4, int(max_w * (value / maxval))) if maxval else 4
-    c.setFillColor(BAR); c.rect(x, y, w, bar_h, fill=1, stroke=0)
+def _bar_row(c, x, y, label, value, maxval, max_w, bar_h=16):
+    """Draw label above, white bar with value INSIDE/at end but kept within margin."""
+    # label
+    c.setFillColor(SOFT); c.setFont("Helvetica", 12)
+    c.drawString(x, y + bar_h + 4, label)
+    # bar track
+    c.setFillColor(LINE); c.rect(x, y - 2, max_w, bar_h, fill=1, stroke=0)
+    w = max(6, int(max_w * (value / maxval))) if maxval else 6
+    w = min(w, max_w - 70)  # leave room for the value text to the right of the bar
+    c.setFillColor(BAR); c.rect(x, y - 2, w, bar_h, fill=1, stroke=0)
+    # value immediately after the bar, left-aligned, always inside margin
+    c.setFillColor(INK); c.setFont("Helvetica-Bold", 13)
+    c.drawString(x + w + 8, y + 1, str(value))
 
 
 def header(c, title=None):
@@ -122,9 +124,13 @@ class PDF:
             y -= 16 + 16 + 10
         elif kind == 'kv':
             k, v = payload
-            c.setFillColor(SOFT); c.setFont("Helvetica", 12); c.drawString(x, y, k)
+            c.setFillColor(SOFT); c.setFont("Helvetica", 12)
+            c.drawString(x, y, k)
+            y -= 18
             c.setFillColor(INK); c.setFont("Helvetica-Bold", 12)
-            c.drawRightString(x + max_w, y, v); y -= 22
+            for ln in _wrap(v, "Helvetica-Bold", 12, max_w):
+                c.drawString(x, y, ln); y -= 16
+            y -= 8
         elif kind == 'proof':
             # boxed proof panel, white border
             lines = payload
