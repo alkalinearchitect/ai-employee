@@ -1,0 +1,28 @@
+{
+ "date": "2026-08-10",
+ "status": "NO_DATA",
+ "note": "web_search backend returned empty result set for all queries incl. control query; no signals collected. No stats invented.",
+ "queries": [
+  {
+   "query": "managed AI employee market size 2026",
+   "results": [],
+   "error": "search backend returned 0 results"
+  },
+  {
+   "query": "AI agent adoption SME UK 2026 statistics",
+   "results": [],
+   "error": "search backend returned 0 results"
+  },
+  {
+   "query": "AI employee agency competitors pricing 2026",
+   "results": [],
+   "error": "search backend returned 0 results"
+  },
+  {
+   "query": "non-human intelligence workforce trend 2026",
+   "results": [],
+   "error": "search backend returned 0 results"
+  }
+ ],
+ "signal_count": 0
+}
