@@ -96,8 +96,11 @@
   .lm{background:var(--chrome);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 1px 1px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(199,202,209,.34))}
   @media (prefers-reduced-motion:no-preference){.lm{animation:lmShift 7s ease-in-out infinite}}
   @keyframes lmShift{0%{background-position:0% 0%}50%{background-position:100% 0%}100%{background-position:0% 0%}}
-  /* ROTATING HEADLINE WORD — removed (static headline per request) */
-  #rot{display:none}
+  /* FROSTED GLASS PANEL — liquid-glass technique (swarm research) */
+  .glass-panel{position:relative;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:20px 22px;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 30px 70px -40px rgba(0,0,0,.9)}
+  @supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.glass-panel{background:rgba(255,255,255,.12)}}
+  /* small mark/symbol before eyebrow */
+  .eyebrow .mk{display:inline-block;width:9px;height:9px;margin-right:10px;transform:rotate(45deg);background:var(--chrome);vertical-align:middle;border-radius:2px}
 
   /* HERO INTRO — words stamp up out of a mask like forged steel, then steel sheen loops.
      Premium rule from verified refs (Code Metal / Obys / Made With GSAP): shine via
@@ -135,8 +138,9 @@
   .reveal{animation:revealFade .6s ease both}
   @keyframes revealFade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
-  .hero{padding:clamp(60px,9vw,112px) 0 clamp(48px,6vw,84px);display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center}
-  .hero>div{min-width:0}
+  .hero{padding:clamp(60px,9vw,112px) 0 clamp(48px,6vw,84px);display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center;position:relative}
+  .hero:before{content:"";position:absolute;top:-10%;left:-5%;width:55%;height:70%;background:radial-gradient(circle at 30% 40%,rgba(199,202,209,.16),transparent 60%);filter:blur(40px);pointer-events:none;z-index:0}
+  .hero>div{min-width:0;position:relative;z-index:1}
   .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:24px}
   h1{font-family:var(--sans);font-weight:300;font-size:clamp(3rem,7vw,5.4rem);line-height:1.05;margin:0 0 24px;letter-spacing:-.03em;max-width:16ch;padding-right:8px}
   .lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--text-2);max-width:44ch;margin:0 0 30px;line-height:1.55}
@@ -277,14 +281,16 @@
 
 <header class="hero wrap">
   <div>
-    <span class="eyebrow">Non-Human Intelligence</span>
-    <h1>Your next hire <span class="phrase"><span class="word"><span class="lm">won't</span></span> <span class="word"><span class="lm">be</span></span></span> human.</h1>
+    <span class="eyebrow"><span class="mk"></span>Non-Human Intelligence</span>
+    <h1>Your next hire won't be human.</h1>
     <p class="lede">A managed agent that owns your most draining workflow. Built, hosted, and run for you. You get the outcome.</p>
-    <div class="price-row">
-      <div class="price"><span class="num">&pound;5,000</span><span class="per">/ month &middot; everything included</span></div>
-      <a class="btn" href="#book">Book a 20-minute call</a>
+    <div class="glass-panel">
+      <div class="price-row">
+        <div class="price"><span class="num">&pound;5,000</span><span class="per">/ month &middot; everything included</span></div>
+        <a class="btn" href="#book">Book a 20-minute call</a>
+      </div>
+      <p class="guarantee">Live in 48 hours. If it hasn't paid for itself by day 30, the first month is on us.</p>
     </div>
-    <p class="guarantee">Live in 48 hours. If it hasn't paid for itself by day 30, the first month is on us.</p>
   </div>
 
   <div class="console" aria-hidden="true">
