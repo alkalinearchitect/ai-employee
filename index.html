@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<title>Non-Human Intelligence for UK business | NOHUMA, £5,000/month</title>
+<title>AI Employee for UK Business | NOHUMA Managed AI Agent, £5,000/month</title>
 <meta name="description" content="NOHUMA is a managed Non-Human Intelligence for UK businesses. We build, run, and maintain an autonomous agent that owns your recurring work. Flat £5,000/month, live in 48 hours or refunded." />
 <meta name="author" content="NOHUMA" />
 <meta property="og:type" content="website" />
@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://alkalinearchitect.github.io/ai-employee/" />
 
 <meta name="theme-color" content="#0a0a0c" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='6' y='6' width='20' height='20' rx='5' fill='none' stroke='url(%23g)' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f4f4f6'/><stop offset='.5' stop-color='%23b9b3d8'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='6' y='6' width='20' height='20' rx='5' fill='none' stroke='url(%23g)' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f4f4f6'/><stop offset='.5' stop-color='%23c7cad1'/><stop offset='1' stop-color='%23e9ebf0'/></linearGradient></defs></svg>" />
 <meta name="robots" content="index, follow" />
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
@@ -49,12 +49,13 @@
 {
   "@context":"https://schema.org","@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"What is NOHUMA?","acceptedAnswer":{"@type":"Answer","text":"NOHUMA is a managed Non-Human Intelligence: an autonomous agent built, onboarded, and fully operated inside your business for a flat £5,000/month. You never configure the tech."}},
+    {"@type":"Question","name":"What is NOHUMA?","acceptedAnswer":{"@type":"Answer","text":"NOHUMA is a managed AI employee (also called a managed AI agent): an autonomous agent built, onboarded, and fully operated inside your business for a flat £5,000/month. You never configure the tech."}},
+    {"@type":"Question","name":"Is NOHUMA an AI employee or an AI agent?","acceptedAnswer":{"@type":"Answer","text":"Same thing, different word. 'AI employee' is how we describe it to business owners — it owns a recurring job like a member of staff. 'AI agent' is the technical term for the autonomous system that does it. Either way, we build and run it for you."}},
     {"@type":"Question","name":"How fast is it live?","acceptedAnswer":{"@type":"Answer","text":"Your agent is live within 48 hours of the scoping call, or the first month is refunded."}},
     {"@type":"Question","name":"What if it doesn't save us money?","acceptedAnswer":{"@type":"Answer","text":"If the agent has not saved you more than £5,000/month in human hours by day 30, measured against your own timesheet, the first month is refunded."}},
     {"@type":"Question","name":"Is my data safe?","acceptedAnswer":{"@type":"Answer","text":"Your data stays within your environment. NOHUMA runs on an isolated client server with scoped access, not blanket permission."}},
     {"@type":"Question","name":"Do I need a technical team?","acceptedAnswer":{"@type":"Answer","text":"No. NOHUMA is fully managed. You bring one workflow to a 20-minute call. We build, host, and run the agent."}},
-    {"@type":"Question","name":"Can I offer it to my own customers?","acceptedAnswer":{"@type":"Answer","text":"Yes. NOHUMA is an optional white-label: your brand, your terms, single-tier. A revenue line, not a cost."}}
+    {"@type":"Question","name":"Can I offer it to my own customers?","acceptedAnswer":{"@type":"Answer","text":"Yes — optional white-label is available for agencies and franchisors: your brand, your terms, single-tier. Ask on the call for the partner model."}}
   ]
 }
 </script>
@@ -63,10 +64,22 @@
   :root{
     --bg:#0a0a0c; --bg-soft:#0e0e11; --surface:#131318; --surface-2:#191920;
     --border:#232329; --border-2:#34343d;
-    --text:#f6f6f8; --text-2:#c4c6cf; --text-3:#9a9ca6; --text-4:#6c6e77;
-    --accent:#8b5cf6; --accent-2:#b6a4ff; --green:#3ad389;
-    /* liquid-metal chrome stops: steel -> bright specular -> violet-steel (anisotropic, not rainbow) */
-    --chrome:linear-gradient(100deg,#e9e9ee 0%,#ffffff 18%,#9a93c4 42%,#d8d4ec 58%,#6f5fb0 82%,#b9b0e6 100%);
+    --text:#f6f6f8; --text-2:#c4c6cf; --text-3:#9a9ca6; --text-4:#8a8c95;
+    --steel:#aeb4c0; --accent-2:#aeb4c0; --accent:#cfd3dc; --green:#3ad389;
+    /* LIQUID METAL — convincing steel/chrome, NO violet. Anisotropic banded steel:
+       dark valley -> hot specular -> mid -> bright glint -> dark -> bright.
+       Tight bands = real curved-metal reflection, not a soft fade. */
+    --chrome:linear-gradient(100deg,
+      #8b909c 0%,
+      #eef1f6 16%,
+      #6b707b 30%,
+      #f6f8fb 47%,
+      #9aa0ad 60%,
+      #ffffff 73%,
+      #aab0bc 84%,
+      #e9ebf0 100%);
+    --chrome-conic:conic-gradient(from 210deg at 50% 50%,
+      #6f7480, #f4f6fa, #9aa0ad, #ffffff, #c7cad1, #8b909c, #6f7480);
     --mono:"SF Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   }
@@ -74,15 +87,15 @@
   html{scroll-behavior:smooth}
   html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
   a{color:inherit;text-decoration:none}
-  .skip-link{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;z-index:60}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--accent);color:#0a0a0c;padding:10px 16px;border-radius:8px;font-weight:600;z-index:60}
   .skip-link:focus{left:12px;top:12px}
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
   .wrap{max-width:68rem;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
 
-  /* LIQUID METAL utility */
-  .lm{background:var(--chrome);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-  @media (prefers-reduced-motion:no-preference){.lm{animation:lmShift 9s ease-in-out infinite}}
-  @keyframes lmShift{0%,100%{background-position:0% 0%}50%{background-position:100% 0%}}
+  /* LIQUID METAL utility — banded steel gradient + drifting sheen = curved-metal read */
+  .lm{background:var(--chrome);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 1px 1px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(199,202,209,.34))}
+  @media (prefers-reduced-motion:no-preference){.lm{animation:lmShift 7s ease-in-out infinite}}
+  @keyframes lmShift{0%{background-position:0% 0%}50%{background-position:100% 0%}100%{background-position:0% 0%}}
 
   header.top{position:sticky;top:0;z-index:50;background:rgba(10,10,12,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
   .top-in{display:flex;align-items:center;justify-content:space-between;height:62px}
@@ -98,23 +111,23 @@
   @keyframes revealFade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
   .hero{padding:clamp(60px,9vw,112px) 0 clamp(48px,6vw,84px);display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center}
-  .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-2);display:block;margin-bottom:24px}
+  .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:24px}
   h1{font-family:var(--sans);font-weight:300;font-size:clamp(2.7rem,6.2vw,4.9rem);line-height:1.02;margin:0 0 24px;letter-spacing:-.03em;max-width:15ch}
   .lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--text-2);max-width:44ch;margin:0 0 30px;line-height:1.55}
   .price-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:14px}
   .price{display:flex;align-items:baseline;gap:8px}
-  .price .num{font-weight:600;font-size:clamp(1.9rem,3.2vw,2.6rem);letter-spacing:-.03em}
+  .price .num{font-weight:600;font-size:clamp(1.9rem,3.2vw,2.6rem);letter-spacing:-.03em;background:var(--chrome);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 0 18px rgba(199,202,209,.34));position:relative}
   .price .per{font-size:.9rem;color:var(--text-3)}
   .guarantee{font-size:.95rem;color:var(--text-3);margin:0;max-width:48ch}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:980px;color:#fff;background:var(--accent);transition:transform .15s ease,box-shadow .25s ease;min-height:48px;border:1px solid transparent;cursor:pointer}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(139,92,246,.28)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:980px;color:#0a0a0c;background:linear-gradient(180deg,#f6f8fb,#cfd3dc);border:1px solid rgba(255,255,255,.45);transition:transform .15s ease,box-shadow .25s ease;min-height:48px;cursor:pointer}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(199,202,209,.34)}
   .btn-sm{padding:11px 20px;font-size:.9rem}
 
   .console{border:1px solid var(--border-2);border-radius:14px;background:var(--surface);box-shadow:0 30px 70px -40px rgba(0,0,0,.9);overflow:hidden;font-family:var(--mono)}
   .con-head{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--border)}
   .con-head .l{display:flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.08em;color:var(--text-2)}
-  .con-head .l svg{width:15px;height:15px;color:var(--accent-2)}
-  .live{display:flex;align-items:center;gap:6px;color:var(--accent-2);font-size:10.5px;letter-spacing:.12em;font-weight:500}
+  .con-head .l svg{width:15px;height:15px;color:var(--steel)}
+  .live{display:flex;align-items:center;gap:6px;color:var(--steel);font-size:10.5px;letter-spacing:.12em;font-weight:500}
   .live .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.8s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
   .con-row{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--border);font-size:12px}
@@ -124,10 +137,10 @@
   .pill{padding:3px 9px;border-radius:980px;font-size:9.5px;letter-spacing:.1em;border:1px solid;white-space:nowrap}
   .pill.draft{color:var(--text-3);border-color:var(--border-2)}
   .pill.sent{color:var(--green);border-color:rgba(58,211,137,.4)}
-  .pill.ready{color:var(--accent-2);border-color:rgba(139,92,246,.45)}
-  .pill.run{color:var(--accent-2);border-color:rgba(139,92,246,.45)}
+  .pill.ready{color:var(--steel);border-color:rgba(174,180,192,.5)}
+  .pill.run{color:var(--steel);border-color:rgba(174,180,192,.5)}
   .con-log{padding:11px 16px;background:var(--bg-soft);color:var(--text-4);font-size:10.5px;border-top:1px solid var(--border)}
-  .con-log .v{color:var(--accent-2)}
+  .con-log .v{color:var(--steel)}
 
   .statement{padding:clamp(60px,9vw,104px) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-soft)}
   .big-line{font-family:var(--sans);font-weight:300;font-size:clamp(1.7rem,4.4vw,3.2rem);line-height:1.14;letter-spacing:-.02em;max-width:22ch;margin:0;color:var(--text)}
@@ -140,14 +153,29 @@
   h3{font-family:var(--sans);font-size:1rem;font-weight:600;letter-spacing:-.01em;margin:0 0 6px}
 
   .offer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
-  .offer-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:22px 24px}
-  .o-num{display:block;font-weight:600;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.03em;color:var(--text);margin-bottom:6px}
+  .offer-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-top:1px solid rgba(199,202,209,.18);border-radius:12px;padding:22px 24px}
+  .o-num{display:block;font-weight:600;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.03em;background:var(--chrome);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 0 12px rgba(199,202,209,.28));margin-bottom:6px}
   .o-lbl{display:block;color:var(--text-2);font-size:.98rem;line-height:1.55}
+
+  /* enumerated stack + buys + timeline */
+  .stack-list{list-style:none;counter-reset:s;margin:22px 0 18px;display:grid;gap:11px;max-width:62ch}
+  .stack-list li{counter-increment:s;position:relative;padding-left:42px;font-size:1rem;color:var(--text-2);line-height:1.5}
+  .stack-list li::before{content:counter(s);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--steel);border:1px solid var(--border-2);background:var(--surface)}
+  .stack-list strong{color:var(--text);font-weight:600}
+  .buys-h{font-family:var(--sans);font-weight:600;font-size:1.15rem;margin:30px 0 12px;letter-spacing:-.01em}
+  .buys{list-style:none;margin:0;display:grid;gap:9px;max-width:58ch}
+  .buys li{position:relative;padding-left:26px;font-size:.98rem;color:var(--text-2);line-height:1.5}
+  .buys li::before{content:"";position:absolute;left:4px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .timeline-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 16px}
+  .timeline-strip>div{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+  .ts-n{font-family:var(--sans);font-weight:600;font-size:1.7rem;background:var(--chrome);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 0 10px rgba(199,202,209,.26))}
+  .ts-l{font-size:.85rem;color:var(--text-3);line-height:1.45}
+  .honest-note{font-size:.9rem;color:var(--text-3);line-height:1.6;margin:8px 0 0;padding:14px 16px;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft)}
 
   .spines{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
   .spine{border:1px solid var(--border);border-left-width:3px;border-radius:9px;padding:20px;background:var(--surface);transition:border-color .2s,background .2s}
   .spine:hover{border-color:var(--border-2);background:var(--surface-2)}
-  .spine .tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:11px;color:var(--accent-2)}
+  .spine .tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:11px;color:var(--steel)}
   .spine p{font-size:.92rem;color:var(--text-3);line-height:1.55;margin:0}
 
   .faq{display:grid;gap:12px;max-width:60rem;margin-top:26px}
@@ -163,8 +191,8 @@
   .foot .fine{font-size:.8rem;margin-top:8px}
   .foot .brand{justify-content:center;margin-bottom:14px}
 
-  .sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px clamp(16px,5vw,40px);padding-bottom:calc(14px + env(safe-area-inset-bottom));background:rgba(10,10,12,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--border);transform:translateY(110%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
-  .sticky-bar.show{transform:translateY(0)}
+  .sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px clamp(16px,5vw,40px);padding-bottom:calc(14px + env(safe-area-inset-bottom));background:rgba(10,10,12,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--border);transform:translateY(110%);visibility:hidden;transition:transform .35s cubic-bezier(.16,1,.3,1),visibility .35s}
+  .sticky-bar.show{transform:translateY(0);visibility:visible}
   .sticky-bar .lbl{color:var(--text);font-weight:600;font-size:.92rem;line-height:1.25}
   .sticky-bar .lbl small{display:block;color:var(--text-2);font-weight:400;font-size:.76rem}
   body.cta-open{padding-bottom:72px;transition:padding-bottom .35s ease}
@@ -189,7 +217,7 @@
 <header class="top">
   <div class="wrap top-in">
     <div class="brand">
-      <svg viewBox="0 0 32 32" fill="none" stroke="url(#g)" stroke-width="2"><rect x="6" y="6" width="20" height="20" rx="5"/><circle cx="16" cy="16" r="3" fill="url(#g)" stroke="none"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f6"/><stop offset=".5" stop-color="#b9b3d8"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+      <svg viewBox="0 0 32 32" fill="none" stroke="url(#g)" stroke-width="2"><rect x="6" y="6" width="20" height="20" rx="5"/><circle cx="16" cy="16" r="3" fill="url(#g)" stroke="none"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f6"/><stop offset=".5" stop-color="#c7cad1"/><stop offset="1" stop-color="#e9ebf0"/></linearGradient></defs></svg>
       <span class="lm">NOHUMA</span>
     </div>
     <nav class="nav-r">
@@ -253,8 +281,19 @@
 
 <section class="reveal" id="proof">
   <span class="eyebrow-2">01 / The stack</span>
-  <h2 class="sec">Built on the 8-Part Agent Stack.</h2>
-  <p class="body">NOHUMA is a managed Non-Human Intelligence built on the 8-Part Agent Stack: its own computer, its own email, a live line, your channels, real tools, simple billing, one governed memory (One Fact, One Home), and constant watching. A brain plus four specialists does the work. That is the whole model. We run it. You watch it land.</p>
+  <h2 class="sec">What a managed AI employee is &mdash; and how we build it.</h2>
+  <p class="body">NOHUMA is a managed AI employee (also called a managed AI agent) built on the 8-Part Agent Stack. Each part is a discrete component, not a slogan &mdash; here is the full stack so you can see exactly what you are buying:</p>
+  <ol class="stack-list">
+    <li><strong>Its own computer</strong> &mdash; a dedicated, isolated environment that runs your agent, not a shared queue.</li>
+    <li><strong>Its own email</strong> &mdash; a real inbox and sending identity in your voice, so replies come from you.</li>
+    <li><strong>A live line</strong> &mdash; a phone or messaging number your agent answers on, 24/7.</li>
+    <li><strong>Your channels</strong> &mdash; wired into the CRM, calendar, docs and chat tools you already use.</li>
+    <li><strong>Real tools</strong> &mdash; it acts, not just chats: it creates, sends, books and updates.</li>
+    <li><strong>Simple billing</strong> &mdash; one flat &pound;5,000/month. No per-seat, no usage traps.</li>
+    <li><strong>One Fact, One Home</strong> &mdash; a single governed memory so it never contradicts itself or loses context.</li>
+    <li><strong>Constant watching</strong> &mdash; monitored and tuned by Human Architect every month, not left to drift.</li>
+  </ol>
+  <p class="body">A brain plus four specialists does the work. That is the whole model. We run it. You watch it land.</p>
 </section>
 
 <section class="reveal" id="offer">
@@ -263,9 +302,26 @@
   <div class="offer-grid">
     <div class="offer-card"><span class="o-num">48h</span><span class="o-lbl">Live, or the first month is refunded.</span></div>
     <div class="offer-card"><span class="o-num">2&times;</span><span class="o-lbl">If it hasn't saved you more than &pound;5k in human hours by day 30, first month refunded. Measured against your own timesheet, not ours.</span></div>
-    <div class="offer-card"><span class="o-num">Yours</span><span class="o-lbl">Self-hosted on your own server. Data stays yours. Portable on exit.</span></div>
+    <div class="offer-card"><span class="o-num">Yours</span><span class="o-lbl">Run on your own cloud account. Data stays yours. Portable on exit. Compute cost is included.</span></div>
     <div class="offer-card"><span class="o-num">Anytime</span><span class="o-lbl">Month to month. Stay because it works, not because you're locked in.</span></div>
   </div>
+
+  <h3 class="buys-h">What &pound;5,000 actually buys</h3>
+  <ul class="buys">
+    <li>One scoping call to map the workflow that drains you.</li>
+    <li>Build, hosting and monitoring of your agent &mdash; done for you.</li>
+    <li>Up to <strong>3 approved workflows</strong> running in month one.</li>
+    <li>A named operator at Human Architect who owns your account.</li>
+    <li>A weekly plain-language report on what the agent did.</li>
+    <li>Ongoing tuning every month &mdash; it gets sharper, not stale.</li>
+  </ul>
+
+  <div class="timeline-strip">
+    <div><span class="ts-n">30</span><span class="ts-l">Days &mdash; live, measured against your timesheet or refunded</span></div>
+    <div><span class="ts-n">60</span><span class="ts-l">Days &mdash; workflows expanded, you approve less, it runs more</span></div>
+    <div><span class="ts-n">90</span><span class="ts-l">Days &mdash; steady-state operation + monthly optimisation review</span></div>
+  </div>
+  <p class="honest-note">We are onboarding our first cohort of UK businesses. That is why the guarantee is the proof: if it hasn't paid for itself by day 30, you don't pay. Numbers published with permission once live.</p>
 </section>
 
 <section class="reveal" id="industry">
@@ -286,12 +342,13 @@
   <span class="eyebrow-2">04 / Questions</span>
   <h2 class="sec">Non-Human Intelligence, answered.</h2>
   <div class="faq">
-    <div class="qa"><h3>What is NOHUMA?</h3><p>A managed Non-Human Intelligence: an autonomous agent built, onboarded, and fully operated inside your business for a flat &pound;5,000/month. You never configure the tech.</p></div>
+    <div class="qa"><h3>What is NOHUMA?</h3><p>A managed AI employee (also called a managed AI agent): an autonomous agent built, onboarded, and fully operated inside your business for a flat &pound;5,000/month. You never configure the tech.</p></div>
+    <div class="qa"><h3>Is NOHUMA an AI employee or an AI agent?</h3><p>Same thing, different word. "AI employee" is how we describe it to business owners — it owns a recurring job like a member of staff. "AI agent" is the technical term for the autonomous system that does it. Either way, we build and run it for you.</p></div>
     <div class="qa"><h3>How fast is it live?</h3><p>Your agent is live within 48 hours of the scoping call, or the first month is refunded.</p></div>
     <div class="qa"><h3>What if it doesn't save us money?</h3><p>If the agent has not saved you more than &pound;5,000/month in human hours by day 30, measured against your own timesheet, the first month is refunded.</p></div>
     <div class="qa"><h3>Is my data safe?</h3><p>Your data stays within your environment. NOHUMA runs on an isolated client server with scoped access, not blanket permission.</p></div>
     <div class="qa"><h3>Do I need a technical team?</h3><p>No. NOHUMA is fully managed. You bring one workflow to a 20-minute call. We build, host, and run the agent.</p></div>
-    <div class="qa"><h3>Can I offer it to my own customers?</h3><p>Yes. NOHUMA is an optional white-label: your brand, your terms, single-tier. A revenue line, not a cost.</p></div>
+    <div class="qa"><h3>Can I offer it to my own customers?</h3><p>Yes — optional white-label is available for agencies and franchisors: your brand, your terms, single-tier. Ask on the call for the partner model.</p></div>
   </div>
 </section>
 
@@ -312,7 +369,7 @@
 <div class="wrap">
 <div class="foot">
   <div class="brand">
-    <svg viewBox="0 0 32 32" fill="none" stroke="url(#g)" stroke-width="2"><rect x="6" y="6" width="20" height="20" rx="5"/><circle cx="16" cy="16" r="3" fill="url(#g)" stroke="none"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f6"/><stop offset=".5" stop-color="#b9b3d8"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+    <svg viewBox="0 0 32 32" fill="none" stroke="url(#g2)" stroke-width="2"><rect x="6" y="6" width="20" height="20" rx="5"/><circle cx="16" cy="16" r="3" fill="url(#g2)" stroke="none"/><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f6"/><stop offset=".5" stop-color="#c7cad1"/><stop offset="1" stop-color="#e9ebf0"/></linearGradient></defs></svg>
     <span class="lm">NOHUMA</span>
   </div>
   <p>NOHUMA is a managed Non-Human Intelligence, built and operated in the UK by Human Architect, an AI systems studio. Self-hosted, your data stays in your environment.</p>
